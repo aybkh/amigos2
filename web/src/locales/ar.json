@@ -1,0 +1,151 @@
+{
+  "ui": {
+    "dir": "rtl",
+    "nav": {
+      "home": "الرئيسية",
+      "hours": "الساعات",
+      "gallery": "معرض الصور",
+      "contact": "اتصل بنا",
+      "menu_cta": "القائمة"
+    },
+    "hero": {
+      "badge": "لوريت دي مار · مفتوح حتى الساعة 3 صباحاً",
+      "cta_menu": "عرض القائمة ←",
+      "cta_location": "الموقع"
+    },
+    "hours": {
+      "title": "مواعيد العمل",
+      "open_now": "● مفتوح الآن",
+      "opens_at": "● يفتح الساعة {time}",
+      "closed_today": "● مغلق اليوم",
+      "closed": "مغلق",
+      "days": {
+        "lun": "الإثنين",
+        "mar": "الثلاثاء",
+        "mie": "الأربعاء",
+        "jue": "الخميس",
+        "vie": "الجمعة",
+        "sab": "السبت",
+        "dom": "الأحد"
+      }
+    },
+    "contact": {
+      "title": "اتصل بنا",
+      "subtitle": "هل لديك سؤال؟ اكتب لنا.",
+      "name": "الاسم",
+      "email": "البريد الإلكتروني",
+      "message": "الرسالة",
+      "name_placeholder": "اسمك",
+      "message_placeholder": "كيف يمكننا مساعدتك؟",
+      "send": "إرسال الرسالة",
+      "sending": "جاري الإرسال…",
+      "success_title": "تم إرسال الرسالة!",
+      "success_body": "سنرد عليك قريباً.",
+      "error": "خطأ في الإرسال. حاول مرة أخرى."
+    },
+    "menu": {
+      "back": "الرئيسية",
+      "search_placeholder": "ابحث عن الأطباق…",
+      "no_results": "لا توجد نتائج لـ",
+      "loading": "جاري تحميل القائمة…",
+      "error": "خطأ في تحميل القائمة.",
+      "empty": "القائمة فارغة حالياً.",
+      "empty_category": "لا توجد منتجات في هذه الفئة.",
+      "allergens": "مسببات الحساسية",
+      "prev": "→ السابق",
+      "next": "التالي ←",
+      "of": "من",
+      "categories": "الفئات"
+    },
+    "footer": {
+      "tagline": "بار · مطعم · بيتزيريا",
+      "follow_us": "تابعونا",
+      "designed_by": "تصميم",
+      "legal": "الإشعار القانوني",
+      "privacy": "سياسة الخصوصية",
+      "cookies": "سياسة الكوكيز"
+    },
+    "aria": {
+      "close": "إغلاق",
+      "prev": "السابق",
+      "next": "التالي",
+      "view_photo": "عرض الصورة",
+      "menu_btn": "القائمة",
+      "clear": "مسح",
+      "lang": "اللغة"
+    },
+    "stats": {
+      "categories": "الفئات",
+      "dishes": "الأطباق",
+      "closing": "الإغلاق",
+      "google": "Google"
+    },
+    "featured": {
+      "title": "المفضلة",
+      "title_highlight": "لدينا",
+      "subtitle": "أفضل ما في قائمتنا",
+      "no_products": "لا توجد منتجات"
+    },
+    "reviews": {
+      "rating": "4.6 ★ على Google Maps",
+      "title": "ما يقولونه عن",
+      "title_highlight": "مطعمنا",
+      "swipe": "← اسحب →"
+    },
+    "gallery": {
+      "title": "المعرض"
+    },
+    "posts": {
+      "title": "آخر الأخبار",
+      "subtitle": "أحدث الأخبار",
+      "read_more": "اقرأ المزيد ←"
+    },
+    "location": {
+      "title": "الموقع",
+      "view_maps": "عرض على الخريطة ←"
+    },
+    "cookies": {
+      "title": "نستخدم ملفات تعريف الارتباط",
+      "body": "يستخدم هذا الموقع ملفات تعريف ارتباط تقنية وخرائط Google.",
+      "more": "مزيد من المعلومات",
+      "reject": "رفض",
+      "accept": "قبول ملفات الارتباط",
+      "prefs": "تفضيلات ملفات الارتباط"
+    }
+  },
+  "categories": {
+    "Tapas": "تاباس",
+    "Entrantes Hindús": "مقبلات هندية",
+    "Comida Hindú y Biryanys": "طعام هندي وبرياني",
+    "Pastas": "باستا",
+    "Pizzas": "بيتزا",
+    "Comida Turca": "طعام تركي",
+    "Ensaladas": "سلطات",
+    "Burgers": "برغر",
+    "Bocadillos": "ساندويتشات",
+    "Platos Combinados": "أطباق متنوعة",
+    "Pescados, Mariscos y Paellas": "أسماك ومأكولات بحرية وبايلا",
+    "Cócteles y Sangrías": "كوكتيلات وسانغريا",
+    "Bebidas, Cervezas y Cafés": "مشروبات وبيرة وقهوة",
+    "Especialidades y Desayunos": "تخصصات وفطور",
+    "Menús Completos": "قوائم كاملة"
+  },
+  "allergens": {
+    "Gluten": "الغلوتين",
+    "Crustáceos": "القشريات",
+    "Huevos": "البيض",
+    "Pescado": "الأسماك",
+    "Cacahuetes": "الفول السوداني",
+    "Soja": "الصويا",
+    "Lácteos": "الألبان",
+    "Frutos de cáscara": "المكسرات",
+    "Apio": "الكرفس",
+    "Mostaza": "الخردل",
+    "Sésamo": "السمسم",
+    "Sulfitos": "الكبريتات",
+    "Moluscos": "الرخويات",
+    "Altramuces": "الترمس",
+    "Picante": "حار",
+    "Carne": "اللحم"
+  }
+}

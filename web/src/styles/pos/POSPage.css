@@ -1,0 +1,311 @@
+/* POSPage.css - Main layout and header styles */
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--bg-base);
+}
+
+.mobile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    background-color: var(--color-sidebar);
+    border-bottom: 2px solid var(--color-border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    height: 70px;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+}
+
+@media (max-width: 1024px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+
+.mobile-logo-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.mobile-logo {
+    height: 40px;
+    object-fit: contain;
+}
+
+.product-area {
+    flex: 1;
+    padding-left: 250px;
+    background-image: linear-gradient(rgba(42, 90, 67, 0.55), rgba(42, 90, 67, 0.55)), url('/ladrillo.webp');
+    background-blend-mode: multiply;
+    background-size: 150px;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.updating-menu-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 20px;
+    text-align: center;
+}
+
+.updating-menu-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+}
+
+.updating-menu-title {
+    color: var(--color-primary);
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.updating-menu-text {
+    color: #ecf0f1;
+    font-size: 1.2rem;
+    max-width: 500px;
+}
+
+.category-section-header {
+    position: sticky;
+    top: 68px;
+    background-image: linear-gradient(rgba(42, 90, 67, 0.55), rgba(42, 90, 67, 0.55)), url('/ladrillo.webp');
+    background-blend-mode: multiply;
+    background-size: 150px;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(8px);
+    z-index: 20;
+    padding: 16px 0;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+.category-title {
+    font-family: 'Black Ops One', cursive;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    color: var(--color-text-light);
+    text-shadow: 2px 2px 1px var(--color-shadow);
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 0 15px 40px;
+}
+
+.empty-category-msg {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    padding: 40px 0;
+}
+
+.pos-footer-spacer {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.pos-footer-link {
+    color: inherit;
+    text-decoration: underline;
+}
+
+/* Tablet & Mobile Overrides */
+@media (max-width: 1024px) {
+    .mobile-header {
+        height: 70px;
+        padding: 0 15px;
+    }
+
+    .product-area {
+        padding-left: 0;
+    }
+
+    .category-section-header {
+        top: 68px;
+        padding: 12px 0;
+        margin-bottom: 20px;
+    }
+
+    .category-title {
+        font-size: 1.4rem;
+    }
+
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 12px 40px;
+    }
+}
+
+@media (max-width: 360px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Mobile menu bar (Amigos2 MenuPage) --- */
+.menu-mobile-bar {
+    display: none;
+    position: sticky;
+    top: 70px;
+    z-index: 90;
+    background: var(--color-sidebar);
+    border-bottom: 2px solid var(--color-border);
+    padding: 10px 15px;
+    align-items: center;
+    gap: 12px;
+}
+
+@media (max-width: 1024px) {
+    .menu-mobile-bar {
+        display: flex;
+    }
+}
+
+.menu-mobile-btn {
+    background: transparent;
+    border: 2px solid var(--color-border);
+    color: white;
+    padding: 6px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    box-shadow: 3px 3px 0px var(--color-shadow);
+}
+
+.menu-mobile-title {
+    font-family: 'Black Ops One', cursive;
+    font-size: 1.1rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.menu-product-area {
+    padding-left: 250px;
+    background-image: linear-gradient(rgba(42, 90, 67, 0.55), rgba(42, 90, 67, 0.55)), url('/ladrillo.webp');
+    background-blend-mode: multiply;
+    background-size: 150px;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+@media (max-width: 1024px) {
+    .menu-product-area {
+        padding-left: 0;
+    }
+}
+
+.menu-category-header {
+    position: sticky;
+    top: 70px;
+    background-image: linear-gradient(rgba(42, 90, 67, 0.55), rgba(42, 90, 67, 0.55)), url('/ladrillo.webp');
+    background-blend-mode: multiply;
+    background-size: 150px;
+    background-repeat: repeat;
+    background-position: center;
+    background-attachment: fixed;
+    backdrop-filter: blur(8px);
+    z-index: 20;
+    padding: 16px 0;
+    margin-bottom: 32px;
+    text-align: center;
+}
+
+@media (max-width: 1024px) {
+    .menu-category-header {
+        top: 126px;
+    }
+}
+
+.menu-category-title {
+    font-family: 'Black Ops One', cursive;
+    font-weight: 900;
+    letter-spacing: 0.1em;
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    color: var(--color-text-light);
+    text-shadow: 2px 2px 1px var(--color-shadow);
+}
+
+.menu-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 15px;
+    padding: 0 15px 40px;
+}
+
+@media (max-width: 1024px) {
+    .menu-product-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+        padding: 0 12px 40px;
+    }
+}
+
+@media (max-width: 360px) {
+    .menu-product-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.menu-empty-category {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.5);
+    font-style: italic;
+    padding: 40px 0;
+}
+
+.menu-footer-spacer {
+    width: 100%;
+    text-align: center;
+    padding: 40px 0;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.7rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.menu-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 40;
+    backdrop-filter: blur(2px);
+}

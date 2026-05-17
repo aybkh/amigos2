@@ -1,0 +1,151 @@
+{
+  "ui": {
+    "dir": "ltr",
+    "nav": {
+      "home": "Start",
+      "hours": "Tijden",
+      "gallery": "Galerij",
+      "contact": "Contact",
+      "menu_cta": "Menukaart"
+    },
+    "hero": {
+      "badge": "Lloret de Mar · Open tot 3 uur",
+      "cta_menu": "Bekijk Menu →",
+      "cta_location": "Locatie"
+    },
+    "hours": {
+      "title": "Openingstijden",
+      "open_now": "● Nu open",
+      "opens_at": "● Opent om {time}",
+      "closed_today": "● Vandaag gesloten",
+      "closed": "Gesloten",
+      "days": {
+        "lun": "Maandag",
+        "mar": "Dinsdag",
+        "mie": "Woensdag",
+        "jue": "Donderdag",
+        "vie": "Vrijdag",
+        "sab": "Zaterdag",
+        "dom": "Zondag"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Heb je een vraag? Schrijf ons.",
+      "name": "Naam",
+      "email": "E-mail",
+      "message": "Bericht",
+      "name_placeholder": "Uw naam",
+      "message_placeholder": "Hoe kunnen we u helpen?",
+      "send": "Stuur bericht",
+      "sending": "Versturen…",
+      "success_title": "Bericht verzonden!",
+      "success_body": "We antwoorden snel.",
+      "error": "Fout bij verzenden. Probeer het opnieuw."
+    },
+    "menu": {
+      "back": "Start",
+      "search_placeholder": "Zoek een gerecht…",
+      "no_results": "Geen resultaten voor",
+      "loading": "Menu laden…",
+      "error": "Fout bij laden van het menu.",
+      "empty": "De kaart is momenteel leeg.",
+      "empty_category": "Geen producten in deze categorie.",
+      "allergens": "Allergenen",
+      "prev": "← Vorige",
+      "next": "Volgende →",
+      "of": "van",
+      "categories": "Categorieën"
+    },
+    "footer": {
+      "tagline": "Bar · Restaurant · Pizzeria",
+      "follow_us": "Volg ons",
+      "designed_by": "Ontworpen door",
+      "legal": "Juridische Kennisgeving",
+      "privacy": "Privacybeleid",
+      "cookies": "Cookiebeleid"
+    },
+    "aria": {
+      "close": "Sluiten",
+      "prev": "Vorige",
+      "next": "Volgende",
+      "view_photo": "Foto bekijken",
+      "menu_btn": "Menu",
+      "clear": "Wissen",
+      "lang": "Taal"
+    },
+    "stats": {
+      "categories": "Categorieën",
+      "dishes": "Gerechten",
+      "closing": "Sluitingstijd",
+      "google": "Google"
+    },
+    "featured": {
+      "title": "Onze",
+      "title_highlight": "Favorieten",
+      "subtitle": "Het beste van ons menu",
+      "no_products": "Geen producten"
+    },
+    "reviews": {
+      "rating": "4.6 ★ op Google Maps",
+      "title": "Wat ze zeggen over",
+      "title_highlight": "ons",
+      "swipe": "← veeg →"
+    },
+    "gallery": {
+      "title": "Galerij"
+    },
+    "posts": {
+      "title": "NIEUWS",
+      "subtitle": "Laatste Nieuws",
+      "read_more": "Lees meer →"
+    },
+    "location": {
+      "title": "Locatie",
+      "view_maps": "Bekijk op Maps →"
+    },
+    "cookies": {
+      "title": "We gebruiken cookies",
+      "body": "Deze website gebruikt technische cookies en Google Maps cookies.",
+      "more": "Meer informatie",
+      "reject": "Weigeren",
+      "accept": "Cookies accepteren",
+      "prefs": "Cookievoorkeuren"
+    }
+  },
+  "categories": {
+    "Tapas": "Tapas",
+    "Entrantes Hindús": "Indiase Voorgerechten",
+    "Comida Hindú y Biryanys": "Indiaas Eten & Biryani's",
+    "Pastas": "Pasta",
+    "Pizzas": "Pizza's",
+    "Comida Turca": "Turks Eten",
+    "Ensaladas": "Salades",
+    "Burgers": "Burgers",
+    "Bocadillos": "Broodjes",
+    "Platos Combinados": "Combinatieschotels",
+    "Pescados, Mariscos y Paellas": "Vis, Zeevruchten & Paella's",
+    "Cócteles y Sangrías": "Cocktails & Sangria's",
+    "Bebidas, Cervezas y Cafés": "Dranken, Bieren & Koffie",
+    "Especialidades y Desayunos": "Specialiteiten & Ontbijt",
+    "Menús Completos": "Complete Menu's"
+  },
+  "allergens": {
+    "Gluten": "Gluten",
+    "Crustáceos": "Schaaldieren",
+    "Huevos": "Eieren",
+    "Pescado": "Vis",
+    "Cacahuetes": "Pinda's",
+    "Soja": "Soja",
+    "Lácteos": "Melk",
+    "Frutos de cáscara": "Noten",
+    "Apio": "Selderij",
+    "Mostaza": "Mosterd",
+    "Sésamo": "Sesam",
+    "Sulfitos": "Sulfieten",
+    "Moluscos": "Weekdieren",
+    "Altramuces": "Lupine",
+    "Picante": "Pittig",
+    "Carne": "Vlees"
+  }
+}

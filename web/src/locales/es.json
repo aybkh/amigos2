@@ -1,0 +1,151 @@
+{
+  "ui": {
+    "dir": "ltr",
+    "nav": {
+      "home": "Inicio",
+      "hours": "Horarios",
+      "gallery": "Galería",
+      "contact": "Contacto",
+      "menu_cta": "Ver Carta"
+    },
+    "hero": {
+      "badge": "Lloret de Mar · Abierto hasta las 3AM",
+      "cta_menu": "Ver la Carta →",
+      "cta_location": "Ubicación"
+    },
+    "hours": {
+      "title": "Horarios",
+      "open_now": "● Abierto ahora",
+      "opens_at": "● Abre a las {time}",
+      "closed_today": "● Cerrado hoy",
+      "closed": "Cerrado",
+      "days": {
+        "lun": "Lunes",
+        "mar": "Martes",
+        "mie": "Miércoles",
+        "jue": "Jueves",
+        "vie": "Viernes",
+        "sab": "Sábado",
+        "dom": "Domingo"
+      }
+    },
+    "contact": {
+      "title": "Contacto",
+      "subtitle": "¿Tienes alguna pregunta? Escríbenos.",
+      "name": "Nombre",
+      "email": "Email",
+      "message": "Mensaje",
+      "name_placeholder": "Tu nombre",
+      "message_placeholder": "¿En qué podemos ayudarte?",
+      "send": "Enviar mensaje",
+      "sending": "Enviando…",
+      "success_title": "¡Mensaje enviado!",
+      "success_body": "Te respondemos pronto.",
+      "error": "Error al enviar. Inténtalo de nuevo."
+    },
+    "menu": {
+      "back": "Inicio",
+      "search_placeholder": "Buscar platos…",
+      "no_results": "Sin resultados para",
+      "loading": "Cargando carta…",
+      "error": "Error al cargar la carta.",
+      "empty": "La carta está vacía por ahora.",
+      "empty_category": "Sin productos en esta categoría.",
+      "allergens": "Alérgenos",
+      "prev": "← Anterior",
+      "next": "Siguiente →",
+      "of": "de",
+      "categories": "Categorías"
+    },
+    "footer": {
+      "tagline": "Bar · Restaurante · Pizzería",
+      "follow_us": "Síguenos",
+      "designed_by": "Diseñado por",
+      "legal": "Aviso Legal",
+      "privacy": "Política de Privacidad",
+      "cookies": "Política de Cookies"
+    },
+    "aria": {
+      "close": "Cerrar",
+      "prev": "Anterior",
+      "next": "Siguiente",
+      "view_photo": "Ver foto",
+      "menu_btn": "Menú",
+      "clear": "Borrar",
+      "lang": "Idioma"
+    },
+    "stats": {
+      "categories": "Categorías",
+      "dishes": "Platos",
+      "closing": "Cierre",
+      "google": "Google"
+    },
+    "featured": {
+      "title": "Nuestros",
+      "title_highlight": "Favoritos",
+      "subtitle": "Lo mejor de nuestra carta",
+      "no_products": "Sin productos"
+    },
+    "reviews": {
+      "rating": "4.6 ★ en Google Maps",
+      "title": "Lo que dicen de",
+      "title_highlight": "nosotros",
+      "swipe": "← desliza →"
+    },
+    "gallery": {
+      "title": "Galería"
+    },
+    "posts": {
+      "title": "NOVEDADES",
+      "subtitle": "Últimas Noticias",
+      "read_more": "Leer más →"
+    },
+    "location": {
+      "title": "Ubicación",
+      "view_maps": "Ver en Maps →"
+    },
+    "cookies": {
+      "title": "Usamos cookies",
+      "body": "Esta web utiliza cookies técnicas y cookies de Google Maps.",
+      "more": "Más información",
+      "reject": "Rechazar",
+      "accept": "Aceptar cookies",
+      "prefs": "Preferencias de cookies"
+    }
+  },
+  "categories": {
+    "Tapas": "Tapas",
+    "Entrantes Hindús": "Entrantes Hindús",
+    "Comida Hindú y Biryanys": "Comida Hindú y Biryanys",
+    "Pastas": "Pastas",
+    "Pizzas": "Pizzas",
+    "Comida Turca": "Comida Turca",
+    "Ensaladas": "Ensaladas",
+    "Burgers": "Burgers",
+    "Bocadillos": "Bocadillos",
+    "Platos Combinados": "Platos Combinados",
+    "Pescados, Mariscos y Paellas": "Pescados, Mariscos y Paellas",
+    "Cócteles y Sangrías": "Cócteles y Sangrías",
+    "Bebidas, Cervezas y Cafés": "Bebidas, Cervezas y Cafés",
+    "Especialidades y Desayunos": "Especialidades y Desayunos",
+    "Menús Completos": "Menús Completos"
+  },
+  "allergens": {
+    "Gluten": "Gluten",
+    "Crustáceos": "Crustáceos",
+    "Huevos": "Huevos",
+    "Pescado": "Pescado",
+    "Cacahuetes": "Cacahuetes",
+    "Soja": "Soja",
+    "Lácteos": "Lácteos",
+    "Frutos de cáscara": "Frutos de cáscara",
+    "Apio": "Apio",
+    "Mostaza": "Mostaza",
+    "Sésamo": "Sésamo",
+    "Sulfitos": "Sulfitos",
+    "Moluscos": "Moluscos",
+    "Altramuces": "Altramuces",
+    "Picante": "Picante",
+    "Carne": "Carne"
+  }
+}

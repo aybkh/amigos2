@@ -1,0 +1,151 @@
+{
+  "ui": {
+    "dir": "ltr",
+    "nav": {
+      "home": "Home",
+      "hours": "Orari",
+      "gallery": "Galleria",
+      "contact": "Contatti",
+      "menu_cta": "Menu"
+    },
+    "hero": {
+      "badge": "Lloret de Mar · Aperto fino alle 3:00",
+      "cta_menu": "Vedi il Menu →",
+      "cta_location": "Posizione"
+    },
+    "hours": {
+      "title": "Orari",
+      "open_now": "● Aperto ora",
+      "opens_at": "● Apre alle {time}",
+      "closed_today": "● Chiuso oggi",
+      "closed": "Chiuso",
+      "days": {
+        "lun": "Lunedì",
+        "mar": "Martedì",
+        "mie": "Mercoledì",
+        "jue": "Giovedì",
+        "vie": "Venerdì",
+        "sab": "Sabato",
+        "dom": "Domenica"
+      }
+    },
+    "contact": {
+      "title": "Contatti",
+      "subtitle": "Hai una domanda? Scrivici.",
+      "name": "Nome",
+      "email": "E-mail",
+      "message": "Messaggio",
+      "name_placeholder": "Il tuo nome",
+      "message_placeholder": "Come possiamo aiutarti?",
+      "send": "Invia messaggio",
+      "sending": "Invio in corso…",
+      "success_title": "Messaggio inviato!",
+      "success_body": "Ti risponderemo presto.",
+      "error": "Errore durante l'invio. Riprova."
+    },
+    "menu": {
+      "back": "Home",
+      "search_placeholder": "Cerca piatti…",
+      "no_results": "Nessun risultato per",
+      "loading": "Caricamento menu…",
+      "error": "Errore nel caricamento del menu.",
+      "empty": "Il menu è vuoto al momento.",
+      "empty_category": "Nessun prodotto in questa categoria.",
+      "allergens": "Allergeni",
+      "prev": "← Precedente",
+      "next": "Successivo →",
+      "of": "di",
+      "categories": "Categorie"
+    },
+    "footer": {
+      "tagline": "Bar · Ristorante · Pizzeria",
+      "follow_us": "Seguici",
+      "designed_by": "Progettato da",
+      "legal": "Note Legali",
+      "privacy": "Informativa sulla Privacy",
+      "cookies": "Informativa sui Cookie"
+    },
+    "aria": {
+      "close": "Chiudi",
+      "prev": "Precedente",
+      "next": "Successivo",
+      "view_photo": "Vedi foto",
+      "menu_btn": "Menu",
+      "clear": "Cancella",
+      "lang": "Lingua"
+    },
+    "stats": {
+      "categories": "Categorie",
+      "dishes": "Piatti",
+      "closing": "Chiusura",
+      "google": "Google"
+    },
+    "featured": {
+      "title": "I nostri",
+      "title_highlight": "Preferiti",
+      "subtitle": "Il meglio del nostro menu",
+      "no_products": "Nessun prodotto"
+    },
+    "reviews": {
+      "rating": "4.6 ★ su Google Maps",
+      "title": "Cosa dicono di",
+      "title_highlight": "noi",
+      "swipe": "← scorri →"
+    },
+    "gallery": {
+      "title": "Galleria"
+    },
+    "posts": {
+      "title": "NOVITÀ",
+      "subtitle": "Ultime Notizie",
+      "read_more": "Leggi di più →"
+    },
+    "location": {
+      "title": "Posizione",
+      "view_maps": "Vedi su Maps →"
+    },
+    "cookies": {
+      "title": "Usiamo i cookie",
+      "body": "Questo sito utilizza cookie tecnici e cookie di Google Maps.",
+      "more": "Ulteriori informazioni",
+      "reject": "Rifiuta",
+      "accept": "Accetta i cookie",
+      "prefs": "Preferenze cookie"
+    }
+  },
+  "categories": {
+    "Tapas": "Tapas",
+    "Entrantes Hindús": "Antipasti Indiani",
+    "Comida Hindú y Biryanys": "Cucina Indiana e Biryani",
+    "Pastas": "Paste",
+    "Pizzas": "Pizze",
+    "Comida Turca": "Cucina Turca",
+    "Ensaladas": "Insalate",
+    "Burgers": "Burger",
+    "Bocadillos": "Panini",
+    "Platos Combinados": "Piatti Combinati",
+    "Pescados, Mariscos y Paellas": "Pesce, Frutti di Mare e Paelle",
+    "Cócteles y Sangrías": "Cocktail e Sangrie",
+    "Bebidas, Cervezas y Cafés": "Bevande, Birre e Caffè",
+    "Especialidades y Desayunos": "Specialità e Colazioni",
+    "Menús Completos": "Menù Completi"
+  },
+  "allergens": {
+    "Gluten": "Glutine",
+    "Crustáceos": "Crostacei",
+    "Huevos": "Uova",
+    "Pescado": "Pesce",
+    "Cacahuetes": "Arachidi",
+    "Soja": "Soia",
+    "Lácteos": "Latticini",
+    "Frutos de cáscara": "Frutta a guscio",
+    "Apio": "Sedano",
+    "Mostaza": "Senape",
+    "Sésamo": "Sesamo",
+    "Sulfitos": "Solfiti",
+    "Moluscos": "Molluschi",
+    "Altramuces": "Lupini",
+    "Picante": "Piccante",
+    "Carne": "Carne"
+  }
+}

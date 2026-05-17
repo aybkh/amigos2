@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─────────────────────────────────────────
+   Paleta Amigos2 — Verde Selva + Neón
+   ───────────────────────────────────────── */
+:root {
+  --color-bg-dark:      #071a10;
+  --color-bg-mid:       #0a2a1a;
+  --color-bg-light:     #0f3d2a;
+  --color-neon:         #00E676;
+  --color-neon-dim:     #00994d;
+  --color-cream:        #F5F0E8;
+  --color-border-glass: rgba(245,240,232,0.10);
+  --color-border-neon:  rgba(0,230,118,0.20);
+  --color-glass:        rgba(245,240,232,0.06);
+  --color-glass-neon:   rgba(0,230,118,0.08);
+
+  /* Kept for MenuPage / pos components */
+  --color-primary:       #C84B31;
+  --color-primary-hover: #a83928;
+  --color-accent:        #C84B31;
+  --color-bg-global:     #071a10;
+  --color-sidebar:       #111111;
+  --color-surface:       #F9F8F6;
+  --color-border:        #000000;
+  --color-shadow:        #000000;
+  --color-text-main:     #2D2926;
+  --color-text-light:    #ffffff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-bg-dark);
+  color: var(--color-cream);
+  min-height: 100vh;
+  min-height: 100dvh;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, .brand-title {
+  font-family: 'Black Ops One', cursive;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--color-neon-dim) var(--color-bg-dark);
+  scrollbar-width: thin;
+}
+
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--color-bg-dark); }
+::-webkit-scrollbar-thumb {
+  background: var(--color-neon-dim);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--color-neon); }
+
+/* ─── Glass utilities ─── */
+.glass {
+  background: var(--color-glass);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border-glass);
+}
+
+.glass-neon {
+  background: var(--color-glass-neon);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--color-border-neon);
+}
+
+/* ─── FeaturedSection responsive ─── */
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+.featured-img-zone { height: 160px; }
+@media (max-width: 640px) {
+  .featured-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .featured-img-zone { height: 120px; }
+}
+
+/* ─── PriceDisplay — entero grande + céntimos pequeños ─── */
+.price-display {
+  display: inline-flex;
+  align-items: flex-start;
+  line-height: 1;
+  color: var(--color-neon);
+  font-weight: 700;
+}
+.price-euros {
+  font-size: 1.8em;
+  line-height: 1;
+}
+.price-cents {
+  font-size: 0.65em;
+  line-height: 1;
+  margin-top: 0.15em;
+  font-weight: 600;
+}
+
+/* ─── Reviews carousel (autoplay + swipe manual) ─── */
+.reviews-scroll {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;        /* Firefox */
+  -ms-overflow-style: none;     /* IE */
+  padding: 16px 24px;
+}
+.reviews-scroll::-webkit-scrollbar {
+  display: none;                /* Chrome/Safari */
+}
+.review-card {
+  scroll-snap-align: start;
+  flex-shrink: 0;
+  width: 300px;                 /* desktop */
+}
+@media (max-width: 640px) {
+  .review-card {
+    width: 85vw;                /* móvil: 1 card + pico siguiente */
+  }
+}
+
+/* ─── StatsBar responsive ─── */
+.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 640px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-grid > div { border-right: none !important; border-bottom: 1px solid rgba(0,230,118,0.15); }
+  .stats-grid > div:last-child { border-bottom: none; }
+}
+
+/* ─── Gallery hover ─── */
+.gallery-photo-btn { position: relative; overflow: hidden; }
+.gallery-photo-btn .gallery-overlay {
+  position: absolute; inset: 0;
+  background: rgba(0,230,118,0.08);
+  opacity: 0; transition: opacity 0.2s;
+}
+.gallery-photo-btn:hover .gallery-overlay { opacity: 1; }
+
+/* ─── Navbar responsive ─── */
+.navbar-inner      { position: relative; }
+.navbar-mobile-btn { display: none; align-items: center; justify-content: center; }
+.navbar-links      { display: flex; align-items: center; gap: 36px; margin: 0 auto; }
+.navbar-cta        { display: flex; }
+.navbar-lang       { display: flex; }
+
+@media (max-width: 768px) {
+  .navbar-mobile-btn { display: flex !important; }
+  .navbar-links      { display: none !important; }
+  .navbar-cta        { display: none !important; }
+  /* Selector de idioma visible en el header móvil (derecha) */
+  .navbar-lang       { display: flex; }
+  /* Logo centrado absolutamente entre hamburger (izq) e idioma (der) */
+  .navbar-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* ─── Generic animations ─── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up { animation: fadeInUp 0.7s ease forwards; }

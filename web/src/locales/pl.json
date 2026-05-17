@@ -1,0 +1,151 @@
+{
+  "ui": {
+    "dir": "ltr",
+    "nav": {
+      "home": "Start",
+      "hours": "Godziny",
+      "gallery": "Galeria",
+      "contact": "Kontakt",
+      "menu_cta": "Menu"
+    },
+    "hero": {
+      "badge": "Lloret de Mar · Otwarte do 3:00",
+      "cta_menu": "Zobacz Menu →",
+      "cta_location": "Lokalizacja"
+    },
+    "hours": {
+      "title": "Godziny otwarcia",
+      "open_now": "● Teraz otwarte",
+      "opens_at": "● Otwiera o {time}",
+      "closed_today": "● Dziś zamknięte",
+      "closed": "Zamknięte",
+      "days": {
+        "lun": "Poniedziałek",
+        "mar": "Wtorek",
+        "mie": "Środa",
+        "jue": "Czwartek",
+        "vie": "Piątek",
+        "sab": "Sobota",
+        "dom": "Niedziela"
+      }
+    },
+    "contact": {
+      "title": "Kontakt",
+      "subtitle": "Masz pytanie? Napisz do nas.",
+      "name": "Imię",
+      "email": "E-mail",
+      "message": "Wiadomość",
+      "name_placeholder": "Twoje imię",
+      "message_placeholder": "Jak możemy ci pomóc?",
+      "send": "Wyślij wiadomość",
+      "sending": "Wysyłanie…",
+      "success_title": "Wiadomość wysłana!",
+      "success_body": "Odpowiemy wkrótce.",
+      "error": "Błąd wysyłania. Spróbuj ponownie."
+    },
+    "menu": {
+      "back": "Start",
+      "search_placeholder": "Szukaj dań…",
+      "no_results": "Brak wyników dla",
+      "loading": "Ładowanie menu…",
+      "error": "Błąd ładowania menu.",
+      "empty": "Menu jest chwilowo puste.",
+      "empty_category": "Brak produktów w tej kategorii.",
+      "allergens": "Alergeny",
+      "prev": "← Poprzedni",
+      "next": "Następny →",
+      "of": "z",
+      "categories": "Kategorie"
+    },
+    "footer": {
+      "tagline": "Bar · Restauracja · Pizzeria",
+      "follow_us": "Obserwuj nas",
+      "designed_by": "Zaprojektowane przez",
+      "legal": "Informacje prawne",
+      "privacy": "Polityka prywatności",
+      "cookies": "Polityka cookies"
+    },
+    "aria": {
+      "close": "Zamknij",
+      "prev": "Poprzedni",
+      "next": "Następny",
+      "view_photo": "Zobacz zdjęcie",
+      "menu_btn": "Menu",
+      "clear": "Wyczyść",
+      "lang": "Język"
+    },
+    "stats": {
+      "categories": "Kategorie",
+      "dishes": "Dania",
+      "closing": "Zamknięcie",
+      "google": "Google"
+    },
+    "featured": {
+      "title": "Nasze",
+      "title_highlight": "Ulubione",
+      "subtitle": "Najlepsze z naszego menu",
+      "no_products": "Brak produktów"
+    },
+    "reviews": {
+      "rating": "4.6 ★ na Google Maps",
+      "title": "Co mówią o",
+      "title_highlight": "nas",
+      "swipe": "← przesuń →"
+    },
+    "gallery": {
+      "title": "Galeria"
+    },
+    "posts": {
+      "title": "AKTUALNOŚCI",
+      "subtitle": "Najnowsze Wiadomości",
+      "read_more": "Czytaj więcej →"
+    },
+    "location": {
+      "title": "Lokalizacja",
+      "view_maps": "Zobacz na Maps →"
+    },
+    "cookies": {
+      "title": "Używamy plików cookie",
+      "body": "Ta strona używa technicznych plików cookie i plików cookie Google Maps.",
+      "more": "Więcej informacji",
+      "reject": "Odrzuć",
+      "accept": "Zaakceptuj pliki cookie",
+      "prefs": "Preferencje plików cookie"
+    }
+  },
+  "categories": {
+    "Tapas": "Tapas",
+    "Entrantes Hindús": "Przystawki indyjskie",
+    "Comida Hindú y Biryanys": "Kuchnia indyjska i biryani",
+    "Pastas": "Makarony",
+    "Pizzas": "Pizze",
+    "Comida Turca": "Kuchnia turecka",
+    "Ensaladas": "Sałatki",
+    "Burgers": "Burgery",
+    "Bocadillos": "Kanapki",
+    "Platos Combinados": "Dania zestawione",
+    "Pescados, Mariscos y Paellas": "Ryby, owoce morza i paelle",
+    "Cócteles y Sangrías": "Koktajle i sangrie",
+    "Bebidas, Cervezas y Cafés": "Napoje, piwa i kawy",
+    "Especialidades y Desayunos": "Specjały i śniadania",
+    "Menús Completos": "Pełne menu"
+  },
+  "allergens": {
+    "Gluten": "Gluten",
+    "Crustáceos": "Skorupiaki",
+    "Huevos": "Jaja",
+    "Pescado": "Ryby",
+    "Cacahuetes": "Orzeszki ziemne",
+    "Soja": "Soja",
+    "Lácteos": "Mleko",
+    "Frutos de cáscara": "Orzechy",
+    "Apio": "Seler",
+    "Mostaza": "Gorczyca",
+    "Sésamo": "Sezam",
+    "Sulfitos": "Siarczyny",
+    "Moluscos": "Mięczaki",
+    "Altramuces": "Łubin",
+    "Picante": "Ostre",
+    "Carne": "Mięso"
+  }
+}

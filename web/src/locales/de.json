@@ -1,0 +1,151 @@
+{
+  "ui": {
+    "dir": "ltr",
+    "nav": {
+      "home": "Start",
+      "hours": "Öffnungszeiten",
+      "gallery": "Galerie",
+      "contact": "Kontakt",
+      "menu_cta": "Speisekarte"
+    },
+    "hero": {
+      "badge": "Lloret de Mar · Geöffnet bis 3 Uhr",
+      "cta_menu": "Zur Speisekarte →",
+      "cta_location": "Standort"
+    },
+    "hours": {
+      "title": "Öffnungszeiten",
+      "open_now": "● Jetzt geöffnet",
+      "opens_at": "● Öffnet um {time}",
+      "closed_today": "● Heute geschlossen",
+      "closed": "Geschlossen",
+      "days": {
+        "lun": "Montag",
+        "mar": "Dienstag",
+        "mie": "Mittwoch",
+        "jue": "Donnerstag",
+        "vie": "Freitag",
+        "sab": "Samstag",
+        "dom": "Sonntag"
+      }
+    },
+    "contact": {
+      "title": "Kontakt",
+      "subtitle": "Haben Sie eine Frage? Schreiben Sie uns.",
+      "name": "Name",
+      "email": "E-Mail",
+      "message": "Nachricht",
+      "name_placeholder": "Ihr Name",
+      "message_placeholder": "Wie können wir Ihnen helfen?",
+      "send": "Nachricht senden",
+      "sending": "Wird gesendet…",
+      "success_title": "Nachricht gesendet!",
+      "success_body": "Wir antworten Ihnen bald.",
+      "error": "Fehler beim Senden. Bitte versuchen Sie es erneut."
+    },
+    "menu": {
+      "back": "Start",
+      "search_placeholder": "Gericht suchen…",
+      "no_results": "Keine Ergebnisse für",
+      "loading": "Speisekarte wird geladen…",
+      "error": "Fehler beim Laden der Speisekarte.",
+      "empty": "Die Speisekarte ist derzeit leer.",
+      "empty_category": "Keine Produkte in dieser Kategorie.",
+      "allergens": "Allergene",
+      "prev": "← Zurück",
+      "next": "Weiter →",
+      "of": "von",
+      "categories": "Kategorien"
+    },
+    "footer": {
+      "tagline": "Bar · Restaurant · Pizzeria",
+      "follow_us": "Folgen Sie uns",
+      "designed_by": "Gestaltet von",
+      "legal": "Impressum",
+      "privacy": "Datenschutzerklärung",
+      "cookies": "Cookie-Richtlinie"
+    },
+    "aria": {
+      "close": "Schließen",
+      "prev": "Zurück",
+      "next": "Weiter",
+      "view_photo": "Foto ansehen",
+      "menu_btn": "Menü",
+      "clear": "Löschen",
+      "lang": "Sprache"
+    },
+    "stats": {
+      "categories": "Kategorien",
+      "dishes": "Gerichte",
+      "closing": "Schließung",
+      "google": "Google"
+    },
+    "featured": {
+      "title": "Unsere",
+      "title_highlight": "Favoriten",
+      "subtitle": "Das Beste unserer Karte",
+      "no_products": "Keine Produkte"
+    },
+    "reviews": {
+      "rating": "4.6 ★ auf Google Maps",
+      "title": "Was sie über",
+      "title_highlight": "uns sagen",
+      "swipe": "← wischen →"
+    },
+    "gallery": {
+      "title": "Galerie"
+    },
+    "posts": {
+      "title": "NEUIGKEITEN",
+      "subtitle": "Aktuelle Nachrichten",
+      "read_more": "Mehr lesen →"
+    },
+    "location": {
+      "title": "Standort",
+      "view_maps": "Auf Maps anzeigen →"
+    },
+    "cookies": {
+      "title": "Wir verwenden Cookies",
+      "body": "Diese Website verwendet technische Cookies und Google Maps Cookies.",
+      "more": "Mehr Informationen",
+      "reject": "Ablehnen",
+      "accept": "Cookies akzeptieren",
+      "prefs": "Cookie-Einstellungen"
+    }
+  },
+  "categories": {
+    "Tapas": "Tapas",
+    "Entrantes Hindús": "Indische Vorspeisen",
+    "Comida Hindú y Biryanys": "Indische Küche & Biryanis",
+    "Pastas": "Pasta",
+    "Pizzas": "Pizzas",
+    "Comida Turca": "Türkische Küche",
+    "Ensaladas": "Salate",
+    "Burgers": "Burger",
+    "Bocadillos": "Sandwiches",
+    "Platos Combinados": "Kombiteller",
+    "Pescados, Mariscos y Paellas": "Fisch, Meeresfrüchte & Paellas",
+    "Cócteles y Sangrías": "Cocktails & Sangrias",
+    "Bebidas, Cervezas y Cafés": "Getränke, Biere & Kaffees",
+    "Especialidades y Desayunos": "Spezialitäten & Frühstück",
+    "Menús Completos": "Komplettmenüs"
+  },
+  "allergens": {
+    "Gluten": "Gluten",
+    "Crustáceos": "Krebstiere",
+    "Huevos": "Eier",
+    "Pescado": "Fisch",
+    "Cacahuetes": "Erdnüsse",
+    "Soja": "Soja",
+    "Lácteos": "Milch",
+    "Frutos de cáscara": "Schalenfrüchte",
+    "Apio": "Sellerie",
+    "Mostaza": "Senf",
+    "Sésamo": "Sesam",
+    "Sulfitos": "Sulfite",
+    "Moluscos": "Weichtiere",
+    "Altramuces": "Lupinen",
+    "Picante": "Scharf",
+    "Carne": "Fleisch"
+  }
+}

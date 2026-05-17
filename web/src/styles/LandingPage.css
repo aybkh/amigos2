@@ -1,0 +1,8 @@
+/* Landing / pos CSS — landing/ imports removed (components now use inline styles + Tailwind) */
+
+/* Kept for MenuPage (carta digital) */
+@import './pos/POSPage.css';
+@import './pos/CategorySidebar.css';
+@import './pos/ProductCard.css';
+@import './pos/ProductModal.css';
+@import './pos/WelcomeScreen.css';

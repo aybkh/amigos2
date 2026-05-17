@@ -1,0 +1,151 @@
+{
+  "ui": {
+    "dir": "ltr",
+    "nav": {
+      "home": "Главная",
+      "hours": "Часы работы",
+      "gallery": "Галерея",
+      "contact": "Контакт",
+      "menu_cta": "Меню"
+    },
+    "hero": {
+      "badge": "Льорет де Мар · Открыто до 3:00",
+      "cta_menu": "Посмотреть меню →",
+      "cta_location": "Расположение"
+    },
+    "hours": {
+      "title": "Часы работы",
+      "open_now": "● Сейчас открыто",
+      "opens_at": "● Открывается в {time}",
+      "closed_today": "● Сегодня закрыто",
+      "closed": "Закрыто",
+      "days": {
+        "lun": "Понедельник",
+        "mar": "Вторник",
+        "mie": "Среда",
+        "jue": "Четверг",
+        "vie": "Пятница",
+        "sab": "Суббота",
+        "dom": "Воскресенье"
+      }
+    },
+    "contact": {
+      "title": "Контакт",
+      "subtitle": "Есть вопрос? Напишите нам.",
+      "name": "Имя",
+      "email": "Эл. почта",
+      "message": "Сообщение",
+      "name_placeholder": "Ваше имя",
+      "message_placeholder": "Чем мы можем вам помочь?",
+      "send": "Отправить сообщение",
+      "sending": "Отправка…",
+      "success_title": "Сообщение отправлено!",
+      "success_body": "Мы ответим вам скоро.",
+      "error": "Ошибка при отправке. Попробуйте ещё раз."
+    },
+    "menu": {
+      "back": "Главная",
+      "search_placeholder": "Поиск блюда…",
+      "no_results": "Ничего не найдено для",
+      "loading": "Загрузка меню…",
+      "error": "Ошибка загрузки меню.",
+      "empty": "Меню пока пусто.",
+      "empty_category": "Нет блюд в этой категории.",
+      "allergens": "Аллергены",
+      "prev": "← Назад",
+      "next": "Вперёд →",
+      "of": "из",
+      "categories": "Категории"
+    },
+    "footer": {
+      "tagline": "Бар · Ресторан · Пиццерия",
+      "follow_us": "Подписывайтесь",
+      "designed_by": "Разработано",
+      "legal": "Правовая информация",
+      "privacy": "Политика конфиденциальности",
+      "cookies": "Политика cookies"
+    },
+    "aria": {
+      "close": "Закрыть",
+      "prev": "Назад",
+      "next": "Вперёд",
+      "view_photo": "Посмотреть фото",
+      "menu_btn": "Меню",
+      "clear": "Очистить",
+      "lang": "Язык"
+    },
+    "stats": {
+      "categories": "Категории",
+      "dishes": "Блюда",
+      "closing": "Закрытие",
+      "google": "Google"
+    },
+    "featured": {
+      "title": "Наши",
+      "title_highlight": "Фавориты",
+      "subtitle": "Лучшее в нашем меню",
+      "no_products": "Нет блюд"
+    },
+    "reviews": {
+      "rating": "4.6 ★ на Google Maps",
+      "title": "Что говорят о",
+      "title_highlight": "нас",
+      "swipe": "← листай →"
+    },
+    "gallery": {
+      "title": "Галерея"
+    },
+    "posts": {
+      "title": "НОВОСТИ",
+      "subtitle": "Последние Новости",
+      "read_more": "Читать далее →"
+    },
+    "location": {
+      "title": "Расположение",
+      "view_maps": "Посмотреть на Maps →"
+    },
+    "cookies": {
+      "title": "Мы используем cookie",
+      "body": "Этот сайт использует технические cookie и cookie Google Maps.",
+      "more": "Подробнее",
+      "reject": "Отклонить",
+      "accept": "Принять cookie",
+      "prefs": "Настройки cookie"
+    }
+  },
+  "categories": {
+    "Tapas": "Тапас",
+    "Entrantes Hindús": "Индийские закуски",
+    "Comida Hindú y Biryanys": "Индийская кухня и бирьяни",
+    "Pastas": "Паста",
+    "Pizzas": "Пиццы",
+    "Comida Turca": "Турецкая кухня",
+    "Ensaladas": "Салаты",
+    "Burgers": "Бургеры",
+    "Bocadillos": "Сэндвичи",
+    "Platos Combinados": "Комбинированные блюда",
+    "Pescados, Mariscos y Paellas": "Рыба, морепродукты и паэльи",
+    "Cócteles y Sangrías": "Коктейли и сангрия",
+    "Bebidas, Cervezas y Cafés": "Напитки, пиво и кофе",
+    "Especialidades y Desayunos": "Фирменные блюда и завтраки",
+    "Menús Completos": "Полные меню"
+  },
+  "allergens": {
+    "Gluten": "Глютен",
+    "Crustáceos": "Ракообразные",
+    "Huevos": "Яйца",
+    "Pescado": "Рыба",
+    "Cacahuetes": "Арахис",
+    "Soja": "Соя",
+    "Lácteos": "Молочные продукты",
+    "Frutos de cáscara": "Орехи",
+    "Apio": "Сельдерей",
+    "Mostaza": "Горчица",
+    "Sésamo": "Кунжут",
+    "Sulfitos": "Сульфиты",
+    "Moluscos": "Моллюски",
+    "Altramuces": "Люпин",
+    "Picante": "Острое",
+    "Carne": "Мясо"
+  }
+}

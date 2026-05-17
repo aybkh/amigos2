@@ -1,0 +1,151 @@
+{
+  "ui": {
+    "dir": "ltr",
+    "nav": {
+      "home": "Accueil",
+      "hours": "Horaires",
+      "gallery": "Galerie",
+      "contact": "Contact",
+      "menu_cta": "Voir la Carte"
+    },
+    "hero": {
+      "badge": "Lloret de Mar · Ouvert jusqu'à 3h",
+      "cta_menu": "Voir la Carte →",
+      "cta_location": "Localisation"
+    },
+    "hours": {
+      "title": "Horaires",
+      "open_now": "● Ouvert maintenant",
+      "opens_at": "● Ouvre à {time}",
+      "closed_today": "● Fermé aujourd'hui",
+      "closed": "Fermé",
+      "days": {
+        "lun": "Lundi",
+        "mar": "Mardi",
+        "mie": "Mercredi",
+        "jue": "Jeudi",
+        "vie": "Vendredi",
+        "sab": "Samedi",
+        "dom": "Dimanche"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Une question ? Écrivez-nous.",
+      "name": "Nom",
+      "email": "E-mail",
+      "message": "Message",
+      "name_placeholder": "Votre nom",
+      "message_placeholder": "Comment pouvons-nous vous aider ?",
+      "send": "Envoyer le message",
+      "sending": "Envoi en cours…",
+      "success_title": "Message envoyé !",
+      "success_body": "Nous vous répondrons bientôt.",
+      "error": "Erreur lors de l'envoi. Veuillez réessayer."
+    },
+    "menu": {
+      "back": "Accueil",
+      "search_placeholder": "Rechercher des plats…",
+      "no_results": "Aucun résultat pour",
+      "loading": "Chargement du menu…",
+      "error": "Erreur lors du chargement.",
+      "empty": "Le menu est vide pour le moment.",
+      "empty_category": "Pas de produits dans cette catégorie.",
+      "allergens": "Allergènes",
+      "prev": "← Précédent",
+      "next": "Suivant →",
+      "of": "sur",
+      "categories": "Catégories"
+    },
+    "footer": {
+      "tagline": "Bar · Restaurant · Pizzeria",
+      "follow_us": "Suivez-nous",
+      "designed_by": "Conçu par",
+      "legal": "Mentions Légales",
+      "privacy": "Politique de Confidentialité",
+      "cookies": "Politique de Cookies"
+    },
+    "aria": {
+      "close": "Fermer",
+      "prev": "Précédent",
+      "next": "Suivant",
+      "view_photo": "Voir la photo",
+      "menu_btn": "Menu",
+      "clear": "Effacer",
+      "lang": "Langue"
+    },
+    "stats": {
+      "categories": "Catégories",
+      "dishes": "Plats",
+      "closing": "Fermeture",
+      "google": "Google"
+    },
+    "featured": {
+      "title": "Nos",
+      "title_highlight": "Favoris",
+      "subtitle": "Le meilleur de notre carte",
+      "no_products": "Aucun produit"
+    },
+    "reviews": {
+      "rating": "4.6 ★ sur Google Maps",
+      "title": "Ce qu'ils disent de",
+      "title_highlight": "nous",
+      "swipe": "← faites glisser →"
+    },
+    "gallery": {
+      "title": "Galerie"
+    },
+    "posts": {
+      "title": "ACTUALITÉS",
+      "subtitle": "Dernières Nouvelles",
+      "read_more": "Lire la suite →"
+    },
+    "location": {
+      "title": "Localisation",
+      "view_maps": "Voir sur Maps →"
+    },
+    "cookies": {
+      "title": "Nous utilisons des cookies",
+      "body": "Ce site utilise des cookies techniques et des cookies Google Maps.",
+      "more": "Plus d'informations",
+      "reject": "Refuser",
+      "accept": "Accepter les cookies",
+      "prefs": "Préférences cookies"
+    }
+  },
+  "categories": {
+    "Tapas": "Tapas",
+    "Entrantes Hindús": "Entrées Indiennes",
+    "Comida Hindú y Biryanys": "Cuisine Indienne & Biryanis",
+    "Pastas": "Pâtes",
+    "Pizzas": "Pizzas",
+    "Comida Turca": "Cuisine Turque",
+    "Ensaladas": "Salades",
+    "Burgers": "Burgers",
+    "Bocadillos": "Sandwichs",
+    "Platos Combinados": "Plats Composés",
+    "Pescados, Mariscos y Paellas": "Poissons, Fruits de Mer & Paellas",
+    "Cócteles y Sangrías": "Cocktails & Sangrias",
+    "Bebidas, Cervezas y Cafés": "Boissons, Bières & Cafés",
+    "Especialidades y Desayunos": "Spécialités & Petits-déjeuners",
+    "Menús Completos": "Menus Complets"
+  },
+  "allergens": {
+    "Gluten": "Gluten",
+    "Crustáceos": "Crustacés",
+    "Huevos": "Œufs",
+    "Pescado": "Poisson",
+    "Cacahuetes": "Arachides",
+    "Soja": "Soja",
+    "Lácteos": "Produits laitiers",
+    "Frutos de cáscara": "Fruits à coque",
+    "Apio": "Céleri",
+    "Mostaza": "Moutarde",
+    "Sésamo": "Sésame",
+    "Sulfitos": "Sulfites",
+    "Moluscos": "Mollusques",
+    "Altramuces": "Lupin",
+    "Picante": "Épicé",
+    "Carne": "Viande"
+  }
+}

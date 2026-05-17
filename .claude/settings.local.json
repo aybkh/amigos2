@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(npm install *)",
+      "Bash(awk -F: '{print $1}')",
+      "Bash(cp -r \"/mnt/c/Users/ayoub/Documents/SwiftPos Projects/Amigos2.com/thekebablab_menu/public/icons\" \"/mnt/c/Users/ayoub/Documents/SwiftPos Projects/Amigos2.com/web/public/\")",
+      "Bash(cp -r \"/mnt/c/Users/ayoub/Documents/SwiftPos Projects/Amigos2.com/thekebablab_menu/public/categories\" \"/mnt/c/Users/ayoub/Documents/SwiftPos Projects/Amigos2.com/web/public/\")",
+      "Bash(cp -r \"/mnt/c/Users/ayoub/Documents/SwiftPos Projects/Amigos2.com/thekebablab_menu/public/images\" \"/mnt/c/Users/ayoub/Documents/SwiftPos Projects/Amigos2.com/web/public/\")",
+      "Bash(curl -s http://localhost:5173fdsdfghj,.-)",
+      "Bash(node -e ' *)",
+      "Bash(ls -1 web/public admin/public)",
+      "Bash(cat admin/index.html)",
+      "Bash(sed -n '1,38p' admin/src/components/layout/AdminLayout.jsx)",
+      "Bash(sed -n '1,12p' web/src/services/supabase.js)",
+      "Bash(sed -n '1,40p' admin/src/components/ui/Input.jsx)"
+    ]
+  }
+}

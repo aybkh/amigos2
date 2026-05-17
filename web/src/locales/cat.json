@@ -1,0 +1,151 @@
+{
+  "ui": {
+    "dir": "ltr",
+    "nav": {
+      "home": "Inici",
+      "hours": "Horaris",
+      "gallery": "Galeria",
+      "contact": "Contacte",
+      "menu_cta": "Veure Carta"
+    },
+    "hero": {
+      "badge": "Lloret de Mar · Obert fins les 3AM",
+      "cta_menu": "Veure la Carta →",
+      "cta_location": "Ubicació"
+    },
+    "hours": {
+      "title": "Horaris",
+      "open_now": "● Obert ara",
+      "opens_at": "● Obre a les {time}",
+      "closed_today": "● Tancat avui",
+      "closed": "Tancat",
+      "days": {
+        "lun": "Dilluns",
+        "mar": "Dimarts",
+        "mie": "Dimecres",
+        "jue": "Dijous",
+        "vie": "Divendres",
+        "sab": "Dissabte",
+        "dom": "Diumenge"
+      }
+    },
+    "contact": {
+      "title": "Contacte",
+      "subtitle": "Tens alguna pregunta? Escriu-nos.",
+      "name": "Nom",
+      "email": "Correu",
+      "message": "Missatge",
+      "name_placeholder": "El teu nom",
+      "message_placeholder": "En què et podem ajudar?",
+      "send": "Enviar missatge",
+      "sending": "Enviant…",
+      "success_title": "Missatge enviat!",
+      "success_body": "Et responem aviat.",
+      "error": "Error en enviar. Torna-ho a intentar."
+    },
+    "menu": {
+      "back": "Inici",
+      "search_placeholder": "Cerca un plat…",
+      "no_results": "No hem trobat res per a",
+      "loading": "Carregant la carta…",
+      "error": "Error en carregar la carta.",
+      "empty": "La carta és buida de moment.",
+      "empty_category": "Cap producte en aquesta categoria.",
+      "allergens": "Al·lèrgens",
+      "prev": "← Anterior",
+      "next": "Següent →",
+      "of": "de",
+      "categories": "Categories"
+    },
+    "footer": {
+      "tagline": "Bar · Restaurant · Pizzeria",
+      "follow_us": "Segueix-nos",
+      "designed_by": "Dissenyat per",
+      "legal": "Avís Legal",
+      "privacy": "Política de Privacitat",
+      "cookies": "Política de Cookies"
+    },
+    "aria": {
+      "close": "Tancar",
+      "prev": "Anterior",
+      "next": "Següent",
+      "view_photo": "Veure foto",
+      "menu_btn": "Menú",
+      "clear": "Esborrar",
+      "lang": "Idioma"
+    },
+    "stats": {
+      "categories": "Categories",
+      "dishes": "Plats",
+      "closing": "Tancament",
+      "google": "Google"
+    },
+    "featured": {
+      "title": "Els nostres",
+      "title_highlight": "Preferits",
+      "subtitle": "El millor de la nostra carta",
+      "no_products": "Sense productes"
+    },
+    "reviews": {
+      "rating": "4.6 ★ a Google Maps",
+      "title": "El que diuen de",
+      "title_highlight": "nosaltres",
+      "swipe": "← llisca →"
+    },
+    "gallery": {
+      "title": "Galeria"
+    },
+    "posts": {
+      "title": "NOVETATS",
+      "subtitle": "Últimes Notícies",
+      "read_more": "Llegir més →"
+    },
+    "location": {
+      "title": "Ubicació",
+      "view_maps": "Veure a Maps →"
+    },
+    "cookies": {
+      "title": "Usem galetes",
+      "body": "Aquest web utilitza galetes tècniques i galetes de Google Maps.",
+      "more": "Més informació",
+      "reject": "Rebutjar",
+      "accept": "Acceptar galetes",
+      "prefs": "Preferències de galetes"
+    }
+  },
+  "categories": {
+    "Tapas": "Tapes",
+    "Entrantes Hindús": "Entrants Indis",
+    "Comida Hindú y Biryanys": "Menjar Indi i Biryanis",
+    "Pastas": "Pastes",
+    "Pizzas": "Pizzes",
+    "Comida Turca": "Menjar Turc",
+    "Ensaladas": "Amanides",
+    "Burgers": "Hamburgueses",
+    "Bocadillos": "Entrepans",
+    "Platos Combinados": "Plats Combinats",
+    "Pescados, Mariscos y Paellas": "Peixos, Marisc i Paelles",
+    "Cócteles y Sangrías": "Còctels i Sangries",
+    "Bebidas, Cervezas y Cafés": "Begudes, Cerveses i Cafès",
+    "Especialidades y Desayunos": "Especialitats i Esmorzars",
+    "Menús Completos": "Menús Complets"
+  },
+  "allergens": {
+    "Gluten": "Gluten",
+    "Crustáceos": "Crustacis",
+    "Huevos": "Ous",
+    "Pescado": "Peix",
+    "Cacahuetes": "Cacauets",
+    "Soja": "Soja",
+    "Lácteos": "Lactis",
+    "Frutos de cáscara": "Fruits de closca",
+    "Apio": "Api",
+    "Mostaza": "Mostassa",
+    "Sésamo": "Sèsam",
+    "Sulfitos": "Sulfits",
+    "Moluscos": "Mol·luscs",
+    "Altramuces": "Tramussos",
+    "Picante": "Picant",
+    "Carne": "Carn"
+  }
+}

@@ -1,0 +1,151 @@
+{
+  "ui": {
+    "dir": "ltr",
+    "nav": {
+      "home": "Home",
+      "hours": "Hours",
+      "gallery": "Gallery",
+      "contact": "Contact",
+      "menu_cta": "Menu"
+    },
+    "hero": {
+      "badge": "Lloret de Mar · Open until 3AM",
+      "cta_menu": "View Menu →",
+      "cta_location": "Location"
+    },
+    "hours": {
+      "title": "Opening Hours",
+      "open_now": "● Open now",
+      "opens_at": "● Opens at {time}",
+      "closed_today": "● Closed today",
+      "closed": "Closed",
+      "days": {
+        "lun": "Monday",
+        "mar": "Tuesday",
+        "mie": "Wednesday",
+        "jue": "Thursday",
+        "vie": "Friday",
+        "sab": "Saturday",
+        "dom": "Sunday"
+      }
+    },
+    "contact": {
+      "title": "Contact",
+      "subtitle": "Got a question? Write to us.",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "name_placeholder": "Your name",
+      "message_placeholder": "How can we help you?",
+      "send": "Send message",
+      "sending": "Sending…",
+      "success_title": "Message sent!",
+      "success_body": "We'll reply soon.",
+      "error": "Error sending. Please try again."
+    },
+    "menu": {
+      "back": "Home",
+      "search_placeholder": "Search dishes…",
+      "no_results": "No results for",
+      "loading": "Loading menu…",
+      "error": "Error loading menu.",
+      "empty": "The menu is empty for now.",
+      "empty_category": "No products in this category.",
+      "allergens": "Allergens",
+      "prev": "← Previous",
+      "next": "Next →",
+      "of": "of",
+      "categories": "Categories"
+    },
+    "footer": {
+      "tagline": "Bar · Restaurant · Pizzeria",
+      "follow_us": "Follow us",
+      "designed_by": "Designed by",
+      "legal": "Legal Notice",
+      "privacy": "Privacy Policy",
+      "cookies": "Cookie Policy"
+    },
+    "aria": {
+      "close": "Close",
+      "prev": "Previous",
+      "next": "Next",
+      "view_photo": "View photo",
+      "menu_btn": "Menu",
+      "clear": "Clear",
+      "lang": "Language"
+    },
+    "stats": {
+      "categories": "Categories",
+      "dishes": "Dishes",
+      "closing": "Closing",
+      "google": "Google"
+    },
+    "featured": {
+      "title": "Our",
+      "title_highlight": "Favorites",
+      "subtitle": "The best of our menu",
+      "no_products": "No products"
+    },
+    "reviews": {
+      "rating": "4.6 ★ on Google Maps",
+      "title": "What they say about",
+      "title_highlight": "us",
+      "swipe": "← swipe →"
+    },
+    "gallery": {
+      "title": "Gallery"
+    },
+    "posts": {
+      "title": "NEWS",
+      "subtitle": "Latest News",
+      "read_more": "Read more →"
+    },
+    "location": {
+      "title": "Location",
+      "view_maps": "View on Maps →"
+    },
+    "cookies": {
+      "title": "We use cookies",
+      "body": "This website uses technical cookies and Google Maps cookies.",
+      "more": "More information",
+      "reject": "Reject",
+      "accept": "Accept cookies",
+      "prefs": "Cookie preferences"
+    }
+  },
+  "categories": {
+    "Tapas": "Tapas",
+    "Entrantes Hindús": "Indian Starters",
+    "Comida Hindú y Biryanys": "Indian Food & Biryanis",
+    "Pastas": "Pasta",
+    "Pizzas": "Pizzas",
+    "Comida Turca": "Turkish Food",
+    "Ensaladas": "Salads",
+    "Burgers": "Burgers",
+    "Bocadillos": "Sandwiches",
+    "Platos Combinados": "Combo Plates",
+    "Pescados, Mariscos y Paellas": "Fish, Seafood & Paellas",
+    "Cócteles y Sangrías": "Cocktails & Sangrias",
+    "Bebidas, Cervezas y Cafés": "Drinks, Beers & Coffees",
+    "Especialidades y Desayunos": "Specialties & Breakfasts",
+    "Menús Completos": "Full Menus"
+  },
+  "allergens": {
+    "Gluten": "Gluten",
+    "Crustáceos": "Crustaceans",
+    "Huevos": "Eggs",
+    "Pescado": "Fish",
+    "Cacahuetes": "Peanuts",
+    "Soja": "Soy",
+    "Lácteos": "Dairy",
+    "Frutos de cáscara": "Tree nuts",
+    "Apio": "Celery",
+    "Mostaza": "Mustard",
+    "Sésamo": "Sesame",
+    "Sulfitos": "Sulphites",
+    "Moluscos": "Molluscs",
+    "Altramuces": "Lupin",
+    "Picante": "Spicy",
+    "Carne": "Meat"
+  }
+}
