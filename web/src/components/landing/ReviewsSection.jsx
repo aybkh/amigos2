@@ -10,22 +10,23 @@ const GoogleIcon = ({ size = 22 }) => (
   </svg>
 )
 
+// lang = código de idioma del texto de la reseña → icono SVG en /public/icons
 const REVIEWS = [
-  { name: 'Deborah Green',          stars: 5, lang: '🇬🇧', text: 'Just had a delicious pizza here, one of the best I have ever had. The staff are very friendly and helpful. Very clean compared to some places in Lloret.' },
-  { name: 'Danilo Manco',           stars: 5, lang: '🇮🇹', text: 'EL RE del kebab di Lloret. Lloret de Mar è pieno di posti del genere, ma la gentilezza e simpatia lo rendono unico. Menu estremamente vario, perfetto per un pre serata. Menzione speciale per la sangria!' },
-  { name: 'Oskar Kaliszer',         stars: 5, lang: '🇵🇱', text: 'Amazing restaurant, delicious food - I can recommend Plato kebab, Pita kebab and durum. Owner is the nicest guy I have ever met in a restaurant, cheap and big portions!' },
-  { name: 'Amanda Pitter',          stars: 5, lang: '🇪🇸', text: 'Muy buena atención, muy bien servicio lo recomiendo. He comido y bebido y el precio ha sido bajo para lo bien que se come. Aquí está el mejor café con leche de Lloret.' },
-  { name: 'Samuel Penazzato',       stars: 5, lang: '🇮🇹', text: "Cameriere preciso e professionale, capace di comprendere più lingue. Cibo pronto in pochissimi secondi (e pure buono!). Propietaria super disponibile e sorridente, non vedo l'ora di tornare." },
-  { name: 'GR Guzman',              stars: 5, lang: '🇮🇹', text: 'Un posto che merita! Cucina deliziosa con ingredienti freschi, servizio rapido e sorridente. Ottimo rapporto qualità-prezzo. Da provare assolutamente!' },
-  { name: 'Marc-Alexander Jonen',   stars: 5, lang: '🇩🇪', text: 'Zu später Stunde noch einen Snack bekommen. Es war sehr lecker. Sehr nette Leute und ein super Preis-Leistungs-Verhältnis.' },
-  { name: 'Tamara Simchuk',         stars: 5, lang: '🇺🇦', text: 'We enjoyed atmosphere with a tasty meal. Owner is so friendly. Thanks for a lovely time and delicious paella!' },
-  { name: 'Jheycer Reynier Mujica', stars: 5, lang: '🇻🇪', text: 'Excelente servicio, empleados y dueños muy atentos, muy amigables y la comida muy buena. Lo recomiendo.' },
-  { name: 'gurshan singh',          stars: 5, lang: '🇮🇹', text: "Ottimo ristorante! Piatti curati e gustosi, servizio attento e cordiale. L'ambiente è accogliente e ci si sente subito a proprio agio. Ci tornerò sicuramente." },
-  { name: 'Victor Giraldo',         stars: 5, lang: '🇨🇴', text: 'Excelente servicio atendido por sus propios dueños muy atentos. Lo recomiendo. Comida deliciosa, el café muy bueno recomendado.' },
-  { name: 'Małgorzata G',           stars: 5, lang: '🇵🇱', text: 'Przepyszna paella! W bardzo korzystnej cenie z przemiłą obsługą.' },
-  { name: 'Andrey Rostov',          stars: 5, lang: '🇷🇺', text: 'Uno de los mejores kebabs del mundo! El propietario es maravilloso!' },
-  { name: 'Charles Harris',         stars: 5, lang: '🇬🇧', text: 'La mejor pizza que he comido nunca, un buen servicio y una gran relación calidad-precio.' },
-  { name: 'Román Soria',            stars: 5, lang: '🇪🇸', text: 'Muy amigables, serviciales, atentos... y buena comida con buenas bebidas. Zulia un genio!' },
+  { name: 'Deborah Green',          stars: 5, lang: 'en', text: 'Just had a delicious pizza here, one of the best I have ever had. The staff are very friendly and helpful. Very clean compared to some places in Lloret.' },
+  { name: 'Danilo Manco',           stars: 5, lang: 'it', text: 'EL RE del kebab di Lloret. Lloret de Mar è pieno di posti del genere, ma la gentilezza e simpatia lo rendono unico. Menu estremamente vario, perfetto per un pre serata. Menzione speciale per la sangria!' },
+  { name: 'Oskar Kaliszer',         stars: 5, lang: 'en', text: 'Amazing restaurant, delicious food - I can recommend Plato kebab, Pita kebab and durum. Owner is the nicest guy I have ever met in a restaurant, cheap and big portions!' },
+  { name: 'Amanda Pitter',          stars: 5, lang: 'es', text: 'Muy buena atención, muy bien servicio lo recomiendo. He comido y bebido y el precio ha sido bajo para lo bien que se come. Aquí está el mejor café con leche de Lloret.' },
+  { name: 'Samuel Penazzato',       stars: 5, lang: 'it', text: "Cameriere preciso e professionale, capace di comprendere più lingue. Cibo pronto in pochissimi secondi (e pure buono!). Propietaria super disponibile e sorridente, non vedo l'ora di tornare." },
+  { name: 'GR Guzman',              stars: 5, lang: 'it', text: 'Un posto che merita! Cucina deliziosa con ingredienti freschi, servizio rapido e sorridente. Ottimo rapporto qualità-prezzo. Da provare assolutamente!' },
+  { name: 'Marc-Alexander Jonen',   stars: 5, lang: 'de', text: 'Zu später Stunde noch einen Snack bekommen. Es war sehr lecker. Sehr nette Leute und ein super Preis-Leistungs-Verhältnis.' },
+  { name: 'Tamara Simchuk',         stars: 5, lang: 'en', text: 'We enjoyed atmosphere with a tasty meal. Owner is so friendly. Thanks for a lovely time and delicious paella!' },
+  { name: 'Jheycer Reynier Mujica', stars: 5, lang: 'es', text: 'Excelente servicio, empleados y dueños muy atentos, muy amigables y la comida muy buena. Lo recomiendo.' },
+  { name: 'gurshan singh',          stars: 5, lang: 'it', text: "Ottimo ristorante! Piatti curati e gustosi, servizio attento e cordiale. L'ambiente è accogliente e ci si sente subito a proprio agio. Ci tornerò sicuramente." },
+  { name: 'Victor Giraldo',         stars: 5, lang: 'es', text: 'Excelente servicio atendido por sus propios dueños muy atentos. Lo recomiendo. Comida deliciosa, el café muy bueno recomendado.' },
+  { name: 'Małgorzata G',           stars: 5, lang: 'pl', text: 'Przepyszna paella! W bardzo korzystnej cenie z przemiłą obsługą.' },
+  { name: 'Andrey Rostov',          stars: 5, lang: 'es', text: 'Uno de los mejores kebabs del mundo! El propietario es maravilloso!' },
+  { name: 'Charles Harris',         stars: 5, lang: 'es', text: 'La mejor pizza que he comido nunca, un buen servicio y una gran relación calidad-precio.' },
+  { name: 'Román Soria',            stars: 5, lang: 'es', text: 'Muy amigables, serviciales, atentos... y buena comida con buenas bebidas. Zulia un genio!' },
 ]
 
 function ReviewCard({ review }) {
@@ -41,12 +42,21 @@ function ReviewCard({ review }) {
         <GoogleIcon size={22} />
       </span>
 
-      <p style={{
-        margin: 0,
-        fontFamily: 'Montserrat, sans-serif',
-        fontWeight: 700, fontSize: '0.85rem',
-        color: '#071a10', paddingRight: 32,
-      }}>{review.name}</p>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 8, paddingRight: 32 }}>
+        <img
+          src={`/icons/${review.lang}.svg`}
+          alt={review.lang}
+          width={22}
+          height={16}
+          style={{ borderRadius: 3, objectFit: 'cover', flexShrink: 0, boxShadow: '0 0 0 1px rgba(0,0,0,0.10)' }}
+        />
+        <p style={{
+          margin: 0,
+          fontFamily: 'Montserrat, sans-serif',
+          fontWeight: 700, fontSize: '0.85rem',
+          color: '#071a10',
+        }}>{review.name}</p>
+      </div>
 
       <div style={{ display: 'flex', gap: 2 }}>
         {[1,2,3,4,5].map(i => (
