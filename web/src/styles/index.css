@@ -111,17 +111,21 @@ html {
 /* ─── Reviews marquee — bucle infinito CSS (estilo The Kebab Lab) ─── */
 .reviews-marquee {
   display: flex;
-  gap: 20px;
   width: max-content;
-  padding: 0 20px;
   animation: reviewsMarquee 60s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
 }
 .reviews-marquee:hover {
   animation-play-state: paused;
 }
+/* separación con margin (no gap) para que las 2 mitades encajen
+   exactas y el -50% sea un bucle perfecto sin saltos */
 .review-card {
   flex-shrink: 0;
   width: 320px;
+  margin-right: 20px;
 }
 @keyframes reviewsMarquee {
   0%   { transform: translateX(0); }
