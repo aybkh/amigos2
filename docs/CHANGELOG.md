@@ -10,6 +10,8 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 - Nueva tabla `delivery_links` (Supabase): `platform` (glovo/ubereats/justeat/phone), `url`, `is_active`, `display_order`. SQL + RLS (lectura pública, escritura autenticada) documentado en `docs/SCHEMA.md` — pendiente ejecutarlo en el SQL Editor
 - `web`: `services/deliveryService.js` (solo activos con url), `hooks/useDelivery.js`, `components/home/DeliverySection.jsx` (4 botones de marca: Glovo #FFC244, Uber Eats #06C167, Just Eat #FF8000, Llamar #E63946; phone → `tel:`, resto → nueva pestaña). Insertado en `HomePage` tras `HoursSection`. La sección no aparece si no hay enlaces activos con URL
 - `web/src/locales/{10}.json` — grupo `ui.delivery` (title, call, *_sub) en los 10 idiomas
+- Ajuste: grid a **2 botones por fila** (`repeat(2,1fr)`); iconos = imágenes de marca de `public/images` en recuadro blanco (Glovo, Uber Eats, Just Eat, y `amigos2` para el botón de teléfono) en lugar de emojis
+- `just-eat.png` y `amigos2.png` convertidos a **.webp** (con sharp `--no-save`) y PNG originales eliminados; todas las imágenes de delivery ahora son webp
 - `admin`: `services/deliveryService.js`, `pages/DeliveryPage.jsx`, `components/delivery/DeliveryLinksManager.jsx` (editar URL + activar/desactivar por plataforma); ruta `ROUTES.DELIVERY` en `App.jsx` y entrada “Pedir a domicilio” (icono Bike) en el sidebar de `AdminLayout`
 - `TABLES.DELIVERY_LINKS` añadido a constantes de web y admin
 

@@ -3,10 +3,10 @@ import { useLanguage } from '../../hooks/useLanguage'
 import { t } from '../../lib/i18n'
 
 const PLATFORMS = {
-  glovo:    { emoji: '📦', bg: '#FFC244', fg: '#1a1a1a' },
-  ubereats: { emoji: '🍔', bg: '#06C167', fg: '#ffffff' },
-  justeat:  { emoji: '🍕', bg: '#FF8000', fg: '#ffffff' },
-  phone:    { emoji: '📞', bg: '#E63946', fg: '#ffffff' },
+  glovo:    { img: '/images/glovo.webp',    bg: '#FFC244', fg: '#1a1a1a' },
+  ubereats: { img: '/images/ubereats.webp', bg: '#06C167', fg: '#ffffff' },
+  justeat:  { img: '/images/just-eat.webp', bg: '#FF8000', fg: '#ffffff' },
+  phone:    { img: '/images/amigos2.webp',  bg: '#E63946', fg: '#ffffff' },
 }
 
 const NAME_KEY = {
@@ -45,8 +45,8 @@ export default function DeliverySection() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-          gap: 20, maxWidth: 900, margin: '0 auto',
+          gridTemplateColumns: 'repeat(2, 1fr)',
+          gap: 16, maxWidth: 760, margin: '0 auto',
         }}>
           {links.map(link => {
             const cfg = PLATFORMS[link.platform]
@@ -76,7 +76,23 @@ export default function DeliverySection() {
                   e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.30)'
                 }}
               >
-                <span style={{ fontSize: '2.4rem', lineHeight: 1, flexShrink: 0 }}>{cfg.emoji}</span>
+                <span style={{
+                  flexShrink: 0, width: 52, height: 52, borderRadius: 10,
+                  background: '#ffffff', display: 'flex',
+                  alignItems: 'center', justifyContent: 'center',
+                  padding: 6,
+                }}>
+                  <img
+                    src={cfg.img}
+                    alt=""
+                    style={{
+                      maxWidth: '100%', maxHeight: '100%',
+                      objectFit: 'contain', display: 'block',
+                      border: '2px solid rgba(0,0,0,0.15)',
+                      borderRadius: 8,
+                    }}
+                  />
+                </span>
                 <div style={{ flex: 1 }}>
                   <h3 style={{
                     margin: '0 0 4px', fontFamily: 'Montserrat, sans-serif',
