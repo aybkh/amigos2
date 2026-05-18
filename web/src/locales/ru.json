@@ -111,7 +111,16 @@
       "reject": "Отклонить",
       "accept": "Принять cookie",
       "prefs": "Настройки cookie"
-    }
+    },
+    "delivery": {
+      "title": "ЗАКАЗАТЬ ДОСТАВКУ",
+      "call": "ПОЗВОНИТЬ И ЗАКАЗАТЬ",
+      "glovo_sub": "Любимая еда дома с Glovo",
+      "ubereats_sub": "Наслаждайтесь нашим меню в Uber Eats",
+      "justeat_sub": "Заказывайте онлайн в Just Eat",
+      "phone_sub": "Закажите напрямую, позвонив в ресторан"
+    },
+    "image_disclaimer": "Изображения иллюстративны."
   },
   "categories": {
     "Tapas": "Тапас",

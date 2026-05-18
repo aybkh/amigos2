@@ -111,7 +111,16 @@
       "reject": "Rebutjar",
       "accept": "Acceptar galetes",
       "prefs": "Preferències de galetes"
-    }
+    },
+    "delivery": {
+      "title": "DEMANAR A DOMICILI",
+      "call": "TRUCA I DEMANA",
+      "glovo_sub": "El teu menjar preferit a casa amb Glovo",
+      "ubereats_sub": "Gaudeix de la nostra carta a Uber Eats",
+      "justeat_sub": "Demana online amb Just Eat",
+      "phone_sub": "Demana directament trucant al local"
+    },
+    "image_disclaimer": "Les imatges són il·lustratives."
   },
   "categories": {
     "Tapas": "Tapes",

@@ -111,7 +111,16 @@
       "reject": "رفض",
       "accept": "قبول ملفات الارتباط",
       "prefs": "تفضيلات ملفات الارتباط"
-    }
+    },
+    "delivery": {
+      "title": "اطلب توصيلًا",
+      "call": "اتصل واطلب",
+      "glovo_sub": "طعامك المفضل في البيت مع Glovo",
+      "ubereats_sub": "استمتع بقائمتنا على Uber Eats",
+      "justeat_sub": "اطلب عبر الإنترنت مع Just Eat",
+      "phone_sub": "اطلب مباشرة بالاتصال بالمطعم"
+    },
+    "image_disclaimer": "الصور توضيحية."
   },
   "categories": {
     "Tapas": "تاباس",

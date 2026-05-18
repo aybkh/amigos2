@@ -11,6 +11,7 @@ import PostsPage from './pages/PostsPage'
 import GalleryPage from './pages/GalleryPage'
 import SiteInfoPage from './pages/SiteInfoPage'
 import MessagesPage from './pages/MessagesPage'
+import DeliveryPage from './pages/DeliveryPage'
 
 function ProtectedRoute({ children }) {
   const { session, loading } = useAuth()
@@ -35,6 +36,7 @@ function AppRoutes() {
       <Route path={ROUTES.GALLERY} element={<ProtectedRoute><GalleryPage /></ProtectedRoute>} />
       <Route path={ROUTES.SITE_INFO} element={<ProtectedRoute><SiteInfoPage /></ProtectedRoute>} />
       <Route path={ROUTES.MESSAGES} element={<ProtectedRoute><MessagesPage /></ProtectedRoute>} />
+      <Route path={ROUTES.DELIVERY} element={<ProtectedRoute><DeliveryPage /></ProtectedRoute>} />
       <Route path="*" element={<Navigate to={ROUTES.DASHBOARD} replace />} />
     </Routes>
   )

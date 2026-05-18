@@ -60,7 +60,7 @@ export default function Footer({ siteInfo }) {
             <img
               src="/amigos2-logo-2-1.png"
               alt="Amigos2"
-              style={{ height: 64, width: 'auto', display: 'block' }}
+              style={{ height: 84, width: 'auto', display: 'block' }}
             />
             <p style={{
               margin: 0,

@@ -4,6 +4,22 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.4.5] - 2026-05-18 — Sección "Pedir a domicilio" + disclaimer imágenes
+
+### [FEATURE] Sección Pedir a domicilio (home, entre Horario y Galería/Contacto)
+- Nueva tabla `delivery_links` (Supabase): `platform` (glovo/ubereats/justeat/phone), `url`, `is_active`, `display_order`. SQL + RLS (lectura pública, escritura autenticada) documentado en `docs/SCHEMA.md` — pendiente ejecutarlo en el SQL Editor
+- `web`: `services/deliveryService.js` (solo activos con url), `hooks/useDelivery.js`, `components/home/DeliverySection.jsx` (4 botones de marca: Glovo #FFC244, Uber Eats #06C167, Just Eat #FF8000, Llamar #E63946; phone → `tel:`, resto → nueva pestaña). Insertado en `HomePage` tras `HoursSection`. La sección no aparece si no hay enlaces activos con URL
+- `web/src/locales/{10}.json` — grupo `ui.delivery` (title, call, *_sub) en los 10 idiomas
+- `admin`: `services/deliveryService.js`, `pages/DeliveryPage.jsx`, `components/delivery/DeliveryLinksManager.jsx` (editar URL + activar/desactivar por plataforma); ruta `ROUTES.DELIVERY` en `App.jsx` y entrada “Pedir a domicilio” (icono Bike) en el sidebar de `AdminLayout`
+- `TABLES.DELIVERY_LINKS` añadido a constantes de web y admin
+
+### [FEATURE] Disclaimer "imágenes ilustrativas" en /carta
+- `pages/MenuPage.jsx` — `<footer className="menu-footer-disclaimer">` al final, con `t(lang, 'ui.image_disclaimer')`
+- `styles/menu.css` — `.menu-footer-disclaimer` ultra-discreto (10–11px, opacity 0.30, itálica), scope `#menu-root`
+- `web/src/locales/{10}.json` — clave `ui.image_disclaimer` en los 10 idiomas
+
+---
+
 ## [1.4.4] - 2026-05-18 — Logo e icono de marca (favicon roto corregido)
 
 ### [FIX] Favicon roto

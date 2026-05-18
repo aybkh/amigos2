@@ -623,3 +623,22 @@
   .menu-modal-img { border-radius: 20px 20px 0 0; }
   .menu-modal-emoji-zone { border-radius: 20px 20px 0 0; }
 }
+
+/* ----- Disclaimer discreto (imágenes ilustrativas) ----- */
+#menu-root .menu-footer-disclaimer {
+  padding: 24px 16px;
+  text-align: center;
+  background: transparent;
+  margin-top: 40px;
+}
+#menu-root .menu-footer-disclaimer p {
+  font-size: 10px;
+  color: rgba(245, 240, 232, 0.30);
+  margin: 0;
+  line-height: 1.4;
+  font-style: italic;
+  letter-spacing: 0.02em;
+}
+@media (min-width: 768px) {
+  #menu-root .menu-footer-disclaimer p { font-size: 11px; }
+}

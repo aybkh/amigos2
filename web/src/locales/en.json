@@ -111,7 +111,16 @@
       "reject": "Reject",
       "accept": "Accept cookies",
       "prefs": "Cookie preferences"
-    }
+    },
+    "delivery": {
+      "title": "ORDER DELIVERY",
+      "call": "CALL & ORDER",
+      "glovo_sub": "Your favourite food at home with Glovo",
+      "ubereats_sub": "Enjoy our menu on Uber Eats",
+      "justeat_sub": "Order online with Just Eat",
+      "phone_sub": "Order directly by calling the restaurant"
+    },
+    "image_disclaimer": "Images are illustrative."
   },
   "categories": {
     "Tapas": "Tapas",

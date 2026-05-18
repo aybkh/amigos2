@@ -111,7 +111,16 @@
       "reject": "Rifiuta",
       "accept": "Accetta i cookie",
       "prefs": "Preferenze cookie"
-    }
+    },
+    "delivery": {
+      "title": "ORDINA A DOMICILIO",
+      "call": "CHIAMA E ORDINA",
+      "glovo_sub": "Il tuo cibo preferito a casa con Glovo",
+      "ubereats_sub": "Goditi il nostro menu su Uber Eats",
+      "justeat_sub": "Ordina online con Just Eat",
+      "phone_sub": "Ordina direttamente chiamando il locale"
+    },
+    "image_disclaimer": "Le immagini sono illustrative."
   },
   "categories": {
     "Tapas": "Tapas",

@@ -111,7 +111,16 @@
       "reject": "Weigeren",
       "accept": "Cookies accepteren",
       "prefs": "Cookievoorkeuren"
-    }
+    },
+    "delivery": {
+      "title": "THUIS BESTELLEN",
+      "call": "BEL & BESTEL",
+      "glovo_sub": "Je favoriete eten thuis met Glovo",
+      "ubereats_sub": "Geniet van ons menu op Uber Eats",
+      "justeat_sub": "Bestel online met Just Eat",
+      "phone_sub": "Bestel direct door het restaurant te bellen"
+    },
+    "image_disclaimer": "Afbeeldingen zijn illustratief."
   },
   "categories": {
     "Tapas": "Tapas",

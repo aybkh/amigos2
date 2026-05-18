@@ -4,6 +4,7 @@ import FeaturedSection      from '../components/home/FeaturedSection'
 import PostsPreviewSection  from '../components/home/PostsPreviewSection'
 import ReviewsSection       from '../components/landing/ReviewsSection'
 import HoursSection         from '../components/home/HoursSection'
+import DeliverySection      from '../components/home/DeliverySection'
 import GallerySection       from '../components/home/GallerySection'
 import LocationSection      from '../components/home/LocationSection'
 import ContactSection       from '../components/home/ContactSection'
@@ -22,6 +23,7 @@ export default function HomePage() {
       <PostsPreviewSection posts={posts} loading={postsLoading} />
       <ReviewsSection />
       <HoursSection />
+      <DeliverySection />
       <GallerySection />
       <LocationSection />
       <ContactSection />

@@ -118,6 +118,41 @@ CREATE INDEX contact_messages_unread_idx ON contact_messages (is_read, created_a
 
 ---
 
+### `delivery_links`
+
+Enlaces de la sección “Pedir a domicilio” de la home (Glovo, Uber Eats, Just Eat y teléfono del local). Se gestionan desde `/delivery` en el panel admin. La web pública solo lee los activos con `url` no vacía.
+
+```sql
+CREATE TABLE IF NOT EXISTS delivery_links (
+  id            bigserial PRIMARY KEY,
+  platform      text NOT NULL,            -- 'glovo' | 'ubereats' | 'justeat' | 'phone'
+  url           text,                     -- URL del enlace, o número de teléfono si platform='phone'
+  is_active     boolean NOT NULL DEFAULT true,
+  display_order integer NOT NULL DEFAULT 0,
+  created_at    timestamptz NOT NULL DEFAULT now()
+);
+
+INSERT INTO delivery_links (platform, url, is_active, display_order) VALUES
+  ('glovo',    '', true, 1),
+  ('ubereats', '', true, 2),
+  ('justeat',  '', true, 3),
+  ('phone',    '', true, 4);
+
+-- RLS: lectura pública, escritura solo autenticados (admin)
+ALTER TABLE delivery_links ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "delivery_links lectura pública"
+ON delivery_links FOR SELECT
+USING (true);
+
+CREATE POLICY "delivery_links escritura autenticada"
+ON delivery_links FOR ALL
+USING (auth.role() = 'authenticated')
+WITH CHECK (auth.role() = 'authenticated');
+```
+
+---
+
 ## Row Level Security (RLS)
 
 ```sql

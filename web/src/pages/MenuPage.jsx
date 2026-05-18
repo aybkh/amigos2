@@ -110,6 +110,10 @@ export default function MenuPage() {
           onChange={changeModal}
         />
       )}
+
+      <footer className="menu-footer-disclaimer">
+        <p>{t(lang, 'ui.image_disclaimer')}</p>
+      </footer>
     </div>
   )
 }
