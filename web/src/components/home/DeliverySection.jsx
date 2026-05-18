@@ -80,7 +80,7 @@ export default function DeliverySection() {
                   flexShrink: 0, width: 52, height: 52, borderRadius: 10,
                   background: '#ffffff', display: 'flex',
                   alignItems: 'center', justifyContent: 'center',
-                  padding: 6,
+                  padding: 2,
                 }}>
                   <img
                     src={cfg.img}
