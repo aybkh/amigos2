@@ -108,30 +108,27 @@ html {
   font-weight: 600;
 }
 
-/* ─── Reviews carousel (autoplay + swipe manual) ─── */
-.reviews-scroll {
+/* ─── Reviews marquee — bucle infinito CSS (estilo The Kebab Lab) ─── */
+.reviews-marquee {
   display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
-  -webkit-overflow-scrolling: touch;
-  scrollbar-width: none;        /* Firefox */
-  -ms-overflow-style: none;     /* IE */
-  padding: 16px 24px;
+  gap: 20px;
+  width: max-content;
+  padding: 0 20px;
+  animation: reviewsMarquee 60s linear infinite;
 }
-.reviews-scroll::-webkit-scrollbar {
-  display: none;                /* Chrome/Safari */
+.reviews-marquee:hover {
+  animation-play-state: paused;
 }
 .review-card {
-  scroll-snap-align: start;
   flex-shrink: 0;
-  width: 300px;                 /* desktop */
+  width: 320px;
 }
-@media (max-width: 640px) {
-  .review-card {
-    width: 85vw;                /* móvil: 1 card + pico siguiente */
-  }
+@keyframes reviewsMarquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .reviews-marquee { animation: none; }
 }
 
 /* ─── StatsBar responsive ─── */
