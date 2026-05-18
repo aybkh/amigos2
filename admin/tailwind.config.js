@@ -4,12 +4,14 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Verde de marca Amigos2 (sustituye al ámbar como color primario).
+        // Se mantiene la clave "amber" para no renombrar clases en todo el código.
         amber: {
-          50:  '#fffbeb',
-          100: '#fef3c7',
-          500: '#f59e0b',
-          600: '#d97706',
-          700: '#b45309',
+          50:  '#e9fbf1',
+          100: '#c6f4dd',
+          500: '#00c264',
+          600: '#00a857',
+          700: '#097a45',
         },
       },
       fontFamily: {
