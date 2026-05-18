@@ -6,7 +6,7 @@ const PLATFORMS = {
   glovo:    { img: '/images/glovo.webp',    bg: '#FFC244', fg: '#1a1a1a' },
   ubereats: { img: '/images/ubereats.webp', bg: '#06C167', fg: '#ffffff' },
   justeat:  { img: '/images/just-eat.webp', bg: '#FF8000', fg: '#ffffff' },
-  phone:    { img: '/images/amigos2.webp',  bg: '#E63946', fg: '#ffffff' },
+  phone:    { img: '/images/amigos2.webp',  bg: '#0a2a1a', fg: '#00E676', border: '2px solid #00E676' },
 }
 
 const NAME_KEY = {
@@ -61,7 +61,7 @@ export default function DeliverySection() {
                 style={{
                   display: 'flex', alignItems: 'center', gap: 16,
                   padding: '20px 24px', borderRadius: 12,
-                  border: '3px solid rgba(0,0,0,0.18)',
+                  border: cfg.border || '3px solid rgba(0,0,0,0.18)',
                   background: cfg.bg, color: cfg.fg,
                   cursor: 'pointer', textAlign: 'left',
                   boxShadow: '0 4px 12px rgba(0,0,0,0.30)',
