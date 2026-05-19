@@ -102,7 +102,7 @@
     },
     "location": {
       "title": "Расположение",
-      "view_maps": "Посмотреть на Maps →"
+      "view_maps": "Открыть карту"
     },
     "cookies": {
       "title": "Мы используем cookie",
