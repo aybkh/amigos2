@@ -4,6 +4,17 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.4.7] - 2026-05-20 — Hero rediseñado (Opción C minimalista, mobile-first)
+
+### [FEATURE] HeroSection minimalista con gradiente + blobs verdes
+- `components/home/HeroSection.jsx` reescrito: layout centrado (badge + título + slogan + 2 CTAs), sin la rejilla 2×2 de pills. Reusa i18n existente (`ui.hero.badge`/`cta_menu`/`cta_location`) y `siteInfo.restaurant_name`/`slogan`
+- `styles/index.css` — bloque `.hero-section` **mobile-first**: gradiente `135deg #071a10 → #0a2618 → #071a10`, dos blobs verdes (`::before` 260px top-right, `::after` 200px bottom-left, `filter: blur`) por encima del fondo. Tipografía y CTAs apilados en columna en móvil; `@media (min-width: 768px)` los pasa a fila, agranda los blobs (600/420px) y el título (`clamp(4rem, 8vw, 6.5rem)`). Cero assets nuevos
+- Sin cambios de i18n (las claves del hero ya existen en los 10 locales)
+
+> Auditoría mobile-first del resto de secciones (Featured, Stats, Hours, Reviews, Contact): pendiente — la mayoría ya usan `clamp(...)` para tipografía y el delivery/footer/header ya están adaptados (v1.4.2 / v1.4.6)
+
+---
+
 ## [1.4.6] - 2026-05-19 — Delivery 1 col en móvil + footer compacto en móvil
 
 ### [FIX] Botones delivery: 2 columnas desktop, 1 en móvil
