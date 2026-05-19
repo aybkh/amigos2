@@ -4,8 +4,8 @@ import { t } from '../../lib/i18n'
 
 const PLATFORMS = {
   glovo:    { img: '/images/glovo.webp',    bg: '#FFC244', fg: '#1a1a1a' },
-  ubereats: { img: '/images/ubereats.webp', bg: '#06C167', fg: '#ffffff' },
-  justeat:  { img: '/images/just-eat.webp', bg: '#FF8000', fg: '#ffffff' },
+  ubereats: { img: '/images/ubereats.webp', bg: '#06C167', fg: '#1a1a1a' },
+  justeat:  { img: '/images/just-eat.webp', bg: '#FF8000', fg: '#1a1a1a' },
   phone:    { img: '/images/amigos2.webp',  bg: '#0a2a1a', fg: '#00E676', border: '2px solid #00E676' },
 }
 
@@ -102,7 +102,7 @@ export default function DeliverySection() {
                     fontSize: '0.85rem', opacity: 0.9,
                   }}>{t(lang, `ui.delivery.${link.platform}_sub`)}</p>
                 </div>
-                <span style={{ fontSize: '1.5rem', fontWeight: 700, flexShrink: 0 }}>→</span>
+                <span style={{ fontSize: '1.5rem', fontWeight: 700, flexShrink: 0 }}>➔</span>
               </button>
             )
           })}
