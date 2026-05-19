@@ -43,9 +43,8 @@ export default function DeliverySection() {
           </h2>
         </div>
 
-        <div style={{
+        <div className="delivery-grid" style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(2, 1fr)',
           gap: 16, maxWidth: 760, margin: '0 auto',
         }}>
           {links.map(link => {

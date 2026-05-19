@@ -40,7 +40,7 @@ export default function Footer({ siteInfo }) {
   ]
 
   return (
-    <footer style={{
+    <footer className="site-footer" style={{
       background: '#040d07',
       borderTop: '1px solid rgba(0,230,118,0.10)',
       padding: '52px 24px 28px',
@@ -48,7 +48,7 @@ export default function Footer({ siteInfo }) {
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
 
         {/* 3-col grid */}
-        <div style={{
+        <div className="site-footer-grid" style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))',
           gap: 40, alignItems: 'start',

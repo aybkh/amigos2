@@ -4,6 +4,20 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.4.6] - 2026-05-19 — Delivery 1 col en móvil + footer compacto en móvil
+
+### [FIX] Botones delivery: 2 columnas desktop, 1 en móvil
+- `components/home/DeliverySection.jsx` — quitado `gridTemplateColumns` inline; el grid usa clase `delivery-grid`
+- `styles/index.css` — `.delivery-grid` 2 columnas; `@media (max-width:767px)` → 1 columna
+
+### [FIX] Footer demasiado alto en móvil
+- `components/layout/Footer.jsx` — clases `site-footer` y `site-footer-grid`
+- `styles/index.css` — en `@media (max-width:767px)`: padding del footer `32px 20px 20px` y gap/margin del grid a 24px (con `!important` para vencer los estilos inline). Desktop sin cambios
+
+> Hero (rediseño): pendiente de que el usuario elija opción A/B/C/D antes de implementar
+
+---
+
 ## [1.4.5] - 2026-05-18 — Sección "Pedir a domicilio" + disclaimer imágenes
 
 ### [FEATURE] Sección Pedir a domicilio (home, entre Horario y Galería/Contacto)

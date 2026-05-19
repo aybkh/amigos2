@@ -180,3 +180,15 @@ html {
 }
 
 .animate-fade-in-up { animation: fadeInUp 0.7s ease forwards; }
+
+/* ─── Delivery: 2 columnas en desktop, 1 en móvil ─── */
+.delivery-grid { grid-template-columns: repeat(2, 1fr); }
+@media (max-width: 767px) {
+  .delivery-grid { grid-template-columns: 1fr; }
+}
+
+/* ─── Footer más compacto en móvil (override de estilos inline) ─── */
+@media (max-width: 767px) {
+  .site-footer { padding: 32px 20px 20px !important; }
+  .site-footer-grid { gap: 24px !important; margin-bottom: 24px !important; }
+}
