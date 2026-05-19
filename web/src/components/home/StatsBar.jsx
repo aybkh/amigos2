@@ -8,7 +8,7 @@ export default function StatsBar() {
     { value: '15',      label: t(lang, 'ui.stats.categories') },
     { value: '131',     label: t(lang, 'ui.stats.dishes') },
     { value: '3:00 AM', label: t(lang, 'ui.stats.closing') },
-    { value: '4.6★',   label: t(lang, 'ui.stats.google') },
+    { value: '4.5★',   label: t(lang, 'ui.stats.google') },
   ]
 
   return (
