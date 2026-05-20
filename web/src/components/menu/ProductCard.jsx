@@ -74,10 +74,9 @@ export default function ProductCard({ product, categoryName, onClick }) {
         </div>
       )}
 
-      {/* Franja alérgenos — entre imagen y nombre */}
-      {allergens.length > 0 && (
-        <div className="menu-card-allergens-strip">
-          {allergens.slice(0, 6).map((alg, i) => {
+      {/* Franja alérgenos — siempre presente (aunque vacía) para alinear tarjetas */}
+      <div className="menu-card-allergens-strip">
+        {allergens.length > 0 && allergens.slice(0, 6).map((alg, i) => {
             const algName = tAllergen(lang, alg.name)
             return (
               <img
@@ -89,8 +88,7 @@ export default function ProductCard({ product, categoryName, onClick }) {
               />
             )
           })}
-        </div>
-      )}
+      </div>
 
       {/* Cuerpo */}
       <div className="menu-card-body">

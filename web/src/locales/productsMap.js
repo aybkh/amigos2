@@ -532,5 +532,149 @@ export const productsMap = {
   "Vinos (Copa o Botella)": {
     name: { es: "Vinos (Copa o Botella)", en: "Wines (Glass or Bottle)", cat: "Vins (Copa o Ampolla)", fr: "Vins (Verre ou Bouteille)", de: "Weine (Glas oder Flasche)", nl: "Wijnen (Glas of Fles)", ru: "Вина (бокал или бутылка)", ar: "نبيذ (كأس أو زجاجة)", pl: "Wina (kieliszek lub butelka)", it: "Vini (Calice o Bottiglia)" },
     description: { es: "Selección de tintos, blancos y rosados.", en: "Selection of reds, whites and rosés.", cat: "Selecció de negres, blancs i rosats.", fr: "Sélection de rouges, blancs et rosés.", de: "Auswahl an Rot-, Weiß- und Roséweinen.", nl: "Selectie van rode, witte en roséwijnen.", ru: "Выбор красных, белых и розовых вин.", ar: "تشكيلة من النبيذ الأحمر والأبيض والوردي.", pl: "Wybór win czerwonych, białych i różowych.", it: "Selezione di rossi, bianchi e rosati." }
+  },
+
+  // ── Refrescos (categoría 0016) ─────────────────────────────────────
+  "Coca-Cola": {
+    name: { es: "Coca-Cola", en: "Coca-Cola", cat: "Coca-Cola", fr: "Coca-Cola", de: "Coca-Cola", nl: "Coca-Cola", ru: "Кока-Кола", ar: "كوكا كولا", pl: "Coca-Cola", it: "Coca-Cola" },
+    description: { es: "Refresco de cola 33cl, servido frío.", en: "Cola soft drink 33cl, served cold.", cat: "Refresc de cola 33cl, servit fred.", fr: "Soda cola 33cl, servi frais.", de: "Cola-Limonade 33cl, kalt serviert.", nl: "Cola frisdrank 33cl, koud geserveerd.", ru: "Кола 33cl, подаётся холодной.", ar: "مشروب كولا غازي 33 سل، يقدم باردًا.", pl: "Napój cola 33cl, podawany na zimno.", it: "Bibita cola 33cl, servita fredda." }
+  },
+  "Coca-Cola Zero": {
+    name: { es: "Coca-Cola Zero", en: "Coca-Cola Zero", cat: "Coca-Cola Zero", fr: "Coca-Cola Zero", de: "Coca-Cola Zero", nl: "Coca-Cola Zero", ru: "Кока-Кола Zero", ar: "كوكا كولا زيرو", pl: "Coca-Cola Zero", it: "Coca-Cola Zero" },
+    description: { es: "Refresco de cola sin azúcar 33cl.", en: "Sugar-free cola 33cl.", cat: "Refresc de cola sense sucre 33cl.", fr: "Cola sans sucre 33cl.", de: "Zuckerfreie Cola 33cl.", nl: "Suikervrije cola 33cl.", ru: "Кола без сахара 33cl.", ar: "كولا بدون سكر 33 سل.", pl: "Cola bez cukru 33cl.", it: "Cola senza zucchero 33cl." }
+  },
+  "Coca-Cola 1L": {
+    name: { es: "Coca-Cola 1L", en: "Coca-Cola 1L", cat: "Coca-Cola 1L", fr: "Coca-Cola 1L", de: "Coca-Cola 1L", nl: "Coca-Cola 1L", ru: "Кока-Кола 1л", ar: "كوكا كولا 1 لتر", pl: "Coca-Cola 1L", it: "Coca-Cola 1L" },
+    description: { es: "Botella de Coca-Cola para compartir, 1 litro.", en: "Coca-Cola bottle to share, 1 litre.", cat: "Ampolla de Coca-Cola per compartir, 1 litre.", fr: "Bouteille de Coca-Cola à partager, 1 litre.", de: "Coca-Cola-Flasche zum Teilen, 1 Liter.", nl: "Coca-Cola fles om te delen, 1 liter.", ru: "Бутылка Кока-Колы, 1 литр.", ar: "زجاجة كوكا كولا للمشاركة، 1 لتر.", pl: "Butelka Coca-Coli do dzielenia, 1L.", it: "Bottiglia di Coca-Cola da condividere, 1L." }
+  },
+  "Pepsi": {
+    name: { es: "Pepsi", en: "Pepsi", cat: "Pepsi", fr: "Pepsi", de: "Pepsi", nl: "Pepsi", ru: "Пепси", ar: "بيبسي", pl: "Pepsi", it: "Pepsi" },
+    description: { es: "Refresco de cola Pepsi 33cl.", en: "Pepsi cola 33cl.", cat: "Refresc de cola Pepsi 33cl.", fr: "Soda cola Pepsi 33cl.", de: "Pepsi Cola 33cl.", nl: "Pepsi cola 33cl.", ru: "Пепси кола 33cl.", ar: "بيبسي كولا 33 سل.", pl: "Pepsi cola 33cl.", it: "Pepsi cola 33cl." }
+  },
+  "Pepsi 1L": {
+    name: { es: "Pepsi 1L", en: "Pepsi 1L", cat: "Pepsi 1L", fr: "Pepsi 1L", de: "Pepsi 1L", nl: "Pepsi 1L", ru: "Пепси 1л", ar: "بيبسي 1 لتر", pl: "Pepsi 1L", it: "Pepsi 1L" },
+    description: { es: "Botella de Pepsi para compartir, 1 litro.", en: "Pepsi bottle to share, 1 litre.", cat: "Ampolla de Pepsi per compartir, 1 litre.", fr: "Bouteille de Pepsi à partager, 1 litre.", de: "Pepsi-Flasche zum Teilen, 1 Liter.", nl: "Pepsi fles om te delen, 1 liter.", ru: "Бутылка Пепси, 1 литр.", ar: "زجاجة بيبسي للمشاركة، 1 لتر.", pl: "Butelka Pepsi do dzielenia, 1L.", it: "Bottiglia di Pepsi da condividere, 1L." }
+  },
+  "Fanta Naranja": {
+    name: { es: "Fanta Naranja", en: "Fanta Orange", cat: "Fanta Taronja", fr: "Fanta Orange", de: "Fanta Orange", nl: "Fanta Sinaasappel", ru: "Фанта Апельсин", ar: "فانتا برتقال", pl: "Fanta Pomarańcza", it: "Fanta Arancia" },
+    description: { es: "Refresco con sabor a naranja 33cl.", en: "Orange flavoured soft drink 33cl.", cat: "Refresc amb sabor a taronja 33cl.", fr: "Soda saveur orange 33cl.", de: "Erfrischungsgetränk mit Orangengeschmack 33cl.", nl: "Frisdrank met sinaasappelsmaak 33cl.", ru: "Апельсиновый газированный напиток 33cl.", ar: "مشروب غازي بنكهة البرتقال 33 سل.", pl: "Napój gazowany o smaku pomarańczowym 33cl.", it: "Bibita gassata all'arancia 33cl." }
+  },
+  "Fanta Limón": {
+    name: { es: "Fanta Limón", en: "Fanta Lemon", cat: "Fanta Llimona", fr: "Fanta Citron", de: "Fanta Zitrone", nl: "Fanta Citroen", ru: "Фанта Лимон", ar: "فانتا ليمون", pl: "Fanta Cytryna", it: "Fanta Limone" },
+    description: { es: "Refresco con sabor a limón 33cl.", en: "Lemon flavoured soft drink 33cl.", cat: "Refresc amb sabor a llimona 33cl.", fr: "Soda saveur citron 33cl.", de: "Erfrischungsgetränk mit Zitronengeschmack 33cl.", nl: "Frisdrank met citroensmaak 33cl.", ru: "Лимонный газированный напиток 33cl.", ar: "مشروب غازي بنكهة الليمون 33 سل.", pl: "Napój gazowany o smaku cytrynowym 33cl.", it: "Bibita gassata al limone 33cl." }
+  },
+  "Fanta 1L": {
+    name: { es: "Fanta 1L", en: "Fanta 1L", cat: "Fanta 1L", fr: "Fanta 1L", de: "Fanta 1L", nl: "Fanta 1L", ru: "Фанта 1л", ar: "فانتا 1 لتر", pl: "Fanta 1L", it: "Fanta 1L" },
+    description: { es: "Botella de Fanta para compartir, 1 litro.", en: "Fanta bottle to share, 1 litre.", cat: "Ampolla de Fanta per compartir, 1 litre.", fr: "Bouteille de Fanta à partager, 1 litre.", de: "Fanta-Flasche zum Teilen, 1 Liter.", nl: "Fanta fles om te delen, 1 liter.", ru: "Бутылка Фанты, 1 литр.", ar: "زجاجة فانتا للمشاركة، 1 لتر.", pl: "Butelka Fanty do dzielenia, 1L.", it: "Bottiglia di Fanta da condividere, 1L." }
+  },
+  "Sprite": {
+    name: { es: "Sprite", en: "Sprite", cat: "Sprite", fr: "Sprite", de: "Sprite", nl: "Sprite", ru: "Спрайт", ar: "سبرايت", pl: "Sprite", it: "Sprite" },
+    description: { es: "Refresco transparente de lima-limón 33cl.", en: "Clear lemon-lime soda 33cl.", cat: "Refresc transparent de llima-llimona 33cl.", fr: "Soda transparent citron-lime 33cl.", de: "Klare Limetten-Zitronen-Limonade 33cl.", nl: "Heldere citrus-limonade 33cl.", ru: "Прозрачный лимонно-лаймовый напиток 33cl.", ar: "مشروب ليمون لايم شفاف 33 سل.", pl: "Przezroczysty napój limonkowo-cytrynowy 33cl.", it: "Bibita trasparente lime-limone 33cl." }
+  },
+  "Sprite 1L": {
+    name: { es: "Sprite 1L", en: "Sprite 1L", cat: "Sprite 1L", fr: "Sprite 1L", de: "Sprite 1L", nl: "Sprite 1L", ru: "Спрайт 1л", ar: "سبرايت 1 لتر", pl: "Sprite 1L", it: "Sprite 1L" },
+    description: { es: "Botella de Sprite para compartir, 1 litro.", en: "Sprite bottle to share, 1 litre.", cat: "Ampolla de Sprite per compartir, 1 litre.", fr: "Bouteille de Sprite à partager, 1 litre.", de: "Sprite-Flasche zum Teilen, 1 Liter.", nl: "Sprite fles om te delen, 1 liter.", ru: "Бутылка Спрайта, 1 литр.", ar: "زجاجة سبرايت للمشاركة، 1 لتر.", pl: "Butelka Sprite do dzielenia, 1L.", it: "Bottiglia di Sprite da condividere, 1L." }
+  },
+  "7up": {
+    name: { es: "7up", en: "7up", cat: "7up", fr: "7up", de: "7up", nl: "7up", ru: "7up", ar: "سيفن أب", pl: "7up", it: "7up" },
+    description: { es: "Refresco de lima-limón 33cl.", en: "Lemon-lime soda 33cl.", cat: "Refresc de llima-llimona 33cl.", fr: "Soda citron-lime 33cl.", de: "Limetten-Zitronen-Limonade 33cl.", nl: "Citrus-limonade 33cl.", ru: "Лимонно-лаймовый напиток 33cl.", ar: "مشروب ليمون لايم 33 سل.", pl: "Napój limonkowo-cytrynowy 33cl.", it: "Bibita lime-limone 33cl." }
+  },
+  "Schweppes": {
+    name: { es: "Schweppes", en: "Schweppes", cat: "Schweppes", fr: "Schweppes", de: "Schweppes", nl: "Schweppes", ru: "Швепс", ar: "شويبس", pl: "Schweppes", it: "Schweppes" },
+    description: { es: "Tónica con quinina 25cl.", en: "Tonic water with quinine 25cl.", cat: "Tònica amb quinina 25cl.", fr: "Tonic à la quinine 25cl.", de: "Tonic Water mit Chinin 25cl.", nl: "Tonic met kinine 25cl.", ru: "Тоник с хинином 25cl.", ar: "مشروب التونيك 25 سل.", pl: "Tonik z chininą 25cl.", it: "Acqua tonica 25cl." }
+  },
+  "Trina Naranja": {
+    name: { es: "Trina Naranja", en: "Trina Orange", cat: "Trina Taronja", fr: "Trina Orange", de: "Trina Orange", nl: "Trina Sinaasappel", ru: "Trina Апельсин", ar: "ترينا برتقال", pl: "Trina Pomarańcza", it: "Trina Arancia" },
+    description: { es: "Refresco de naranja sin gas 33cl.", en: "Still orange soft drink 33cl.", cat: "Refresc de taronja sense gas 33cl.", fr: "Soda plat à l'orange 33cl.", de: "Stilles Orangengetränk 33cl.", nl: "Stille sinaasappelfrisdrank 33cl.", ru: "Апельсиновый напиток без газа 33cl.", ar: "مشروب برتقال بدون غاز 33 سل.", pl: "Napój pomarańczowy niegazowany 33cl.", it: "Bibita all'arancia non gassata 33cl." }
+  },
+  "Nestea Limón": {
+    name: { es: "Nestea Limón", en: "Nestea Lemon", cat: "Nestea Llimona", fr: "Nestea Citron", de: "Nestea Zitrone", nl: "Nestea Citroen", ru: "Nestea Лимон", ar: "نستي ليمون", pl: "Nestea Cytryna", it: "Nestea Limone" },
+    description: { es: "Té frío con sabor a limón 33cl.", en: "Iced tea with lemon 33cl.", cat: "Te fred amb sabor a llimona 33cl.", fr: "Thé glacé citron 33cl.", de: "Eistee Zitrone 33cl.", nl: "IJsthee citroen 33cl.", ru: "Холодный чай с лимоном 33cl.", ar: "شاي بارد بالليمون 33 سل.", pl: "Mrożona herbata z cytryną 33cl.", it: "Tè freddo al limone 33cl." }
+  },
+  "Nestea Maracuyá": {
+    name: { es: "Nestea Maracuyá", en: "Nestea Passion Fruit", cat: "Nestea Maracujà", fr: "Nestea Fruit de la Passion", de: "Nestea Maracuja", nl: "Nestea Passievrucht", ru: "Nestea Маракуйя", ar: "نستي ماراكويا", pl: "Nestea Marakuja", it: "Nestea Maracuja" },
+    description: { es: "Té frío con sabor a maracuyá 33cl.", en: "Iced tea with passion fruit 33cl.", cat: "Te fred amb sabor a maracujà 33cl.", fr: "Thé glacé fruit de la passion 33cl.", de: "Eistee Maracuja 33cl.", nl: "IJsthee passievrucht 33cl.", ru: "Холодный чай с маракуйей 33cl.", ar: "شاي بارد بالماراكويا 33 سل.", pl: "Mrożona herbata marakuja 33cl.", it: "Tè freddo al maracuja 33cl." }
+  },
+  "Aquarius Naranja": {
+    name: { es: "Aquarius Naranja", en: "Aquarius Orange", cat: "Aquarius Taronja", fr: "Aquarius Orange", de: "Aquarius Orange", nl: "Aquarius Sinaasappel", ru: "Aquarius Апельсин", ar: "أكواريوس برتقال", pl: "Aquarius Pomarańcza", it: "Aquarius Arancia" },
+    description: { es: "Bebida isotónica de naranja 33cl.", en: "Orange isotonic drink 33cl.", cat: "Beguda isotònica de taronja 33cl.", fr: "Boisson isotonique à l'orange 33cl.", de: "Isotonisches Orangengetränk 33cl.", nl: "Isotone sinaasappelfrisdrank 33cl.", ru: "Изотонический напиток с апельсином 33cl.", ar: "مشروب رياضي بالبرتقال 33 سل.", pl: "Napój izotoniczny pomarańczowy 33cl.", it: "Bevanda isotonica all'arancia 33cl." }
+  },
+  "Aquarius Limón": {
+    name: { es: "Aquarius Limón", en: "Aquarius Lemon", cat: "Aquarius Llimona", fr: "Aquarius Citron", de: "Aquarius Zitrone", nl: "Aquarius Citroen", ru: "Aquarius Лимон", ar: "أكواريوس ليمون", pl: "Aquarius Cytryna", it: "Aquarius Limone" },
+    description: { es: "Bebida isotónica de limón 33cl.", en: "Lemon isotonic drink 33cl.", cat: "Beguda isotònica de llimona 33cl.", fr: "Boisson isotonique au citron 33cl.", de: "Isotonisches Zitronengetränk 33cl.", nl: "Isotone citroenfrisdrank 33cl.", ru: "Изотонический напиток с лимоном 33cl.", ar: "مشروب رياضي بالليمون 33 سل.", pl: "Napój izotoniczny cytrynowy 33cl.", it: "Bevanda isotonica al limone 33cl." }
+  },
+  "Zumo de Melocotón": {
+    name: { es: "Zumo de Melocotón", en: "Peach Juice", cat: "Suc de Préssec", fr: "Jus de Pêche", de: "Pfirsichsaft", nl: "Perziksap", ru: "Персиковый сок", ar: "عصير الخوخ", pl: "Sok brzoskwiniowy", it: "Succo di Pesca" },
+    description: { es: "Zumo de melocotón frío 20cl.", en: "Cold peach juice 20cl.", cat: "Suc de préssec fred 20cl.", fr: "Jus de pêche frais 20cl.", de: "Kalter Pfirsichsaft 20cl.", nl: "Koud perziksap 20cl.", ru: "Холодный персиковый сок 20cl.", ar: "عصير خوخ بارد 20 سل.", pl: "Zimny sok brzoskwiniowy 20cl.", it: "Succo di pesca freddo 20cl." }
+  },
+  "Monster": {
+    name: { es: "Monster", en: "Monster", cat: "Monster", fr: "Monster", de: "Monster", nl: "Monster", ru: "Monster", ar: "مونستر", pl: "Monster", it: "Monster" },
+    description: { es: "Bebida energética 500ml con taurina y cafeína.", en: "Energy drink 500ml with taurine and caffeine.", cat: "Beguda energètica 500ml amb taurina i cafeïna.", fr: "Boisson énergisante 500ml avec taurine et caféine.", de: "Energydrink 500ml mit Taurin und Koffein.", nl: "Energiedrank 500ml met taurine en cafeïne.", ru: "Энергетический напиток 500мл с таурином и кофеином.", ar: "مشروب طاقة 500 مل مع التورين والكافيين.", pl: "Napój energetyczny 500ml z tauryną i kofeiną.", it: "Energy drink 500ml con taurina e caffeina." }
+  },
+  "Agua Mineral 0.5L": {
+    name: { es: "Agua Mineral 0.5L", en: "Mineral Water 0.5L", cat: "Aigua Mineral 0.5L", fr: "Eau Minérale 0,5L", de: "Mineralwasser 0,5L", nl: "Mineraalwater 0,5L", ru: "Минеральная вода 0,5л", ar: "ماء معدني 0.5 لتر", pl: "Woda mineralna 0,5L", it: "Acqua Minerale 0,5L" },
+    description: { es: "Agua mineral natural sin gas, 500ml.", en: "Still natural mineral water, 500ml.", cat: "Aigua mineral natural sense gas, 500ml.", fr: "Eau minérale plate, 500ml.", de: "Stilles Mineralwasser, 500ml.", nl: "Stil mineraalwater, 500ml.", ru: "Минеральная вода без газа, 500мл.", ar: "ماء معدني طبيعي بدون غاز، 500 مل.", pl: "Naturalna woda mineralna niegazowana, 500ml.", it: "Acqua minerale naturale, 500ml." }
+  },
+  "Agua Mineral 1.5L": {
+    name: { es: "Agua Mineral 1.5L", en: "Mineral Water 1.5L", cat: "Aigua Mineral 1.5L", fr: "Eau Minérale 1,5L", de: "Mineralwasser 1,5L", nl: "Mineraalwater 1,5L", ru: "Минеральная вода 1,5л", ar: "ماء معدني 1.5 لتر", pl: "Woda mineralna 1,5L", it: "Acqua Minerale 1,5L" },
+    description: { es: "Agua mineral natural sin gas, 1,5 litros.", en: "Still natural mineral water, 1.5 litres.", cat: "Aigua mineral natural sense gas, 1,5 litres.", fr: "Eau minérale plate, 1,5 litre.", de: "Stilles Mineralwasser, 1,5 Liter.", nl: "Stil mineraalwater, 1,5 liter.", ru: "Минеральная вода без газа, 1,5 литра.", ar: "ماء معدني طبيعي بدون غاز، 1.5 لتر.", pl: "Naturalna woda mineralna niegazowana, 1,5L.", it: "Acqua minerale naturale, 1,5L." }
+  },
+  "Vichy Catalan": {
+    name: { es: "Vichy Catalan", en: "Vichy Catalan", cat: "Vichy Catalan", fr: "Vichy Catalan", de: "Vichy Catalan", nl: "Vichy Catalan", ru: "Vichy Catalan", ar: "فيشي كاتالان", pl: "Vichy Catalan", it: "Vichy Catalan" },
+    description: { es: "Agua mineral con gas 500ml.", en: "Sparkling mineral water 500ml.", cat: "Aigua mineral amb gas 500ml.", fr: "Eau minérale gazeuse 500ml.", de: "Mineralwasser mit Kohlensäure 500ml.", nl: "Bruisend mineraalwater 500ml.", ru: "Газированная минеральная вода 500мл.", ar: "ماء معدني فوار 500 مل.", pl: "Woda mineralna gazowana 500ml.", it: "Acqua minerale frizzante 500ml." }
+  },
+  "Free Damm Limón": {
+    name: { es: "Free Damm Limón", en: "Free Damm Lemon", cat: "Free Damm Llimona", fr: "Free Damm Citron", de: "Free Damm Zitrone", nl: "Free Damm Citroen", ru: "Free Damm Лимон", ar: "فري دام ليمون", pl: "Free Damm Cytryna", it: "Free Damm Limone" },
+    description: { es: "Cerveza sin alcohol con limón 33cl.", en: "Non-alcoholic beer with lemon 33cl.", cat: "Cervesa sense alcohol amb llimona 33cl.", fr: "Bière sans alcool au citron 33cl.", de: "Alkoholfreies Bier mit Zitrone 33cl.", nl: "Alcoholvrij bier met citroen 33cl.", ru: "Безалкогольное пиво с лимоном 33cl.", ar: "بيرة بدون كحول بالليمون 33 سل.", pl: "Piwo bezalkoholowe z cytryną 33cl.", it: "Birra analcolica al limone 33cl." }
+  },
+  "Free Damm Tostada": {
+    name: { es: "Free Damm Tostada", en: "Free Damm Toasted", cat: "Free Damm Torrada", fr: "Free Damm Ambrée", de: "Free Damm Bernstein", nl: "Free Damm Amber", ru: "Free Damm тёмное", ar: "فري دام داكنة", pl: "Free Damm Bursztynowe", it: "Free Damm Tostata" },
+    description: { es: "Cerveza tostada sin alcohol 33cl.", en: "Toasted non-alcoholic beer 33cl.", cat: "Cervesa torrada sense alcohol 33cl.", fr: "Bière ambrée sans alcool 33cl.", de: "Bernsteinfarbenes alkoholfreies Bier 33cl.", nl: "Geroosterd alcoholvrij bier 33cl.", ru: "Тёмное безалкогольное пиво 33cl.", ar: "بيرة داكنة بدون كحول 33 سل.", pl: "Bursztynowe piwo bezalkoholowe 33cl.", it: "Birra tostata analcolica 33cl." }
+  },
+
+  // ── Salsas (categoría 0017) ───────────────────────────────────────
+  "Algerian": {
+    name: { es: "Algerian", en: "Algerian", cat: "Algerian", fr: "Algérienne", de: "Algerian", nl: "Algerian", ru: "Algerian", ar: "ألجيريان", pl: "Algerian", it: "Algerian" },
+    description: { es: "Salsa belga ligeramente picante con harissa y mayonesa.", en: "Belgian lightly spicy sauce with harissa and mayo.", cat: "Salsa belga lleugerament picant amb harissa i maionesa.", fr: "Sauce belge légèrement épicée à la harissa et mayonnaise.", de: "Belgische leicht scharfe Sauce mit Harissa und Mayonnaise.", nl: "Belgische licht pittige saus met harissa en mayonaise.", ru: "Бельгийский слегка острый соус с харисой и майонезом.", ar: "صلصة بلجيكية حارة قليلاً بالهريسة والمايونيز.", pl: "Belgijski lekko ostry sos z harissą i majonezem.", it: "Salsa belga leggermente piccante con harissa e maionese." }
+  },
+  "Andaluza": {
+    name: { es: "Andaluza", en: "Andalusian", cat: "Andalusa", fr: "Andalouse", de: "Andalusisch", nl: "Andalusisch", ru: "Андалузский", ar: "أندلسية", pl: "Andaluzyjski", it: "Andalusa" },
+    description: { es: "Mayonesa especiada con tomate, pimiento y ajo.", en: "Spiced mayonnaise with tomato, pepper and garlic.", cat: "Maionesa especiada amb tomàquet, pebrot i all.", fr: "Mayonnaise épicée avec tomate, poivron et ail.", de: "Würzige Mayonnaise mit Tomate, Paprika und Knoblauch.", nl: "Gekruide mayonaise met tomaat, paprika en knoflook.", ru: "Пряный майонез с томатом, перцем и чесноком.", ar: "مايونيز متبل بالطماطم والفلفل والثوم.", pl: "Pikantny majonez z pomidorem, papryką i czosnkiem.", it: "Maionese speziata con pomodoro, peperone e aglio." }
+  },
+  "Barbacoa": {
+    name: { es: "Barbacoa", en: "Barbecue", cat: "Barbacoa", fr: "Barbecue", de: "Barbecue", nl: "Barbecue", ru: "Барбекю", ar: "باربكيو", pl: "Barbecue", it: "Barbecue" },
+    description: { es: "Salsa dulce y ahumada de tomate y especias.", en: "Sweet smoky tomato and spice sauce.", cat: "Salsa dolça i fumada de tomàquet i espècies.", fr: "Sauce douce et fumée à la tomate et aux épices.", de: "Süße geräucherte Tomaten-Gewürz-Sauce.", nl: "Zoete gerookte tomaten-kruidensaus.", ru: "Сладкий копчёный соус из томатов и специй.", ar: "صلصة طماطم وتوابل دخانية حلوة.", pl: "Słodki, wędzony sos pomidorowo-przyprawowy.", it: "Salsa dolce e affumicata di pomodoro e spezie." }
+  },
+  "Biggie": {
+    name: { es: "Biggie", en: "Biggie", cat: "Biggie", fr: "Biggie", de: "Biggie", nl: "Biggie", ru: "Biggie", ar: "بيغي", pl: "Biggie", it: "Biggie" },
+    description: { es: "Salsa cremosa estilo americano con mayo, ketchup y especias.", en: "Creamy American-style sauce with mayo, ketchup and spices.", cat: "Salsa cremosa estil americà amb maionesa, ketchup i espècies.", fr: "Sauce crémeuse à l'américaine avec mayo, ketchup et épices.", de: "Cremige Sauce im amerikanischen Stil mit Mayo, Ketchup und Gewürzen.", nl: "Romige Amerikaanse saus met mayo, ketchup en kruiden.", ru: "Кремовый соус в американском стиле с майонезом, кетчупом и специями.", ar: "صلصة كريمية بالطريقة الأمريكية مع المايونيز والكاتشب والتوابل.", pl: "Kremowy sos w stylu amerykańskim z majonezem, ketchupem i przyprawami.", it: "Salsa cremosa stile americano con mayo, ketchup e spezie." }
+  },
+  "Blanca": {
+    name: { es: "Blanca", en: "White Sauce", cat: "Salsa Blanca", fr: "Sauce Blanche", de: "Weiße Sauce", nl: "Witte Saus", ru: "Белый соус", ar: "صلصة بيضاء", pl: "Sos biały", it: "Salsa Bianca" },
+    description: { es: "Salsa blanca de yogur con ajo y hierbas, típica de kebab.", en: "White yogurt sauce with garlic and herbs, kebab style.", cat: "Salsa blanca de iogurt amb all i herbes, típica de kebab.", fr: "Sauce blanche au yaourt avec ail et herbes, façon kebab.", de: "Weiße Joghurtsauce mit Knoblauch und Kräutern, Kebab-Stil.", nl: "Witte yoghurtsaus met knoflook en kruiden, kebabstijl.", ru: "Белый йогуртовый соус с чесноком и зеленью, для кебаба.", ar: "صلصة لبن بيضاء بالثوم والأعشاب، على طريقة الكباب.", pl: "Biały sos jogurtowy z czosnkiem i ziołami, w stylu kebab.", it: "Salsa bianca allo yogurt con aglio ed erbe, stile kebab." }
+  },
+  "Brazil": {
+    name: { es: "Brazil", en: "Brazil", cat: "Brazil", fr: "Brazil", de: "Brazil", nl: "Brazil", ru: "Бразил", ar: "برازيل", pl: "Brazil", it: "Brazil" },
+    description: { es: "Salsa cóctel cremosa estilo brasileño, ligeramente dulce.", en: "Creamy Brazilian-style cocktail sauce, slightly sweet.", cat: "Salsa còctel cremosa estil brasiler, lleugerament dolça.", fr: "Sauce cocktail crémeuse à la brésilienne, légèrement sucrée.", de: "Cremige Cocktailsauce nach brasilianischer Art, leicht süß.", nl: "Romige cocktailsaus in Braziliaanse stijl, licht zoet.", ru: "Кремовый коктейль-соус в бразильском стиле, слегка сладкий.", ar: "صلصة كوكتيل كريمية على الطريقة البرازيلية، حلوة قليلاً.", pl: "Kremowy sos koktajlowy w stylu brazylijskim, lekko słodki.", it: "Salsa cocktail cremosa stile brasiliano, leggermente dolce." }
+  },
+  "Ketchup": {
+    name: { es: "Ketchup", en: "Ketchup", cat: "Quètxup", fr: "Ketchup", de: "Ketchup", nl: "Ketchup", ru: "Кетчуп", ar: "كاتشب", pl: "Ketchup", it: "Ketchup" },
+    description: { es: "Salsa de tomate dulce.", en: "Sweet tomato sauce.", cat: "Salsa de tomàquet dolça.", fr: "Sauce tomate sucrée.", de: "Süße Tomatensauce.", nl: "Zoete tomatensaus.", ru: "Сладкий томатный соус.", ar: "صلصة طماطم حلوة.", pl: "Słodki sos pomidorowy.", it: "Salsa di pomodoro dolce." }
+  },
+  "Mayonesa": {
+    name: { es: "Mayonesa", en: "Mayonnaise", cat: "Maionesa", fr: "Mayonnaise", de: "Mayonnaise", nl: "Mayonaise", ru: "Майонез", ar: "مايونيز", pl: "Majonez", it: "Maionese" },
+    description: { es: "Salsa cremosa de huevo y aceite.", en: "Creamy egg and oil sauce.", cat: "Salsa cremosa d'ou i oli.", fr: "Sauce crémeuse à base d'œuf et d'huile.", de: "Cremige Ei-Öl-Sauce.", nl: "Romige saus van ei en olie.", ru: "Кремовый соус из яиц и масла.", ar: "صلصة كريمية من البيض والزيت.", pl: "Kremowy sos jajeczno-olejowy.", it: "Salsa cremosa di uova e olio." }
+  },
+  "Picante": {
+    name: { es: "Picante", en: "Spicy", cat: "Picant", fr: "Piquante", de: "Scharf", nl: "Pittig", ru: "Острый", ar: "حار", pl: "Pikantny", it: "Piccante" },
+    description: { es: "Salsa picante con tomate y chiles.", en: "Hot sauce with tomato and chilli.", cat: "Salsa picant amb tomàquet i bitxos.", fr: "Sauce piquante à la tomate et au piment.", de: "Scharfe Sauce mit Tomate und Chili.", nl: "Pittige saus met tomaat en chili.", ru: "Острый соус с томатом и чили.", ar: "صلصة حارة بالطماطم والفلفل الحار.", pl: "Pikantny sos z pomidorem i chili.", it: "Salsa piccante con pomodoro e peperoncino." }
+  },
+  "Pita Kebab": {
+    name: { es: "Pita Kebab", en: "Pita Kebab", cat: "Pita Kebab", fr: "Pita Kebab", de: "Pita Kebab", nl: "Pita Kebab", ru: "Pita Kebab", ar: "بيتا كباب", pl: "Pita Kebab", it: "Pita Kebab" },
+    description: { es: "Salsa cremosa de yogur con especias del kebab.", en: "Creamy yogurt sauce with kebab spices.", cat: "Salsa cremosa de iogurt amb espècies del kebab.", fr: "Sauce crémeuse au yaourt et épices à kebab.", de: "Cremige Joghurtsauce mit Kebab-Gewürzen.", nl: "Romige yoghurtsaus met kebabkruiden.", ru: "Кремовый йогуртовый соус со специями кебаба.", ar: "صلصة لبن كريمية بتوابل الكباب.", pl: "Kremowy sos jogurtowy z przyprawami kebabowymi.", it: "Salsa cremosa allo yogurt con spezie da kebab." }
+  },
+  "Samurai": {
+    name: { es: "Samurai", en: "Samurai", cat: "Samurai", fr: "Samurai", de: "Samurai", nl: "Samurai", ru: "Самурай", ar: "ساموراي", pl: "Samurai", it: "Samurai" },
+    description: { es: "Mayonesa picante con harissa.", en: "Spicy mayonnaise with harissa.", cat: "Maionesa picant amb harissa.", fr: "Mayonnaise piquante à la harissa.", de: "Scharfe Mayonnaise mit Harissa.", nl: "Pittige mayonaise met harissa.", ru: "Острый майонез с харисой.", ar: "مايونيز حار بالهريسة.", pl: "Pikantny majonez z harissą.", it: "Maionese piccante con harissa." }
   }
 }

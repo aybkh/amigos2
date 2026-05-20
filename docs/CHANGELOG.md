@@ -4,7 +4,35 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
-## [1.5.0] - 2026-05-20 — Footer profesional 4 columnas en desktop
+## [1.5.1] - 2026-05-21 — Footer split (mobile/desktop separados) + cards 3:2
+
+### [REFACTOR] Footer dividido en 2 componentes aislados
+- `components/layout/FooterMobile.jsx` + `styles/FooterMobile.css` — nuevo componente exclusivo móvil (<768px): logo, tagline, contacto inline, 4 iconos sociales 44×44, legales verticales, copyright + créditos
+- `components/layout/FooterDesktop.jsx` + `styles/FooterDesktop.css` — nuevo componente exclusivo desktop (≥768px): grid 4 columnas (Logo+info / Navegación / Horarios / Contacto+Redes), bottom-bar horizontal
+- `components/layout/Footer.jsx` — ahora es solo un switcher con `matchMedia('(max-width: 767px)')` que renderiza uno u otro. Imposible que CSS de uno rompa al otro
+- `styles/index.css` — eliminado el bloque `.site-footer` antiguo (~210 líneas) para evitar conflictos de namespace
+- Se mantienen i18n (`useLanguage` + `t()`), modales legales (`useLegalModal`), prop `siteInfo` dinámico y SocialBtn con estado disabled — sin regresiones funcionales
+
+### [FIX] Imágenes de productos en carta con ratio 3:2
+- `styles/menu.css` — `.menu-card-img` y `.menu-card-emoji-zone` ahora usan `aspect-ratio: 3/2` (antes 4/3). Coincide con el ratio real de las imágenes subidas a Supabase Storage y evita recortes/letterboxing
+
+### [FIX] Tarjeta de producto: descripción oculta solo en móvil
+- `styles/menu.css` — `@media (max-width: 767px) { .menu-card-desc { display: none; } }`. La descripción sigue visible en tarjeta desktop y en modal/drawer
+
+### [FIX] Tarjeta de producto: franja de alérgenos siempre visible
+- `components/menu/ProductCard.jsx` — el `<div class="menu-card-allergens-strip">` se renderiza siempre, esté o no la lista vacía
+- `styles/menu.css` — `.menu-card-allergens-strip` ahora tiene `min-height: 28px` + `box-sizing: border-box`. Así todas las tarjetas alinean nombre+precio a la misma altura, tengan alérgenos o no
+
+### [REFACTOR] FooterMobile más compacto (~40% menos altura)
+- `styles/FooterMobile.css` — padding 24/12px (antes 32/16), gap 12px (antes 16-20), logo 100px (antes 120), iconos sociales 40×40 (antes 44×44, sigue táctil), fuentes 1-2px más pequeñas, legales con gap 2px y padding 4×8 (antes 4 / 8×12). Sin tocar JSX ni FooterDesktop
+
+### [FEATURE] Descripciones (10 idiomas) + alérgenos para refrescos y salsas
+- `locales/productsMap.js` — 35 entradas nuevas (24 refrescos + 11 salsas) con `name` y `description` en es/en/cat/fr/de/nl/ru/ar/pl/it
+- SQL aparte (Supabase SQL Editor) — `UPDATE products` con `description` (ES) y `allergens`. Free Damm Limón/Tostada → `['Gluten']`; salsas: Blanca y Pita Kebab → `['Lácteos']`, Mayonesa/Algerian/Samurai/Brazil/Biggie/Andaluza → `['Huevo','Mostaza']` (+ Picante en las que aplica), Barbacoa → `['Mostaza','Sulfitos']`, Picante → `['Picante']`, Ketchup sin alérgenos
+
+---
+
+## [1.5.0] - 2026-05-20 — es
 
 ### [FEATURE] Footer reestructurado a 4 columnas (desktop) / 1 col (móvil)
 - `components/layout/Footer.jsx` — nueva estructura `footer-grid` con 4 columnas: **Logo+info**, **Navegación** (Inicio / Carta / Galería / Contacto), **Horarios** (Lun–Dom, 12:30–23:59 + 00:00–03:00) y **Contacto** (teléfono + email + redes). Iconos sociales: Instagram, Facebook, TikTok, **WhatsApp** (nuevo, usando `wa.me/<phoneDigits>`)

@@ -364,13 +364,13 @@
 }
 .menu-card-img {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/2;
   object-fit: cover;
   display: block;
 }
 .menu-card-emoji-zone {
   width: 100%;
-  aspect-ratio: 4/3;
+  aspect-ratio: 3/2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -386,6 +386,9 @@
   background: rgba(0, 0, 0, 0.30);
   flex-wrap: wrap;
   align-items: center;
+  /* Altura reservada también cuando no hay alérgenos, para alinear tarjetas */
+  min-height: 28px;
+  box-sizing: border-box;
 }
 .menu-allergen-strip-icon {
   width: 16px;
@@ -417,6 +420,10 @@
   -webkit-line-clamp: 2;
   -webkit-box-orient: vertical;
   overflow: hidden;
+}
+/* Móvil: ocultar descripción en la tarjeta (sólo se ve en el modal/drawer) */
+@media (max-width: 767px) {
+  .menu-card-desc { display: none; }
 }
 .menu-card-price {
   font-family: 'Black Ops One', cursive;
