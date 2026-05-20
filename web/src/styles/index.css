@@ -366,8 +366,137 @@ footer {
   .delivery-grid { grid-template-columns: 1fr; }
 }
 
-/* ─── Footer más compacto en móvil (override de estilos inline) ─── */
-@media (max-width: 767px) {
-  .site-footer { padding: 32px 20px 20px !important; }
-  .site-footer-grid { gap: 24px !important; margin-bottom: 24px !important; }
+/* ============================================
+   FOOTER · Mobile-first (compacto + áreas táctiles ≥44px)
+   ============================================ */
+.site-footer {
+  background: #040d07;
+  border-top: 1px solid rgba(0, 230, 118, 0.10);
+  padding: 32px 20px 16px;
+}
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  max-width: 400px;
+  margin: 0 auto;
+  text-align: center;
+}
+.footer-logo {
+  width: 120px;
+  height: auto;
+  display: block;
+}
+.footer-info {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  line-height: 1.5;
+  color: rgba(245, 240, 232, 0.60);
+}
+.footer-info p { margin: 0 0 4px; }
+.footer-info .footer-contact { margin-top: 6px; }
+.footer-info a {
+  color: rgba(245, 240, 232, 0.75);
+  text-decoration: none;
+}
+.footer-info a:hover { color: var(--color-neon); }
+
+/* Iconos sociales — área táctil mínima 44×44 en móvil */
+.footer-social {
+  display: flex;
+  gap: 12px;
+}
+.footer-social-icon {
+  width: 44px;
+  height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 230, 118, 0.10);
+  border: 1px solid rgba(0, 230, 118, 0.30);
+  border-radius: 8px;
+  color: var(--color-neon);
+  text-decoration: none;
+  transition: background 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.footer-social-icon:hover {
+  background: rgba(0, 230, 118, 0.20);
+  border-color: var(--color-neon);
+  transform: translateY(-2px);
+}
+
+/* Links legales — verticales en móvil con buena área táctil */
+.footer-legal-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.footer-legal-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  color: rgba(245, 240, 232, 0.70);
+  padding: 6px 12px;
+  border-radius: 4px;
+  transition: color 0.2s ease, background 0.2s ease;
+}
+.footer-legal-link:hover {
+  color: var(--color-neon);
+  background: rgba(0, 230, 118, 0.08);
+}
+
+/* Copyright + créditos */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  margin-top: 4px;
+}
+.footer-copyright {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: rgba(245, 240, 232, 0.45);
+}
+.footer-credits {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  color: rgba(245, 240, 232, 0.30);
+}
+.footer-credits a {
+  color: var(--color-neon);
+  text-decoration: none;
+  opacity: 0.85;
+}
+.footer-credits a:hover { opacity: 1; }
+
+/* Desktop ≥ 768 */
+@media (min-width: 768px) {
+  .site-footer { padding: 48px 40px 24px; }
+  .footer-content { gap: 32px; max-width: 1200px; }
+  .footer-logo { width: 150px; }
+  .footer-info { font-size: 14px; }
+  .footer-social-icon { width: 40px; height: 40px; }
+  .footer-legal-links {
+    flex-direction: row;
+    gap: 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .footer-legal-link {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+  .footer-legal-link:not(:last-child)::after {
+    content: '·';
+    margin: 0 4px;
+    color: rgba(245, 240, 232, 0.30);
+  }
+  .footer-credits { font-size: 11px; }
 }

@@ -4,6 +4,20 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.4.9] - 2026-05-20 — Footer rediseñado (mobile-first + áreas táctiles)
+
+### [REFACTOR] Footer compacto, accesible y mobile-first
+- `components/layout/Footer.jsx` — reescrito: layout en columna centrada (logo + info + iconos + links legales + bottom), eliminado el título "SÍGUENOS", grid de 3 columnas reemplazado por flex column. Mantiene `useLegalModal` para los modales legales y `siteInfo` para contacto
+- `styles/index.css` — bloque `.site-footer` mobile-first:
+  - Padding 32px/20px/16px móvil → 48px/40px/24px desktop
+  - Logo 120px móvil → 150px desktop
+  - **Iconos sociales 44×44 en móvil** (área táctil accesible, regla móvil ≥44px) → 40×40 desktop
+  - Links legales: **vertical 14px** móvil con padding 6×12 (área táctil) → fila 13px con separadores `·` en desktop
+  - Créditos: 10px opacity 0.30 móvil → 11px desktop (más discretos que antes)
+- Sustituido el rule antiguo `.site-footer-grid` (ya no existe en el JSX)
+
+---
+
 ## [1.4.8] - 2026-05-20 — Hero con logo + media de fondo + padding compacto en toda la home
 
 ### [FEATURE] Logo en el hero (en vez de wordmark de texto)
