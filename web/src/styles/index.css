@@ -83,13 +83,16 @@ html {
   grid-template-columns: repeat(2, 1fr);  /* móvil: 2x3 */
   gap: 12px;
 }
-.featured-img-zone { height: 120px; }
+.featured-img-zone {
+  /* Las imágenes de categorías son 3:2 */
+  aspect-ratio: 3 / 2;
+  width: 100%;
+}
 @media (min-width: 768px) {
   .featured-grid {
     grid-template-columns: repeat(3, 1fr); /* desktop: 3x2 */
     gap: 20px;
   }
-  .featured-img-zone { height: 160px; }
 }
 
 /* ─── PriceDisplay — entero grande + céntimos pequeños ─── */
