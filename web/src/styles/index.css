@@ -77,16 +77,19 @@ html {
   border: 1px solid var(--color-border-neon);
 }
 
-/* ─── FeaturedSection responsive ─── */
+/* ─── FeaturedSection — mobile-first: 2 cols × 3 filas → 3 cols × 2 filas en desktop ─── */
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(2, 1fr);  /* móvil: 2x3 */
+  gap: 12px;
 }
-.featured-img-zone { height: 160px; }
-@media (max-width: 640px) {
-  .featured-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .featured-img-zone { height: 120px; }
+.featured-img-zone { height: 120px; }
+@media (min-width: 768px) {
+  .featured-grid {
+    grid-template-columns: repeat(3, 1fr); /* desktop: 3x2 */
+    gap: 20px;
+  }
+  .featured-img-zone { height: 160px; }
 }
 
 /* ─── PriceDisplay — entero grande + céntimos pequeños ─── */
