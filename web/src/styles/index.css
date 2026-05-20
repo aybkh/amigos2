@@ -425,6 +425,16 @@ footer {
   border-color: var(--color-neon);
   transform: translateY(-2px);
 }
+/* Iconos sin URL configurada (se rellenan en /admin → Info Restaurante) */
+.footer-social-icon--disabled {
+  opacity: 0.40;
+  cursor: default;
+}
+.footer-social-icon--disabled:hover {
+  background: rgba(0, 230, 118, 0.10);
+  border-color: rgba(0, 230, 118, 0.30);
+  transform: none;
+}
 
 /* Links legales — verticales en móvil con buena área táctil */
 .footer-legal-links {

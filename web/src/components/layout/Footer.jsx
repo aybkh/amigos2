@@ -1,7 +1,33 @@
-import { Instagram, Facebook } from 'lucide-react'
+import { Instagram, Facebook, Phone } from 'lucide-react'
 import { useLanguage } from '../../hooks/useLanguage'
 import { useLegalModal } from '../../contexts/LegalModalContext'
 import { t } from '../../lib/i18n'
+
+// Botón social — si no hay href, se renderiza atenuado y sin navegación
+function SocialBtn({ href, label, children, external = true }) {
+  if (!href) {
+    return (
+      <span
+        className="footer-social-icon footer-social-icon--disabled"
+        aria-label={label}
+        title={label}
+      >
+        {children}
+      </span>
+    )
+  }
+  return (
+    <a
+      href={href}
+      target={external ? '_blank' : undefined}
+      rel={external ? 'noopener noreferrer' : undefined}
+      aria-label={label}
+      className="footer-social-icon"
+    >
+      {children}
+    </a>
+  )
+}
 
 const TikTokIcon = () => (
   <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true">
@@ -46,23 +72,24 @@ export default function Footer({ siteInfo }) {
           )}
         </div>
 
-        {/* Iconos sociales (sin título "Síguenos") */}
+        {/* Iconos sociales + teléfono (sin título "Síguenos") */}
         <div className="footer-social">
-          {instagram && (
-            <a href={instagram} target="_blank" rel="noopener noreferrer"
-               className="footer-social-icon" aria-label="Instagram">
-              <Instagram size={20} />
-            </a>
-          )}
-          {facebook && (
-            <a href={facebook} target="_blank" rel="noopener noreferrer"
-               className="footer-social-icon" aria-label="Facebook">
-              <Facebook size={20} />
-            </a>
-          )}
-          <a href="#" className="footer-social-icon" aria-label="TikTok" onClick={e => e.preventDefault()}>
+          <SocialBtn
+            href={phone ? `tel:${phone.replace(/\s+/g, '')}` : null}
+            label="Teléfono"
+            external={false}
+          >
+            <Phone size={20} />
+          </SocialBtn>
+          <SocialBtn href={instagram} label="Instagram">
+            <Instagram size={20} />
+          </SocialBtn>
+          <SocialBtn href={facebook} label="Facebook">
+            <Facebook size={20} />
+          </SocialBtn>
+          <SocialBtn href={null} label="TikTok">
             <TikTokIcon />
-          </a>
+          </SocialBtn>
         </div>
 
         {/* Links legales (modal) */}
