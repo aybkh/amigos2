@@ -4,6 +4,17 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.5.0] - 2026-05-20 — Footer profesional 4 columnas en desktop
+
+### [FEATURE] Footer reestructurado a 4 columnas (desktop) / 1 col (móvil)
+- `components/layout/Footer.jsx` — nueva estructura `footer-grid` con 4 columnas: **Logo+info**, **Navegación** (Inicio / Carta / Galería / Contacto), **Horarios** (Lun–Dom, 12:30–23:59 + 00:00–03:00) y **Contacto** (teléfono + email + redes). Iconos sociales: Instagram, Facebook, TikTok, **WhatsApp** (nuevo, usando `wa.me/<phoneDigits>`)
+- `styles/index.css` — bloque footer reescrito **mobile-first**: 1 columna centrada con título por sección, áreas táctiles ≥44px; `@media (min-width: 768px)` → `grid-template-columns: repeat(4, 1fr)`, alineación a la izquierda, bottom-bar horizontal (copyright | legales | créditos)
+- Featured también: en este push del día anterior, grid `repeat(2,1fr)` móvil → `repeat(3,1fr)` desktop (2x3/3x2) con imágenes `aspect-ratio: 3/2`
+- i18n: añadida `ui.footer.nav_title` (Navegación) en los 10 idiomas; el resto reutiliza claves existentes (`ui.nav.*`, `ui.hours.*`, `ui.contact.title`, `ui.footer.*`)
+- Mantiene `useLegalModal` (los enlaces legales abren modales, no rutas); icono WhatsApp como SVG inline
+
+---
+
 ## [1.4.9] - 2026-05-20 — Footer rediseñado (mobile-first + áreas táctiles)
 
 ### [REFACTOR] Footer compacto, accesible y mobile-first

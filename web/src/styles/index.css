@@ -416,45 +416,102 @@ footer {
 }
 
 /* ============================================
-   FOOTER · Mobile-first (compacto + áreas táctiles ≥44px)
+   FOOTER · Mobile-first 1 col → Desktop 4 cols
    ============================================ */
 .site-footer {
   background: #040d07;
   border-top: 1px solid rgba(0, 230, 118, 0.10);
   padding: 32px 20px 16px;
 }
-.footer-content {
+.footer-container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Móvil: 1 columna, todo centrado */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  text-align: center;
+}
+.footer-column {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 24px;
-  max-width: 400px;
-  margin: 0 auto;
-  text-align: center;
+  gap: 10px;
 }
 .footer-logo {
   width: 120px;
   height: auto;
-  display: block;
+  margin-bottom: 4px;
 }
-.footer-info {
+.footer-tagline,
+.footer-location {
+  margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 13px;
-  line-height: 1.5;
-  color: rgba(245, 240, 232, 0.60);
+  color: rgba(245, 240, 232, 0.70);
 }
-.footer-info p { margin: 0 0 4px; }
-.footer-info .footer-contact { margin-top: 6px; }
-.footer-info a {
-  color: rgba(245, 240, 232, 0.75);
-  text-decoration: none;
+.footer-column-title {
+  margin: 0 0 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-neon);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
 }
-.footer-info a:hover { color: var(--color-neon); }
 
-/* Iconos sociales — área táctil mínima 44×44 en móvil */
-.footer-social {
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.footer-links a {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: rgba(245, 240, 232, 0.70);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-links a:hover { color: var(--color-neon); }
+
+.footer-hours,
+.footer-hours-time {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: rgba(245, 240, 232, 0.70);
+}
+.footer-hours { font-weight: 600; margin-bottom: 4px; }
+
+.footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+.footer-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 13px;
+  color: rgba(245, 240, 232, 0.70);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.footer-contact-link:hover { color: var(--color-neon); }
+
+/* Iconos sociales — táctiles 44×44 en móvil */
+.footer-socials {
   display: flex;
   gap: 12px;
+  justify-content: center;
 }
 .footer-social-icon {
   width: 44px;
@@ -474,7 +531,6 @@ footer {
   border-color: var(--color-neon);
   transform: translateY(-2px);
 }
-/* Iconos sin URL configurada (se rellenan en /admin → Info Restaurante) */
 .footer-social-icon--disabled {
   opacity: 0.40;
   cursor: default;
@@ -485,48 +541,52 @@ footer {
   transform: none;
 }
 
-/* Links legales — verticales en móvil con buena área táctil */
-.footer-legal-links {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-.footer-legal-link {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-  color: rgba(245, 240, 232, 0.70);
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: color 0.2s ease, background 0.2s ease;
-}
-.footer-legal-link:hover {
-  color: var(--color-neon);
-  background: rgba(0, 230, 118, 0.08);
-}
-
-/* Copyright + créditos */
+/* Bottom bar — móvil columna centrada */
 .footer-bottom {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 230, 118, 0.10);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  margin-top: 4px;
+  gap: 10px;
+  text-align: center;
 }
 .footer-copyright {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 12px;
-  color: rgba(245, 240, 232, 0.45);
+  color: rgba(245, 240, 232, 0.55);
 }
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  align-items: center;
+  justify-content: center;
+}
+.footer-legal-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.footer-legal button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 8px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  color: rgba(245, 240, 232, 0.65);
+  transition: color 0.2s ease;
+}
+.footer-legal button:hover { color: var(--color-neon); }
+.footer-legal-sep { color: rgba(245, 240, 232, 0.30); font-size: 12px; }
 .footer-credits {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 10px;
-  color: rgba(245, 240, 232, 0.30);
+  color: rgba(245, 240, 232, 0.35);
 }
 .footer-credits a {
   color: var(--color-neon);
@@ -535,27 +595,38 @@ footer {
 }
 .footer-credits a:hover { opacity: 1; }
 
-/* Desktop ≥ 768 */
+/* ============================================
+   Desktop ≥ 768 — Grid 4 columnas
+   ============================================ */
 @media (min-width: 768px) {
-  .site-footer { padding: 48px 40px 24px; }
-  .footer-content { gap: 32px; max-width: 1200px; }
+  .site-footer { padding: 60px 40px 30px; }
+
+  .footer-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: left;
+  }
+  .footer-column {
+    align-items: flex-start;
+    gap: 10px;
+  }
   .footer-logo { width: 150px; }
-  .footer-info { font-size: 14px; }
-  .footer-social-icon { width: 40px; height: 40px; }
-  .footer-legal-links {
+  .footer-tagline,
+  .footer-location,
+  .footer-links a,
+  .footer-hours,
+  .footer-hours-time,
+  .footer-contact-link { font-size: 14px; }
+  .footer-column-title { font-size: 15px; }
+
+  .footer-socials { justify-content: flex-start; }
+
+  /* Bottom bar horizontal en desktop */
+  .footer-bottom {
     flex-direction: row;
-    gap: 0;
-    flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-between;
+    text-align: left;
   }
-  .footer-legal-link {
-    font-size: 13px;
-    padding: 4px 8px;
-  }
-  .footer-legal-link:not(:last-child)::after {
-    content: '·';
-    margin: 0 4px;
-    color: rgba(245, 240, 232, 0.30);
-  }
+  .footer-copyright { font-size: 13px; }
   .footer-credits { font-size: 11px; }
 }
