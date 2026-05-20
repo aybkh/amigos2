@@ -194,36 +194,53 @@ footer {
   position: relative;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
   padding: 60px 24px 48px;
   overflow: hidden;
   background: linear-gradient(135deg, #071a10 0%, #0a2618 50%, #071a10 100%);
 }
-/* Imagen/vídeo de fondo opcional (admin lo activa) */
-.hero-background-media {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-  overflow: hidden;
-}
-.hero-background-media img,
-.hero-background-media video {
+
+/* Contenedor 2-cols (desktop) / 1-col (móvil) */
+.hero-container {
+  position: relative;
+  z-index: 1;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+.hero-content-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+
+/* Helpers de visibilidad por breakpoint */
+.desktop-only { display: none; }
+.mobile-only  { display: block; }
+
+/* Card de media (imagen o vídeo) — visible, NO fondo */
+.hero-media-mobile {
+  width: 100%;
+  max-width: 400px;
+  margin: 24px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.40);
+}
+.hero-media-image,
+.hero-media-video {
+  width: 100%;
+  height: auto;
   display: block;
+  object-fit: cover;
 }
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(7,26,16,0.40), rgba(7,26,16,0.85));
-}
-/* Cuando hay media de fondo, ocultamos los blobs decorativos */
-.hero-section.hero-has-media::before,
-.hero-section.hero-has-media::after { display: none; }
+.hero-media-video { max-height: 300px; }
 /* Blobs verdes desenfocados */
 .hero-section::before,
 .hero-section::after {
@@ -336,6 +353,32 @@ footer {
 @media (min-width: 768px) {
   .hero-section {
     padding: 80px 40px 60px;
+  }
+  /* Toggle visibilidad mobile/desktop */
+  .desktop-only { display: block; }
+  .mobile-only  { display: none; }
+  /* 2 columnas en desktop: media 40% izq / contenido 60% der */
+  .hero-container {
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+  }
+  .hero-media-column {
+    flex: 0 0 40%;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.50);
+  }
+  .hero-media-column .hero-media-image,
+  .hero-media-column .hero-media-video {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+  }
+  .hero-content-column {
+    flex: 1;
+    text-align: left;
+    align-items: flex-start;
   }
   .hero-logo { width: 400px; }
   .hero-section::before {
