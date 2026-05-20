@@ -19,7 +19,7 @@ export default function LocationSection() {
       id="ubicacion"
       style={{
         background: 'var(--color-bg-mid)',
-        padding: '80px 24px',
+        padding: '48px 24px',
       }}
     >
       <div style={{ maxWidth: 700, margin: '0 auto' }}>

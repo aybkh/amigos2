@@ -26,6 +26,7 @@ export const TABLES = {
   GALLERY: 'gallery',
   CONTACT_MESSAGES: 'contact_messages',
   DELIVERY_LINKS: 'delivery_links',
+  HERO_MEDIA: 'hero_media',
 }
 
 // Nombre del bucket de Storage para imágenes públicas

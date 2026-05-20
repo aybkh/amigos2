@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import {
   LayoutDashboard, UtensilsCrossed, Newspaper,
-  Images, Info, LogOut, Menu, X, Mail, Bike,
+  Images, Info, LogOut, Menu, X, Mail, Bike, Film,
 } from 'lucide-react'
 import { ROUTES } from '../../lib/constants'
 import { useAuth } from '../../hooks/useAuth'
@@ -14,6 +14,7 @@ const navItems = [
   { to: ROUTES.POSTS, label: 'Posts', icon: Newspaper },
   { to: ROUTES.GALLERY, label: 'Galería', icon: Images },
   { to: ROUTES.SITE_INFO, label: 'Info Restaurante', icon: Info },
+  { to: ROUTES.HERO_MEDIA, label: 'Hero (imagen/vídeo)', icon: Film },
   { to: ROUTES.DELIVERY, label: 'Pedir a domicilio', icon: Bike },
   { to: ROUTES.MESSAGES, label: 'Mensajes', icon: Mail, badge: true },
 ]

@@ -153,6 +153,37 @@ WITH CHECK (auth.role() = 'authenticated');
 
 ---
 
+### `hero_media`
+
+Imagen o vídeo de fondo del hero de la home. Si no hay fila activa (o `media_type='none'`), la web usa el gradiente + blobs por defecto. Se gestiona desde `/hero` en el admin.
+
+```sql
+CREATE TABLE IF NOT EXISTS hero_media (
+  id          bigserial PRIMARY KEY,
+  media_type  text NOT NULL CHECK (media_type IN ('image','video','none')),
+  media_url   text,
+  is_active   boolean NOT NULL DEFAULT true,
+  created_at  timestamptz NOT NULL DEFAULT now()
+);
+
+INSERT INTO hero_media (media_type, media_url, is_active)
+VALUES ('none', NULL, true);
+
+-- RLS: lectura pública, escritura solo autenticados (admin)
+ALTER TABLE hero_media ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "hero_media lectura pública"
+ON hero_media FOR SELECT
+USING (true);
+
+CREATE POLICY "hero_media escritura autenticada"
+ON hero_media FOR ALL
+USING (auth.role() = 'authenticated')
+WITH CHECK (auth.role() = 'authenticated');
+```
+
+---
+
 ## Row Level Security (RLS)
 
 ```sql

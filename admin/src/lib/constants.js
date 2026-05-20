@@ -8,6 +8,7 @@ export const ROUTES = {
   SITE_INFO: '/info',
   MESSAGES: '/messages',
   DELIVERY: '/delivery',
+  HERO_MEDIA: '/hero',
 }
 
 // Nombres de tablas Supabase
@@ -19,6 +20,7 @@ export const TABLES = {
   GALLERY: 'gallery',
   CONTACT_MESSAGES: 'contact_messages',
   DELIVERY_LINKS: 'delivery_links',
+  HERO_MEDIA: 'hero_media',
 }
 
 // Bucket de Supabase Storage (único bucket público)

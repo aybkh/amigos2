@@ -181,6 +181,12 @@ html {
 
 .animate-fade-in-up { animation: fadeInUp 0.7s ease forwards; }
 
+/* Transiciones suaves de fondo entre secciones (cambio 4) */
+section,
+footer {
+  transition: background-color 0.4s ease, background 0.4s ease;
+}
+
 /* ============================================
    HERO (Opción C — minimalista) · Mobile-first
    ============================================ */
@@ -192,10 +198,32 @@ html {
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 80px 24px 60px;
+  padding: 60px 24px 48px;
   overflow: hidden;
   background: linear-gradient(135deg, #071a10 0%, #0a2618 50%, #071a10 100%);
 }
+/* Imagen/vídeo de fondo opcional (admin lo activa) */
+.hero-background-media {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.hero-background-media img,
+.hero-background-media video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(7,26,16,0.40), rgba(7,26,16,0.85));
+}
+/* Cuando hay media de fondo, ocultamos los blobs decorativos */
+.hero-section.hero-has-media::before,
+.hero-section.hero-has-media::after { display: none; }
 /* Blobs verdes desenfocados */
 .hero-section::before,
 .hero-section::after {
@@ -234,16 +262,17 @@ html {
   color: var(--color-neon);
 }
 
-.hero-title {
-  font-family: 'Black Ops One', cursive;
-  font-size: clamp(3rem, 14vw, 4rem);
-  line-height: 0.95;
-  margin: 0 0 12px;
-  color: var(--color-cream);
-  letter-spacing: 0.02em;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.45);
+/* Logo en lugar de wordmark de texto */
+.hero-logo-container {
+  margin: 0 0 16px;
 }
-.hero-title-accent { color: var(--color-neon); }
+.hero-logo {
+  display: block;
+  width: 280px;
+  max-width: 88vw;
+  height: auto;
+  filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.55));
+}
 
 .hero-subtitle {
   margin: 0 0 32px;
@@ -306,8 +335,9 @@ html {
 /* Desktop ≥ 768 — adaptaciones */
 @media (min-width: 768px) {
   .hero-section {
-    padding: 100px 40px 80px;
+    padding: 80px 40px 60px;
   }
+  .hero-logo { width: 400px; }
   .hero-section::before {
     width: 600px; height: 600px;
     top: -250px; right: -180px;
@@ -319,7 +349,6 @@ html {
     filter: blur(80px);
   }
   .hero-badge { font-size: 0.75rem; padding: 7px 16px; }
-  .hero-title { font-size: clamp(4rem, 8vw, 6.5rem); }
   .hero-subtitle { font-size: 1.05rem; margin-bottom: 40px; }
   .hero-cta-buttons {
     flex-direction: row;

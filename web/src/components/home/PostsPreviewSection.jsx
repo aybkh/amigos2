@@ -92,7 +92,7 @@ export default function PostsPreviewSection({ posts, loading }) {
   if (!loading && (!posts || posts.length === 0)) return null
 
   return (
-    <section style={{ background: 'var(--color-bg-mid, #0a2a1a)', padding: '80px 24px' }}>
+    <section style={{ background: 'var(--color-bg-mid, #0a2a1a)', padding: '48px 24px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ marginBottom: 40 }}>
           <p style={{

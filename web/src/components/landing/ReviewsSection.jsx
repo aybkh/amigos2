@@ -106,7 +106,7 @@ export default function ReviewsSection() {
   )
 
   return (
-    <section style={{ background: '#040d07', padding: '72px 0', overflow: 'hidden' }}>
+    <section style={{ background: '#040d07', padding: '48px 0', overflow: 'hidden' }}>
       {header}
 
       {/* Array duplicado → bucle infinito sin saltos (CSS marquee) */}

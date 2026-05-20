@@ -4,6 +4,29 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.4.8] - 2026-05-20 — Hero con logo + media de fondo + padding compacto en toda la home
+
+### [FEATURE] Logo en el hero (en vez de wordmark de texto)
+- `components/home/HeroSection.jsx` — el `<h1>` de texto sustituido por `<img src="/amigos2-logo-2-1.png" />` en un `.hero-logo-container`
+- `styles/index.css` — `.hero-logo` 280px móvil / 400px desktop, con `drop-shadow`
+
+### [FEATURE] Soporte opcional de imagen/vídeo de fondo en el hero
+- Nueva tabla `hero_media` (Supabase) con `media_type` (`image|video|none`), `media_url`, `is_active`. RLS lectura pública + escritura autenticada. SQL en `docs/SCHEMA.md`. Pendiente ejecutarlo en el SQL Editor
+- `web`: `services/heroMediaService.js` (tolera tabla inexistente), `hooks/useHeroMedia.js`, `HeroSection.jsx` renderiza `<img>` o `<video autoPlay muted loop playsInline>` absoluto + overlay si hay media activo; la clase `.hero-has-media` oculta los blobs decorativos
+- `admin`: `services/heroMediaService.js`, `pages/HeroMediaPage.jsx`, `components/heromedia/HeroMediaManager.jsx` (selector tipo + URL + preview), ruta `/hero` y entrada en el sidebar (icono `Film`)
+- `TABLES.HERO_MEDIA` añadido a constantes de web y admin
+
+### [REFACTOR] Padding vertical compacto en toda la home (mobile-first)
+- 7 secciones: `padding: '80px 24px'` → `'48px 24px'` (`ContactSection`, `DeliverySection`, `FeaturedSection`, `GallerySection`, `HoursSection`, `LocationSection`, `PostsPreviewSection`)
+- `ReviewsSection`: `'72px 0'` → `'48px 0'`
+- Hero: móvil `60px 24px 48px` / desktop `80px 40px 60px` (era 80/100px)
+- Resultado: ~30–40% menos altura vertical entre secciones
+
+### [STYLE] Transiciones suaves de fondo
+- `styles/index.css` — `section, footer { transition: background 0.4s ease }` para suavizar cualquier cambio de fondo (e.g., con/sin media en el hero)
+
+---
+
 ## [1.4.7] - 2026-05-20 — Hero rediseñado (Opción C minimalista, mobile-first)
 
 ### [FEATURE] HeroSection minimalista con gradiente + blobs verdes

@@ -75,7 +75,7 @@ export default function HoursSection() {
       id="horarios"
       style={{
         background: 'linear-gradient(160deg, #071a10, #0a2a1a)',
-        padding: '80px 24px',
+        padding: '48px 24px',
       }}
     >
       <div style={{ maxWidth: 600, margin: '0 auto' }}>

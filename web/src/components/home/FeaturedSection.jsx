@@ -130,7 +130,7 @@ export default function FeaturedSection() {
   if (!loading && featured.length === 0) return null
 
   return (
-    <section id="featured" style={{ background: 'var(--color-bg-mid)', padding: '80px 24px' }}>
+    <section id="featured" style={{ background: 'var(--color-bg-mid)', padding: '48px 24px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
 
         <div style={{ textAlign: 'center', marginBottom: 40 }}>

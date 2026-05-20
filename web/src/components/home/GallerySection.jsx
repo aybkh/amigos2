@@ -97,7 +97,7 @@ export default function GallerySection() {
       id="galeria"
       style={{
         background: 'var(--color-cream)',
-        padding: '80px 24px',
+        padding: '48px 24px',
       }}
     >
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>

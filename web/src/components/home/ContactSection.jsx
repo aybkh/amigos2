@@ -49,7 +49,7 @@ export default function ContactSection() {
       id="contacto"
       style={{
         background: 'var(--color-bg-dark)',
-        padding: '80px 24px',
+        padding: '48px 24px',
       }}
     >
       <div style={{ maxWidth: 550, margin: '0 auto' }}>
