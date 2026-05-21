@@ -105,3 +105,33 @@
   font-family: 'Montserrat', sans-serif;
   margin-top: 8px;
 }
+
+/* Input con error de validación */
+.contact-input--error {
+  border-color: #e57373;
+}
+
+/* Mensaje de error por campo */
+.contact-field-error {
+  display: block;
+  color: #e57373;
+  font-size: 0.75rem;
+  font-family: 'Montserrat', sans-serif;
+  margin-top: 4px;
+}
+
+/* Fila bajo el textarea: error + contador */
+.contact-field-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.contact-char-count {
+  flex-shrink: 0;
+  font-size: 0.7rem;
+  font-family: 'Montserrat', sans-serif;
+  color: rgba(255, 255, 255, 0.45);
+}

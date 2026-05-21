@@ -23,6 +23,18 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 - `components/menu/ProductCard.jsx` — el `<div class="menu-card-allergens-strip">` se renderiza siempre, esté o no la lista vacía
 - `styles/menu.css` — `.menu-card-allergens-strip` ahora tiene `min-height: 28px` + `box-sizing: border-box`. Así todas las tarjetas alinean nombre+precio a la misma altura, tengan alérgenos o no
 
+### [FIX] Seguridad — correcciones M1, M2, M3 de la auditoría
+- `.gitignore` — añadidos `.env`, `.env.*` (con excepción `!.env.example`), `node_modules/`, `dist/` (M1). Verificado: ningún `.env` estaba trackeado
+- `components/contact/ContactForm.jsx` — validación completa de inputs: nombre 2-100 chars solo letras (regex Unicode, admite acentos y nombres internacionales), email formato + máx 255, mensaje 10-1000 chars (M3). Errores por campo + contador de caracteres
+- ContactForm — rate limiting client-side: 1 envío cada 60s vía `useRef` (M2). Se mantiene `contactService` (no se llama a Supabase directo desde el componente)
+- `styles/landing/Contact.css` — estilos `.contact-input--error`, `.contact-field-error`, `.contact-field-meta`, `.contact-char-count`
+
+### [FEATURE] HeroSection rediseñado compacto con media de fondo
+- `components/home/HeroSection.jsx` + `styles/HeroSection.css` — hero compacto (~65vh móvil / 70-75vh desktop): logo + slogan, 2 CTAs (Ver Carta → `/carta`, Ubicación → scroll a `#ubicacion`) y 3 mini-cards de categorías (Pizzas / Turca / Hindú) que enlazan a la carta
+- Media del panel admin (`useHeroMedia`) ahora se usa como **fondo a pantalla completa con overlay oscuro** (antes era card en columna). Sin media → degradado verde sólido
+- `styles/index.css` — eliminado el bloque hero antiguo (~215 líneas, "Opción C") para evitar conflicto de la clase reutilizada `.hero-logo`
+- Eliminado el badge superior; se mantiene i18n (`useLanguage` + `t()`) y el slogan dinámico de `siteInfo`
+
 ### [FIX] "Diseñado por AyoubDev" en negrita
 - `styles/FooterDesktop.css` — `.footer-desktop-credits` con `font-weight: 700`
 - `styles/FooterMobile.css` + `FooterMobile.jsx` — span de créditos con clase `.footer-mobile-credits` y `font-weight: 700` (sin afectar al copyright de la misma fila)

@@ -14,3 +14,12 @@ Thumbs.db
 # Claude
 CLAUDE.md
 .claude/
+
+# Dependencias y builds
+node_modules/
+dist/
+
+# Variables de entorno — NUNCA subir
+.env
+.env.*
+!.env.example
