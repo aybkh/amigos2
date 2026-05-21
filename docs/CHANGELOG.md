@@ -23,8 +23,13 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 - `components/menu/ProductCard.jsx` — el `<div class="menu-card-allergens-strip">` se renderiza siempre, esté o no la lista vacía
 - `styles/menu.css` — `.menu-card-allergens-strip` ahora tiene `min-height: 28px` + `box-sizing: border-box`. Así todas las tarjetas alinean nombre+precio a la misma altura, tengan alérgenos o no
 
-### [REFACTOR] FooterMobile más compacto (~40% menos altura)
-- `styles/FooterMobile.css` — padding 24/12px (antes 32/16), gap 12px (antes 16-20), logo 100px (antes 120), iconos sociales 40×40 (antes 44×44, sigue táctil), fuentes 1-2px más pequeñas, legales con gap 2px y padding 4×8 (antes 4 / 8×12). Sin tocar JSX ni FooterDesktop
+### [FIX] "Diseñado por AyoubDev" en negrita
+- `styles/FooterDesktop.css` — `.footer-desktop-credits` con `font-weight: 700`
+- `styles/FooterMobile.css` + `FooterMobile.jsx` — span de créditos con clase `.footer-mobile-credits` y `font-weight: 700` (sin afectar al copyright de la misma fila)
+
+### [REFACTOR] FooterMobile rediseñado horizontal compacto (~200-240px)
+- `components/layout/FooterMobile.jsx` + `styles/FooterMobile.css` — nuevo layout en 5 filas horizontales: (1) logo 70px + tagline en línea, (2) contacto teléfono · email, (3) iconos sociales 36×36, (4) legales en línea separados por `|`, (5) copyright en línea separado por `·`. Separador visual `.footer-mobile-separator` reutilizable
+- Se mantienen modales `useLegalModal`, i18n, prop `siteInfo` e iconos de marca (TikTok/WhatsApp SVG); sin tocar FooterDesktop
 
 ### [FEATURE] Descripciones (10 idiomas) + alérgenos para refrescos y salsas
 - `locales/productsMap.js` — 35 entradas nuevas (24 refrescos + 11 salsas) con `name` y `description` en es/en/cat/fr/de/nl/ru/ar/pl/it

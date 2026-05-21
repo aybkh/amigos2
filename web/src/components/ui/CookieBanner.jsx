@@ -123,8 +123,8 @@ export default function CookieBanner() {
           title={t(lang, 'ui.cookies.prefs')}
           aria-label={t(lang, 'ui.cookies.prefs')}
           style={{
-            position: 'fixed', bottom: 16, left: 16,
-            width: 36, height: 36,
+            position: 'fixed', bottom: 5, left: 7,
+            width: 30, height: 30,
             borderRadius: '50%',
             background: 'rgba(0,230,118,0.08)',
             border: '1px solid rgba(0,230,118,0.30)',
