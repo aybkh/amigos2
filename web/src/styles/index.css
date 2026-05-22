@@ -94,16 +94,20 @@ html {
     gap: 20px;
   }
 }
-/* Fundido suave al rotar el plato destacado (cada 5s) */
+/* Rotación del plato destacado: fade-out → swap invisible → fade-in escalonado */
 @keyframes featuredFadeIn {
-  from { opacity: 0; transform: translateY(6px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(10px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0)    scale(1);    }
 }
-.featured-fade {
-  animation: featuredFadeIn 0.55s ease;
+@keyframes featuredFadeOut {
+  from { opacity: 1; transform: translateY(0)     scale(1);    }
+  to   { opacity: 0; transform: translateY(-10px) scale(0.98); }
 }
+.featured-grid.is-in  .featured-fade { animation: featuredFadeIn  0.5s ease both; }
+.featured-grid.is-out .featured-fade { animation: featuredFadeOut 0.3s ease forwards; }
 @media (prefers-reduced-motion: reduce) {
-  .featured-fade { animation: none; }
+  .featured-grid.is-in  .featured-fade,
+  .featured-grid.is-out .featured-fade { animation: none; }
 }
 
 /* ─── PriceDisplay — entero grande + céntimos pequeños ─── */

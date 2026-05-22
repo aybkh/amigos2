@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect, useMemo, useRef } from 'react'
 import { useMenu } from '../../hooks/useMenu'
 import { useLanguage } from '../../hooks/useLanguage'
 import { t } from '../../lib/i18n'
@@ -6,8 +6,9 @@ import PriceDisplay from '../ui/PriceDisplay'
 
 const TARGET_NAMES = ['Pizzas', 'Comida Turca', 'Paellas', 'Platos Combinados', 'Cócteles', 'Hindú']
 
-// Rotación automática de plato destacado por categoría
-const ROTATE_MS = 5000
+// Rotación automática del plato destacado por categoría
+const ROTATE_MS   = 10000  // cada 10s (pausado, profesional)
+const FADE_OUT_MS = 320    // debe coincidir con la animación featuredFadeOut
 
 const EMOJI_MAP = {
   pizza: '🍕', pizzas: '🍕',
@@ -37,7 +38,7 @@ function getAvailableProducts(cat) {
   return (cat.products ?? []).filter(p => p.is_available !== false)
 }
 
-function FeaturedCard({ cat, lang, tick }) {
+function FeaturedCard({ cat, lang, tick, index, phase }) {
   const [imgFailed, setImgFailed] = useState(false)
 
   const products = getAvailableProducts(cat)
@@ -70,11 +71,13 @@ function FeaturedCard({ cat, lang, tick }) {
       onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgba(0,230,118,0.25)')}
       onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(245,240,232,0.08)')}
     >
-      {/* key por producto → re-anima el fundido en cada rotación */}
+      {/* Fundido suave: stagger en cascada al entrar (delay por índice) */}
       <div
-        key={product?.id ?? 'empty'}
         className="featured-fade"
-        style={{ display: 'flex', flexDirection: 'column', flex: 1 }}
+        style={{
+          display: 'flex', flexDirection: 'column', flex: 1,
+          animationDelay: phase === 'in' ? `${index * 0.1}s` : '0s',
+        }}
       >
         <div
           className="featured-img-zone"
@@ -144,12 +147,26 @@ function FeaturedCard({ cat, lang, tick }) {
 export default function FeaturedSection() {
   const { categories, loading } = useMenu()
   const { lang } = useLanguage()
-  const [tick, setTick] = useState(0)
+  const [tick, setTick]   = useState(0)
+  const [phase, setPhase] = useState('in')   // 'in' | 'out'
 
-  // Rotación automática cada 5s — recalcula el plato aleatorio de cada tarjeta
+  // Pausa al pasar el ratón — ref para que el intervalo vea el valor actual
+  const pausedRef  = useRef(false)
+  const timeoutRef = useRef(null)
+
   useEffect(() => {
-    const id = setInterval(() => setTick(n => n + 1), ROTATE_MS)
-    return () => clearInterval(id)
+    const id = setInterval(() => {
+      if (pausedRef.current) return
+      setPhase('out')                              // 1) fade out
+      timeoutRef.current = setTimeout(() => {
+        setTick(n => n + 1)                        // 2) cambia los platos (invisible)
+        setPhase('in')                             // 3) fade in con stagger
+      }, FADE_OUT_MS)
+    }, ROTATE_MS)
+    return () => {
+      clearInterval(id)
+      if (timeoutRef.current) clearTimeout(timeoutRef.current)
+    }
   }, [])
 
   const featured = (() => {
@@ -164,7 +181,12 @@ export default function FeaturedSection() {
   if (!loading && featured.length === 0) return null
 
   return (
-    <section id="featured" style={{ background: 'var(--color-bg-mid)', padding: '48px 24px' }}>
+    <section
+      id="featured"
+      style={{ background: 'var(--color-bg-mid)', padding: '48px 24px' }}
+      onMouseEnter={() => { pausedRef.current = true }}
+      onMouseLeave={() => { pausedRef.current = false }}
+    >
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
 
         <div style={{ textAlign: 'center', marginBottom: 40 }}>
@@ -185,7 +207,7 @@ export default function FeaturedSection() {
           }}>{t(lang, 'ui.featured.subtitle')}</p>
         </div>
 
-        <div className="featured-grid">
+        <div className={`featured-grid ${phase === 'out' ? 'is-out' : 'is-in'}`}>
           {loading
             ? Array.from({ length: 6 }).map((_, i) => (
                 <div key={i} className="featured-img-zone" style={{
@@ -194,7 +216,16 @@ export default function FeaturedSection() {
                   border: '1px solid rgba(245,240,232,0.06)',
                 }} />
               ))
-            : featured.map(cat => <FeaturedCard key={cat.id} cat={cat} lang={lang} tick={tick} />)
+            : featured.map((cat, i) => (
+                <FeaturedCard
+                  key={cat.id}
+                  cat={cat}
+                  lang={lang}
+                  tick={tick}
+                  index={i}
+                  phase={phase}
+                />
+              ))
           }
         </div>
       </div>

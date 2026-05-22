@@ -24,10 +24,15 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 - `styles/menu.css` — `.menu-card-allergens-strip` ahora tiene `min-height: 28px` + `box-sizing: border-box`. Así todas las tarjetas alinean nombre+precio a la misma altura, tengan alérgenos o no
 
 ### [FEATURE] FeaturedSection: plato aleatorio rotativo por categoría
-- `components/home/FeaturedSection.jsx` — cada tarjeta sigue ligada a su categoría pero ahora muestra un **producto aleatorio** de esa categoría (antes el primero fijo). Rotación automática cada **5s** vía `setInterval` + `tick`; sin botones
+- `components/home/FeaturedSection.jsx` — cada tarjeta sigue ligada a su categoría pero ahora muestra un **producto aleatorio** de esa categoría (antes el primero fijo). Sin botones
 - Precio movido a la **derecha** del nombre (fila flex `space-between`, `align-items: baseline`); nombre con `flex:1` + ellipsis si es largo
 - Se mantiene `useMenu()` y el componente `PriceDisplay` (no se llama a Supabase directo desde el componente)
-- Transición: fundido suave (`featuredFadeIn`, opacity + translateY 0.55s) en cada rotación vía `key` por producto; respeta `prefers-reduced-motion`
+
+### [REFACTOR] FeaturedSection: rotación más fluida y pausable
+- Intervalo de rotación ampliado de 5s a **10s** (más pausado)
+- Transición en dos fases: **fade-out** (0.3s) → cambio invisible de plato → **fade-in** (0.5s) con **stagger** en cascada (`animationDelay` por índice). Antes solo había fade-in
+- **Pause on hover**: la rotación se detiene mientras el ratón está sobre la sección (vía `pausedRef`)
+- `styles/index.css` — keyframes `featuredFadeIn` / `featuredFadeOut` activados por clases `.featured-grid.is-in` / `.is-out`; respeta `prefers-reduced-motion`
 
 ### [FIX] Seguridad — correcciones M1, M2, M3 de la auditoría
 - `.gitignore` — añadidos `.env`, `.env.*` (con excepción `!.env.example`), `node_modules/`, `dist/` (M1). Verificado: ningún `.env` estaba trackeado
