@@ -1,5 +1,5 @@
 // Página de Digital Signage para TV del local — ciclo automático sin interacción
-// Rutas: /tv (auto-tema), /tv/1 (claro), /tv/2 (oscuro)
+// Ruta única: /tv — tema oscuro Amigos2 (verde selva + neón)
 import { useState, useEffect, useRef, useCallback } from 'react'
 import { menuService } from '../services/menuService'
 import TvProductGrid from '../components/tv/TvProductGrid'
@@ -8,13 +8,6 @@ import { TV_CONFIG } from '../lib/constants'
 import '../styles/tv.css'
 
 const PHASE = { PRODUCT_LIST: 'PRODUCT_LIST', HERO_SCREEN: 'HERO_SCREEN' }
-
-function detectTheme(force) {
-  if (force === 'light') return 'light'
-  if (force === 'dark')  return 'dark'
-  const h = new Date().getHours()
-  return (h >= 8 && h < 20) ? 'light' : 'dark'
-}
 
 function paginate(arr, size) {
   const pages = []
@@ -25,7 +18,7 @@ function paginate(arr, size) {
 const fmtTime = (d) => d.toLocaleTimeString('es-ES', { hour: '2-digit', minute: '2-digit' })
 const fmtDate = (d) => d.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' })
 
-export default function TvPage({ forceTheme }) {
+export default function TvPage() {
   const [categories, setCategories] = useState([])
   const [loading,    setLoading]    = useState(true)
   const [catIdx,     setCatIdx]     = useState(0)
@@ -33,7 +26,6 @@ export default function TvPage({ forceTheme }) {
   const [phase,      setPhase]      = useState(PHASE.PRODUCT_LIST)
   const [fadeOut,    setFadeOut]    = useState(false)
   const [clock,      setClock]      = useState(new Date())
-  const [theme,      setTheme]      = useState(() => detectTheme(forceTheme))
   const timer = useRef(null)
 
   // ── Carga de datos con fallback en localStorage ──
@@ -51,12 +43,9 @@ export default function TvPage({ forceTheme }) {
   useEffect(() => {
     loadMenu()
     const refreshId = setInterval(loadMenu, TV_CONFIG.MENU_REFRESH_INTERVAL)
-    const clockId   = setInterval(() => {
-      setClock(new Date())
-      if (!forceTheme) setTheme(detectTheme())
-    }, 1000)
+    const clockId   = setInterval(() => setClock(new Date()), 1000)
     return () => { clearInterval(refreshId); clearInterval(clockId) }
-  }, [loadMenu, forceTheme])
+  }, [loadMenu])
 
   // ── Datos derivados ──
   const cat         = categories[catIdx] ?? null
@@ -102,7 +91,7 @@ export default function TvPage({ forceTheme }) {
   // ── Loading ──
   if (loading || !cat) {
     return (
-      <div className={`tv-container tv-${theme}`} style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div className="tv-container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
         <p className="tv-bebas" style={{ fontSize: '5rem', color: 'var(--tv-accent)' }}>
           Cargando carta…
         </p>
@@ -111,7 +100,7 @@ export default function TvPage({ forceTheme }) {
   }
 
   return (
-    <div className={`tv-container tv-${theme}`}>
+    <div className="tv-container">
 
       {/* ── HEADER ── */}
       <header className="tv-header">

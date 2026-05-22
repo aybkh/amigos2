@@ -3,8 +3,6 @@ export const ROUTES = {
   HOME:      '/',
   MENU:      '/carta',
   TV:        '/tv',
-  TV_LIGHT:  '/tv/1',
-  TV_DARK:   '/tv/2',
 }
 
 // Configuración de la pantalla TV (Digital Signage)

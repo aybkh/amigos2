@@ -28,11 +28,21 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 - Precio movido a la **derecha** del nombre (fila flex `space-between`, `align-items: baseline`); nombre con `flex:1` + ellipsis si es largo
 - Se mantiene `useMenu()` y el componente `PriceDisplay` (no se llama a Supabase directo desde el componente)
 
-### [REFACTOR] FeaturedSection: rotación más fluida y pausable
-- Intervalo de rotación ampliado de 5s a **10s** (más pausado)
-- Transición en dos fases: **fade-out** (0.3s) → cambio invisible de plato → **fade-in** (0.5s) con **stagger** en cascada (`animationDelay` por índice). Antes solo había fade-in
-- **Pause on hover**: la rotación se detiene mientras el ratón está sobre la sección (vía `pausedRef`)
-- `styles/index.css` — keyframes `featuredFadeIn` / `featuredFadeOut` activados por clases `.featured-grid.is-in` / `.is-out`; respeta `prefers-reduced-motion`
+### [REFACTOR] TV/Kiosco: tema único oscuro Amigos2 + fallback offline real
+- `pages/TvPage.jsx` — eliminada la lógica de tema claro/auto; el kiosco es ahora **tema único oscuro**. Quitado el prop `forceTheme` y `detectTheme()`
+- Rutas `/tv/1` (claro) y `/tv/2` (oscuro) eliminadas — solo queda `/tv`. `App.jsx` y `ROUTES` (`constants.js`) actualizados
+- `styles/tv.css` — un solo tema con la paleta de marca Amigos2 (verde selva `#071a10` + neón `#00E676`); eliminados `.tv-light`/`.tv-dark` y los colores hardcodeados (`#C84B31`, `#2A5A43`, `#e8e4df`)
+- `services/menuService.js` — fallback offline en cascada: localStorage → **`public/data/menu_fallback.json`** (nuevo). Cubre el arranque en frío de la TV sin conexión, que antes se quedaba colgado en "Cargando carta…"
+- `public/data/menu_fallback.json` — snapshot estático de la carta (17 categorías, 164 productos)
+- `CLAUDE.md` — actualizada la sección del kiosco: nomenclatura real Tv (no Kiosk), ruta única, sin `useKiosk`/`kioskConstants.js`
+
+### [REFACTOR] FeaturedSection: animación slider crossfade (estilo The Kebab Lab)
+- Cada tarjeta es ahora un **slider** que cicla por los productos de su categoría con **crossfade de opacidad 0.8s** (slides apilados en `position:absolute`), réplica de la animación de The Kebab Lab
+- Cada tarjeta avanza con su propio intervalo **desincronizado 4-5s** (`4000 + random*1000`), así no parpadean todas a la vez
+- Flechas manuales prev/next (`ChevronLeft/Right`), visibles al hover de la tarjeta (siempre visibles en táctil)
+- Pausa el auto-slide al pasar el ratón por la tarjeta
+- `styles/index.css` — reemplazados los keyframes `featuredFade*` por `.featured-slider` / `.featured-slide` / `.featured-arrow`; respeta `prefers-reduced-motion`
+- Adaptación a Amigos2: datos vía `useMenu()` (no fetch/Supabase directo), estética glass verde propia (no se copia el skin rotado/ladrillo de Kebab Lab)
 
 ### [FIX] Seguridad — correcciones M1, M2, M3 de la auditoría
 - `.gitignore` — añadidos `.env`, `.env.*` (con excepción `!.env.example`), `node_modules/`, `dist/` (M1). Verificado: ningún `.env` estaba trackeado

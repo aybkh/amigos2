@@ -5,36 +5,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700;800&display=swap');
 
-/* ── Variables de tema — Claro ── */
-.tv-light {
-  --tv-bg:           #F9F8F6;
-  --tv-surface:      #ffffff;
-  --tv-text:         #2D2926;
-  --tv-text-dim:     rgba(45, 41, 38, 0.45);
-  --tv-accent:       #C84B31;
-  --tv-accent-glow:  rgba(200, 75, 49, 0.25);
-  --tv-card-bg:      #ffffff;
-  --tv-card-border:  rgba(42, 90, 67, 0.18);
-  --tv-header-bg:    #2A5A43;
-  --tv-footer-bg:    rgba(42, 90, 67, 0.95);
-  --tv-dot-inactive: rgba(0, 0, 0, 0.15);
-  --tv-separator:    #C84B31;
-}
-
-/* ── Variables de tema — Oscuro ── */
-.tv-dark {
-  --tv-bg:           #1c1c1c;
-  --tv-surface:      #242424;
-  --tv-text:         #ffffff;
-  --tv-text-dim:     rgba(255, 255, 255, 0.45);
-  --tv-accent:       #C84B31;
-  --tv-accent-glow:  rgba(200, 75, 49, 0.3);
-  --tv-card-bg:      #F9F8F6;
-  --tv-card-border:  rgba(200, 75, 49, 0.12);
-  --tv-header-bg:    #2A5A43;
-  --tv-footer-bg:    rgba(30, 61, 46, 0.97);
-  --tv-dot-inactive: rgba(255, 255, 255, 0.15);
-  --tv-separator:    #C84B31;
+/* ── Tema único — Amigos2 oscuro (verde selva + neón) ── */
+.tv-container {
+  --tv-bg:           #071a10;
+  --tv-surface:      #0a2a1a;
+  --tv-text:         #F5F0E8;
+  --tv-text-dim:     rgba(245, 240, 232, 0.45);
+  --tv-accent:       #00E676;
+  --tv-accent-glow:  rgba(0, 230, 118, 0.30);
+  --tv-card-bg:      #0f3d2a;
+  --tv-card-border:  rgba(0, 230, 118, 0.20);
+  --tv-header-bg:    #0a2a1a;
+  --tv-footer-bg:    rgba(7, 26, 16, 0.97);
+  --tv-dot-inactive: rgba(245, 240, 232, 0.15);
+  --tv-separator:    #00E676;
 }
 
 /* ────────────────────────────────────────────────
@@ -53,9 +37,9 @@
 
 .tv-bebas { font-family: 'Bebas Neue', sans-serif; }
 
-/* ── Textura pizarra en modo oscuro ── */
-.tv-dark.tv-container {
-  background-image: radial-gradient(circle, #2a2a2a 1px, transparent 1px);
+/* ── Textura sutil de puntos verdes ── */
+.tv-container {
+  background-image: radial-gradient(circle, #0d3320 1px, transparent 1px);
   background-size: 4px 4px;
 }
 
@@ -226,7 +210,7 @@
   aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
-  background: #e8e4df;
+  background: var(--tv-surface);
   flex-shrink: 0;
 }
 
@@ -250,7 +234,7 @@
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  background: #e8e4df;
+  background: var(--tv-surface);
 }
 
 .tv-sold-out {
@@ -258,7 +242,7 @@
   top: 10px;
   right: 10px;
   background: var(--tv-accent);
-  color: white;
+  color: var(--tv-bg);
   padding: 4px 14px;
   border-radius: 6px;
   font-family: 'Bebas Neue', sans-serif;
@@ -280,7 +264,7 @@
 .tv-product-name {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 1.6rem;
-  color: #2A5A43;
+  color: var(--tv-text);
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 1.5px;
@@ -296,7 +280,7 @@
 .tv-price {
   font-family: 'Bebas Neue', sans-serif;
   font-size: 2.4rem;
-  color: #C84B31;
+  color: var(--tv-accent);
   white-space: nowrap;
   text-shadow: 0 0 14px var(--tv-accent-glow);
   line-height: 1;
@@ -342,12 +326,12 @@
   to   { transform: scale(1.0); }
 }
 
-/* Hero sin imagen: overlay verde botella */
+/* Hero sin imagen: overlay verde selva Amigos2 */
 .tv-hero-radial {
   background: linear-gradient(
     135deg,
-    rgba(42, 90, 67, 0.9) 0%,
-    rgba(30, 61, 46, 1) 100%
+    rgba(15, 61, 42, 0.95) 0%,
+    rgba(7, 26, 16, 1) 100%
   );
 }
 
@@ -356,9 +340,9 @@
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(42, 90, 67, 0.3) 0%,
-    rgba(10, 20, 15, 0.65) 40%,
-    rgba(10, 20, 15, 0.85) 100%
+    rgba(10, 42, 26, 0.35) 0%,
+    rgba(7, 26, 16, 0.70) 40%,
+    rgba(7, 26, 16, 0.88) 100%
   );
 }
 

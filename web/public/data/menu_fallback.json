@@ -1,0 +1,2524 @@
+[
+    {
+        "id": "11111111-0007-0000-0000-000000000000",
+        "name": "Tapas",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/tapas.webp",
+        "display_order": 0,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "6ec6eaa3-e20c-4c15-9eda-e497ff42ecb7",
+                "name": "Patatas Fritas",
+                "price": 3.5,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/patatas-fritas.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0007-0000-0000-000000000000",
+                "description": "Raci\u00c3\u00b3n cl\u00c3\u00a1sica de patatas fritas crujientes.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "5b7edeea-f8d7-4fe1-8685-1441eb11c391",
+                "name": "Patatas Bravas",
+                "price": 4.5,
+                "allergens": [
+                    "Huevo",
+                    "Mostaza"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/patatas-bravas.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0007-0000-0000-000000000000",
+                "description": "Patatas fritas ba\u00c3\u00b1adas en salsa brava tradicional.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "ae221b7b-80be-45fa-9ec1-d958474db3d5",
+                "name": "Deluxe",
+                "price": 4.5,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/patatas-deluxe.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0007-0000-0000-000000000000",
+                "description": "Patatas de corte r\u00c3\u00bastico sazonadas con especias.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "b56e0b35-160c-4b75-a65b-64cb26cc55a7",
+                "name": "Alitas de Pollo",
+                "price": 6.0,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/alitas-pollo.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0007-0000-0000-000000000000",
+                "description": "Seis jugosas alitas de pollo aderezadas y fritas.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "df6dbeb3-27f5-41c7-ba74-0519e1041831",
+                "name": "Calamares",
+                "price": 6.5,
+                "allergens": [
+                    "Gluten",
+                    "Huevo",
+                    "Moluscos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/calamares-romana.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0007-0000-0000-000000000000",
+                "description": "Ocho anillas de calamar a la romana.",
+                "is_available": true,
+                "display_order": 4
+            },
+            {
+                "id": "f0432097-b799-4ff6-944b-73998fe678f2",
+                "name": "Nuggets de Pollo",
+                "price": 5.5,
+                "allergens": [
+                    "Gluten",
+                    "Soja",
+                    "Apio"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/nuggets-pollo.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0007-0000-0000-000000000000",
+                "description": "Ocho porciones de pollo empanado y frito.",
+                "is_available": true,
+                "display_order": 5
+            },
+            {
+                "id": "749202c2-1faa-49dc-b713-95e3119d5635",
+                "name": "Croquetas de Pollo",
+                "price": 7.5,
+                "allergens": [
+                    "Gluten",
+                    "Huevo",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/croquetas-pollo.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0007-0000-0000-000000000000",
+                "description": "Ocho croquetas cremosas con bechamel y pollo.",
+                "is_available": true,
+                "display_order": 6
+            },
+            {
+                "id": "1dadbbd4-7983-49ad-b969-acfc2d2026f7",
+                "name": "Rollos Primavera",
+                "price": 3.0,
+                "allergens": [
+                    "Gluten",
+                    "Soja"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/rollos-primavera.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0007-0000-0000-000000000000",
+                "description": "Ocho mini rollitos de vegetales fritos.",
+                "is_available": true,
+                "display_order": 7
+            },
+            {
+                "id": "1809f45c-8d27-4fcc-893e-648bc4dc432b",
+                "name": "Bikini",
+                "price": 3.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bikini.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0007-0000-0000-000000000000",
+                "description": "S\u00c3\u00a1ndwich mixto de jam\u00c3\u00b3n dulce y queso fundido.",
+                "is_available": true,
+                "display_order": 8
+            },
+            {
+                "id": "6080eb89-17a8-46e1-9ba1-879301a59f2d",
+                "name": "Hot Dog",
+                "price": 4.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos",
+                    "Mostaza"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/hot-dog.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0007-0000-0000-000000000000",
+                "description": "Perrito caliente cl\u00c3\u00a1sico en pan tierno.",
+                "is_available": true,
+                "display_order": 9
+            }
+        ]
+    },
+    {
+        "id": "11111111-0003-0000-0000-000000000000",
+        "name": "Entrantes Hind\u00c3\u00bas",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/entrantes-hindus.webp",
+        "display_order": 1,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "0ae2e65a-b51a-4bb3-81f2-02adea5aa5b8",
+                "name": "Samosa con garbanzos",
+                "price": 5.5,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/samosa-garbanzos.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0003-0000-0000-000000000000",
+                "description": "Empanadillas indias con base de curry de garbanzos.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "60c83e4b-7d4a-477b-a8d5-411444a85f86",
+                "name": "Samosa",
+                "price": 3.0,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/samosa.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0003-0000-0000-000000000000",
+                "description": "Dos empanadillas crujientes rellenas de patata y guisantes.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "2f9c0be2-c465-41f4-8724-f73e0382fc37",
+                "name": "Naan Normal",
+                "price": 2.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/naan-normal.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0003-0000-0000-000000000000",
+                "description": "Pan plano tradicional indio cocido al horno.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "93403163-b31f-45ec-b79d-ed5606265063",
+                "name": "Cheese Naan",
+                "price": 3.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/cheese-naan.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0003-0000-0000-000000000000",
+                "description": "Pan plano indio relleno de queso fundido.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "4825ee79-8b5f-4c59-98f5-a4637b51e6d2",
+                "name": "Garlic Naan Ajo",
+                "price": 3.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/garlic-naan.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0003-0000-0000-000000000000",
+                "description": "Pan plano indio con ajo picado y mantequilla.",
+                "is_available": true,
+                "display_order": 4
+            }
+        ]
+    },
+    {
+        "id": "11111111-0002-0000-0000-000000000000",
+        "name": "Comida Hind\u00c3\u00ba y Biryanys",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/comida-hindu-y-biryanys.webp",
+        "display_order": 2,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "8ba93a93-8121-453d-8998-3a0e64c6c8cd",
+                "name": "Butter Chicken",
+                "price": 9.0,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/butter-chicken.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0002-0000-0000-000000000000",
+                "description": "Pollo en salsa cremosa de mantequilla y tomate.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "26317b61-6f3d-48d1-a887-520ba419772a",
+                "name": "Chicken Biryani",
+                "price": 8.5,
+                "allergens": [
+                    "L\u00c3\u00a1cteos",
+                    "Frutos secos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/chicken-biryani.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0002-0000-0000-000000000000",
+                "description": "Arroz basmati especiado cocinado con trozos de pollo.",
+                "is_available": true,
+                "display_order": 4
+            },
+            {
+                "id": "ee5cd76f-c57e-42ad-874c-c2259629011f",
+                "name": "Chicken Curry",
+                "price": 9.0,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/chicken-curry.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0002-0000-0000-000000000000",
+                "description": "Pollo guisado en salsa de curry tradicional hind\u00c3\u00ba.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "849d8fc8-20e0-403f-88d2-0790d6b8b424",
+                "name": "Chicken Madras",
+                "price": 9.0,
+                "allergens": [
+                    "Mostaza"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/chicken-madras.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0002-0000-0000-000000000000",
+                "description": "Pollo al estilo Madras en salsa roja especiada.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "81b0bbd2-8c4c-4f00-859b-bdd2cd49e8a1",
+                "name": "Chilli Chicken",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "Soja"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/chilli-chicken.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0002-0000-0000-000000000000",
+                "description": "Pollo picante en salsa de chile rojo con arroz o pan.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "646c6851-6270-4dd8-a480-18d770bfb81c",
+                "name": "Frutii de Mare Biryani",
+                "price": 13.5,
+                "allergens": [
+                    "Crust\u00c3\u00a1ceos",
+                    "L\u00c3\u00a1cteos",
+                    "Moluscos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/frutii-de-mare-biryani.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0002-0000-0000-000000000000",
+                "description": "Arroz basmati especiado con gambas y mejillones.",
+                "is_available": true,
+                "display_order": 6
+            },
+            {
+                "id": "6fad775b-0971-4a5d-baa7-2f9ed339f601",
+                "name": "Vegetable Biryani",
+                "price": 8.0,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/vegetable-biryani.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0002-0000-0000-000000000000",
+                "description": "Arroz basmati especiado con verduras mixtas.",
+                "is_available": true,
+                "display_order": 5
+            }
+        ]
+    },
+    {
+        "id": "11111111-0001-0000-0000-000000000000",
+        "name": "Pastas",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/pastas.webp",
+        "display_order": 3,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "7e2f4080-42c1-433d-b002-07dbb68a2757",
+                "name": "Bolo\u00c3\u00b1esa",
+                "price": 8.5,
+                "allergens": [
+                    "Gluten",
+                    "Apio"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bolonesa.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0001-0000-0000-000000000000",
+                "description": "Espaguetis con salsa bolo\u00c3\u00b1esa, carne picada y tomate.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "ce563d10-06f8-462a-9e5a-8ad575c7b5ec",
+                "name": "Canelones Bolo\u00c3\u00b1esa",
+                "price": 8.5,
+                "allergens": [
+                    "Gluten",
+                    "Huevo",
+                    "L\u00c3\u00a1cteos",
+                    "Apio"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/canelones-bolonesa.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0001-0000-0000-000000000000",
+                "description": "Canelones rellenos de carne con bechamel y queso gratinado.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "e9e5fd7e-661f-409d-880e-99cebf28e276",
+                "name": "Carbonara",
+                "price": 8.5,
+                "allergens": [
+                    "Gluten",
+                    "Huevo",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/carbonara.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0001-0000-0000-000000000000",
+                "description": "Espaguetis con salsa carbonara cremosa, nata, bacon y queso.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "b0e257e1-a931-4150-a662-213a89215f10",
+                "name": "Lasa\u00c3\u00b1a Bolo\u00c3\u00b1esa",
+                "price": 8.5,
+                "allergens": [
+                    "Gluten",
+                    "Huevo",
+                    "L\u00c3\u00a1cteos",
+                    "Apio"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/lasana-bolonesa.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0001-0000-0000-000000000000",
+                "description": "Lasa\u00c3\u00b1a de carne picada, tomate, bechamel y queso.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "6e1f0112-b55a-4ed4-884b-c1a517753adb",
+                "name": "Macarrones Bolo\u00c3\u00b1esa",
+                "price": 8.5,
+                "allergens": [
+                    "Gluten",
+                    "Apio"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/macarrones-bolonesa.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0001-0000-0000-000000000000",
+                "description": "Macarrones con salsa de tomate y carne picada.",
+                "is_available": true,
+                "display_order": 4
+            }
+        ]
+    },
+    {
+        "id": "11111111-0004-0000-0000-000000000000",
+        "name": "Pizzas",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/pizzas.webp",
+        "display_order": 4,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "59589321-2ab9-4c7b-9be9-7a8e96602390",
+                "name": "At\u00c3\u00ban",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "Pescado",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-atun.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Salsa de tomate, queso, cebollas y at\u00c3\u00ban.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "ea1d8642-f194-4a0b-a0c9-56c3b5f390c0",
+                "name": "Bacon",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-bacon.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Salsa de tomate, queso mozzarella y bacon.",
+                "is_available": true,
+                "display_order": 15
+            },
+            {
+                "id": "82dd3a2d-3719-46ee-a8dd-d633ade231ee",
+                "name": "Barbacoa",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-barbacoa.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Salsa barbacoa, queso, pollo y olivas.",
+                "is_available": true,
+                "display_order": 7
+            },
+            {
+                "id": "71f501f9-931b-425a-961f-178c61e0a86a",
+                "name": "Calzone",
+                "price": 9.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-calzone.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Pizza cerrada con tomate, queso, cebolla y carne.",
+                "is_available": true,
+                "display_order": 12
+            },
+            {
+                "id": "03b66913-d60e-4d09-9356-b1fb8d144518",
+                "name": "Caprese",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-caprese.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Tomate natural, queso fresco y or\u00c3\u00a9gano.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "6078bc97-2fa2-46d3-8438-5d345bff81ab",
+                "name": "Carbonara",
+                "price": 10.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-carbonara.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Base de nata, bacon, jam\u00c3\u00b3n cocido y cebolla.",
+                "is_available": true,
+                "display_order": 16
+            },
+            {
+                "id": "e0233f1b-2473-4577-b258-3201939a3190",
+                "name": "Frutti de mare",
+                "price": 13.5,
+                "allergens": [
+                    "Gluten",
+                    "Crust\u00c3\u00a1ceos",
+                    "L\u00c3\u00a1cteos",
+                    "Moluscos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-frutti-de-mare.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Tomate, queso, gambas, calamares y mejillones.",
+                "is_available": true,
+                "display_order": 11
+            },
+            {
+                "id": "91d5c3ba-2863-4556-80cb-096a1681388b",
+                "name": "Fungi",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-fungi.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Salsa de tomate, queso y champi\u00c3\u00b1ones.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "a724008c-e89c-4a77-a416-90bee481054a",
+                "name": "Jam\u00c3\u00b3n",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-jamon.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Tomate, queso, jam\u00c3\u00b3n cocido y champi\u00c3\u00b1ones.",
+                "is_available": true,
+                "display_order": 14
+            },
+            {
+                "id": "5727f36c-f6af-4de5-a016-d77936f5cd25",
+                "name": "4 Quesos",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-4-quesos.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Salsa de tomate y cuatro quesos especiales.",
+                "is_available": true,
+                "display_order": 5
+            },
+            {
+                "id": "7a313bd2-2646-43dd-ac80-5a20f57d9a57",
+                "name": "Amigos 2",
+                "price": 10.0,
+                "allergens": [
+                    "Gluten",
+                    "Crust\u00c3\u00a1ceos",
+                    "Pescado",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-amigos-2.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Tomate, queso, pollo, vegetales, at\u00c3\u00ban y gambas.",
+                "is_available": true,
+                "display_order": 18
+            },
+            {
+                "id": "0c5fb7d5-c071-4343-9c0d-ab8f5ecc450f",
+                "name": "Kebab",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-kebab.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Tomate, queso, carne de kebab y cebollas.",
+                "is_available": true,
+                "display_order": 6
+            },
+            {
+                "id": "2db1db75-8781-4b55-a5c5-b9185e34cd8a",
+                "name": "Margarita",
+                "price": 8.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-margarita.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Salsa de tomate y queso mozzarella.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "8d1309e2-921a-4e81-b410-ec25cee2e5b8",
+                "name": "Pavo",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-pavo.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Tomate, queso y pechuga de pavo.",
+                "is_available": true,
+                "display_order": 10
+            },
+            {
+                "id": "1d09976f-3695-4d1c-b3b5-a5265e5afcdf",
+                "name": "Pepperoni",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-pepperoni.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Tomate, queso y rodajas de pepperoni.",
+                "is_available": true,
+                "display_order": 9
+            },
+            {
+                "id": "553316c7-7be8-4816-8361-72a34daea31a",
+                "name": "Romana",
+                "price": 10.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-romana.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Salsa barbacoa, queso, bacon, jam\u00c3\u00b3n y patatas.",
+                "is_available": true,
+                "display_order": 17
+            },
+            {
+                "id": "151de16f-95e5-4226-8350-c1c41b443b31",
+                "name": "Salami",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-salami.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Tomate, queso y abundante salami.",
+                "is_available": true,
+                "display_order": 8
+            },
+            {
+                "id": "016a3bb5-0224-42b6-9d9e-ad0b9be7dd42",
+                "name": "Tropical",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-tropical.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Tomate, queso, ma\u00c3\u00adz y pi\u00c3\u00b1a dulce.",
+                "is_available": true,
+                "display_order": 13
+            },
+            {
+                "id": "11c6bb32-3fa7-4587-bebc-23e33b2d3282",
+                "name": "Vegetariana",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pizza-vegetariana.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0004-0000-0000-000000000000",
+                "description": "Tomate, queso, pimientos, ma\u00c3\u00adz, cebolla y olivas.",
+                "is_available": true,
+                "display_order": 4
+            }
+        ]
+    },
+    {
+        "id": "11111111-0005-0000-0000-000000000000",
+        "name": "Comida Turca",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/comida-turca.webp",
+        "display_order": 5,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "a395939c-5963-4479-8f5d-9b98af7ae085",
+                "name": "D\u00c3\u00bcr\u00c3\u00bcm Normal",
+                "price": 5.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/durum-normal.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0005-0000-0000-000000000000",
+                "description": "Rollo con ensalada, carne o falafel y salsas.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "c76cc334-095a-45a0-b2fb-e922745f4bf7",
+                "name": "D\u00c3\u00bcr\u00c3\u00bcm XL Solo Carne",
+                "price": 6.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/durum-xl-solo-carne.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0005-0000-0000-000000000000",
+                "description": "Rollo grande sin verduras, solo carne.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "9283b72d-e10b-4e42-8659-77c0d21c8d6d",
+                "name": "D\u00c3\u00bcr\u00c3\u00bcm XXL",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/durum-xxl.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0005-0000-0000-000000000000",
+                "description": "Rollo gigante con ensalada, carne y salsas.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "e34ed3ee-3e6c-4b5f-9078-962a44fecd72",
+                "name": "D\u00c3\u00bcr\u00c3\u00bcm XXL Solo Carne",
+                "price": 11.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/durum-xxl-solo-carne.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0005-0000-0000-000000000000",
+                "description": "Rollo gigante sin verduras, repleto de carne.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "fcd8a571-e7a3-4a47-bf63-88fd7d095c0a",
+                "name": "Kapsal\u00c3\u00b3n Peque\u00c3\u00b1o",
+                "price": 6.5,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/kapsalon-pequeno.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0005-0000-0000-000000000000",
+                "description": "Bandeja de patatas, carne, queso gratinado y ensalada.",
+                "is_available": true,
+                "display_order": 4
+            },
+            {
+                "id": "a0d80145-9763-4cb5-bd6e-0f02ca5b898f",
+                "name": "Kapsal\u00c3\u00b3n Mediano",
+                "price": 8.5,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/kapsalon-mediano.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0005-0000-0000-000000000000",
+                "description": "Bandeja de patatas, carne, queso gratinado y ensalada.",
+                "is_available": true,
+                "display_order": 5
+            },
+            {
+                "id": "c38c0674-33c1-464f-87c1-8f59a21836f5",
+                "name": "Kapsal\u00c3\u00b3n Grande XXL",
+                "price": 9.5,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/kapsalon-grande.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0005-0000-0000-000000000000",
+                "description": "Bandeja grande de patatas, carne, queso y ensalada.",
+                "is_available": true,
+                "display_order": 6
+            },
+            {
+                "id": "a4c6eb06-88dd-4d9d-b376-695e2446378b",
+                "name": "Pita Kebab Normal",
+                "price": 5.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pita-kebab.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0005-0000-0000-000000000000",
+                "description": "Pan de pita relleno de carne, ensalada y salsas.",
+                "is_available": true,
+                "display_order": 7
+            },
+            {
+                "id": "ba950ecd-7729-4253-9147-245b97c7f648",
+                "name": "Pita Kebab Solo Carne",
+                "price": 6.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pita-solo-carne.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0005-0000-0000-000000000000",
+                "description": "Pan de pita relleno \u00c3\u00banicamente de carne asada.",
+                "is_available": true,
+                "display_order": 8
+            },
+            {
+                "id": "560b8b6d-c384-49bf-add3-1159a52108f4",
+                "name": "D\u00c3\u00b6ner Box",
+                "price": 4.0,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/doner-box.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0005-0000-0000-000000000000",
+                "description": "Caja con patatas fritas cubiertas de carne y salsa.",
+                "is_available": true,
+                "display_order": 9
+            }
+        ]
+    },
+    {
+        "id": "11111111-0006-0000-0000-000000000000",
+        "name": "Ensaladas",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/ensaladas.webp",
+        "display_order": 6,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "cbbb10a6-b444-44ef-9f00-e0792beb1d12",
+                "name": "Mixta",
+                "price": 5.0,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/ensalada-mixta.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0006-0000-0000-000000000000",
+                "description": "Lechuga, tomate, ma\u00c3\u00adz, lombarda, zanahoria y olivas.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "a3dd491b-72a2-4a7d-b4cc-018b2ccf4d20",
+                "name": "At\u00c3\u00ban",
+                "price": 6.0,
+                "allergens": [
+                    "Pescado"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/ensalada-atun.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0006-0000-0000-000000000000",
+                "description": "Lechuga, tomate, at\u00c3\u00ban desmigado, cebollas y olivas.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "a039f265-e50c-4c56-9939-7081977acba9",
+                "name": "Turca",
+                "price": 6.0,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/ensalada-turca.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0006-0000-0000-000000000000",
+                "description": "Pimiento, tomate fresco, cebolla y pepino.",
+                "is_available": true,
+                "display_order": 2
+            }
+        ]
+    },
+    {
+        "id": "11111111-0008-0000-0000-000000000000",
+        "name": "Burgers",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/burgers.webp",
+        "display_order": 7,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "93ee78c8-286c-4f74-954e-a612cae7e56e",
+                "name": "Burger Ternera",
+                "price": 4.0,
+                "allergens": [
+                    "Gluten",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/burger-ternera.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0008-0000-0000-000000000000",
+                "description": "Carne de ternera, lechuga, tomate y salsas.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "ef7d25ae-c10f-411b-a8c8-96310ba325b8",
+                "name": "Burger Pollo",
+                "price": 4.0,
+                "allergens": [
+                    "Gluten",
+                    "Huevo",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/burger-pollo.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0008-0000-0000-000000000000",
+                "description": "Filete de pollo, lechuga, tomate y mayonesa.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "1d45af22-600e-4d65-b149-4353227f5ead",
+                "name": "Burger Pescado",
+                "price": 4.5,
+                "allergens": [
+                    "Gluten",
+                    "Pescado",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/burger-pescado.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0008-0000-0000-000000000000",
+                "description": "Pescado blanco rebozado, lechuga y salsas suaves.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "bf16745f-b45b-420c-8ffe-239d34350192",
+                "name": "Burger Vegetal",
+                "price": 4.5,
+                "allergens": [
+                    "Gluten",
+                    "Soja",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/burger-vegetal.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0008-0000-0000-000000000000",
+                "description": "Hamburguesa vegetal con vegetales frescos y salsas.",
+                "is_available": true,
+                "display_order": 3
+            }
+        ]
+    },
+    {
+        "id": "11111111-0009-0000-0000-000000000000",
+        "name": "Bocadillos",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/bocadillos.webp",
+        "display_order": 8,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "906b0ae4-ed9b-4691-9158-824c5a4b3ff8",
+                "name": "Bocadillo de At\u00c3\u00ban",
+                "price": 4.5,
+                "allergens": [
+                    "Gluten",
+                    "Pescado"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-atun.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Bocadillo fr\u00c3\u00ado de at\u00c3\u00ban desmigado y complementos.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "b5d2fb0d-8c95-4f26-9a0e-2972c16a7221",
+                "name": "Bocadillo Jam\u00c3\u00b3n York",
+                "price": 4.5,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-jamon-york.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Bocadillo fr\u00c3\u00ado de jam\u00c3\u00b3n dulce cocido.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "066cfef5-d216-4200-aae9-fadf20ed2412",
+                "name": "Bocadillo Jam\u00c3\u00b3n Ib\u00c3\u00a9rico",
+                "price": 4.5,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-jamon-iberico.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Bocadillo de finas lonchas de jam\u00c3\u00b3n ib\u00c3\u00a9rico.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "8f702ef9-4eb2-4cd2-9f51-eeee2edda3b8",
+                "name": "Bocadillo de Queso",
+                "price": 4.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-queso.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Bocadillo fr\u00c3\u00ado de lonchas de queso tierno o curado.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "440b4828-c3ac-4f9a-8db0-b096d10dfdfa",
+                "name": "Bocadillo de Fuet",
+                "price": 4.5,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-fuet.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Cl\u00c3\u00a1sico bocadillo de rodajas de fuet catal\u00c3\u00a1n.",
+                "is_available": true,
+                "display_order": 4
+            },
+            {
+                "id": "c1e4d540-a90c-48d1-89ce-c39cac8882ea",
+                "name": "Bocadillo Vegetal",
+                "price": 4.5,
+                "allergens": [
+                    "Gluten",
+                    "Huevo",
+                    "Pescado"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-vegetal.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Tomate, lechuga, huevo duro, olivas y at\u00c3\u00ban.",
+                "is_available": true,
+                "display_order": 5
+            },
+            {
+                "id": "cef0b19e-36ac-42d7-b6eb-a2d64f0e1cac",
+                "name": "Bocadillo Caliente Pollo",
+                "price": 5.5,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-pollo.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Pechuga de pollo a la plancha.",
+                "is_available": true,
+                "display_order": 6
+            },
+            {
+                "id": "888d0057-e9c7-417e-8732-52b28352acb1",
+                "name": "Bocadillo Caliente Lomo",
+                "price": 5.5,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-lomo.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Filetes de lomo de cerdo a la plancha.",
+                "is_available": true,
+                "display_order": 7
+            },
+            {
+                "id": "3b19d0d7-c2d9-4279-814a-b7202e1090a4",
+                "name": "Bocadillo Caliente Bacon",
+                "price": 5.5,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-bacon.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Tiras de bacon ahumado a la plancha.",
+                "is_available": true,
+                "display_order": 8
+            },
+            {
+                "id": "d9536b79-bdb4-407b-8ddc-aae9a84f4d76",
+                "name": "Bocadillo Pollo con queso",
+                "price": 6.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-pollo-queso.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Pollo a la plancha y queso fundido.",
+                "is_available": true,
+                "display_order": 9
+            },
+            {
+                "id": "7a57deb4-9b91-4db4-96a0-0daecd4c79d4",
+                "name": "Bocadillo Lomo con queso",
+                "price": 6.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-lomo-queso.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Lomo a la plancha coronado con queso derretido.",
+                "is_available": true,
+                "display_order": 10
+            },
+            {
+                "id": "d541fb85-973e-4556-b11e-49b67273f5ca",
+                "name": "Bocadillo Bacon con queso",
+                "price": 6.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-bacon-queso.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Bacon crujiente y queso fundido.",
+                "is_available": true,
+                "display_order": 11
+            },
+            {
+                "id": "e647d89a-25d3-4e19-aedf-f06dd9c63d53",
+                "name": "Bocadillo Calamares",
+                "price": 6.0,
+                "allergens": [
+                    "Gluten",
+                    "Huevo",
+                    "Moluscos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-calamares.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Anillas de calamar a la romana.",
+                "is_available": true,
+                "display_order": 12
+            },
+            {
+                "id": "0ac77e56-bf41-488f-b1df-5e0560cfffe2",
+                "name": "Bocadillo Tortilla francesa",
+                "price": 6.0,
+                "allergens": [
+                    "Gluten",
+                    "Huevo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-tortilla.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Tortilla reci\u00c3\u00a9n cuajada de dos huevos.",
+                "is_available": true,
+                "display_order": 13
+            },
+            {
+                "id": "ae73387f-7f3b-4a1d-886a-23189e74dab5",
+                "name": "Bocadillo Butifarra",
+                "price": 6.0,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/bocadillo-butifarra.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0009-0000-0000-000000000000",
+                "description": "Salchicha fresca a la plancha dentro del pan.",
+                "is_available": true,
+                "display_order": 14
+            }
+        ]
+    },
+    {
+        "id": "11111111-0010-0000-0000-000000000000",
+        "name": "Platos Combinados",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/platos-combinados.webp",
+        "display_order": 9,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "59145882-d17f-423d-a97b-891ae68e3406",
+                "name": "Plato Kebab",
+                "price": 8.5,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/plato-kebab.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0010-0000-0000-000000000000",
+                "description": "Carne asada de kebab, patatas fritas y ensalada.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "569f9729-9882-4044-99f2-3ae31925950d",
+                "name": "Plato Falafel",
+                "price": 8.5,
+                "allergens": [
+                    "Gluten",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/plato-falafel.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0010-0000-0000-000000000000",
+                "description": "Croquetas de falafel, patatas y ensalada.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "ea463330-d762-4de8-aba7-7d8dab420c07",
+                "name": "Seekh Kebab",
+                "price": 8.5,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/plato-seekh-kebab.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0010-0000-0000-000000000000",
+                "description": "Cilindros de carne picada especiada con patatas y ensalada.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "75cfb28e-1747-48d5-ba9a-b59ffd17ca6c",
+                "name": "Plato Kebab Arroz",
+                "price": 8.5,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/plato-kebab-arroz.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0010-0000-0000-000000000000",
+                "description": "Carne asada, cama de arroz y ensalada.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "e588ddb9-1048-4e94-9245-e4b0f7638443",
+                "name": "Escalopa Pollo",
+                "price": 8.5,
+                "allergens": [
+                    "Gluten",
+                    "Huevo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/plato-escalopa-pollo.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0010-0000-0000-000000000000",
+                "description": "Filete de pollo empanado con patatas fritas.",
+                "is_available": true,
+                "display_order": 4
+            },
+            {
+                "id": "cf87e7c0-0f5a-48c2-b775-284b501e3b67",
+                "name": "Burgers con patatas",
+                "price": 8.5,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/plato-burgers.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0010-0000-0000-000000000000",
+                "description": "Dos hamburguesas sin pan con patatas y ensalada.",
+                "is_available": true,
+                "display_order": 5
+            },
+            {
+                "id": "6e23d626-ae7d-45a9-addd-9345f52ac321",
+                "name": "Bistec con huevo",
+                "price": 11.0,
+                "allergens": [
+                    "Huevo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/plato-bistec.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0010-0000-0000-000000000000",
+                "description": "Filete de ternera, huevo frito y patatas.",
+                "is_available": true,
+                "display_order": 6
+            },
+            {
+                "id": "df356195-103a-4106-8192-0b0510f1b837",
+                "name": "Entrecot",
+                "price": 16.5,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/plato-entrecot.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0010-0000-0000-000000000000",
+                "description": "Lomo alto de vacuno a la parrilla con patatas.",
+                "is_available": true,
+                "display_order": 7
+            },
+            {
+                "id": "bcfd42f0-0b20-4bbf-8237-5d712dc599f3",
+                "name": "Costillas de cordero",
+                "price": 18.0,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/plato-costillas-cordero.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0010-0000-0000-000000000000",
+                "description": "Costillar de cordero asado con patatas y ensalada.",
+                "is_available": true,
+                "display_order": 8
+            },
+            {
+                "id": "8f03833d-2418-4ce0-b519-ef04fe140760",
+                "name": "1/4 Pollo",
+                "price": 7.5,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/plato-cuarto-pollo.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0010-0000-0000-000000000000",
+                "description": "Cuarto de pollo asado con patatas y ensalada.",
+                "is_available": true,
+                "display_order": 9
+            },
+            {
+                "id": "24f7591a-2d4e-4a56-a8cb-f4546a47aeca",
+                "name": "1/2 Pollo",
+                "price": 9.5,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/plato-medio-pollo.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0010-0000-0000-000000000000",
+                "description": "Medio pollo asado con patatas y ensalada.",
+                "is_available": true,
+                "display_order": 10
+            },
+            {
+                "id": "ff191b77-b05a-4f51-8e6e-3ccd1e46a7f8",
+                "name": "Costillas de Cerdo",
+                "price": 15.5,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/plato-costillas-cerdo.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0010-0000-0000-000000000000",
+                "description": "Tira de costillas asadas adobadas con guarnici\u00c3\u00b3n.",
+                "is_available": true,
+                "display_order": 11
+            }
+        ]
+    },
+    {
+        "id": "11111111-0011-0000-0000-000000000000",
+        "name": "Pescados, Mariscos y Paellas",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/pescados-mariscos-y-paellas.webp",
+        "display_order": 10,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "67ca6821-9741-4916-8ef9-91dd250cb675",
+                "name": "Gambes (9 uni)",
+                "price": 15.5,
+                "allergens": [
+                    "Crust\u00c3\u00a1ceos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/gambas.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0011-0000-0000-000000000000",
+                "description": "Gambas a la plancha con ensalada y lim\u00c3\u00b3n.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "a987ece4-6fde-421a-a60b-6ffb5097c048",
+                "name": "Fritura Mariscos",
+                "price": 15.5,
+                "allergens": [
+                    "Gluten",
+                    "Crust\u00c3\u00a1ceos",
+                    "Pescado",
+                    "Moluscos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/fritura-mariscos.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0011-0000-0000-000000000000",
+                "description": "Frutos del mar rebozados y fritos.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "54010b61-c706-4733-81ee-a49641bdaf2c",
+                "name": "Sardinas fritas o plancha",
+                "price": 10.0,
+                "allergens": [
+                    "Gluten",
+                    "Pescado"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/sardinas.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0011-0000-0000-000000000000",
+                "description": "Raci\u00c3\u00b3n de sardinas enteras.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "f06abe68-343b-4b7f-a419-3f6d73f122b9",
+                "name": "Calamares en Plato",
+                "price": 11.5,
+                "allergens": [
+                    "Gluten",
+                    "Huevo",
+                    "Moluscos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/calamares-plato.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0011-0000-0000-000000000000",
+                "description": "Raci\u00c3\u00b3n de anillas a la romana con guarnici\u00c3\u00b3n.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "22848a56-a65b-4542-8df4-2c206259ff94",
+                "name": "Pescado Frito con patatas",
+                "price": 8.5,
+                "allergens": [
+                    "Gluten",
+                    "Huevo",
+                    "Pescado"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pescado-frito.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0011-0000-0000-000000000000",
+                "description": "Lomos de pescado blanco rebozados.",
+                "is_available": true,
+                "display_order": 4
+            },
+            {
+                "id": "071416d5-8564-497b-a589-59ffa5d078d9",
+                "name": "Almejas",
+                "price": 11.0,
+                "allergens": [
+                    "Moluscos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/almejas.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0011-0000-0000-000000000000",
+                "description": "Cazuela de almejas en salsa marinera.",
+                "is_available": true,
+                "display_order": 5
+            },
+            {
+                "id": "bfa3724d-b6f7-4f12-bdec-622ecbbb80cb",
+                "name": "Sopa Marisco",
+                "price": 11.0,
+                "allergens": [
+                    "Crust\u00c3\u00a1ceos",
+                    "Pescado",
+                    "Moluscos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/sopa-marisco.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0011-0000-0000-000000000000",
+                "description": "Caldo intenso de pescado con trozos de marisco.",
+                "is_available": true,
+                "display_order": 6
+            },
+            {
+                "id": "85b8bf0f-7918-4e56-842d-498b8da19ade",
+                "name": "Mejillones al vapor",
+                "price": 10.5,
+                "allergens": [
+                    "Moluscos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/mejillones.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0011-0000-0000-000000000000",
+                "description": "Olla de mejillones de roca cocidos al vapor.",
+                "is_available": true,
+                "display_order": 7
+            },
+            {
+                "id": "3ae5d1fc-cf92-4872-a2eb-3034d65af416",
+                "name": "Paella Mixta",
+                "price": 13.0,
+                "allergens": [
+                    "Crust\u00c3\u00a1ceos",
+                    "Pescado",
+                    "Moluscos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/paella-mixta.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0011-0000-0000-000000000000",
+                "description": "Aut\u00c3\u00a9ntica paella con carne, vegetales y marisco.",
+                "is_available": true,
+                "display_order": 8
+            },
+            {
+                "id": "d56ff4d3-0f64-4139-bb39-42c3a355ddb5",
+                "name": "Paella Marinera",
+                "price": 13.0,
+                "allergens": [
+                    "Crust\u00c3\u00a1ceos",
+                    "Pescado",
+                    "Moluscos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/paella-marinera.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0011-0000-0000-000000000000",
+                "description": "Paella de marisco con intenso fumet.",
+                "is_available": true,
+                "display_order": 9
+            },
+            {
+                "id": "634d9cb9-0226-4736-8899-abdad0e3a494",
+                "name": "Fideu\u00c3\u00a1",
+                "price": 12.9,
+                "allergens": [
+                    "Gluten",
+                    "Crust\u00c3\u00a1ceos",
+                    "Pescado",
+                    "Moluscos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/fideua.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0011-0000-0000-000000000000",
+                "description": "Plato marinero con fideos y caldo de pescado.",
+                "is_available": true,
+                "display_order": 10
+            }
+        ]
+    },
+    {
+        "id": "11111111-0013-0000-0000-000000000000",
+        "name": "C\u00c3\u00b3cteles y Sangr\u00c3\u00adas",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/cocteles-y-sangrias.webp",
+        "display_order": 11,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "14e5cfc6-747e-42ce-bedb-56459d80392b",
+                "name": "Caipiroska",
+                "price": 6.5,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/caipiroska.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0013-0000-0000-000000000000",
+                "description": "C\u00c3\u00b3ctel refrescante con vodka y lima.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "95334661-6b71-4eb8-a001-d5e083162b54",
+                "name": "Margarita",
+                "price": 6.5,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/margarita.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0013-0000-0000-000000000000",
+                "description": "Tequila, triple sec y zumo de lima.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "a92d10f8-2f47-4546-87cb-6b0696a1327e",
+                "name": "San Francisco",
+                "price": 6.5,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/san-francisco.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0013-0000-0000-000000000000",
+                "description": "C\u00c3\u00b3ctel sin alcohol de zumos frutales.",
+                "is_available": true,
+                "display_order": 4
+            },
+            {
+                "id": "15000ff8-e1c3-4af9-9d5d-cbdd33f1357d",
+                "name": "Sangr\u00c3\u00ada Vino 1 Ltrs",
+                "price": 10.0,
+                "allergens": [
+                    "Sulfitos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/sangria-1l.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0013-0000-0000-000000000000",
+                "description": "Jarra de un litro de sangr\u00c3\u00ada tradicional.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "990a1ee8-a8a7-40e4-9691-837671d06503",
+                "name": "Mojito Litro",
+                "price": 12.0,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/mojito-1l.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0013-0000-0000-000000000000",
+                "description": "Formato de un litro del c\u00c3\u00b3ctel cubano.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "5481a1b2-9764-44d4-9a88-60b9dd51dfdb",
+                "name": "Pi\u00c3\u00b1a Colada",
+                "price": 6.5,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pina-colada.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0013-0000-0000-000000000000",
+                "description": "Ron blanco, crema de coco y pi\u00c3\u00b1a.",
+                "is_available": true,
+                "display_order": 5
+            },
+            {
+                "id": "1e49b4ad-9a0d-4ca6-958b-6abb55326c30",
+                "name": "Sex on the beach",
+                "price": 6.5,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/sex-on-the-beach.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0013-0000-0000-000000000000",
+                "description": "Vodka, melocot\u00c3\u00b3n, naranja y ar\u00c3\u00a1ndanos.",
+                "is_available": true,
+                "display_order": 6
+            }
+        ]
+    },
+    {
+        "id": "11111111-0012-0000-0000-000000000000",
+        "name": "Bebidas, Cervezas y Caf\u00c3\u00a9s",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/bebidas-cervezas-y-cafes.webp",
+        "display_order": 12,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "2885a22b-d4ab-4221-a2b0-3245c3301a32",
+                "name": "Caf\u00c3\u00a9 Solo",
+                "price": 0.0,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/cafe-solo.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0012-0000-0000-000000000000",
+                "description": "Cl\u00c3\u00a1sico caf\u00c3\u00a9 espresso.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "7338b035-f8f7-47ec-ab98-1228a3dc9100",
+                "name": "Cortado",
+                "price": 0.0,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/cortado.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0012-0000-0000-000000000000",
+                "description": "Espresso con poca leche.",
+                "is_available": true,
+                "display_order": 4
+            },
+            {
+                "id": "28b11ba4-6b6c-48b6-9d00-129afa2847aa",
+                "name": "Caf\u00c3\u00a9 con leche",
+                "price": 0.0,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/cafe-con-leche.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0012-0000-0000-000000000000",
+                "description": "Espresso con leche.",
+                "is_available": true,
+                "display_order": 5
+            },
+            {
+                "id": "d0ceacf4-7e35-47cf-9a0f-7fe71d67f9df",
+                "name": "Ca\u00c3\u00b1a peque\u00c3\u00b1a",
+                "price": 0.0,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/cana.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0012-0000-0000-000000000000",
+                "description": "Vaso peque\u00c3\u00b1o de cerveza de barril.",
+                "is_available": true,
+                "display_order": 6
+            },
+            {
+                "id": "0778890b-8aea-4be5-bf67-e6717f6a8d82",
+                "name": "Cerveza Mediana",
+                "price": 0.0,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/cerveza-mediana.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0012-0000-0000-000000000000",
+                "description": "Botella de tama\u00c3\u00b1o mediano (tercio).",
+                "is_available": true,
+                "display_order": 7
+            },
+            {
+                "id": "77d2e3c3-f4a4-4147-9af0-ca22113bbb4f",
+                "name": "Jarra de Cerveza",
+                "price": 0.0,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/jarra-cerveza.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0012-0000-0000-000000000000",
+                "description": "Gran formato de cerveza de barril.",
+                "is_available": true,
+                "display_order": 8
+            },
+            {
+                "id": "17aed69e-aa4c-42c7-a1bd-68365d1690a0",
+                "name": "Vinos (Copa o Botella)",
+                "price": 0.0,
+                "allergens": [
+                    "Sulfitos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/vinos.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0012-0000-0000-000000000000",
+                "description": "Selecci\u00c3\u00b3n de tintos, blancos y rosados.",
+                "is_available": true,
+                "display_order": 9
+            }
+        ]
+    },
+    {
+        "id": "11111111-0014-0000-0000-000000000000",
+        "name": "Especialidades y Desayunos",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/especialidades-y-desayunos.webp",
+        "display_order": 13,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "e549b76e-86b2-4b00-a850-646d9a2870e1",
+                "name": "2 Paellas + 1 Litro Sangr\u00c3\u00ada",
+                "price": 30.0,
+                "allergens": [
+                    "Crust\u00c3\u00a1ceos",
+                    "Pescado",
+                    "Sulfitos",
+                    "Moluscos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/oferta-paellas.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0014-0000-0000-000000000000",
+                "description": "Dos paellas m\u00c3\u00a1s una jarra de sangr\u00c3\u00ada.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "b919bf2d-59c8-4a69-af65-44b5f03b7d27",
+                "name": "Pollo para llevar",
+                "price": 12.5,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pollo-llevar.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0014-0000-0000-000000000000",
+                "description": "Pollo entero asado con patatas y ensalada.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "3afcf761-36f9-4343-aa7d-4e797adb1f6e",
+                "name": "English Breakfast",
+                "price": 8.5,
+                "allergens": [
+                    "Gluten",
+                    "Huevo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/english-breakfast.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0014-0000-0000-000000000000",
+                "description": "Desayuno ingl\u00c3\u00a9s: huevos, salchicha, bacon y alubias.",
+                "is_available": true,
+                "display_order": 2
+            }
+        ]
+    },
+    {
+        "id": "11111111-0015-0000-0000-000000000000",
+        "name": "Men\u00c3\u00bas Completos",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/menus-completos.webp",
+        "display_order": 14,
+        "is_active": true,
+        "created_at": "2026-05-13T02:22:04.933832+00:00",
+        "products": [
+            {
+                "id": "2c6747ec-78a0-49fc-b33f-d6c34a01c9f4",
+                "name": "Men\u00c3\u00ba 1 - Pita Kebab",
+                "price": 8.0,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/menu-pita.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0015-0000-0000-000000000000",
+                "description": "Pita Kebab + Patatas + Bebida.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "944a231e-ab9a-4d89-a7c2-9d50b5c946eb",
+                "name": "Men\u00c3\u00ba 2 - D\u00c3\u00bcr\u00c3\u00bcm",
+                "price": 8.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/menu-durum.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0015-0000-0000-000000000000",
+                "description": "Rollo D\u00c3\u00bcr\u00c3\u00bcm + Patatas + Bebida.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "636a4905-5282-4f39-a2c0-673f68adcd79",
+                "name": "Men\u00c3\u00ba 3 - Plato Kebab",
+                "price": 9.5,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/menu-plato-kebab.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0015-0000-0000-000000000000",
+                "description": "Plato Kebab + Patatas + Bebida.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "3ff29e5c-03fc-4e4e-973c-f55d9467db6d",
+                "name": "Men\u00c3\u00ba 4 - D\u00c3\u00bcr\u00c3\u00bcm XXL",
+                "price": 13.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/menu-durum-xxl.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0015-0000-0000-000000000000",
+                "description": "D\u00c3\u00bcr\u00c3\u00bcm gigante + Patatas + Bebida.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "d37050c1-219c-412d-9225-c3a3857e4b89",
+                "name": "Men\u00c3\u00ba 5 - Plato Arroz",
+                "price": 10.5,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/menu-plato-arroz.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0015-0000-0000-000000000000",
+                "description": "Plato con Arroz y Carne + Bebida.",
+                "is_available": true,
+                "display_order": 4
+            },
+            {
+                "id": "ff3d589d-c8ec-49c2-bf9c-7ae2a937a5a0",
+                "name": "Men\u00c3\u00ba 6 - Doner Box",
+                "price": 7.5,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/menu-doner-box.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0015-0000-0000-000000000000",
+                "description": "Cajita Doner Box + Bebida.",
+                "is_available": true,
+                "display_order": 5
+            },
+            {
+                "id": "d83f0471-9a9f-46de-a3e1-b4d5b76ee879",
+                "name": "Men\u00c3\u00ba 7 - Nuggets",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten",
+                    "Soja",
+                    "Apio"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/menu-nuggets.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0015-0000-0000-000000000000",
+                "description": "Nuggets de pollo + Patatas + Bebida.",
+                "is_available": true,
+                "display_order": 6
+            },
+            {
+                "id": "4aae37c7-6e02-489f-9533-51e00a6d6aad",
+                "name": "Men\u00c3\u00ba 8 - Burger",
+                "price": 7.5,
+                "allergens": [
+                    "Gluten",
+                    "S\u00c3\u00a9samo"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/menu-burger.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0015-0000-0000-000000000000",
+                "description": "Hamburguesa a elegir + Patatas + Bebida.",
+                "is_available": true,
+                "display_order": 7
+            },
+            {
+                "id": "551ae553-76f4-4283-bc71-5685542ba92b",
+                "name": "Men\u00c3\u00ba 9 - Hot Dog",
+                "price": 6.5,
+                "allergens": [
+                    "Gluten",
+                    "L\u00c3\u00a1cteos",
+                    "Mostaza"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/menu-hot-dog.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0015-0000-0000-000000000000",
+                "description": "Perrito caliente + Patatas + Bebida.",
+                "is_available": true,
+                "display_order": 8
+            },
+            {
+                "id": "c0b8065e-6da5-47cc-906f-5c840ae59925",
+                "name": "Men\u00c3\u00ba 10 - Alitas",
+                "price": 9.0,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/menu-alitas.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0015-0000-0000-000000000000",
+                "description": "Raci\u00c3\u00b3n de alitas de pollo + Patatas + Bebida.",
+                "is_available": true,
+                "display_order": 9
+            }
+        ]
+    },
+    {
+        "id": "11111111-0016-0000-0000-000000000000",
+        "name": "Refrescos",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/refrescos.webp",
+        "display_order": 15,
+        "is_active": true,
+        "created_at": "2026-05-20T19:11:49.53914+00:00",
+        "products": [
+            {
+                "id": "da285c63-823d-4ec7-94fa-88afdd240d03",
+                "name": "Coca-Cola",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/coca-cola.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Refresco de cola 33cl, servido fr\u00c3\u00ado.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "76c13c4e-1881-4a15-bc4d-d0324b6b5a26",
+                "name": "Coca-Cola Zero",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/coca-cola-zero.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Refresco de cola sin az\u00c3\u00bacar 33cl.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "3619d926-c30a-4f3c-803a-2ccdf262b3fa",
+                "name": "Coca-Cola 1L",
+                "price": 4.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/cola-1l.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Botella de Coca-Cola para compartir, 1 litro.",
+                "is_available": true,
+                "display_order": 16
+            },
+            {
+                "id": "4e83bf1f-994f-4630-bb08-850219975b38",
+                "name": "Pepsi",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pepsi.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Refresco de cola Pepsi 33cl.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "22cbb054-a2e5-492d-bf76-a6256ce1ac96",
+                "name": "Pepsi 1L",
+                "price": 4.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/pepsi-1l.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Botella de Pepsi para compartir, 1 litro.",
+                "is_available": true,
+                "display_order": 17
+            },
+            {
+                "id": "647d4fd5-b5bf-4b35-aeff-788ead378462",
+                "name": "Fanta Naranja",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/fanta-naranja.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Refresco con sabor a naranja 33cl.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "36535ed8-34b7-4a34-8d0e-5ba96bc287be",
+                "name": "Fanta Lim\u00c3\u00b3n",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/fanta-limon.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Refresco con sabor a lim\u00c3\u00b3n 33cl.",
+                "is_available": true,
+                "display_order": 4
+            },
+            {
+                "id": "ac95d0d7-7001-4d4b-9356-87a5d5bb48a2",
+                "name": "Fanta 1L",
+                "price": 4.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/fanta-1l.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Botella de Fanta para compartir, 1 litro.",
+                "is_available": true,
+                "display_order": 18
+            },
+            {
+                "id": "8c57e460-febb-411f-ba43-7d6142ebfb84",
+                "name": "Sprite",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/sprite.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Refresco transparente de lima-lim\u00c3\u00b3n 33cl.",
+                "is_available": true,
+                "display_order": 5
+            },
+            {
+                "id": "83a37299-22ed-4c92-b4a8-17e51c661369",
+                "name": "Sprite 1L",
+                "price": 4.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/sprite-1l.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Botella de Sprite para compartir, 1 litro.",
+                "is_available": true,
+                "display_order": 19
+            },
+            {
+                "id": "4efc6d90-9a2a-4954-969c-055e348fbd47",
+                "name": "7up",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/7up.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Refresco de lima-lim\u00c3\u00b3n 33cl.",
+                "is_available": true,
+                "display_order": 6
+            },
+            {
+                "id": "1ed76f39-d850-4fdc-bc15-f4e6f6d9a5d3",
+                "name": "Schweppes",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/schweppes.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "T\u00c3\u00b3nica con quinina 25cl.",
+                "is_available": true,
+                "display_order": 7
+            },
+            {
+                "id": "42360916-49f9-4a69-8f1e-c00d0441a5ab",
+                "name": "Trina Naranja",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/trina-naranja.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Refresco de naranja sin gas 33cl.",
+                "is_available": true,
+                "display_order": 8
+            },
+            {
+                "id": "4ea77a11-4a69-4d81-bbfe-df5ebbedb9e2",
+                "name": "Nestea Lim\u00c3\u00b3n",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/nestea-limon.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "T\u00c3\u00a9 fr\u00c3\u00ado con sabor a lim\u00c3\u00b3n 33cl.",
+                "is_available": true,
+                "display_order": 9
+            },
+            {
+                "id": "be254b7e-4bf7-42e3-977f-e173eb2caf8b",
+                "name": "Nestea Maracuy\u00c3\u00a1",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/nestea-maracuya.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "T\u00c3\u00a9 fr\u00c3\u00ado con sabor a maracuy\u00c3\u00a1 33cl.",
+                "is_available": true,
+                "display_order": 10
+            },
+            {
+                "id": "043a4567-b739-4572-87b1-12f6407b494d",
+                "name": "Aquarius Naranja",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/aquarius-naranja.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Bebida isot\u00c3\u00b3nica de naranja 33cl.",
+                "is_available": true,
+                "display_order": 11
+            },
+            {
+                "id": "16605d4f-4355-43f5-b51f-d5df5234350a",
+                "name": "Aquarius Lim\u00c3\u00b3n",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/aquarius-limon.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Bebida isot\u00c3\u00b3nica de lim\u00c3\u00b3n 33cl.",
+                "is_available": true,
+                "display_order": 12
+            },
+            {
+                "id": "0bf91b35-883e-4ca4-9d56-7a95becac253",
+                "name": "Zumo de Melocot\u00c3\u00b3n",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/zumo-de-melocoton.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Zumo de melocot\u00c3\u00b3n fr\u00c3\u00ado 20cl.",
+                "is_available": true,
+                "display_order": 13
+            },
+            {
+                "id": "ed5a48d1-6b7c-4b8d-a159-9b3c6b8204a6",
+                "name": "Monster",
+                "price": 3.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/monster.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Bebida energ\u00c3\u00a9tica 500ml con taurina y cafe\u00c3\u00adna.",
+                "is_available": true,
+                "display_order": 15
+            },
+            {
+                "id": "8f8aed46-3016-4004-b46b-7ee2ec426a69",
+                "name": "Agua Mineral 0.5L",
+                "price": 1.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/agua-mineral-0-5l.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Agua mineral natural sin gas, 500ml.",
+                "is_available": true,
+                "display_order": 20
+            },
+            {
+                "id": "e3ddf790-6b6c-4d99-8b70-1788237df5c9",
+                "name": "Agua Mineral 1.5L",
+                "price": 3.0,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/agua-mineral-1-5l.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Agua mineral natural sin gas, 1,5 litros.",
+                "is_available": true,
+                "display_order": 21
+            },
+            {
+                "id": "7d16bbe4-b5db-4321-9709-47b7a0bd1032",
+                "name": "Vichy Catalan",
+                "price": 2.5,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/vichy-catalan.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Agua mineral con gas 500ml.",
+                "is_available": true,
+                "display_order": 22
+            },
+            {
+                "id": "31d72fd9-d625-4a99-9b90-647e162b7431",
+                "name": "Free Damm Lim\u00c3\u00b3n",
+                "price": 2.5,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/free-damm-limon.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Cerveza sin alcohol con lim\u00c3\u00b3n 33cl.",
+                "is_available": true,
+                "display_order": 23
+            },
+            {
+                "id": "4b30ce94-a3c4-4da8-bd43-64a6c9f97d27",
+                "name": "Free Damm Tostada",
+                "price": 2.5,
+                "allergens": [
+                    "Gluten"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/free-damm-tostada.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Cerveza tostada sin alcohol 33cl.",
+                "is_available": true,
+                "display_order": 24
+            },
+            {
+                "id": "5bb41bf8-ef4c-4531-abc7-ac9805271313",
+                "name": "Red Bull",
+                "price": 0.0,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/red-bull.webp",
+                "created_at": "2026-05-13T02:22:04.933832+00:00",
+                "category_id": "11111111-0016-0000-0000-000000000000",
+                "description": "Bebida energ\u00c3\u00a9tica.",
+                "is_available": true,
+                "display_order": 14
+            }
+        ]
+    },
+    {
+        "id": "11111111-0017-0000-0000-000000000000",
+        "name": "Salsas",
+        "description": null,
+        "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/categories/salsas.webp",
+        "display_order": 16,
+        "is_active": true,
+        "created_at": "2026-05-20T19:11:49.53914+00:00",
+        "products": [
+            {
+                "id": "23a6f7b6-8650-4438-9d3b-aad957155e76",
+                "name": "Algerian",
+                "price": 1.0,
+                "allergens": [
+                    "Huevo",
+                    "Mostaza",
+                    "Picante"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/salsa-algerian.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0017-0000-0000-000000000000",
+                "description": "Salsa belga ligeramente picante con harissa y mayonesa.",
+                "is_available": true,
+                "display_order": 0
+            },
+            {
+                "id": "a1ae0138-3d42-40c4-8798-d484144196bf",
+                "name": "Andaluza",
+                "price": 1.0,
+                "allergens": [
+                    "Huevo",
+                    "Mostaza"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/salsa-andaluza.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0017-0000-0000-000000000000",
+                "description": "Mayonesa especiada con tomate, pimiento y ajo.",
+                "is_available": true,
+                "display_order": 1
+            },
+            {
+                "id": "b40a8b11-e827-48ad-9b2c-349538e8d89e",
+                "name": "Barbacoa",
+                "price": 1.0,
+                "allergens": [
+                    "Mostaza",
+                    "Sulfitos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/salsa-barbacoa.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0017-0000-0000-000000000000",
+                "description": "Salsa dulce y ahumada de tomate y especias.",
+                "is_available": true,
+                "display_order": 2
+            },
+            {
+                "id": "3375af04-06f3-4a6a-8a30-ceabd3384716",
+                "name": "Biggie",
+                "price": 1.0,
+                "allergens": [
+                    "Huevo",
+                    "Mostaza"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/salsa-biggie.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0017-0000-0000-000000000000",
+                "description": "Salsa cremosa estilo americano con mayo, ketchup y especias.",
+                "is_available": true,
+                "display_order": 3
+            },
+            {
+                "id": "06199efb-51ae-402a-ac50-12b94ae90371",
+                "name": "Blanca",
+                "price": 1.0,
+                "allergens": [
+                    "L\u00c3\u00a1cteos"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/salsa-blanca.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0017-0000-0000-000000000000",
+                "description": "Salsa blanca de yogur con ajo y hierbas, t\u00c3\u00adpica de kebab.",
+                "is_available": true,
+                "display_order": 4
+            },
+            {
+                "id": "540ce356-6886-4aa7-90e5-7d1fbf3c478f",
+                "name": "Brazil",
+                "price": 1.0,
+                "allergens": [
+                    "Huevo",
+                    "Mostaza"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/salsa-brazil.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0017-0000-0000-000000000000",
+                "description": "Salsa c\u00c3\u00b3ctel cremosa estilo brasile\u00c3\u00b1o, ligeramente dulce.",
+                "is_available": true,
+                "display_order": 5
+            },
+            {
+                "id": "ba1a13bd-70f7-4b80-812a-6f8d97780cb5",
+                "name": "Ketchup",
+                "price": 1.0,
+                "allergens": null,
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/salsa-ketchup.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0017-0000-0000-000000000000",
+                "description": "Salsa de tomate dulce.",
+                "is_available": true,
+                "display_order": 6
+            },
+            {
+                "id": "38f60126-3b47-4f14-b1c8-cc4e3f4989a2",
+                "name": "Mayonesa",
+                "price": 1.0,
+                "allergens": [
+                    "Huevo",
+                    "Mostaza"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/salsa-mayonesa.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0017-0000-0000-000000000000",
+                "description": "Salsa cremosa de huevo y aceite.",
+                "is_available": true,
+                "display_order": 7
+            },
+            {
+                "id": "6a91a931-857b-439a-bb6c-9866397c5758",
+                "name": "Picante",
+                "price": 1.0,
+                "allergens": [
+                    "Picante"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/salsa-picante.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0017-0000-0000-000000000000",
+                "description": "Salsa picante con tomate y chiles.",
+                "is_available": true,
+                "display_order": 8
+            },
+            {
+                "id": "aab4edee-2934-4048-874f-aff7245986d4",
+                "name": "Samurai",
+                "price": 1.0,
+                "allergens": [
+                    "Huevo",
+                    "Mostaza",
+                    "Picante"
+                ],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/salsa-samurai.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0017-0000-0000-000000000000",
+                "description": "Mayonesa picante con harissa.",
+                "is_available": true,
+                "display_order": 10
+            },
+            {
+                "id": "e3302fb6-c145-42d5-863e-6f2b99c6ee74",
+                "name": "Pita\r\n  Kebab",
+                "price": 1.0,
+                "allergens": [],
+                "image_url": "https://xkbhijdtqpblryybwnho.supabase.co/storage/v1/object/public/images/products/salsa-pita-kebab.webp",
+                "created_at": "2026-05-20T19:11:49.53914+00:00",
+                "category_id": "11111111-0017-0000-0000-000000000000",
+                "description": null,
+                "is_available": true,
+                "display_order": 9
+            }
+        ]
+    }
+]

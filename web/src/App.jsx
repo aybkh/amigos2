@@ -19,8 +19,6 @@ function AppInner() {
         <Route path={ROUTES.HOME}      element={<HomePage />} />
         <Route path={ROUTES.MENU}      element={<MenuPage />} />
         <Route path={ROUTES.TV}        element={<TvPage />} />
-        <Route path={ROUTES.TV_LIGHT}  element={<TvPage forceTheme="light" />} />
-        <Route path={ROUTES.TV_DARK}   element={<TvPage forceTheme="dark" />} />
         <Route path="*"                element={<HomePage />} />
       </Routes>
 

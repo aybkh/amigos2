@@ -94,20 +94,60 @@ html {
     gap: 20px;
   }
 }
-/* Rotación del plato destacado: fade-out → swap invisible → fade-in escalonado */
-@keyframes featuredFadeIn {
-  from { opacity: 0; transform: translateY(10px) scale(0.98); }
-  to   { opacity: 1; transform: translateY(0)    scale(1);    }
+/* Slider de productos por tarjeta — crossfade estilo The Kebab Lab.
+   Slides apilados; el activo sube a opacity 1 con transición de 0.8s. */
+.featured-slider {
+  position: relative;
+  overflow: hidden;
 }
-@keyframes featuredFadeOut {
-  from { opacity: 1; transform: translateY(0)     scale(1);    }
-  to   { opacity: 0; transform: translateY(-10px) scale(0.98); }
+.featured-slide {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 230, 118, 0.05);
 }
-.featured-grid.is-in  .featured-fade { animation: featuredFadeIn  0.5s ease both; }
-.featured-grid.is-out .featured-fade { animation: featuredFadeOut 0.3s ease forwards; }
+.featured-slide.active {
+  opacity: 1;
+}
+.featured-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 @media (prefers-reduced-motion: reduce) {
-  .featured-grid.is-in  .featured-fade,
-  .featured-grid.is-out .featured-fade { animation: none; }
+  .featured-slide { transition: none; }
+}
+/* Flechas manuales prev/next */
+.featured-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 1px solid rgba(0, 230, 118, 0.30);
+  border-radius: 50%;
+  background: rgba(7, 26, 16, 0.65);
+  color: var(--color-neon);
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+.featured-slider:hover .featured-arrow { opacity: 1; }
+.featured-arrow:hover { background: rgba(0, 230, 118, 0.20); }
+.featured-arrow.prev { left: 6px; }
+.featured-arrow.next { right: 6px; }
+/* En táctil las flechas siempre visibles (no hay hover fiable) */
+@media (hover: none) {
+  .featured-arrow { opacity: 1; }
 }
 
 /* ─── PriceDisplay — entero grande + céntimos pequeños ─── */
