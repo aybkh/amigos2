@@ -36,7 +36,7 @@ _Ninguna._ No se encontró ninguna vulnerabilidad crítica. La capa de datos (RL
 
 - [x] **M1 — `.gitignore` no incluye `.env`.** ✅ RESUELTO 2026-05-21. Añadidos `.env`, `.env.*` (`!.env.example`), `node_modules/`, `dist/` al `.gitignore`.
 - [~] **M2 — Formulario de contacto sin protección anti-spam.** ⚠️ MITIGADO PARCIALMENTE 2026-05-21. Añadido rate-limiting client-side (1 envío / 60s). **Nota:** es client-side — un atacante puede seguir golpeando la API REST directamente. Para protección real falta captcha + mover el INSERT a una Edge Function (pendiente).
-- [x] **M3 — Sin validación de entrada en el formulario de contacto.** ✅ RESUELTO 2026-05-21. Validación de nombre (2-100, solo letras), email (formato + máx 255) y mensaje (10-1000) en `ContactForm.jsx`. Recomendado además añadir los `CHECK` constraints en la columna de Supabase (ver Acción 3).
+- [x] **M3 — Sin validación de entrada en el formulario de contacto.** ✅ RESUELTO 2026-05-21. Validación de doble capa: cliente (`ContactForm.jsx` — nombre 2-100 solo letras, email formato + máx 255, mensaje 10-1000) **y servidor** (constraints `CHECK` en `contact_messages`: `name_len`, `message_len`, `email_len`, `email_fmt`). La BD rechaza datos basura aunque se ataque la API REST directamente.
 
 ### 💡 MEJORAS RECOMENDADAS
 
