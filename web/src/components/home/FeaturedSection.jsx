@@ -1,10 +1,13 @@
-import { useState } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useMenu } from '../../hooks/useMenu'
 import { useLanguage } from '../../hooks/useLanguage'
 import { t } from '../../lib/i18n'
 import PriceDisplay from '../ui/PriceDisplay'
 
 const TARGET_NAMES = ['Pizzas', 'Comida Turca', 'Paellas', 'Platos Combinados', 'Cócteles', 'Hindú']
+
+// Rotación automática de plato destacado por categoría
+const ROTATE_MS = 5000
 
 const EMOJI_MAP = {
   pizza: '🍕', pizzas: '🍕',
@@ -30,16 +33,25 @@ function getCategoryEmoji(name) {
 
 const isValidUrl = (url) => !!url && (url.startsWith('http://') || url.startsWith('https://'))
 
-function getFirstAvailableProduct(cat) {
-  return (cat.products ?? [])
-    .filter(p => p.is_available !== false)
-    .sort((a, b) => (a.display_order ?? 0) - (b.display_order ?? 0))[0] ?? null
+function getAvailableProducts(cat) {
+  return (cat.products ?? []).filter(p => p.is_available !== false)
 }
 
-function FeaturedCard({ cat, lang }) {
+function FeaturedCard({ cat, lang, tick }) {
   const [imgFailed, setImgFailed] = useState(false)
 
-  const product = getFirstAvailableProduct(cat)
+  const products = getAvailableProducts(cat)
+
+  // Producto aleatorio de ESTA categoría; recalcula en cada tick de rotación
+  const product = useMemo(() => {
+    if (products.length === 0) return null
+    return products[Math.floor(Math.random() * products.length)]
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [cat.id, tick])
+
+  // Reiniciar el fallback de imagen al cambiar de producto
+  useEffect(() => { setImgFailed(false) }, [product?.id])
+
   const emoji   = getCategoryEmoji(cat.name)
   const showImg = isValidUrl(product?.image_url) && !imgFailed
 
@@ -58,57 +70,72 @@ function FeaturedCard({ cat, lang }) {
       onMouseEnter={e => (e.currentTarget.style.borderColor = 'rgba(0,230,118,0.25)')}
       onMouseLeave={e => (e.currentTarget.style.borderColor = 'rgba(245,240,232,0.08)')}
     >
+      {/* key por producto → re-anima el fundido en cada rotación */}
       <div
-        className="featured-img-zone"
-        style={{
-          background: 'rgba(0,230,118,0.05)',
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          overflow: 'hidden',
-        }}
+        key={product?.id ?? 'empty'}
+        className="featured-fade"
+        style={{ display: 'flex', flexDirection: 'column', flex: 1 }}
       >
-        {showImg ? (
-          <img
-            src={product.image_url}
-            alt=""
-            loading="lazy"
-            onError={() => setImgFailed(true)}
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
-          />
-        ) : (
-          <span style={{ fontSize: '3rem', lineHeight: 1 }}>{emoji}</span>
-        )}
-      </div>
+        <div
+          className="featured-img-zone"
+          style={{
+            background: 'rgba(0,230,118,0.05)',
+            display: 'flex', alignItems: 'center', justifyContent: 'center',
+            overflow: 'hidden',
+          }}
+        >
+          {showImg ? (
+            <img
+              src={product.image_url}
+              alt=""
+              loading="lazy"
+              onError={() => setImgFailed(true)}
+              style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            />
+          ) : (
+            <span style={{ fontSize: '3rem', lineHeight: 1 }}>{emoji}</span>
+          )}
+        </div>
 
-      <div style={{ padding: '12px 14px', display: 'flex', flexDirection: 'column', gap: 3 }}>
-        <span style={{
-          fontFamily: 'Montserrat, sans-serif',
-          fontWeight: 700, fontSize: '0.60rem',
-          letterSpacing: '0.14em', textTransform: 'uppercase',
-          color: 'var(--color-neon)',
-        }}>{cat.name}</span>
-        {product ? (
-          <>
-            <span style={{
-              fontFamily: 'Montserrat, sans-serif',
-              fontWeight: 700, fontSize: '0.85rem',
-              color: 'var(--color-cream)',
-              overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
-            }}>{product.name}</span>
-            {product.price != null
-              ? <PriceDisplay price={product.price} />
-              : <span style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 800, fontSize: '0.95rem',
-                  color: 'var(--color-neon)',
-                }}>—</span>}
-          </>
-        ) : (
+        <div style={{ padding: '12px 14px', display: 'flex', flexDirection: 'column', gap: 6 }}>
           <span style={{
             fontFamily: 'Montserrat, sans-serif',
-            fontSize: '0.78rem',
-            color: 'rgba(245,240,232,0.35)',
-          }}>{t(lang, 'ui.featured.no_products')}</span>
-        )}
+            fontWeight: 700, fontSize: '0.60rem',
+            letterSpacing: '0.14em', textTransform: 'uppercase',
+            color: 'var(--color-neon)',
+          }}>{cat.name}</span>
+          {product ? (
+            <div style={{
+              display: 'flex',
+              justifyContent: 'space-between',
+              alignItems: 'baseline',
+              gap: 10,
+            }}>
+              <span style={{
+                flex: 1, minWidth: 0,
+                fontFamily: 'Montserrat, sans-serif',
+                fontWeight: 700, fontSize: '0.85rem',
+                color: 'var(--color-cream)',
+                overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
+              }}>{product.name}</span>
+              <span style={{ flexShrink: 0 }}>
+                {product.price != null
+                  ? <PriceDisplay price={product.price} />
+                  : <span style={{
+                      fontFamily: 'Montserrat, sans-serif',
+                      fontWeight: 800, fontSize: '0.95rem',
+                      color: 'var(--color-neon)',
+                    }}>—</span>}
+              </span>
+            </div>
+          ) : (
+            <span style={{
+              fontFamily: 'Montserrat, sans-serif',
+              fontSize: '0.78rem',
+              color: 'rgba(245,240,232,0.35)',
+            }}>{t(lang, 'ui.featured.no_products')}</span>
+          )}
+        </div>
       </div>
     </div>
   )
@@ -117,6 +144,13 @@ function FeaturedCard({ cat, lang }) {
 export default function FeaturedSection() {
   const { categories, loading } = useMenu()
   const { lang } = useLanguage()
+  const [tick, setTick] = useState(0)
+
+  // Rotación automática cada 5s — recalcula el plato aleatorio de cada tarjeta
+  useEffect(() => {
+    const id = setInterval(() => setTick(n => n + 1), ROTATE_MS)
+    return () => clearInterval(id)
+  }, [])
 
   const featured = (() => {
     if (categories.length === 0) return []
@@ -160,7 +194,7 @@ export default function FeaturedSection() {
                   border: '1px solid rgba(245,240,232,0.06)',
                 }} />
               ))
-            : featured.map(cat => <FeaturedCard key={cat.id} cat={cat} lang={lang} />)
+            : featured.map(cat => <FeaturedCard key={cat.id} cat={cat} lang={lang} tick={tick} />)
           }
         </div>
       </div>
