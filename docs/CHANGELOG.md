@@ -23,11 +23,20 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 - `components/menu/ProductCard.jsx` — el `<div class="menu-card-allergens-strip">` se renderiza siempre, esté o no la lista vacía
 - `styles/menu.css` — `.menu-card-allergens-strip` ahora tiene `min-height: 28px` + `box-sizing: border-box`. Así todas las tarjetas alinean nombre+precio a la misma altura, tengan alérgenos o no
 
+### [FEATURE] FeaturedSection: plato aleatorio rotativo por categoría
+- `components/home/FeaturedSection.jsx` — cada tarjeta sigue ligada a su categoría pero ahora muestra un **producto aleatorio** de esa categoría (antes el primero fijo). Rotación automática cada **5s** vía `setInterval` + `tick`; sin botones
+- Precio movido a la **derecha** del nombre (fila flex `space-between`, `align-items: baseline`); nombre con `flex:1` + ellipsis si es largo
+- Se mantiene `useMenu()` y el componente `PriceDisplay` (no se llama a Supabase directo desde el componente)
+- Transición: fundido suave (`featuredFadeIn`, opacity + translateY 0.55s) en cada rotación vía `key` por producto; respeta `prefers-reduced-motion`
+
 ### [FIX] Seguridad — correcciones M1, M2, M3 de la auditoría
 - `.gitignore` — añadidos `.env`, `.env.*` (con excepción `!.env.example`), `node_modules/`, `dist/` (M1). Verificado: ningún `.env` estaba trackeado
 - `components/contact/ContactForm.jsx` — validación completa de inputs: nombre 2-100 chars solo letras (regex Unicode, admite acentos y nombres internacionales), email formato + máx 255, mensaje 10-1000 chars (M3). Errores por campo + contador de caracteres
 - ContactForm — rate limiting client-side: 1 envío cada 60s vía `useRef` (M2). Se mantiene `contactService` (no se llama a Supabase directo desde el componente)
 - `styles/landing/Contact.css` — estilos `.contact-input--error`, `.contact-field-error`, `.contact-field-meta`, `.contact-char-count`
+
+### [CONFIG] Constraints CHECK en `contact_messages` (Supabase)
+- Validación servidor que complementa M3: constraints `name_len` (2-100), `message_len` (10-1000), `email_len` (≤255) y `email_fmt` (formato email) en la tabla `contact_messages`. La BD rechaza datos basura aunque se ataque la API REST saltándose el formulario
 
 ### [FEATURE] HeroSection rediseñado compacto con media de fondo
 - `components/home/HeroSection.jsx` + `styles/HeroSection.css` — hero compacto (~65vh móvil / 70-75vh desktop): logo + slogan, 2 CTAs (Ver Carta → `/carta`, Ubicación → scroll a `#ubicacion`) y 3 mini-cards de categorías (Pizzas / Turca / Hindú) que enlazan a la carta
