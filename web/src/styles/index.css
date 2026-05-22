@@ -94,6 +94,17 @@ html {
     gap: 20px;
   }
 }
+/* Fundido suave al rotar el plato destacado (cada 5s) */
+@keyframes featuredFadeIn {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.featured-fade {
+  animation: featuredFadeIn 0.55s ease;
+}
+@media (prefers-reduced-motion: reduce) {
+  .featured-fade { animation: none; }
+}
 
 /* ─── PriceDisplay — entero grande + céntimos pequeños ─── */
 .price-display {
