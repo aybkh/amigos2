@@ -36,6 +36,7 @@ export default function FooterMobile({ siteInfo }) {
 
   const instagram = siteInfo?.social_instagram || null
   const facebook  = siteInfo?.social_facebook  || null
+  const tiktok    = siteInfo?.social_tiktok    || null
   const phone     = siteInfo?.phone
   const email     = siteInfo?.email
   const phoneDigits = phone ? phone.replace(/[^0-9]/g, '') : null
@@ -69,7 +70,7 @@ export default function FooterMobile({ siteInfo }) {
         <div className="footer-mobile-socials">
           <SocialBtn href={instagram} label="Instagram"><Instagram size={16} /></SocialBtn>
           <SocialBtn href={facebook}  label="Facebook"><Facebook size={16} /></SocialBtn>
-          <SocialBtn href={null}      label="TikTok"><TikTokIcon /></SocialBtn>
+          <SocialBtn href={tiktok}    label="TikTok"><TikTokIcon /></SocialBtn>
           <SocialBtn
             href={phoneDigits ? `https://wa.me/${phoneDigits}` : null}
             label="WhatsApp"

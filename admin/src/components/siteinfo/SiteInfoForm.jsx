@@ -14,6 +14,7 @@ export default function SiteInfoForm({ initialData, onSave, saving }) {
     website: initialData?.website || '',
     social_instagram: initialData?.social_instagram || '',
     social_facebook: initialData?.social_facebook || '',
+    social_tiktok: initialData?.social_tiktok || '',
     logo_url: initialData?.logo_url || '',
     hero_image_url: initialData?.hero_image_url || '',
     opening_hours: initialData?.opening_hours || {},
@@ -52,8 +53,9 @@ export default function SiteInfoForm({ initialData, onSave, saving }) {
       <section className="space-y-4">
         <h2 className="text-lg font-semibold text-stone-800 border-b border-stone-200 pb-2">Redes sociales</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Input label="Instagram (URL)" value={form.social_instagram} onChange={e => set('social_instagram', e.target.value)} />
-          <Input label="Facebook (URL)" value={form.social_facebook} onChange={e => set('social_facebook', e.target.value)} />
+          <Input label="Instagram (URL)" value={form.social_instagram} onChange={e => set('social_instagram', e.target.value)} placeholder="https://instagram.com/..." />
+          <Input label="Facebook (URL)" value={form.social_facebook} onChange={e => set('social_facebook', e.target.value)} placeholder="https://facebook.com/..." />
+          <Input label="TikTok (URL)" value={form.social_tiktok} onChange={e => set('social_tiktok', e.target.value)} placeholder="https://tiktok.com/@..." />
         </div>
       </section>
 
