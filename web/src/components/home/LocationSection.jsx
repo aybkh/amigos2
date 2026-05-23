@@ -4,7 +4,7 @@ import { useLanguage } from '../../hooks/useLanguage'
 import { t } from '../../lib/i18n'
 
 const HARDCODED_ADDRESS = 'Buenos Aires 44, 17310 Lloret de Mar'
-const HARDCODED_EMBED   = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2695.8203982075165!2d2.831212475550589!3d41.69939957658453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb17d94db5b89d%3A0xef09233d855d8b28!2sAmigos%202!5e1!3m2!1sca!2ses!4v1778770913577!5m2!1sca!2ses'
+const HARDCODED_EMBED   = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2978.9785119760763!2d2.831212475550589!3d41.69939957658453!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12bb17d94db5b89d%3A0xef09233d855d8b28!2sAmigos%202!5e0!3m2!1ses!2ses!4v1779541448794!5m2!1ses!2ses'
 const HARDCODED_MAPS    = 'https://maps.google.com/?q=Amigos+2+Lloret+de+Mar'
 
 export default function LocationSection() {
