@@ -29,23 +29,29 @@ export default function CategoryList({ categories, selectedId, onSelect, onCreat
               <p className="text-sm font-medium text-stone-800 truncate">{cat.name}</p>
               <p className="text-xs text-stone-400">{cat.products?.length ?? 0} productos</p>
             </div>
-            <div className="flex items-center gap-1 shrink-0" onClick={e => e.stopPropagation()}>
+            <div className="flex items-center gap-0.5 shrink-0" onClick={e => e.stopPropagation()}>
               <button
                 onClick={() => onReorder(idx, idx - 1)}
                 disabled={idx === 0}
-                className="p-1 text-stone-400 hover:text-stone-700 disabled:opacity-30"
-              ><ChevronUp size={14} /></button>
+                className="p-2 md:p-1 text-stone-400 hover:text-stone-700 disabled:opacity-30"
+                aria-label="Subir"
+              ><ChevronUp size={16} /></button>
               <button
                 onClick={() => onReorder(idx, idx + 1)}
                 disabled={idx === categories.length - 1}
-                className="p-1 text-stone-400 hover:text-stone-700 disabled:opacity-30"
-              ><ChevronDown size={14} /></button>
-              <button onClick={() => onEdit(cat)} className="p-1 text-stone-400 hover:text-amber-600">
-                <Pencil size={14} />
-              </button>
-              <button onClick={() => onDelete(cat)} className="p-1 text-stone-400 hover:text-red-600">
-                <Trash2 size={14} />
-              </button>
+                className="p-2 md:p-1 text-stone-400 hover:text-stone-700 disabled:opacity-30"
+                aria-label="Bajar"
+              ><ChevronDown size={16} /></button>
+              <button
+                onClick={() => onEdit(cat)}
+                className="p-2 md:p-1 text-stone-400 hover:text-amber-600"
+                aria-label="Editar"
+              ><Pencil size={16} /></button>
+              <button
+                onClick={() => onDelete(cat)}
+                className="p-2 md:p-1 text-stone-400 hover:text-red-600"
+                aria-label="Eliminar"
+              ><Trash2 size={16} /></button>
             </div>
           </li>
         ))}

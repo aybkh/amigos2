@@ -47,7 +47,7 @@ export default function HoursEditor({ value = {}, onChange }) {
 
             {/* Row principal */}
             <div className="flex items-center gap-3">
-              <span className="w-24 flex-shrink-0 text-sm font-medium text-stone-700">{label}</span>
+              <span className="w-20 sm:w-24 flex-shrink-0 text-sm font-medium text-stone-700">{label}</span>
 
               {/* Toggle ON/OFF */}
               <button

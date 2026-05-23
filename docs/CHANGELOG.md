@@ -28,6 +28,12 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 - Precio movido a la **derecha** del nombre (fila flex `space-between`, `align-items: baseline`); nombre con `flex:1` + ellipsis si es largo
 - Se mantiene `useMenu()` y el componente `PriceDisplay` (no se llama a Supabase directo desde el componente)
 
+### [REFACTOR] Admin panel — mobile-first en las pantallas más usadas
+- `admin/src/components/menu/ProductList.jsx` — doble layout: **tabla en desktop, lista de tarjetas apiladas en móvil** (≤md). Antes el `<table>` con 5 columnas exigía scroll horizontal en móvil. Cada tarjeta: imagen 56×56, nombre+precio en fila, descripción opcional, fila inferior con toggle disponible + reorden + editar/eliminar (tap targets 32×32)
+- `admin/src/pages/MenuPage.jsx` — patrón **master/detail en móvil**: muestra solo CategoryList o solo ProductList según haya selección; en desktop sigue siendo 2 columnas (280px + resto). ProductList recibe `onBack` que en móvil muestra un botón "←" para volver a categorías
+- `admin/src/components/menu/CategoryList.jsx` — botones de acción ampliados a `p-2` en móvil (32px tap target, antes 22px) e iconos a 16px; en desktop se mantiene `md:p-1` compacto
+- `admin/src/components/siteinfo/HoursEditor.jsx` — etiqueta del día `w-20 sm:w-24` (80px en móvil vs 96px) — libera espacio para los inputs `time`
+
 ### [REFACTOR] TV/Kiosco: tema único oscuro Amigos2 + fallback offline real
 - `pages/TvPage.jsx` — eliminada la lógica de tema claro/auto; el kiosco es ahora **tema único oscuro**. Quitado el prop `forceTheme` y `detectTheme()`
 - Rutas `/tv/1` (claro) y `/tv/2` (oscuro) eliminadas — solo queda `/tv`. `App.jsx` y `ROUTES` (`constants.js`) actualizados

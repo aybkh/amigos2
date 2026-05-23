@@ -94,24 +94,31 @@ export default function MenuPage() {
     <AdminLayout>
       <div className="space-y-4">
         <h1 className="text-2xl font-bold text-stone-900">Carta Digital</h1>
-        <div className="grid grid-cols-1 md:grid-cols-[280px_1fr] gap-4 items-start">
-          <CategoryList
-            categories={categories}
-            selectedId={selectedId}
-            onSelect={setSelectedId}
-            onCreate={() => setCatModal({})}
-            onEdit={cat => setCatModal({ category: cat })}
-            onDelete={handleDeleteCategory}
-            onReorder={handleCategoryReorder}
-          />
-          <ProductList
-            category={selectedCategory}
-            onToggleAvailability={handleToggleAvailability}
-            onCreate={() => setProdModal({})}
-            onEdit={prod => setProdModal({ product: prod })}
-            onDelete={handleDeleteProduct}
-            onReorder={handleProductReorder}
-          />
+        {/* Móvil: master/detail (una vista a la vez)
+            Desktop: dos columnas 280px + resto */}
+        <div className="md:grid md:grid-cols-[280px_1fr] md:gap-4 md:items-start">
+          <div className={selectedId ? 'hidden md:block' : 'block'}>
+            <CategoryList
+              categories={categories}
+              selectedId={selectedId}
+              onSelect={setSelectedId}
+              onCreate={() => setCatModal({})}
+              onEdit={cat => setCatModal({ category: cat })}
+              onDelete={handleDeleteCategory}
+              onReorder={handleCategoryReorder}
+            />
+          </div>
+          <div className={selectedId ? 'block' : 'hidden md:block'}>
+            <ProductList
+              category={selectedCategory}
+              onToggleAvailability={handleToggleAvailability}
+              onCreate={() => setProdModal({})}
+              onEdit={prod => setProdModal({ product: prod })}
+              onDelete={handleDeleteProduct}
+              onReorder={handleProductReorder}
+              onBack={() => setSelectedId(null)}
+            />
+          </div>
         </div>
       </div>
 
