@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Instagram, Facebook, Phone, Mail } from 'lucide-react'
+import { Instagram, Phone, Mail } from 'lucide-react'
 import { useLanguage } from '../../hooks/useLanguage'
 import { useLegalModal } from '../../contexts/LegalModalContext'
 import { t } from '../../lib/i18n'
@@ -37,7 +37,6 @@ export default function FooterDesktop({ siteInfo }) {
   const { openLegal } = useLegalModal()
 
   const instagram = siteInfo?.social_instagram || null
-  const facebook  = siteInfo?.social_facebook  || null
   const tiktok    = siteInfo?.social_tiktok    || null
   const phone     = siteInfo?.phone
   const email     = siteInfo?.email
@@ -98,7 +97,6 @@ export default function FooterDesktop({ siteInfo }) {
 
             <div className="footer-desktop-socials">
               <SocialBtn href={instagram} label="Instagram"><Instagram size={20} /></SocialBtn>
-              <SocialBtn href={facebook}  label="Facebook"><Facebook size={20} /></SocialBtn>
               <SocialBtn href={tiktok}    label="TikTok"><TikTokIcon /></SocialBtn>
               <SocialBtn
                 href={phoneDigits ? `https://wa.me/${phoneDigits}` : null}

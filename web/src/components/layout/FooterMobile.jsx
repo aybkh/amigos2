@@ -1,4 +1,4 @@
-import { Instagram, Facebook } from 'lucide-react'
+import { Instagram } from 'lucide-react'
 import { useLanguage } from '../../hooks/useLanguage'
 import { useLegalModal } from '../../contexts/LegalModalContext'
 import { t } from '../../lib/i18n'
@@ -35,7 +35,6 @@ export default function FooterMobile({ siteInfo }) {
   const { openLegal } = useLegalModal()
 
   const instagram = siteInfo?.social_instagram || null
-  const facebook  = siteInfo?.social_facebook  || null
   const tiktok    = siteInfo?.social_tiktok    || null
   const phone     = siteInfo?.phone
   const email     = siteInfo?.email
@@ -69,7 +68,6 @@ export default function FooterMobile({ siteInfo }) {
         {/* Fila 3: Iconos sociales */}
         <div className="footer-mobile-socials">
           <SocialBtn href={instagram} label="Instagram"><Instagram size={16} /></SocialBtn>
-          <SocialBtn href={facebook}  label="Facebook"><Facebook size={16} /></SocialBtn>
           <SocialBtn href={tiktok}    label="TikTok"><TikTokIcon /></SocialBtn>
           <SocialBtn
             href={phoneDigits ? `https://wa.me/${phoneDigits}` : null}
