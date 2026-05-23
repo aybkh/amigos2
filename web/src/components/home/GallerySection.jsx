@@ -1,32 +1,33 @@
-import { useState } from 'react'
-import { X, ChevronLeft, ChevronRight } from 'lucide-react'
+import { useState, useEffect } from 'react'
+import { X, ChevronLeft, ChevronRight, ZoomIn } from 'lucide-react'
 import { useGallery } from '../../hooks/useGallery'
 import { useLanguage } from '../../hooks/useLanguage'
 import { t } from '../../lib/i18n'
 
 function Lightbox({ photos, idx, onClose, onPrev, onNext, lang }) {
+  // Bloquear scroll del body mientras el lightbox está abierto
+  useEffect(() => {
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = prev }
+  }, [])
+
+  // Navegación por teclado: Esc cierra, ← anterior, → siguiente
+  useEffect(() => {
+    const handler = (e) => {
+      if (e.key === 'Escape') onClose()
+      else if (e.key === 'ArrowLeft'  && onPrev) onPrev()
+      else if (e.key === 'ArrowRight' && onNext) onNext()
+    }
+    window.addEventListener('keydown', handler)
+    return () => window.removeEventListener('keydown', handler)
+  }, [onClose, onPrev, onNext])
+
   return (
-    <div
-      style={{
-        position: 'fixed', inset: 0, zIndex: 100,
-        background: 'rgba(4,13,7,0.96)',
-        display: 'flex', alignItems: 'center', justifyContent: 'center',
-        backdropFilter: 'blur(12px)',
-      }}
-      onClick={onClose}
-    >
+    <div className="gallery-lightbox" onClick={onClose}>
       <button
         onClick={onClose}
-        style={{
-          position: 'absolute', top: 20, right: 20,
-          background: 'rgba(245,240,232,0.10)',
-          border: '1px solid rgba(245,240,232,0.15)',
-          borderRadius: 8,
-          color: 'var(--color-cream)',
-          width: 40, height: 40,
-          display: 'flex', alignItems: 'center', justifyContent: 'center',
-          cursor: 'pointer',
-        }}
+        className="gallery-lightbox-btn gallery-lightbox-close"
         aria-label={t(lang, 'ui.aria.close')}
       >
         <X size={20} />
@@ -36,16 +37,13 @@ function Lightbox({ photos, idx, onClose, onPrev, onNext, lang }) {
         src={photos[idx]?.image_url}
         alt={photos[idx]?.alt_text ?? ''}
         onClick={e => e.stopPropagation()}
-        style={{
-          maxWidth: '90vw', maxHeight: '85vh',
-          objectFit: 'contain', borderRadius: 12,
-        }}
+        className="gallery-lightbox-image"
       />
 
       {onPrev && (
         <button
           onClick={e => { e.stopPropagation(); onPrev() }}
-          style={{ ...navBtnStyle, left: 16 }}
+          className="gallery-lightbox-btn gallery-lightbox-prev"
           aria-label={t(lang, 'ui.aria.prev')}
         >
           <ChevronLeft size={24} />
@@ -55,34 +53,18 @@ function Lightbox({ photos, idx, onClose, onPrev, onNext, lang }) {
       {onNext && (
         <button
           onClick={e => { e.stopPropagation(); onNext() }}
-          style={{ ...navBtnStyle, right: 16 }}
+          className="gallery-lightbox-btn gallery-lightbox-next"
           aria-label={t(lang, 'ui.aria.next')}
         >
           <ChevronRight size={24} />
         </button>
       )}
 
-      <span style={{
-        position: 'absolute', bottom: 20,
-        fontFamily: 'Montserrat, sans-serif',
-        fontWeight: 600, fontSize: '0.80rem',
-        color: 'rgba(245,240,232,0.50)',
-      }}>
+      <span className="gallery-lightbox-counter">
         {idx + 1} / {photos.length}
       </span>
     </div>
   )
-}
-
-const navBtnStyle = {
-  position: 'absolute', top: '50%', transform: 'translateY(-50%)',
-  background: 'rgba(245,240,232,0.10)',
-  border: '1px solid rgba(245,240,232,0.15)',
-  borderRadius: 10,
-  color: 'var(--color-cream)',
-  width: 48, height: 48,
-  display: 'flex', alignItems: 'center', justifyContent: 'center',
-  cursor: 'pointer',
 }
 
 export default function GallerySection() {
@@ -137,9 +119,13 @@ export default function GallerySection() {
                     src={photo.image_url}
                     alt={photo.alt_text ?? ''}
                     loading="lazy"
-                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', borderRadius: 12 }}
+                    className="gallery-photo-img"
                   />
-                  <div className="gallery-overlay" />
+                  <div className="gallery-overlay">
+                    <span className="gallery-overlay-icon">
+                      <ZoomIn size={22} />
+                    </span>
+                  </div>
                 </>
               )}
             </button>
