@@ -204,14 +204,129 @@ html {
   .stats-grid > div:last-child { border-bottom: none; }
 }
 
-/* ─── Gallery hover ─── */
-.gallery-photo-btn { position: relative; overflow: hidden; }
+/* ─── Gallery — hover effects, lightbox animations ─── */
+.gallery-photo-btn {
+  position: relative;
+  overflow: hidden;
+}
+.gallery-photo-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+  transition: transform 0.5s ease;
+}
+.gallery-photo-btn:hover .gallery-photo-img {
+  transform: scale(1.08);
+}
 .gallery-photo-btn .gallery-overlay {
-  position: absolute; inset: 0;
-  background: rgba(0,230,118,0.08);
-  opacity: 0; transition: opacity 0.2s;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to top,
+    rgba(7, 26, 16, 0.55) 0%,
+    rgba(0, 230, 118, 0.12) 60%,
+    transparent 100%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  border-radius: 12px;
 }
 .gallery-photo-btn:hover .gallery-overlay { opacity: 1; }
+
+.gallery-overlay-icon {
+  width: 48px; height: 48px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--color-neon);
+  color: var(--color-bg-dark);
+  border-radius: 50%;
+  transform: scale(0.7);
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 4px 16px rgba(0, 230, 118, 0.40);
+}
+.gallery-photo-btn:hover .gallery-overlay-icon { transform: scale(1); }
+
+/* En táctil no hay hover fiable — sin overlay (la imagen sigue clicable) */
+@media (hover: none) {
+  .gallery-photo-btn .gallery-overlay { opacity: 0; }
+}
+
+/* Lightbox: backdrop fade-in + imagen zoom-in */
+.gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(4, 13, 7, 0.96);
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: galleryLightboxIn 0.25s ease both;
+}
+.gallery-lightbox-image {
+  max-width: 90vw;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 12px;
+  animation: galleryLightboxImageIn 0.35s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes galleryLightboxIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes galleryLightboxImageIn {
+  from { opacity: 0; transform: scale(0.92); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .gallery-lightbox,
+  .gallery-lightbox-image,
+  .gallery-photo-img,
+  .gallery-overlay,
+  .gallery-overlay-icon { animation: none; transition: none; }
+}
+
+/* Lightbox: botones de navegación (cerrar + prev/next) */
+.gallery-lightbox-btn {
+  position: absolute;
+  background: rgba(245, 240, 232, 0.10);
+  border: 1px solid rgba(245, 240, 232, 0.15);
+  border-radius: 10px;
+  color: var(--color-cream);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+.gallery-lightbox-btn:hover {
+  background: rgba(0, 230, 118, 0.20);
+  border-color: rgba(0, 230, 118, 0.50);
+}
+.gallery-lightbox-close { top: 20px; right: 20px; width: 40px; height: 40px; border-radius: 8px; }
+.gallery-lightbox-prev,
+.gallery-lightbox-next { top: 50%; transform: translateY(-50%); width: 48px; height: 48px; }
+.gallery-lightbox-prev { left: 16px; }
+.gallery-lightbox-next { right: 16px; }
+
+.gallery-lightbox-counter {
+  position: absolute;
+  bottom: 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 0.80rem;
+  color: rgba(245, 240, 232, 0.50);
+}
+
+/* Botones más pequeños en móvil */
+@media (max-width: 640px) {
+  .gallery-lightbox-close { top: 12px; right: 12px; }
+  .gallery-lightbox-prev  { left: 8px; width: 40px; height: 40px; }
+  .gallery-lightbox-next  { right: 8px; width: 40px; height: 40px; }
+}
 
 /* ─── Navbar responsive ─── */
 .navbar-inner      { position: relative; }
