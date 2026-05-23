@@ -28,6 +28,14 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 - Precio movido a la **derecha** del nombre (fila flex `space-between`, `align-items: baseline`); nombre con `flex:1` + ellipsis si es largo
 - Se mantiene `useMenu()` y el componente `PriceDisplay` (no se llama a Supabase directo desde el componente)
 
+### [REFACTOR] GallerySection — UX modernizada (home)
+- `components/home/GallerySection.jsx` — Lightbox ahora bloquea el **scroll del body** mientras está abierto y soporta **navegación por teclado** (Esc cierra, ← anterior, → siguiente). Estilos inline movidos a clases CSS
+- `styles/index.css` — bloque gallery rehecho:
+  - **Hover en tile**: imagen `scale(1.08)` 0.5s + gradiente neón con icono `ZoomIn` que aparece con un pequeño bounce
+  - **Lightbox**: fade-in del backdrop (0.25s) y **zoom-in** de la imagen (0.35s, cubic-bezier suave); botones del lightbox cambian a verde neón al pasar el ratón
+  - Respeta `prefers-reduced-motion`; en táctil (`hover: none`) el overlay no se muestra (no hay hover fiable)
+- Se mantiene `useGallery()`, i18n y el campo `alt_text` real del schema (el prompt usaba `caption` que no existe)
+
 ### [REFACTOR] Admin panel — mobile-first en las pantallas más usadas
 - `admin/src/components/menu/ProductList.jsx` — doble layout: **tabla en desktop, lista de tarjetas apiladas en móvil** (≤md). Antes el `<table>` con 5 columnas exigía scroll horizontal en móvil. Cada tarjeta: imagen 56×56, nombre+precio en fila, descripción opcional, fila inferior con toggle disponible + reorden + editar/eliminar (tap targets 32×32)
 - `admin/src/pages/MenuPage.jsx` — patrón **master/detail en móvil**: muestra solo CategoryList o solo ProductList según haya selección; en desktop sigue siendo 2 columnas (280px + resto). ProductList recibe `onBack` que en móvil muestra un botón "←" para volver a categorías
