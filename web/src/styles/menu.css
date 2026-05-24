@@ -233,7 +233,7 @@
 }
 #menu-root .category-image-container {
   width: 100%;
-  aspect-ratio: 2 / 1;
+  aspect-ratio: 3 / 2;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
