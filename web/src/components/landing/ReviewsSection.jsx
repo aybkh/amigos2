@@ -33,10 +33,13 @@ function ReviewCard({ review }) {
   return (
     <div className="review-card" style={{
       position: 'relative',
-      background: '#ffffff',
+      background: 'rgba(245, 240, 232, 0.03)',
+      border: '1px solid rgba(245, 240, 232, 0.06)',
+      backdropFilter: 'blur(16px)',
+      WebkitBackdropFilter: 'blur(16px)',
       borderRadius: 14, padding: '20px 22px',
       display: 'flex', flexDirection: 'column', gap: 10,
-      boxShadow: '0 4px 15px rgba(0,0,0,0.12)',
+      boxShadow: '0 8px 32px rgba(0,0,0,0.30)',
     }}>
       <span style={{ position: 'absolute', top: 18, right: 18 }}>
         <GoogleIcon size={22} />
@@ -54,7 +57,7 @@ function ReviewCard({ review }) {
           margin: 0,
           fontFamily: 'Montserrat, sans-serif',
           fontWeight: 700, fontSize: '0.85rem',
-          color: '#071a10',
+          color: 'var(--color-cream)',
         }}>{review.name}</p>
       </div>
 
@@ -68,7 +71,7 @@ function ReviewCard({ review }) {
         margin: 0,
         fontFamily: 'Montserrat, sans-serif',
         fontSize: '0.82rem', lineHeight: 1.55,
-        color: '#2d2926',
+        color: 'rgba(245, 240, 232, 0.70)',
         display: '-webkit-box',
         WebkitLineClamp: 4,
         WebkitBoxOrient: 'vertical',
@@ -94,11 +97,14 @@ export default function ReviewsSection() {
       }}>
         {t(lang, 'ui.reviews.rating')}
       </p>
-      <h2 style={{
-        fontFamily: "'Black Ops One', cursive",
-        fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
-        color: 'var(--color-cream)', margin: 0, letterSpacing: '0.04em',
-      }}>
+      <h2
+        className="section-title-glow"
+        style={{
+          fontFamily: "'Black Ops One', cursive",
+          fontSize: 'clamp(1.6rem, 4vw, 2.4rem)',
+          color: 'var(--color-cream)', margin: 0, letterSpacing: '0.04em',
+        }}
+      >
         {t(lang, 'ui.reviews.title')}{' '}
         <span style={{ color: 'var(--color-neon)' }}>{t(lang, 'ui.reviews.title_highlight')}</span>
       </h2>

@@ -20,12 +20,12 @@ export default function HomePage() {
       <HeroSection />
       <StatsBar />
       <FeaturedSection />
-      <PostsPreviewSection posts={posts} loading={postsLoading} />
-      <ReviewsSection />
-      <HoursSection />
-      <DeliverySection />
       <GallerySection />
+      <DeliverySection />
+      <HoursSection />
+      <ReviewsSection />
       <LocationSection />
+      <PostsPreviewSection posts={posts} loading={postsLoading} />
       <ContactSection />
     </Layout>
   )

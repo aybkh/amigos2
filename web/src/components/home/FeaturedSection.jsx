@@ -180,15 +180,18 @@ export default function FeaturedSection() {
   if (!loading && featured.length === 0) return null
 
   return (
-    <section id="featured" style={{ background: 'var(--color-bg-mid)', padding: '48px 24px' }}>
+    <section id="featured" style={{ background: 'linear-gradient(180deg, var(--color-bg-dark) 0%, var(--color-bg-mid) 100%)', padding: '48px 24px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
 
         <div style={{ textAlign: 'center', marginBottom: 40 }}>
-          <h2 style={{
-            fontFamily: "'Black Ops One', cursive",
-            fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
-            color: 'var(--color-cream)', margin: 0, letterSpacing: '0.04em',
-          }}>
+          <h2
+            className="section-title-glow"
+            style={{
+              fontFamily: "'Black Ops One', cursive",
+              fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
+              color: 'var(--color-cream)', margin: 0, letterSpacing: '0.04em',
+            }}
+          >
             {t(lang, 'ui.featured.title')}{' '}
             <span style={{ color: 'var(--color-neon)' }}>{t(lang, 'ui.featured.title_highlight')}</span>
           </h2>

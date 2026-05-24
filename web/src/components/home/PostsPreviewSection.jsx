@@ -92,7 +92,7 @@ export default function PostsPreviewSection({ posts, loading }) {
   if (!loading && (!posts || posts.length === 0)) return null
 
   return (
-    <section style={{ background: 'var(--color-bg-mid, #0a2a1a)', padding: '48px 24px' }}>
+    <section style={{ background: 'var(--color-bg-dark)', padding: '48px 24px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ marginBottom: 40 }}>
           <p style={{
@@ -102,11 +102,14 @@ export default function PostsPreviewSection({ posts, loading }) {
           }}>
             {t(lang, 'ui.posts.subtitle')}
           </p>
-          <h2 style={{
-            fontFamily: "'Black Ops One', cursive",
-            fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
-            color: 'var(--color-cream)', letterSpacing: '0.04em', margin: 0,
-          }}>
+          <h2
+            className="section-title-glow"
+            style={{
+              fontFamily: "'Black Ops One', cursive",
+              fontSize: 'clamp(1.8rem, 4vw, 2.5rem)',
+              color: 'var(--color-cream)', letterSpacing: '0.04em', margin: 0,
+            }}
+          >
             {t(lang, 'ui.posts.title')}
           </h2>
         </div>
