@@ -197,12 +197,7 @@ html {
 }
 
 /* ─── StatsBar responsive ─── */
-.stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); }
-@media (max-width: 640px) {
-  .stats-grid { grid-template-columns: repeat(2, 1fr); }
-  .stats-grid > div { border-right: none !important; border-bottom: 1px solid rgba(0,230,118,0.15); }
-  .stats-grid > div:last-child { border-bottom: none; }
-}
+.stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); }
 
 /* ─── Gallery — hover effects, lightbox animations ─── */
 .gallery-photo-btn {

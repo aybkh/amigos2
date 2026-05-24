@@ -5,8 +5,6 @@ export default function StatsBar() {
   const { lang } = useLanguage()
 
   const stats = [
-    { value: '15',      label: t(lang, 'ui.stats.categories') },
-    { value: '131',     label: t(lang, 'ui.stats.dishes') },
     { value: '3:00 AM', label: t(lang, 'ui.stats.closing') },
     { value: '4.5★',   label: t(lang, 'ui.stats.google') },
   ]
@@ -20,7 +18,7 @@ export default function StatsBar() {
       borderBottom: '1px solid rgba(0,230,118,0.15)',
       padding: '20px 24px',
     }}>
-      <div className="stats-grid" style={{ maxWidth: 900, margin: '0 auto', gap: 0 }}>
+      <div className="stats-grid" style={{ maxWidth: 600, margin: '0 auto', gap: 0 }}>
         {stats.map(({ value, label }, i) => (
           <div
             key={label}

@@ -4,6 +4,13 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.5.3] - 2026-05-24 — Rediseño de la barra de estadísticas (StatsBar)
+
+### [REFACTOR] Simplificación a 2 datos de valor reales (Cierre y Google Maps)
+- `web/src/components/home/StatsBar.jsx` — Se eliminaron los contadores de "15 Categorías" y "131 Platos" para evitar mostrar datos técnicos o numéricos fríos, dejando la barra estilizada únicamente con los dos datos de valor más potentes y atractivos para el cliente: el horario de cierre extendido ("3:00 AM Cierre") y la excelente puntuación en Google Maps ("4.5★ Google").
+- `web/src/components/home/StatsBar.jsx` — Se redujo el `maxWidth` del contenedor de la barra a `600px` para lograr un diseño más compacto, centrado, cohesionado y premium.
+- `web/src/styles/index.css` — Se modificó el grid de `.stats-grid` a `repeat(2, 1fr)` en todas las resoluciones de pantalla y se eliminó la consulta de medios (media query) que forzaba el formato vertical/apilado en móvil, logrando que los 2 datos clave se muestren perfectamente alineados de forma horizontal con su línea divisoria vertical en todos los dispositivos.
+
 ## [1.5.2] - 2026-05-24 — Aspect ratio de categorías 3:2 + Corrección de orden en panel de administración + Ajustes de modales
 
 ### [FIX] Bloqueo de scroll al abrir modales o drawers
