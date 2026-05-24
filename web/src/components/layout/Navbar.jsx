@@ -61,10 +61,13 @@ export default function Navbar() {
 
   return (
     <>
-      <nav style={{
-        ...navBase,
-        background: scrolled || open ? 'rgba(7,26,16,0.95)' : 'rgba(7,26,16,0.60)',
-      }}>
+      <nav
+        className={`navbar-main ${scrolled ? 'scrolled' : ''} ${open ? 'drawer-open' : ''}`}
+        style={{
+          ...navBase,
+          background: scrolled || open ? 'rgba(7,26,16,0.95)' : 'rgba(7,26,16,0.60)',
+        }}
+      >
         <div className="navbar-inner" style={{
           maxWidth: 1200, margin: '0 auto',
           padding: '0 20px',

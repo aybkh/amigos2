@@ -4,6 +4,13 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.5.5] - 2026-05-24 — Animación y ocultamiento del logo en cabecera móvil
+
+### [FEATURE] Logo del header dinámico basado en scroll (solo en móvil)
+- `web/src/components/layout/Navbar.jsx` — Se añadieron las clases dinámicas `scrolled` y `drawer-open` a la etiqueta principal `<nav>` de la barra de navegación. Esto permite coordinar la visibilidad de los elementos del header directamente mediante CSS reactivo.
+- `web/src/styles/index.css` — Se modificó la regla `.navbar-logo` dentro del bloque responsivo móvil (`@media (max-width: 768px)`) para ocultar inicialmente el logo mediante `opacity: 0` y `pointer-events: none`.
+- `web/src/styles/index.css` — Se diseñó una micro-animación premium que hace que el logo se desvanezca y escale elásticamente (`transform: scale(0.92)` a `scale(1)`) de manera sumamente suave (`cubic-bezier(0.34, 1.56, 0.64, 1)`) al hacer scroll hacia abajo o al abrir el menú lateral móvil. En ordenadores, el logo se mantiene visible permanentemente sin cambios.
+
 ## [1.5.4] - 2026-05-24 — Rediseño y corrección de la sección de Galería
 
 ### [FIX] Fondo oscuro premium y relación de aspecto 3:2 en imágenes de galería
