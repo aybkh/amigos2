@@ -286,7 +286,7 @@
   min-width: 0;
   /* Sin padding-top: el header es sticky (en flujo), la primera
      categoría debe quedar justo debajo sin franja vacía */
-  padding: 0 24px 80px;
+  padding: 0 24px 40px;
 }
 
 /* ----- Category section ----- */
@@ -624,7 +624,7 @@
   .menu-hamburger-btn { display: flex; }
   .menu-back-btn { display: none; }
   #menu-root .category-sidebar-desktop { display: none; }
-  .menu-content { padding: 0 16px 80px; }
+  .menu-content { padding: 0 16px 40px; }
 }
 
 @media (max-width: 640px) {
@@ -640,10 +640,10 @@
 
 /* ----- Disclaimer discreto (imágenes ilustrativas) ----- */
 #menu-root .menu-footer-disclaimer {
-  padding: 24px 16px;
+  padding: 16px;
   text-align: center;
   background: transparent;
-  margin-top: 40px;
+  margin-top: 24px;
 }
 #menu-root .menu-footer-disclaimer p {
   font-size: 10px;

@@ -101,11 +101,16 @@ export default function MenuPage() {
             <div className="menu-state-msg">{t(lang, 'ui.menu.empty')}</div>
           )}
           {!loading && !error && categories.length > 0 && (
-            <ProductGrid
-              categories={categories}
-              searchQuery=""
-              onProductClick={openModal}
-            />
+            <>
+              <ProductGrid
+                categories={categories}
+                searchQuery=""
+                onProductClick={openModal}
+              />
+              <footer className="menu-footer-disclaimer">
+                <p>{t(lang, 'ui.image_disclaimer')}</p>
+              </footer>
+            </>
           )}
         </main>
       </div>
@@ -118,10 +123,6 @@ export default function MenuPage() {
           onChange={changeModal}
         />
       )}
-
-      <footer className="menu-footer-disclaimer">
-        <p>{t(lang, 'ui.image_disclaimer')}</p>
-      </footer>
     </div>
   )
 }
