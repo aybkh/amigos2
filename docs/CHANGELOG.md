@@ -4,6 +4,11 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.5.6] - 2026-05-24 — Ajuste de fondo en opiniones (Reviews)
+
+### [FIX] Fondo de la sección de opiniones optimizado a verde selva oscuro
+- `web/src/components/landing/ReviewsSection.jsx` — Se reemplazó el color de fondo ultra oscuro (`#040d07`, que lucía lúgubre y desconectado) por el color verde selva oscuro corporativo de la marca (`var(--color-bg-dark)`). Esto permite una transición cromática perfecta y coherente entre la sección de Horarios y la sección de Ubicación.
+
 ## [1.5.5] - 2026-05-24 — Animación y ocultamiento del logo en cabecera móvil
 
 ### [FEATURE] Logo del header dinámico basado en scroll (solo en móvil)
