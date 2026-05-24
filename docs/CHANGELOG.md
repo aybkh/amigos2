@@ -11,9 +11,12 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 - `web/src/components/ui/LegalModal.jsx` — Se añadió bloqueo de scroll en el cuerpo al abrir los modales de aviso legal, privacidad y cookies.
 - `web/src/pages/MenuPage.jsx` — Se añadió bloqueo de scroll en el cuerpo cuando el cajón/drawer de categorías está abierto en dispositivos móviles.
 
-### [FIX] Optimización de la imagen de fondo del Hero
-- `web/src/styles/HeroSection.css` — Se ajustó la alineación de la imagen `.hero-bg-media` a `object-position: center 18%` para que el cartel real de la fachada ("Bar-Restaurante-Pizzería...") y el toldo verde queden perfectamente visibles sin recortarse en la parte superior.
-- `web/src/styles/HeroSection.css` — Se redujo levemente la opacidad del overlay oscuro (`.hero-overlay`) para que la foto de la fachada sea mucho más viva y luminosa, sin perder contraste con el texto principal.
+### [FIX] Efecto de desenfoque (blur) y contraste en el fondo del Hero
+- `web/src/styles/HeroSection.css` — Se añadió un filtro `filter: blur(6px)` y una escala de compensación `transform: scale(1.08)` a la imagen de fondo `.hero-bg-media` para desenfocar la fachada y hacer que los textos y botones tengan un contraste impecable.
+- `web/src/styles/HeroSection.css` — Se incrementó sutilmente la opacidad del degradado verde selva en `.hero-overlay` para maximizar la legibilidad de la marca y las categorías en todo tipo de pantallas.
+
+### [FIX] Optimización de la alineación de la fachada en el Hero
+- `web/src/styles/HeroSection.css` — Se ajustó la alineación de la imagen `.hero-bg-media` a `object-position: center 18%` para que el toldo y cartel del restaurante queden perfectamente enmarcados.
 
 ### [FIX] Traducción completa de nuevas categorías y de "Café y Té"
 - `web/src/locales/*.json` — Se detectó que el nombre de la categoría "Bebidas, Cervezas y Cafés" fue modificado en la base de datos a "Café y Té" y se crearon tres nuevas categorías de bebidas ("Cervezas", "Vinos", "Bebidas Alcohólicas"), así como "Refrescos" y "Salsas". Se agregaron las traducciones completas para estas 6 categorías en los 10 archivos de idioma de la web pública (es, en, cat, fr, de, nl, ru, ar, pl, it), solucionando el problema donde se mostraban sin traducir.

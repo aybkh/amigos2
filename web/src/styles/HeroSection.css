@@ -20,22 +20,24 @@
   position: absolute;
   inset: 0;
   z-index: 0;
+  overflow: hidden;
 }
 .hero-bg-media {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 18%; /* Centra la vista en el cartel y el toldo */
   display: block;
+  filter: blur(6px);
+  transform: scale(1.08);
 }
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     180deg,
-    rgba(7, 26, 16, 0.65) 0%,
-    rgba(7, 26, 16, 0.40) 50%,
-    rgba(7, 26, 16, 0.75) 100%
+    rgba(7, 26, 16, 0.84) 0%,
+    rgba(7, 26, 16, 0.70) 50%,
+    rgba(7, 26, 16, 0.88) 100%
   );
 }
 
