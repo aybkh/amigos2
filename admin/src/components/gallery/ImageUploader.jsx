@@ -15,7 +15,7 @@ export default function ImageUploader({ onUploaded }) {
       setQueue(prev => prev.map(q => q.id === item.id ? { ...q, status: 'uploading' } : q))
       try {
         const url = await galleryService.upload(item.file)
-        await galleryService.create({ image_url: url, alt_text: item.file.name.split('.')[0] })
+        await galleryService.create({ image_url: url, alt_text: '' })
         setQueue(prev => prev.map(q => q.id === item.id ? { ...q, status: 'done' } : q))
       } catch {
         setQueue(prev => prev.map(q => q.id === item.id ? { ...q, status: 'error' } : q))

@@ -137,16 +137,24 @@ export default function GallerySection() {
               boxShadow: '0 8px 32px rgba(0, 0, 0, 0.40)',
             }}
           >
-            <img
-              src={photos[featuredIdx]?.image_url}
-              alt={photos[featuredIdx]?.alt_text ?? ''}
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-                display: 'block',
-              }}
-            />
+            {photos.map((photo, idx) => (
+              <img
+                key={photo.id}
+                src={photo.image_url}
+                alt={photo.alt_text ?? ''}
+                style={{
+                  position: 'absolute',
+                  inset: 0,
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  display: 'block',
+                  opacity: idx === featuredIdx ? 1 : 0,
+                  transition: 'opacity 0.8s ease-in-out',
+                  zIndex: idx === featuredIdx ? 1 : 0,
+                }}
+              />
+            ))}
             {/* Overlay con gradiente y zoom icon */}
             <div
               style={{
@@ -156,19 +164,34 @@ export default function GallerySection() {
                 display: 'flex',
                 alignItems: 'flex-end',
                 padding: '16px 20px',
+                zIndex: 10,
               }}
             >
-              <span
-                style={{
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontWeight: 700,
-                  fontSize: '0.85rem',
-                  color: 'var(--color-cream)',
-                  textShadow: '0 2px 4px rgba(0,0,0,0.60)',
-                }}
-              >
-                {photos[featuredIdx]?.alt_text || t(lang, 'ui.gallery.title')}
-              </span>
+              <div style={{ flex: 1, position: 'relative', height: '1.25rem', overflow: 'hidden' }}>
+                {photos.map((photo, idx) => (
+                  <span
+                    key={photo.id}
+                    style={{
+                      position: 'absolute',
+                      left: 0,
+                      bottom: 0,
+                      fontFamily: 'Montserrat, sans-serif',
+                      fontWeight: 700,
+                      fontSize: '0.85rem',
+                      color: 'var(--color-cream)',
+                      textShadow: '0 2px 4px rgba(0,0,0,0.60)',
+                      opacity: idx === featuredIdx ? 1 : 0,
+                      transition: 'opacity 0.8s ease-in-out',
+                      whiteSpace: 'nowrap',
+                      textOverflow: 'ellipsis',
+                      overflow: 'hidden',
+                      width: '100%',
+                    }}
+                  >
+                    {photo.alt_text || t(lang, 'ui.gallery.title')}
+                  </span>
+                ))}
+              </div>
               <span
                 style={{
                   marginLeft: 'auto',
@@ -181,6 +204,7 @@ export default function GallerySection() {
                   alignItems: 'center',
                   justifyContent: 'center',
                   boxShadow: '0 4px 12px rgba(0, 230, 118, 0.40)',
+                  zIndex: 11,
                 }}
               >
                 <ZoomIn size={18} />

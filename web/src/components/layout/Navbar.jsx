@@ -53,9 +53,9 @@ export default function Navbar() {
   const navLinks = [
     { key: 'home',     hash: '#inicio',    Icon: Home        },
     { key: 'featured', hash: '#featured',  Icon: Heart       },
+    { key: 'gallery',  hash: '#galeria',   Icon: Images      },
     { key: 'delivery', hash: '#domicilio', Icon: ShoppingBag },
     { key: 'hours',    hash: '#horarios',  Icon: Clock       },
-    { key: 'gallery',  hash: '#galeria',   Icon: Images      },
     { key: 'contact',  hash: '#contacto',  Icon: Phone       },
   ]
 

@@ -47,6 +47,16 @@ export default function GalleryPage() {
     }
   }
 
+  async function handleUpdateDescription(id, altText) {
+    try {
+      await galleryService.update(id, { alt_text: altText })
+      setImages(prev => prev.map(img => img.id === id ? { ...img, alt_text: altText } : img))
+      show('Descripción guardada', 'success')
+    } catch {
+      show('Error al guardar la descripción', 'error')
+    }
+  }
+
   if (loading) return <AdminLayout><LoadingSpinner /></AdminLayout>
 
   return (
@@ -62,7 +72,12 @@ export default function GalleryPage() {
         </div>
         <div className="bg-white rounded-xl border border-stone-200 p-5">
           <h2 className="font-semibold text-stone-800 mb-4">Gestionar galería</h2>
-          <GalleryManager images={images} onDelete={handleDelete} onReorder={handleReorder} />
+          <GalleryManager 
+            images={images} 
+            onDelete={handleDelete} 
+            onReorder={handleReorder} 
+            onUpdateDescription={handleUpdateDescription} 
+          />
         </div>
       </div>
     </AdminLayout>

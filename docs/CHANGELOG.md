@@ -4,6 +4,20 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.5.7] - 2026-05-24 — Mejoras en galería y orden de navegación
+
+### [FEATURE] Gestión de descripciones cortas personalizadas para la galería en el panel de control (/admin)
+- `admin/src/components/gallery/GalleryManager.jsx` — Se rediseñó la cuadrícula de gestión de galería para presentar tarjetas verticales individuales, agregando un campo de texto para editar la descripción corta y un botón "Guardar" de color esmeralda premium.
+- `admin/src/pages/GalleryPage.jsx` — Se implementó la integración del callback `onUpdateDescription` que conecta con Supabase a través de `galleryService.update` para guardar los cambios y actualizar el estado de forma inmediata, además de corregir un error de sintaxis en el método `handleReorder`.
+- `admin/src/components/gallery/ImageUploader.jsx` — Se configuró `alt_text: ''` por defecto al subir imágenes para evitar la visualización de nombres de archivo crudos o erróneos.
+
+### [FEATURE] Transiciones de fundido cruzado (cross-fade) fluidas y aceleradas por hardware en la galería pública
+- `web/src/components/home/GallerySection.jsx` — Se migró la imagen destacada a una pila de imágenes posicionadas de forma absoluta que realiza una transición de opacidad ultra fluida controlada por CSS.
+- `web/src/components/home/GallerySection.jsx` — Se implementó la transición fluida en paralelo para los títulos/descripciones cortas de la imagen destacada para que coincida perfectamente con el cambio de imagen.
+
+### [REFACTOR] Reordenación de la barra de navegación para alinearse con el flujo natural de scroll
+- `web/src/components/layout/Navbar.jsx` — Se modificó el orden del menú `navLinks` (`home` -> `featured` -> `gallery` -> `delivery` -> `hours` -> `contact`), logrando que la sección de Galería aparezca antes de Horarios en la navegación, reflejando el orden visual exacto de la página principal.
+
 ## [1.5.6] - 2026-05-24 — Ajuste de fondo en opiniones (Reviews)
 
 ### [FIX] Fondo de la sección de opiniones optimizado a verde selva oscuro
