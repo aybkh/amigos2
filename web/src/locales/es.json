@@ -45,7 +45,9 @@
       "sending": "Enviando…",
       "success_title": "¡Mensaje enviado!",
       "success_body": "Te respondemos pronto.",
-      "error": "Error al enviar. Inténtalo de nuevo."
+      "error": "Error al enviar. Inténtalo de nuevo.",
+      "privacy_accept": "He leído y acepto la",
+      "privacy_link": "política de privacidad"
     },
     "menu": {
       "back": "Inicio",

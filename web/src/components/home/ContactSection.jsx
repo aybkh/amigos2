@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { contactService } from '../../services/contactService'
 import { useLanguage } from '../../hooks/useLanguage'
+import { useLegalModal } from '../../contexts/LegalModalContext'
 import { t } from '../../lib/i18n'
 
 const INITIAL = { name: '', email: '', phone: '', message: '' }
@@ -34,14 +35,17 @@ const labelStyle = {
 }
 
 export default function ContactSection() {
-  const [form,   setForm]   = useState(INITIAL)
-  const [status, setStatus] = useState('idle')
+  const [form,    setForm]    = useState(INITIAL)
+  const [status,  setStatus]  = useState('idle')
+  const [accepted, setAccepted] = useState(false)
   const { lang } = useLanguage()
+  const { openLegal } = useLegalModal()
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value })
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (!accepted) return
     if (!isValidPhone(form.phone.trim())) {
       setStatus('error')
       return
@@ -56,6 +60,7 @@ export default function ContactSection() {
       })
       setStatus('success')
       setForm(INITIAL)
+      setAccepted(false)
     } catch {
       setStatus('error')
     }
@@ -179,23 +184,61 @@ export default function ContactSection() {
                 </p>
               )}
 
+              <label
+                htmlFor="cf-privacy"
+                style={{
+                  display: 'flex', alignItems: 'flex-start', gap: 10,
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: '0.80rem', lineHeight: 1.45,
+                  color: 'rgba(245,240,232,0.65)',
+                  cursor: 'pointer', userSelect: 'none',
+                }}
+              >
+                <input
+                  id="cf-privacy" type="checkbox"
+                  checked={accepted}
+                  onChange={(e) => setAccepted(e.target.checked)}
+                  style={{
+                    marginTop: 3, flexShrink: 0,
+                    width: 16, height: 16,
+                    accentColor: 'var(--color-neon)',
+                    cursor: 'pointer',
+                  }}
+                />
+                <span>
+                  {t(lang, 'ui.contact.privacy_accept')}{' '}
+                  <button
+                    type="button"
+                    onClick={() => openLegal('privacidad')}
+                    style={{
+                      background: 'none', border: 'none', padding: 0,
+                      color: 'var(--color-neon)', cursor: 'pointer',
+                      font: 'inherit', textDecoration: 'underline',
+                    }}
+                  >
+                    {t(lang, 'ui.contact.privacy_link')}
+                  </button>
+                </span>
+              </label>
+
               <button
                 type="submit"
-                disabled={status === 'sending'}
+                disabled={status === 'sending' || !accepted}
                 style={{
                   width: '100%',
-                  background: status === 'sending' ? 'var(--color-neon-dim)' : 'var(--color-neon)',
+                  background: (status === 'sending' || !accepted) ? 'var(--color-neon-dim)' : 'var(--color-neon)',
                   color: 'var(--color-bg-dark)',
                   border: 'none', borderRadius: 8,
                   padding: '14px',
                   fontFamily: 'Montserrat, sans-serif',
                   fontWeight: 800, fontSize: '0.88rem',
                   letterSpacing: '0.12em', textTransform: 'uppercase',
-                  cursor: status === 'sending' ? 'not-allowed' : 'pointer',
-                  transition: 'opacity 0.2s',
+                  cursor: (status === 'sending' || !accepted) ? 'not-allowed' : 'pointer',
+                  opacity: !accepted ? 0.55 : 1,
+                  transition: 'opacity 0.2s, background 0.2s',
                 }}
-                onMouseEnter={e => { if (status !== 'sending') e.currentTarget.style.opacity = '0.85' }}
-                onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+                onMouseEnter={e => { if (status !== 'sending' && accepted) e.currentTarget.style.opacity = '0.85' }}
+                onMouseLeave={e => (e.currentTarget.style.opacity = accepted ? '1' : '0.55')}
               >
                 {status === 'sending' ? t(lang, 'ui.contact.sending') : t(lang, 'ui.contact.send')}
               </button>

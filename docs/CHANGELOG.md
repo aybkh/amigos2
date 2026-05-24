@@ -4,6 +4,12 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.5.11] - 2026-05-25 — Checkbox de política de privacidad obligatorio en contacto
+
+### [FEATURE] Aceptación de la política de privacidad como requisito para enviar
+- `web/src/components/home/ContactSection.jsx` — Se añadió un checkbox "He leído y acepto la política de privacidad" justo antes del botón de envío. El enlace "política de privacidad" abre el modal legal existente (`openLegal('privacidad')`) reutilizando el contexto `LegalModalContext`. El botón "Enviar mensaje" queda deshabilitado (con estilo atenuado y `cursor: not-allowed`) hasta que el usuario marca la casilla. Tras un envío con éxito, el estado `accepted` también se resetea junto al formulario.
+- `web/src/locales/es.json` — Se añadieron las claves `ui.contact.privacy_accept` ("He leído y acepto la") y `ui.contact.privacy_link` ("política de privacidad"). Resto de idiomas heredan por fallback automático a ES hasta traducir.
+
 ## [1.5.10] - 2026-05-25 — Hotfix: el campo Teléfono no aparecía en la home
 
 ### [FIX] Añadido el campo Teléfono al componente de contacto real (ContactSection)
