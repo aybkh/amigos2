@@ -49,6 +49,12 @@ export default function ProductModal({ products, index, onClose, onChange }) {
   useEffect(() => { setImgFailed(false) }, [index])
 
   useEffect(() => {
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = prev }
+  }, [])
+
+  useEffect(() => {
     if (!product) return
     const handler = (e) => {
       if (e.key === 'Escape') onClose()
@@ -99,6 +105,10 @@ export default function ProductModal({ products, index, onClose, onChange }) {
             <p className="menu-modal-desc">{description}</p>
           )}
           <PriceDisplay price={product.price} className="menu-modal-price" />
+
+          <p className="menu-modal-image-disclaimer">
+            {t(lang, 'ui.image_disclaimer')}
+          </p>
 
           {allergens.length > 0 && (
             <>

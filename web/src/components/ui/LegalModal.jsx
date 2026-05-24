@@ -61,6 +61,12 @@ export default function LegalModal({ type, onClose }) {
     return () => document.removeEventListener('keydown', handler)
   }, [onClose])
 
+  useEffect(() => {
+    const prev = document.body.style.overflow
+    document.body.style.overflow = 'hidden'
+    return () => { document.body.style.overflow = prev }
+  }, [])
+
   if (!sections) return null
 
   const title = pick(LEGAL_TITLES[type], lang)

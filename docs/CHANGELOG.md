@@ -4,7 +4,16 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
-## [1.5.2] - 2026-05-24 — Aspect ratio de categorías 3:2 + Corrección de orden en panel de administración
+## [1.5.2] - 2026-05-24 — Aspect ratio de categorías 3:2 + Corrección de orden en panel de administración + Ajustes de modales
+
+### [FIX] Bloqueo de scroll al abrir modales o drawers
+- `web/src/components/menu/ProductModal.jsx` — Se añadió un efecto `useEffect` para bloquear el scroll del cuerpo (`overflow = 'hidden'`) al abrir el modal de producto y restaurarlo al cerrar.
+- `web/src/components/ui/LegalModal.jsx` — Se añadió bloqueo de scroll en el cuerpo al abrir los modales de aviso legal, privacidad y cookies.
+- `web/src/pages/MenuPage.jsx` — Se añadió bloqueo de scroll en el cuerpo cuando el cajón/drawer de categorías está abierto en dispositivos móviles.
+
+### [FEATURE] Leyenda breve de sugerencia de presentación
+- `web/src/components/menu/ProductModal.jsx` + `web/src/styles/menu.css` — Se añadió y estilizó una leyenda sutil de tipo *"Sugerencia de presentación, la imagen es ilustrativa"* en color tenue debajo del precio en el modal de detalle del plato.
+- `web/src/locales/*.json` — Se actualizaron los 10 archivos de idioma de la web pública (es, en, cat, fr, de, nl, ru, ar, pl, it) para traducir dinámicamente la nueva leyenda *"Sugerencia de presentación, la imagen es ilustrativa"* (clave `image_disclaimer`).
 
 ### [FIX] Relación de aspecto 3:2 en las imágenes de categorías
 - `web/src/styles/menu.css` — Se modificó el aspect ratio de `.category-image-container` de `2 / 1` a `3 / 2` para coincidir con la proporción de las tarjetas de productos y evitar distorsiones de las imágenes de categorías en la carta pública.

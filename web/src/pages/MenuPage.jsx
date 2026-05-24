@@ -24,6 +24,14 @@ export default function MenuPage() {
   }, [categories, activeCatId])
 
   useEffect(() => {
+    if (drawerOpen) {
+      const prev = document.body.style.overflow
+      document.body.style.overflow = 'hidden'
+      return () => { document.body.style.overflow = prev }
+    }
+  }, [drawerOpen])
+
+  useEffect(() => {
     if (categories.length === 0) return
     observerRef.current?.disconnect()
     observerRef.current = new IntersectionObserver(
