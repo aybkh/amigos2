@@ -138,7 +138,13 @@
     "Cócteles y Sangrías": "Коктейли и сангрия",
     "Bebidas, Cervezas y Cafés": "Напитки, пиво и кофе",
     "Especialidades y Desayunos": "Фирменные блюда и завтраки",
-    "Menús Completos": "Полные меню"
+    "Menús Completos": "Полные меню",
+    "Café y Té": "Кофе и чай",
+    "Refrescos": "Прохладительные напитки",
+    "Salsas": "Соусы",
+    "Cervezas": "Пиво",
+    "Vinos": "Вина",
+    "Bebidas Alcohólicas": "Алкогольные напитки"
   },
   "allergens": {
     "Gluten": "Глютен",

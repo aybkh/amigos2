@@ -138,7 +138,13 @@
     "Cócteles y Sangrías": "Koktajle i sangrie",
     "Bebidas, Cervezas y Cafés": "Napoje, piwa i kawy",
     "Especialidades y Desayunos": "Specjały i śniadania",
-    "Menús Completos": "Pełne menu"
+    "Menús Completos": "Pełne menu",
+    "Café y Té": "Kawa i herbata",
+    "Refrescos": "Napoje chłodzące",
+    "Salsas": "Sosy",
+    "Cervezas": "Piwa",
+    "Vinos": "Wina",
+    "Bebidas Alcohólicas": "Napoje alkoholowe"
   },
   "allergens": {
     "Gluten": "Gluten",

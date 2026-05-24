@@ -138,7 +138,13 @@
     "Cócteles y Sangrías": "كوكتيلات وسانغريا",
     "Bebidas, Cervezas y Cafés": "مشروبات وبيرة وقهوة",
     "Especialidades y Desayunos": "تخصصات وفطور",
-    "Menús Completos": "قوائم كاملة"
+    "Menús Completos": "قوائم كاملة",
+    "Café y Té": "القهوة والشاي",
+    "Refrescos": "مشروبات باردة",
+    "Salsas": "الصلصات",
+    "Cervezas": "البيرة",
+    "Vinos": "النبيذ",
+    "Bebidas Alcohólicas": "المشروبات الكحولية"
   },
   "allergens": {
     "Gluten": "الغلوتين",

@@ -138,7 +138,13 @@
     "Cócteles y Sangrías": "Còctels i Sangries",
     "Bebidas, Cervezas y Cafés": "Begudes, Cerveses i Cafès",
     "Especialidades y Desayunos": "Especialitats i Esmorzars",
-    "Menús Completos": "Menús Complets"
+    "Menús Completos": "Menús Complets",
+    "Café y Té": "Cafè i Te",
+    "Refrescos": "Refrescos",
+    "Salsas": "Salses",
+    "Cervezas": "Cerveses",
+    "Vinos": "Vins",
+    "Bebidas Alcohólicas": "Begudes Alcohòliques"
   },
   "allergens": {
     "Gluten": "Gluten",

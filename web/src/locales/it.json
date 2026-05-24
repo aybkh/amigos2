@@ -138,7 +138,13 @@
     "Cócteles y Sangrías": "Cocktail e Sangrie",
     "Bebidas, Cervezas y Cafés": "Bevande, Birre e Caffè",
     "Especialidades y Desayunos": "Specialità e Colazioni",
-    "Menús Completos": "Menù Completi"
+    "Menús Completos": "Menù Completi",
+    "Café y Té": "Caffè e Tè",
+    "Refrescos": "Bevande analcoliche",
+    "Salsas": "Salse",
+    "Cervezas": "Birre",
+    "Vinos": "Vini",
+    "Bebidas Alcohólicas": "Bevande Alcoliche"
   },
   "allergens": {
     "Gluten": "Glutine",

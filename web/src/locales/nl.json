@@ -138,7 +138,13 @@
     "Cócteles y Sangrías": "Cocktails & Sangria's",
     "Bebidas, Cervezas y Cafés": "Dranken, Bieren & Koffie",
     "Especialidades y Desayunos": "Specialiteiten & Ontbijt",
-    "Menús Completos": "Complete Menu's"
+    "Menús Completos": "Complete Menu's",
+    "Café y Té": "Koffie & Thee",
+    "Refrescos": "Frisdranken",
+    "Salsas": "Sauzen",
+    "Cervezas": "Bieren",
+    "Vinos": "Wijnen",
+    "Bebidas Alcohólicas": "Alcoholische Dranken"
   },
   "allergens": {
     "Gluten": "Gluten",

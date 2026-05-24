@@ -11,6 +11,9 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 - `web/src/components/ui/LegalModal.jsx` — Se añadió bloqueo de scroll en el cuerpo al abrir los modales de aviso legal, privacidad y cookies.
 - `web/src/pages/MenuPage.jsx` — Se añadió bloqueo de scroll en el cuerpo cuando el cajón/drawer de categorías está abierto en dispositivos móviles.
 
+### [FIX] Traducción completa de nuevas categorías y de "Café y Té"
+- `web/src/locales/*.json` — Se detectó que el nombre de la categoría "Bebidas, Cervezas y Cafés" fue modificado en la base de datos a "Café y Té" y se crearon tres nuevas categorías de bebidas ("Cervezas", "Vinos", "Bebidas Alcohólicas"), así como "Refrescos" y "Salsas". Se agregaron las traducciones completas para estas 6 categorías en los 10 archivos de idioma de la web pública (es, en, cat, fr, de, nl, ru, ar, pl, it), solucionando el problema donde se mostraban sin traducir.
+
 ### [FEATURE] Leyenda breve de sugerencia de presentación
 - `web/src/components/menu/ProductModal.jsx` + `web/src/styles/menu.css` — Se añadió y estilizó una leyenda sutil de tipo *"Sugerencia de presentación, la imagen es ilustrativa"* en color tenue debajo del precio en el modal de detalle del plato.
 - `web/src/locales/*.json` — Se actualizaron los 10 archivos de idioma de la web pública (es, en, cat, fr, de, nl, ru, ar, pl, it) para traducir dinámicamente la nueva leyenda *"Sugerencia de presentación, la imagen es ilustrativa"* (clave `image_disclaimer`).

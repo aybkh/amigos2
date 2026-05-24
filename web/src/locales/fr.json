@@ -138,7 +138,13 @@
     "Cócteles y Sangrías": "Cocktails & Sangrias",
     "Bebidas, Cervezas y Cafés": "Boissons, Bières & Cafés",
     "Especialidades y Desayunos": "Spécialités & Petits-déjeuners",
-    "Menús Completos": "Menus Complets"
+    "Menús Completos": "Menus Complets",
+    "Café y Té": "Café & Thé",
+    "Refrescos": "Boissons fraîches",
+    "Salsas": "Sauces",
+    "Cervezas": "Bières",
+    "Vinos": "Vins",
+    "Bebidas Alcohólicas": "Boissons Alcoolisées"
   },
   "allergens": {
     "Gluten": "Gluten",
