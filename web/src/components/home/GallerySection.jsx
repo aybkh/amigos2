@@ -97,11 +97,7 @@ export default function GallerySection() {
           </h2>
         </div>
 
-        <div style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
-          gap: 16,
-        }}>
+        <div className="gallery-responsive-grid">
           {(loading ? Array.from({ length: 6 }) : photos).map((photo, idx) => (
             <button
               key={loading ? idx : photo.id}

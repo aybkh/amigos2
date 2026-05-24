@@ -391,6 +391,24 @@ footer {
   filter: blur(10px);
 }
 
+/* ─── Gallery responsive grid ─── */
+.gallery-responsive-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns on mobile by default! */
+  gap: 12px;
+}
+@media (min-width: 640px) {
+  .gallery-responsive-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+}
+@media (min-width: 1024px) {
+  .gallery-responsive-grid {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
 /* Hero — estilos movidos a HeroSection.css
    (rediseño compacto con media de fondo, ver components/home/HeroSection.jsx) */
 

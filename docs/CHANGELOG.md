@@ -19,6 +19,10 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 - `web/src/components/layout/Navbar.jsx` — Se optimizó la altura y el espaciado vertical de los botones en el cajón/drawer del menú móvil (de `20px 4px` a `15px 4px`) para garantizar que la lista extendida de 6 enlaces se visualice perfectamente de un vistazo sin necesidad de scroll en la mayoría de los smartphones.
 - `web/src/locales/*.json` — Se actualizaron automáticamente los 10 archivos de traducción de la web pública (es, en, cat, fr, de, nl, ru, ar, pl, it) para incorporar de forma localizada las dos nuevas claves del menú de navegación (`ui.nav.featured` y `ui.nav.delivery`), cumpliendo con la internacionalización integral de la plataforma.
 
+### [FIX] Cuadrícula responsiva de 2 columnas para la galería en dispositivos móviles
+- `web/src/styles/index.css` — Se diseñó la clase de cuadrícula inteligente `.gallery-responsive-grid` que aplica automáticamente **2 columnas a las fotografías en móviles** por defecto (con un espaciado reducido de `12px`), escalando a 3 columnas en tabletas y un layout auto-fill fluido `minmax(280px, 1fr)` en ordenadores de escritorio.
+- `web/src/components/home/GallerySection.jsx` — Se migró el contenedor de la galería para utilizar la clase responsiva `.gallery-responsive-grid` en lugar de la definición estática en línea, eliminando el problema de la excesiva acumulación vertical de imágenes enormes a una sola columna en smartphones.
+
 ## [1.5.5] - 2026-05-24 — Animación y ocultamiento del logo en cabecera móvil
 
 ### [FEATURE] Logo del header dinámico basado en scroll (solo en móvil)
