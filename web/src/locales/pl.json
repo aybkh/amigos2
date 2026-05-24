@@ -6,7 +6,9 @@
       "hours": "Godziny",
       "gallery": "Galeria",
       "contact": "Kontakt",
-      "menu_cta": "Menu"
+      "menu_cta": "Menu",
+      "featured": "Ulubione",
+      "delivery": "Dostawa"
     },
     "hero": {
       "badge": "Lloret de Mar · Otwarte do 3:00",

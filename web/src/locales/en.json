@@ -6,7 +6,9 @@
       "hours": "Hours",
       "gallery": "Gallery",
       "contact": "Contact",
-      "menu_cta": "Menu"
+      "menu_cta": "Menu",
+      "featured": "Favorites",
+      "delivery": "Delivery"
     },
     "hero": {
       "badge": "Lloret de Mar · Open until 3AM",

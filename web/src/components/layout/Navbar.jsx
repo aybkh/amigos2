@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Link, useLocation, useNavigate } from 'react-router-dom'
-import { Menu, X, Home, Clock, Images, Phone, UtensilsCrossed, ChevronDown } from 'lucide-react'
+import { Menu, X, Home, Clock, Images, Phone, UtensilsCrossed, ChevronDown, Heart, ShoppingBag } from 'lucide-react'
 import { ROUTES } from '../../lib/constants'
 import { useLanguage } from '../../hooks/useLanguage'
 import { LANG_OPTIONS, t } from '../../lib/i18n'
@@ -51,10 +51,12 @@ export default function Navbar() {
   }
 
   const navLinks = [
-    { key: 'home',    hash: '#inicio',   Icon: Home   },
-    { key: 'hours',   hash: '#horarios', Icon: Clock  },
-    { key: 'gallery', hash: '#galeria',  Icon: Images },
-    { key: 'contact', hash: '#contacto', Icon: Phone  },
+    { key: 'home',     hash: '#inicio',    Icon: Home        },
+    { key: 'featured', hash: '#featured',  Icon: Heart       },
+    { key: 'delivery', hash: '#domicilio', Icon: ShoppingBag },
+    { key: 'hours',    hash: '#horarios',  Icon: Clock       },
+    { key: 'gallery',  hash: '#galeria',   Icon: Images      },
+    { key: 'contact',  hash: '#contacto',  Icon: Phone       },
   ]
 
   const current = LANG_OPTIONS.find(l => l.code === lang)
@@ -240,7 +242,7 @@ export default function Navbar() {
               display: 'flex', alignItems: 'center', gap: 16,
               background: 'none', border: 'none',
               borderBottom: '1px solid rgba(245,240,232,0.08)',
-              padding: '20px 4px',
+              padding: '15px 4px',
               color: 'var(--color-cream)',
               fontFamily: "'Black Ops One', cursive",
               fontSize: '1.5rem', letterSpacing: 2,

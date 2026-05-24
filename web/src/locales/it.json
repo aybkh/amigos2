@@ -6,7 +6,9 @@
       "hours": "Orari",
       "gallery": "Galleria",
       "contact": "Contatti",
-      "menu_cta": "Menu"
+      "menu_cta": "Menu",
+      "featured": "Preferiti",
+      "delivery": "A Domicilio"
     },
     "hero": {
       "badge": "Lloret de Mar · Aperto fino alle 3:00",

@@ -6,7 +6,9 @@
       "hours": "Horaires",
       "gallery": "Galerie",
       "contact": "Contact",
-      "menu_cta": "Voir la Carte"
+      "menu_cta": "Voir la Carte",
+      "featured": "Favoris",
+      "delivery": "Livraison"
     },
     "hero": {
       "badge": "Lloret de Mar · Ouvert jusqu'à 3h",
