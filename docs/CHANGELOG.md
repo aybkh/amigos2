@@ -4,6 +4,15 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.5.2] - 2026-05-24 — Aspect ratio de categorías 3:2 + Corrección de orden en panel de administración
+
+### [FIX] Relación de aspecto 3:2 en las imágenes de categorías
+- `web/src/styles/menu.css` — Se modificó el aspect ratio de `.category-image-container` de `2 / 1` a `3 / 2` para coincidir con la proporción de las tarjetas de productos y evitar distorsiones de las imágenes de categorías en la carta pública.
+
+### [FIX] Ordenación consistente de productos en el panel de administración
+- `admin/src/services/menuService.js` — Se corrigió la consulta de categorías para ordenar explícitamente los productos vinculados por su columna `display_order` en Supabase (`.order('display_order', { foreignTable: 'products', ascending: true })`).
+- Se añadió un fallback de ordenación en memoria (JavaScript `.sort()`) al recuperar las categorías para asegurar que el orden sea 100% consistente y evitar que los platos editados/guardados salten a la primera posición de la lista por el comportamiento interno de base de datos (PostgreSQL/Supabase).
+
 ## [1.5.1] - 2026-05-21 — Footer split (mobile/desktop separados) + cards 3:2
 
 ### [REFACTOR] Footer dividido en 2 componentes aislados
