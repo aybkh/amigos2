@@ -36,6 +36,8 @@
       "subtitle": "¿Tienes alguna pregunta? Escríbenos.",
       "name": "Nombre",
       "email": "Email",
+      "phone": "Teléfono",
+      "optional": "opcional",
       "message": "Mensaje",
       "name_placeholder": "Tu nombre",
       "message_placeholder": "¿En qué podemos ayudarte?",

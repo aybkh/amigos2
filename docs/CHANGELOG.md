@@ -4,6 +4,12 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.5.10] - 2026-05-25 — Hotfix: el campo Teléfono no aparecía en la home
+
+### [FIX] Añadido el campo Teléfono al componente de contacto real (ContactSection)
+- `web/src/components/home/ContactSection.jsx` — La home pública renderiza este componente, no `ContactForm.jsx`. Se añadió `phone` al estado inicial, una utilidad `isValidPhone` con la misma regla que `ContactForm` (6-20 dígitos, separadores comunes permitidos) y un nuevo input `type="tel"` con `inputMode="tel"` y `autoComplete="tel"` entre Email y Mensaje. El envío ahora normaliza los campos (trim/lowercase) y pasa `phone` (o `null` si vacío) a `contactService.send`.
+- `web/src/locales/es.json` — Se añadieron las claves `ui.contact.phone` y `ui.contact.optional`. El resto de idiomas las heredan por fallback automático a ES hasta que se traduzcan explícitamente.
+
 ## [1.5.9] - 2026-05-25 — Teléfono opcional en contacto, carta en pestaña nueva y limpieza de flechas en Destacados
 
 ### [FEATURE] Campo "Teléfono" opcional en el formulario de contacto

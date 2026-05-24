@@ -3,7 +3,15 @@ import { contactService } from '../../services/contactService'
 import { useLanguage } from '../../hooks/useLanguage'
 import { t } from '../../lib/i18n'
 
-const INITIAL = { name: '', email: '', message: '' }
+const INITIAL = { name: '', email: '', phone: '', message: '' }
+
+const PHONE_RE = /^[+()\d\s.-]{6,30}$/
+
+function isValidPhone(p) {
+  if (!p) return true
+  const digits = p.replace(/\D/g, '')
+  return PHONE_RE.test(p) && digits.length >= 6 && digits.length <= 20
+}
 
 const inputStyle = {
   width: '100%',
@@ -34,9 +42,18 @@ export default function ContactSection() {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+    if (!isValidPhone(form.phone.trim())) {
+      setStatus('error')
+      return
+    }
     setStatus('sending')
     try {
-      await contactService.send(form)
+      await contactService.send({
+        name: form.name.trim(),
+        email: form.email.trim().toLowerCase(),
+        phone: form.phone.trim() || null,
+        message: form.message.trim(),
+      })
       setStatus('success')
       setForm(INITIAL)
     } catch {
@@ -109,6 +126,30 @@ export default function ContactSection() {
                   id="cf-email" name="email" type="email" required
                   value={form.email} onChange={handleChange}
                   placeholder="tu@email.com"
+                  style={inputStyle}
+                  onFocus={e => (e.target.style.borderColor = 'rgba(0,230,118,0.50)')}
+                  onBlur={e => (e.target.style.borderColor = 'rgba(245,240,232,0.12)')}
+                />
+              </div>
+
+              <div>
+                <label htmlFor="cf-phone" style={labelStyle}>
+                  {t(lang, 'ui.contact.phone')}{' '}
+                  <span style={{
+                    fontWeight: 500, fontSize: '0.85em',
+                    letterSpacing: '0.08em', textTransform: 'lowercase',
+                    color: 'rgba(245,240,232,0.30)',
+                  }}>
+                    ({t(lang, 'ui.contact.optional')})
+                  </span>
+                </label>
+                <input
+                  id="cf-phone" name="phone" type="tel"
+                  value={form.phone} onChange={handleChange}
+                  placeholder="+34 600 000 000"
+                  inputMode="tel"
+                  autoComplete="tel"
+                  maxLength={30}
                   style={inputStyle}
                   onFocus={e => (e.target.style.borderColor = 'rgba(0,230,118,0.50)')}
                   onBlur={e => (e.target.style.borderColor = 'rgba(245,240,232,0.12)')}
