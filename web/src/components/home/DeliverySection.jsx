@@ -30,15 +30,18 @@ export default function DeliverySection() {
   }
 
   return (
-    <section id="domicilio" style={{ background: 'rgba(7,26,16,0.40)', padding: '48px 24px' }}>
+    <section id="domicilio" style={{ background: 'var(--color-bg-mid)', padding: '48px 24px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
-          <h2 style={{
-            fontFamily: "'Black Ops One', cursive",
-            fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
-            color: 'var(--color-cream)', margin: 0,
-            letterSpacing: '0.04em', textTransform: 'uppercase',
-          }}>
+          <h2
+            className="section-title-glow"
+            style={{
+              fontFamily: "'Black Ops One', cursive",
+              fontSize: 'clamp(1.8rem, 4vw, 2.8rem)',
+              color: 'var(--color-cream)', margin: 0,
+              letterSpacing: '0.04em', textTransform: 'uppercase',
+            }}
+          >
             {t(lang, 'ui.delivery.title')}
           </h2>
         </div>

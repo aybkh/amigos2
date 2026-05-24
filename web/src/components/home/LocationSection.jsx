@@ -25,11 +25,14 @@ export default function LocationSection() {
       <div style={{ maxWidth: 700, margin: '0 auto' }}>
 
         <div style={{ textAlign: 'center', marginBottom: 36 }}>
-          <h2 style={{
-            fontFamily: "'Black Ops One', cursive",
-            fontSize: 'clamp(1.8rem, 4vw, 2.6rem)',
-            color: 'var(--color-cream)', margin: 0, letterSpacing: '0.04em',
-          }}>
+          <h2
+            className="section-title-glow"
+            style={{
+              fontFamily: "'Black Ops One', cursive",
+              fontSize: 'clamp(1.8rem, 4vw, 2.6rem)',
+              color: 'var(--color-cream)', margin: 0, letterSpacing: '0.04em',
+            }}
+          >
             {t(lang, 'ui.location.title')}
           </h2>
         </div>

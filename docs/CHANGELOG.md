@@ -9,6 +9,10 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 ### [FIX] Fondo de la sección de opiniones optimizado a verde selva oscuro
 - `web/src/components/landing/ReviewsSection.jsx` — Se reemplazó el color de fondo ultra oscuro (`#040d07`, que lucía lúgubre y desconectado) por el color verde selva oscuro corporativo de la marca (`var(--color-bg-dark)`). Esto permite una transición cromática perfecta y coherente entre la sección de Horarios y la sección de Ubicación.
 
+### [REFACTOR] Alternancia estricta de fondos entre secciones consecutivas y unificación de glows
+- `web/src/components/home/DeliverySection.jsx` — Se modificó el color de fondo de la sección de Pedidos a Domicilio de `rgba(7,26,16,0.40)` (que visualmente se asimilaba a un fondo oscuro) a verde selva intermedio (**`var(--color-bg-mid)`**), logrando una separación y alternancia cromática 100% perfecta entre la Galería (fondo oscuro) y los Horarios (gradiente diagonal).
+- `web/src/components/home/DeliverySection.jsx` + `web/src/components/home/HoursSection.jsx` + `web/src/components/home/LocationSection.jsx` — Se aplicó la clase `.section-title-glow` a sus títulos principales, logrando que el resplandor radial neón verde esmerilado esté presente de manera armoniosa y unificada en todas las secciones principales de la landing page.
+
 ## [1.5.5] - 2026-05-24 — Animación y ocultamiento del logo en cabecera móvil
 
 ### [FEATURE] Logo del header dinámico basado en scroll (solo en móvil)
