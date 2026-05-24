@@ -4,6 +4,14 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.5.4] - 2026-05-24 — Rediseño y corrección de la sección de Galería
+
+### [FIX] Fondo oscuro premium y relación de aspecto 3:2 en imágenes de galería
+- `web/src/components/home/GallerySection.jsx` — Se corrigió el fondo de la sección de la galería reemplazando el color crema claro (`var(--color-cream)`) por el color verde selva oscuro de la marca (`var(--color-bg-dark)`) para mantener una armonía visual premium coherente con el resto de la página.
+- `web/src/components/home/GallerySection.jsx` — Se actualizó el color del título "Galería" a crema claro (`var(--color-cream)`) para asegurar una legibilidad y contraste ideales sobre el nuevo fondo oscuro.
+- `web/src/components/home/GallerySection.jsx` — Se cambió la relación de aspecto (`aspectRatio`) de las tarjetas/botones de fotos de `1 / 1` (cuadrado que recortaba la fachada) a `3 / 2` (proporción rectangular real de las fotografías), garantizando que las imágenes se muestren completas y sin recortes indeseados en ordenadores y móviles.
+- `web/src/components/home/GallerySection.jsx` — Se optimizó el color de fondo de carga de las imágenes a un vidrio translúcido premium (`rgba(245,240,232,0.04)`), y se incrementó el tamaño mínimo del grid a `280px` con un espacio de separación (`gap`) de `16px` para una distribución más holgada y premium.
+
 ## [1.5.3] - 2026-05-24 — Rediseño de la barra de estadísticas (StatsBar)
 
 ### [REFACTOR] Simplificación a 2 datos de valor reales (Cierre y Google Maps)

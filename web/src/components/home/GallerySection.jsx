@@ -78,7 +78,7 @@ export default function GallerySection() {
     <section
       id="galeria"
       style={{
-        background: 'var(--color-cream)',
+        background: 'var(--color-bg-dark)',
         padding: '48px 24px',
       }}
     >
@@ -88,7 +88,7 @@ export default function GallerySection() {
           <h2 style={{
             fontFamily: "'Black Ops One', cursive",
             fontSize: 'clamp(1.8rem, 4vw, 2.6rem)',
-            color: 'var(--color-bg-mid)', margin: 0, letterSpacing: '0.04em',
+            color: 'var(--color-cream)', margin: 0, letterSpacing: '0.04em',
           }}>
             {t(lang, 'ui.gallery.title')}
           </h2>
@@ -96,8 +96,8 @@ export default function GallerySection() {
 
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
-          gap: 14,
+          gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+          gap: 16,
         }}>
           {(loading ? Array.from({ length: 6 }) : photos).map((photo, idx) => (
             <button
@@ -106,9 +106,9 @@ export default function GallerySection() {
               className="gallery-photo-btn"
               style={{
                 border: 'none', padding: 0, cursor: loading ? 'default' : 'pointer',
-                background: 'rgba(10,42,26,0.08)',
+                background: 'rgba(245,240,232,0.04)',
                 borderRadius: 12,
-                aspectRatio: '1 / 1',
+                aspectRatio: '3 / 2',
                 display: 'block',
               }}
               aria-label={t(lang, 'ui.aria.view_photo')}
