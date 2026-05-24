@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { useSearchParams } from 'react-router-dom'
 import { useLanguage } from '../hooks/useLanguage'
 import { t } from '../lib/i18n'
 import { useMenu } from '../hooks/useMenu'
@@ -12,16 +13,37 @@ import '../styles/menu.css'
 export default function MenuPage() {
   const { lang } = useLanguage()
   const { categories, loading, error } = useMenu()
+  const [searchParams] = useSearchParams()
   const [activeCatId, setActiveCatId] = useState(null)
   const [drawerOpen, setDrawerOpen] = useState(false)
   const [modal, setModal] = useState(null)
   const observerRef = useRef(null)
+  const initialScrollDone = useRef(false)
 
   useEffect(() => {
     if (categories.length > 0 && !activeCatId) {
       setActiveCatId(categories[0].id)
     }
   }, [categories, activeCatId])
+
+  // Si el URL trae ?cat=<término>, hacer scroll a la primera categoría cuyo nombre lo contenga
+  useEffect(() => {
+    if (initialScrollDone.current) return
+    if (categories.length === 0) return
+    const term = (searchParams.get('cat') || '').trim().toLowerCase()
+    if (!term) return
+    const match = categories.find(c => (c.name || '').toLowerCase().includes(term))
+    if (!match) return
+    initialScrollDone.current = true
+    setActiveCatId(match.id)
+    requestAnimationFrame(() => {
+      const el = document.getElementById(`menu-cat-${match.id}`)
+      if (el) {
+        const y = el.getBoundingClientRect().top + window.pageYOffset - 80
+        window.scrollTo({ top: y, behavior: 'smooth' })
+      }
+    })
+  }, [categories, searchParams])
 
   useEffect(() => {
     if (drawerOpen) {

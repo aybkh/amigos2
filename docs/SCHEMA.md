@@ -108,12 +108,16 @@ CREATE TABLE contact_messages (
   id         uuid PRIMARY KEY DEFAULT gen_random_uuid(),
   name       text NOT NULL,
   email      text NOT NULL,
+  phone      text,                 -- opcional, formato libre
   message    text NOT NULL,
   is_read    boolean NOT NULL DEFAULT false,
   created_at timestamptz NOT NULL DEFAULT now()
 );
 
 CREATE INDEX contact_messages_unread_idx ON contact_messages (is_read, created_at DESC);
+
+-- Migración para añadir teléfono sobre la tabla existente
+ALTER TABLE contact_messages ADD COLUMN IF NOT EXISTS phone text;
 ```
 
 ---

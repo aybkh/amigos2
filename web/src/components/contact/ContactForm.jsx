@@ -1,7 +1,7 @@
 import { useState, useRef } from 'react'
 import { contactService } from '../../services/contactService'
 
-const INITIAL = { name: '', email: '', message: '' }
+const INITIAL = { name: '', email: '', phone: '', message: '' }
 
 // Rate limiting client-side: 1 mensaje cada 60s
 const RATE_LIMIT_MS = 60000
@@ -10,10 +10,13 @@ const MESSAGE_MAX = 1000
 // Acepta letras de cualquier idioma + espacios y separadores de nombre
 const NAME_RE  = /^[\p{L}\p{M}\s'.-]+$/u
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
+// Teléfono: dígitos + separadores comunes; mínimo 6 dígitos
+const PHONE_RE = /^[+()\d\s.-]{6,30}$/
 
-function validateForm({ name, email, message }) {
+function validateForm({ name, email, phone, message }) {
   const errors = {}
   const n = name.trim()
+  const p = phone.trim()
   const m = message.trim()
 
   if (!n)                    errors.name = 'El nombre es obligatorio'
@@ -24,6 +27,12 @@ function validateForm({ name, email, message }) {
   if (!email.trim())                     errors.email = 'El email es obligatorio'
   else if (!EMAIL_RE.test(email.trim())) errors.email = 'Email no válido'
   else if (email.length > 255)           errors.email = 'El email es demasiado largo'
+
+  if (p) {
+    const digits = p.replace(/\D/g, '')
+    if (!PHONE_RE.test(p) || digits.length < 6) errors.phone = 'Teléfono no válido'
+    else if (digits.length > 20)                errors.phone = 'El teléfono es demasiado largo'
+  }
 
   if (!m)                          errors.message = 'El mensaje es obligatorio'
   else if (m.length < 10)          errors.message = 'El mensaje debe tener al menos 10 caracteres'
@@ -65,6 +74,7 @@ export default function ContactForm() {
       await contactService.send({
         name: form.name.trim(),
         email: form.email.trim().toLowerCase(),
+        phone: form.phone.trim() || null,
         message: form.message.trim(),
       })
       lastSubmit.current = Date.now()
@@ -114,6 +124,23 @@ export default function ContactForm() {
           className={`contact-input${errors.email ? ' contact-input--error' : ''}`}
         />
         {errors.email && <span className="contact-field-error">{errors.email}</span>}
+      </div>
+
+      <div className="contact-field">
+        <label className="contact-label" htmlFor="phone">
+          Teléfono <span className="contact-label-optional">(opcional)</span>
+        </label>
+        <input
+          id="phone" name="phone" type="tel"
+          value={form.phone} onChange={handleChange}
+          placeholder="+34 600 000 000"
+          inputMode="tel"
+          autoComplete="tel"
+          maxLength={30}
+          disabled={sending}
+          className={`contact-input${errors.phone ? ' contact-input--error' : ''}`}
+        />
+        {errors.phone && <span className="contact-field-error">{errors.phone}</span>}
       </div>
 
       <div className="contact-field">

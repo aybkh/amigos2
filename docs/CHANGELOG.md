@@ -4,6 +4,33 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.5.9] - 2026-05-25 — Teléfono opcional en contacto, carta en pestaña nueva y limpieza de flechas en Destacados
+
+### [FEATURE] Campo "Teléfono" opcional en el formulario de contacto
+- `web/src/components/contact/ContactForm.jsx` — Se añadió el campo `phone` al estado inicial, al objeto de envío y al JSX. Es opcional: solo se valida si el usuario lo rellena, exigiendo entre 6 y 20 dígitos efectivos y aceptando separadores comunes (`+`, espacios, `()`, `.`, `-`). El input usa `type="tel"`, `inputMode="tel"` y `autoComplete="tel"` para mejorar la experiencia móvil.
+- `web/src/services/contactService.js` — Se actualizó `contactService.send` para aceptar y propagar el campo `phone` al `insert` de Supabase.
+- `web/src/styles/landing/Contact.css` — Se añadió la clase `.contact-label-optional` para diferenciar visualmente la indicación "(opcional)" del label principal.
+- `admin/src/components/messages/MessageCard.jsx` — Se renderiza el teléfono junto al email cuando existe, como enlace `tel:` para poder llamar con un clic desde el panel admin.
+- `docs/SCHEMA.md` — Se añadió la columna `phone text` (nullable) a la definición de `contact_messages` y un `ALTER TABLE ... ADD COLUMN IF NOT EXISTS phone text` como migración para entornos existentes.
+
+### [FEATURE] La carta digital siempre se abre en una pestaña nueva
+- `web/src/components/layout/Navbar.jsx` — Se añadieron `target="_blank"` y `rel="noopener noreferrer"` a los dos enlaces `Link to={ROUTES.MENU}` (CTA del navbar desktop y CTA del drawer móvil) para forzar la apertura de la carta en una pestaña nueva sin perder la página actual del cliente.
+- `web/src/components/layout/FooterDesktop.jsx` — Misma adición sobre el enlace "Carta" del footer.
+- `web/src/components/home/HeroSection.jsx` — Misma adición sobre el CTA principal `hero-cta-primary` y las tres mini-cards de categorías destacadas (Pizzas, Turca, Hindú) del hero.
+
+### [FEATURE] Las mini-cards del hero abren la carta directamente sobre la categoría correcta
+- `web/src/components/home/HeroSection.jsx` — Los tres `Link` de "Pizzas", "Turca" y "Hindú" pasan ahora un parámetro de consulta `?cat=<término>` (`pizza`, `turca`, `hind`) en lugar de simplemente apuntar a `/menu`.
+- `web/src/pages/MenuPage.jsx` — Se añadió `useSearchParams` y un `useEffect` que, cuando las categorías están cargadas y la URL trae `?cat=`, busca la primera categoría cuyo nombre contiene el término (case-insensitive), la marca como activa y hace scroll suave a su sección. El uso de `requestAnimationFrame` garantiza que el DOM ya ha renderizado los anclajes `menu-cat-<id>` antes de medir su posición. Un `useRef` previene re-disparos en cambios de query.
+
+### [REFACTOR] Eliminación de las flechas de navegación en las tarjetas de Destacados
+- `web/src/components/home/FeaturedSection.jsx` — Se eliminaron los botones `featured-arrow` (anterior/siguiente con `ChevronLeft`/`ChevronRight`), las funciones `prevSlide`/`nextSlide` que las controlaban y la importación de los iconos de `lucide-react` que ya no se utilizan. El auto-slide cada 4-5s se mantiene intacto, así como la pausa al hacer hover.
+
+## [1.5.8] - 2026-05-25 — Rediseño desktop de la sección "Pedir a Domicilio"
+
+### [FEATURE] Tarjetas cuadradas con logo grande en grid de 3 columnas para desktop
+- `web/src/components/home/DeliverySection.jsx` — Se añadieron las clases `delivery-card`, `delivery-logo`, `delivery-info` y `delivery-arrow` a los elementos relevantes y se importó la hoja de estilos `Delivery.css` para habilitar overrides específicos de desktop sin alterar la presentación móvil existente.
+- `web/src/styles/landing/Delivery.css` — Se reescribió por completo el archivo para contener únicamente reglas dentro de `@media (min-width: 768px)`: el grid pasa a 3 columnas equitativas (`repeat(3, 1fr)`), cada tarjeta adopta `aspect-ratio: 1/1` con disposición vertical centrada (logo arriba, nombre y subtítulo debajo), el logotipo crece a 140×140 px y la flecha lateral se oculta para favorecer el impacto del logo. El móvil mantiene los estilos inline originales del componente sin modificación alguna.
+
 ## [1.5.7] - 2026-05-24 — Mejoras en galería y orden de navegación
 
 ### [FEATURE] Gestión de descripciones cortas personalizadas para la galería en el panel de control (/admin)

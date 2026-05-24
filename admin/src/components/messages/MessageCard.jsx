@@ -54,13 +54,24 @@ export default function MessageCard({ message, onMarkRead, onMarkUnread, onDelet
             )}
             <span className="text-xs text-gray-400 ml-auto shrink-0">{formatDate(message.created_at)}</span>
           </div>
-          <a
-            href={`mailto:${message.email}`}
-            onClick={e => e.stopPropagation()}
-            className="text-xs text-blue-600 hover:underline"
-          >
-            {message.email}
-          </a>
+          <div className="flex items-center gap-3 flex-wrap">
+            <a
+              href={`mailto:${message.email}`}
+              onClick={e => e.stopPropagation()}
+              className="text-xs text-blue-600 hover:underline"
+            >
+              {message.email}
+            </a>
+            {message.phone && (
+              <a
+                href={`tel:${String(message.phone).replace(/\s+/g, '')}`}
+                onClick={e => e.stopPropagation()}
+                className="text-xs text-blue-600 hover:underline"
+              >
+                {message.phone}
+              </a>
+            )}
+          </div>
           {!expanded && (
             <p className="text-sm text-gray-500 mt-1 line-clamp-2 text-left">
               {message.message}

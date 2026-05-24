@@ -1,6 +1,7 @@
 import { useDelivery } from '../../hooks/useDelivery'
 import { useLanguage } from '../../hooks/useLanguage'
 import { t } from '../../lib/i18n'
+import '../../styles/landing/Delivery.css'
 
 const PLATFORMS = {
   glovo:    { img: '/images/glovo.webp',    bg: '#FFC244', fg: '#1a1a1a' },
@@ -60,6 +61,7 @@ export default function DeliverySection() {
               <button
                 key={link.id}
                 onClick={() => open(link)}
+                className="delivery-card"
                 style={{
                   display: 'flex', alignItems: 'center', gap: 16,
                   padding: '20px 24px', borderRadius: 12,
@@ -78,7 +80,7 @@ export default function DeliverySection() {
                   e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.30)'
                 }}
               >
-                <span style={{
+                <span className="delivery-logo" style={{
                   flexShrink: 0, width: 52, height: 52, borderRadius: 10,
                   background: '#ffffff', display: 'flex',
                   alignItems: 'center', justifyContent: 'center',
@@ -95,7 +97,7 @@ export default function DeliverySection() {
                     }}
                   />
                 </span>
-                <div style={{ flex: 1 }}>
+                <div className="delivery-info" style={{ flex: 1 }}>
                   <h3 style={{
                     margin: '0 0 4px', fontFamily: 'Montserrat, sans-serif',
                     fontWeight: 800, fontSize: '1.2rem',
@@ -105,7 +107,7 @@ export default function DeliverySection() {
                     fontSize: '0.85rem', opacity: 0.9,
                   }}>{t(lang, `ui.delivery.${link.platform}_sub`)}</p>
                 </div>
-                <span style={{ fontSize: '1.5rem', fontWeight: 700, flexShrink: 0 }}>➔</span>
+                <span className="delivery-arrow" style={{ fontSize: '1.5rem', fontWeight: 700, flexShrink: 0 }}>➔</span>
               </button>
             )
           })}

@@ -65,7 +65,7 @@ export default function HeroSection() {
 
         {/* CTAs */}
         <div className="hero-ctas">
-          <Link to={ROUTES.MENU} className="hero-cta-primary">
+          <Link to={ROUTES.MENU} target="_blank" rel="noopener noreferrer" className="hero-cta-primary">
             {t(lang, 'ui.hero.cta_menu')}
           </Link>
           <button type="button" onClick={scrollToLocation} className="hero-cta-secondary">
@@ -76,15 +76,15 @@ export default function HeroSection() {
 
         {/* Mini-cards categorías destacadas → carta */}
         <div className="hero-highlights">
-          <Link to={ROUTES.MENU} className="hero-highlight-card" aria-label="Ver Pizzas">
+          <Link to={`${ROUTES.MENU}?cat=pizza`} target="_blank" rel="noopener noreferrer" className="hero-highlight-card" aria-label="Ver Pizzas">
             <Pizza size={28} strokeWidth={1.5} />
             <span>Pizzas</span>
           </Link>
-          <Link to={ROUTES.MENU} className="hero-highlight-card" aria-label="Ver Comida Turca">
+          <Link to={`${ROUTES.MENU}?cat=turca`} target="_blank" rel="noopener noreferrer" className="hero-highlight-card" aria-label="Ver Comida Turca">
             <UtensilsCrossed size={28} strokeWidth={1.5} />
             <span>Turca</span>
           </Link>
-          <Link to={ROUTES.MENU} className="hero-highlight-card" aria-label="Ver Comida Hindú">
+          <Link to={`${ROUTES.MENU}?cat=hind`} target="_blank" rel="noopener noreferrer" className="hero-highlight-card" aria-label="Ver Comida Hindú">
             <Flame size={28} strokeWidth={1.5} />
             <span>Hindú</span>
           </Link>

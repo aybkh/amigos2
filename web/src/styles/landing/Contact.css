@@ -36,6 +36,15 @@
   margin-bottom: 8px;
 }
 
+.contact-label-optional {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 1px;
+  text-transform: lowercase;
+  margin-left: 4px;
+}
+
 .contact-input {
   width: 100%;
   border-radius: 10px;

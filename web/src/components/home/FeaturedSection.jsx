@@ -1,5 +1,4 @@
 import { useState, useEffect, useRef } from 'react'
-import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { useMenu } from '../../hooks/useMenu'
 import { useLanguage } from '../../hooks/useLanguage'
 import { t } from '../../lib/i18n'
@@ -72,15 +71,6 @@ function FeaturedCard({ cat, lang }) {
   const activeIdx = count ? currentIndex % count : 0
   const product = products[activeIdx] ?? null
 
-  const nextSlide = (e) => {
-    e.stopPropagation()
-    setCurrentIndex(prev => (prev + 1) % count)
-  }
-  const prevSlide = (e) => {
-    e.stopPropagation()
-    setCurrentIndex(prev => (prev - 1 + count) % count)
-  }
-
   return (
     <div
       style={{
@@ -114,16 +104,6 @@ function FeaturedCard({ cat, lang }) {
             </div>
           )}
 
-        {count > 1 && (
-          <>
-            <button className="featured-arrow prev" onClick={prevSlide} aria-label="Anterior">
-              <ChevronLeft size={16} />
-            </button>
-            <button className="featured-arrow next" onClick={nextSlide} aria-label="Siguiente">
-              <ChevronRight size={16} />
-            </button>
-          </>
-        )}
       </div>
 
       {/* Contenido */}

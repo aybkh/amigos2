@@ -187,7 +187,7 @@ export default function Navbar() {
 
             {/* CTA */}
             <div className="navbar-cta">
-              <Link to={ROUTES.MENU} style={{ textDecoration: 'none' }}>
+              <Link to={ROUTES.MENU} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                 <button
                   style={{
                     background: 'transparent',
@@ -257,7 +257,7 @@ export default function Navbar() {
         ))}
 
         <div style={{ marginTop: 'auto', paddingTop: 24 }}>
-          <Link to={ROUTES.MENU} style={{ textDecoration: 'none' }} onClick={() => setOpen(false)}>
+          <Link to={ROUTES.MENU} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }} onClick={() => setOpen(false)}>
             <button style={{
               width: '100%', padding: '18px',
               background: 'var(--color-neon)',

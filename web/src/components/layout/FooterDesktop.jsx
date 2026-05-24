@@ -65,7 +65,7 @@ export default function FooterDesktop({ siteInfo }) {
             <h3 className="footer-desktop-title">{t(lang, 'ui.footer.nav_title')}</h3>
             <ul className="footer-desktop-links">
               <li><Link to="/">{t(lang, 'ui.nav.home')}</Link></li>
-              <li><Link to={ROUTES.MENU}>{t(lang, 'ui.nav.menu_cta')}</Link></li>
+              <li><Link to={ROUTES.MENU} target="_blank" rel="noopener noreferrer">{t(lang, 'ui.nav.menu_cta')}</Link></li>
               <li><a href="/#galeria">{t(lang, 'ui.nav.gallery')}</a></li>
               <li><a href="/#contacto">{t(lang, 'ui.nav.contact')}</a></li>
             </ul>
