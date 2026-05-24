@@ -329,6 +329,7 @@ html {
 .navbar-links      { display: flex; align-items: center; gap: 36px; margin: 0 auto; }
 .navbar-cta        { display: flex; }
 .navbar-lang       { display: flex; }
+.navbar-logo-img   { height: 60px; }
 
 @media (max-width: 768px) {
   .navbar-mobile-btn { display: flex !important; }
@@ -336,6 +337,7 @@ html {
   .navbar-cta        { display: none !important; }
   /* Selector de idioma visible en el header móvil (derecha) */
   .navbar-lang       { display: flex; }
+  .navbar-logo-img   { height: 40px; }
   /* Logo centrado absolutamente entre hamburger (izq) e idioma (der) */
   /* En móvil empieza invisible y aparece con scroll o al abrir menú */
   .navbar-logo {

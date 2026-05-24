@@ -93,7 +93,8 @@ export default function Navbar() {
             <img
               src="/amigos2-logo-2-1.png"
               alt="Amigos2"
-              style={{ height: 60, width: 'auto', display: 'block' }}
+              className="navbar-logo-img"
+              style={{ width: 'auto', display: 'block' }}
             />
           </Link>
 

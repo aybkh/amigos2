@@ -8,8 +8,10 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
 ### [FEATURE] Logo del header dinámico basado en scroll (solo en móvil)
 - `web/src/components/layout/Navbar.jsx` — Se añadieron las clases dinámicas `scrolled` y `drawer-open` a la etiqueta principal `<nav>` de la barra de navegación. Esto permite coordinar la visibilidad de los elementos del header directamente mediante CSS reactivo.
+- `web/src/components/layout/Navbar.jsx` — Se eliminó el estilo inline `height: 60` para el elemento de imagen del logo del header, moviendo esta definición a clases de CSS responsivas y limpias.
 - `web/src/styles/index.css` — Se modificó la regla `.navbar-logo` dentro del bloque responsivo móvil (`@media (max-width: 768px)`) para ocultar inicialmente el logo mediante `opacity: 0` y `pointer-events: none`.
 - `web/src/styles/index.css` — Se diseñó una micro-animación premium que hace que el logo se desvanezca y escale elásticamente (`transform: scale(0.92)` a `scale(1)`) de manera sumamente suave (`cubic-bezier(0.34, 1.56, 0.64, 1)`) al hacer scroll hacia abajo o al abrir el menú lateral móvil. En ordenadores, el logo se mantiene visible permanentemente sin cambios.
+- `web/src/styles/index.css` — Se añadió la regla responsiva `.navbar-logo-img` con una altura de `60px` para pantallas grandes y de exactamente **`40px`** en el bloque móvil (`max-width: 768px`), logrando una cabecera sumamente compacta y elegante en smartphones.
 
 ### [FIX] Mayor espaciado y margen superior en el Hero para separar el logo del header fijo
 - `web/src/styles/HeroSection.css` — Se aumentó el `padding-top` por defecto de la sección del Hero de `60px` a `96px` en móvil para evitar que la barra de navegación fija tape o quede demasiado pegada al logo principal del Hero, dejando una separación visual impecable de `32px` de aire.
