@@ -409,6 +409,15 @@ footer {
   }
 }
 
+/* ─── Gallery thumbnails scrollbar hiding ─── */
+.gallery-thumbnails-container::-webkit-scrollbar {
+  display: none;
+}
+.gallery-thumbnails-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Hero — estilos movidos a HeroSection.css
    (rediseño compacto con media de fondo, ver components/home/HeroSection.jsx) */
 

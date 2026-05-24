@@ -71,6 +71,16 @@ export default function GallerySection() {
   const { photos, loading } = useGallery({ preview: true })
   const { lang } = useLanguage()
   const [selected, setSelected] = useState(null)
+  const [featuredIdx, setFeaturedIdx] = useState(0)
+
+  // Rotación automática cada 5 segundos (si no está abierto el lightbox)
+  useEffect(() => {
+    if (loading || photos.length <= 1 || selected !== null) return
+    const interval = setInterval(() => {
+      setFeaturedIdx(prev => (prev + 1) % photos.length)
+    }, 5000)
+    return () => clearInterval(interval)
+  }, [loading, photos.length, selected])
 
   if (!loading && photos.length === 0) return null
 
@@ -82,9 +92,9 @@ export default function GallerySection() {
         padding: '48px 24px',
       }}
     >
-      <div style={{ maxWidth: 1200, margin: '0 auto' }}>
+      <div style={{ maxWidth: 900, margin: '0 auto' }}>
 
-        <div style={{ textAlign: 'center', marginBottom: 40 }}>
+        <div style={{ textAlign: 'center', marginBottom: 36 }}>
           <h2
             className="section-title-glow"
             style={{
@@ -97,39 +107,148 @@ export default function GallerySection() {
           </h2>
         </div>
 
-        <div className="gallery-responsive-grid">
-          {(loading ? Array.from({ length: 6 }) : photos).map((photo, idx) => (
-            <button
-              key={loading ? idx : photo.id}
-              onClick={() => !loading && setSelected(idx)}
-              className="gallery-photo-btn"
+        {/* 1. Imagen Grande Destacada (Showcase) */}
+        {loading ? (
+          <div
+            style={{
+              width: '100%',
+              maxWidth: 760,
+              margin: '0 auto 20px',
+              aspectRatio: '3 / 2',
+              borderRadius: 16,
+              background: 'rgba(245,240,232,0.04)',
+              border: '1px solid rgba(0, 230, 118, 0.15)',
+            }}
+          />
+        ) : (
+          <div
+            className="gallery-featured-card"
+            onClick={() => setSelected(featuredIdx)}
+            style={{
+              width: '100%',
+              maxWidth: 760,
+              margin: '0 auto 20px',
+              aspectRatio: '3 / 2',
+              borderRadius: 16,
+              overflow: 'hidden',
+              position: 'relative',
+              cursor: 'pointer',
+              border: '1px solid rgba(0, 230, 118, 0.20)',
+              boxShadow: '0 8px 32px rgba(0, 0, 0, 0.40)',
+            }}
+          >
+            <img
+              src={photos[featuredIdx]?.image_url}
+              alt={photos[featuredIdx]?.alt_text ?? ''}
               style={{
-                border: 'none', padding: 0, cursor: loading ? 'default' : 'pointer',
-                background: 'rgba(245,240,232,0.04)',
-                borderRadius: 12,
-                aspectRatio: '3 / 2',
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
                 display: 'block',
               }}
-              aria-label={t(lang, 'ui.aria.view_photo')}
+            />
+            {/* Overlay con gradiente y zoom icon */}
+            <div
+              style={{
+                position: 'absolute',
+                inset: 0,
+                background: 'linear-gradient(to top, rgba(7,26,16,0.70) 0%, transparent 60%)',
+                display: 'flex',
+                alignItems: 'flex-end',
+                padding: '16px 20px',
+              }}
             >
-              {!loading && photo && (
-                <>
+              <span
+                style={{
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontWeight: 700,
+                  fontSize: '0.85rem',
+                  color: 'var(--color-cream)',
+                  textShadow: '0 2px 4px rgba(0,0,0,0.60)',
+                }}
+              >
+                {photos[featuredIdx]?.alt_text || t(lang, 'ui.gallery.title')}
+              </span>
+              <span
+                style={{
+                  marginLeft: 'auto',
+                  background: 'var(--color-neon)',
+                  color: 'var(--color-bg-dark)',
+                  borderRadius: '50%',
+                  width: 38,
+                  height: 38,
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  boxShadow: '0 4px 12px rgba(0, 230, 118, 0.40)',
+                }}
+              >
+                <ZoomIn size={18} />
+              </span>
+            </div>
+          </div>
+        )}
+
+        {/* 2. Fila de Miniaturas (Thumbnails) */}
+        <div
+          className="gallery-thumbnails-container"
+          style={{
+            display: 'flex',
+            gap: 12,
+            justifyContent: 'center',
+            overflowX: 'auto',
+            padding: '4px 4px 16px',
+            WebkitOverflowScrolling: 'touch',
+          }}
+        >
+          {loading
+            ? Array.from({ length: 6 }).map((_, idx) => (
+                <div
+                  key={idx}
+                  style={{
+                    flexShrink: 0,
+                    width: 'clamp(70px, 18vw, 100px)',
+                    aspectRatio: '3 / 2',
+                    borderRadius: 10,
+                    background: 'rgba(245,240,232,0.03)',
+                    border: '1px solid rgba(245,240,232,0.06)',
+                  }}
+                />
+              ))
+            : photos.map((photo, idx) => (
+                <button
+                  key={photo.id}
+                  onClick={() => setFeaturedIdx(idx)}
+                  aria-label={`${t(lang, 'ui.aria.view_photo')} ${idx + 1}`}
+                  style={{
+                    flexShrink: 0,
+                    width: 'clamp(70px, 18vw, 100px)',
+                    aspectRatio: '3 / 2',
+                    borderRadius: 10,
+                    border: idx === featuredIdx
+                      ? '2px solid var(--color-neon)'
+                      : '1px solid rgba(245,240,232,0.15)',
+                    padding: 0,
+                    background: 'none',
+                    cursor: 'pointer',
+                    overflow: 'hidden',
+                    opacity: idx === featuredIdx ? 1 : 0.45,
+                    transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
+                    boxShadow: idx === featuredIdx
+                      ? '0 0 14px rgba(0, 230, 118, 0.50)'
+                      : 'none',
+                    transform: idx === featuredIdx ? 'scale(1.04)' : 'none',
+                  }}
+                >
                   <img
                     src={photo.image_url}
-                    alt={photo.alt_text ?? ''}
-                    loading="lazy"
-                    className="gallery-photo-img"
+                    alt=""
+                    style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                   />
-                  <div className="gallery-overlay">
-                    <span className="gallery-overlay-icon">
-                      <ZoomIn size={22} />
-                    </span>
-                  </div>
-                </>
-              )}
-            </button>
-          ))}
+                </button>
+              ))}
         </div>
+
       </div>
 
       {selected !== null && (
