@@ -14,6 +14,7 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 ### [FEATURE] Transiciones de fundido cruzado (cross-fade) fluidas y aceleradas por hardware en la galería pública
 - `web/src/components/home/GallerySection.jsx` — Se migró la imagen destacada a una pila de imágenes posicionadas de forma absoluta que realiza una transición de opacidad ultra fluida controlada por CSS.
 - `web/src/components/home/GallerySection.jsx` — Se implementó la transición fluida en paralelo para los títulos/descripciones cortas de la imagen destacada para que coincida perfectamente con el cambio de imagen.
+- `web/src/components/home/GallerySection.jsx` — Se aplicó `minWidth: 0` al contenedor `flex: 1` de las descripciones cortas para resolver la restricción implícita de Flexbox (`min-width: auto`) ante hijos absolutos con `whiteSpace: 'nowrap'`, solucionando el desbordamiento horizontal y eliminando la franja lateral vacía en pantallas móviles.
 
 ### [REFACTOR] Reordenación de la barra de navegación para alinearse con el flujo natural de scroll
 - `web/src/components/layout/Navbar.jsx` — Se modificó el orden del menú `navLinks` (`home` -> `featured` -> `gallery` -> `delivery` -> `hours` -> `contact`), logrando que la sección de Galería aparezca antes de Horarios en la navegación, reflejando el orden visual exacto de la página principal.

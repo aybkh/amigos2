@@ -167,7 +167,7 @@ export default function GallerySection() {
                 zIndex: 10,
               }}
             >
-              <div style={{ flex: 1, position: 'relative', height: '1.25rem', overflow: 'hidden' }}>
+              <div style={{ flex: 1, minWidth: 0, position: 'relative', height: '1.25rem', overflow: 'hidden' }}>
                 {photos.map((photo, idx) => (
                   <span
                     key={photo.id}
