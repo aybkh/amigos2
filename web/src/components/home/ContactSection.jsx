@@ -3,6 +3,7 @@ import { contactService } from '../../services/contactService'
 import { useLanguage } from '../../hooks/useLanguage'
 import { useLegalModal } from '../../contexts/LegalModalContext'
 import { t } from '../../lib/i18n'
+import '../../styles/landing/Contact.css'
 
 const INITIAL = { name: '', email: '', phone: '', message: '' }
 
@@ -184,37 +185,24 @@ export default function ContactSection() {
                 </p>
               )}
 
-              <label
-                htmlFor="cf-privacy"
-                style={{
-                  display: 'flex', alignItems: 'flex-start', gap: 10,
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontSize: '0.80rem', lineHeight: 1.45,
-                  color: 'rgba(245,240,232,0.65)',
-                  cursor: 'pointer', userSelect: 'none',
-                }}
-              >
+              <label htmlFor="cf-privacy" className="cf-privacy-label">
                 <input
                   id="cf-privacy" type="checkbox"
                   checked={accepted}
                   onChange={(e) => setAccepted(e.target.checked)}
-                  style={{
-                    marginTop: 3, flexShrink: 0,
-                    width: 16, height: 16,
-                    accentColor: 'var(--color-neon)',
-                    cursor: 'pointer',
-                  }}
+                  className="cf-privacy-input"
                 />
-                <span>
+                <span className="cf-privacy-box" aria-hidden="true">
+                  <svg viewBox="0 0 16 16" width="11" height="11" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="3 8.5 6.5 12 13 4" />
+                  </svg>
+                </span>
+                <span className="cf-privacy-text">
                   {t(lang, 'ui.contact.privacy_accept')}{' '}
                   <button
                     type="button"
                     onClick={() => openLegal('privacidad')}
-                    style={{
-                      background: 'none', border: 'none', padding: 0,
-                      color: 'var(--color-neon)', cursor: 'pointer',
-                      font: 'inherit', textDecoration: 'underline',
-                    }}
+                    className="cf-privacy-link"
                   >
                     {t(lang, 'ui.contact.privacy_link')}
                   </button>

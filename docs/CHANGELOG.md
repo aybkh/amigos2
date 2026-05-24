@@ -4,6 +4,12 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.5.12] - 2026-05-25 — Estilado custom del checkbox de privacidad
+
+### [REFACTOR] Checkbox personalizado en línea con la identidad de marca
+- `web/src/components/home/ContactSection.jsx` — Se reemplazó el checkbox nativo (`accentColor`) por una caja personalizada: el `<input>` queda oculto pero accesible (posicionado absolutamente, sin tamaño), y un `<span class="cf-privacy-box">` actúa como caja visual con un SVG de tick dentro. El label envuelve todo, manteniendo el área de clic completa. Se añade el enlace "política de privacidad" como `<button class="cf-privacy-link">` para evitar nesting de elementos interactivos no válido HTML.
+- `web/src/styles/landing/Contact.css` — Se añadieron las reglas `.cf-privacy-*`: caja de 20×20 px con `border-radius: 5px`, borde semitransparente sobre fondo oscuro, hover en verde neón tenue, estado `:checked` con fondo neón sólido + tick visible animado (escala 0.6 → 1 + opacidad), `box-shadow` con doble glow (ring + halo) y outline neón con `:focus-visible` para accesibilidad por teclado. El enlace usa border-bottom como subrayado controlable que cambia a blanco en hover. Se importó `Contact.css` desde `ContactSection.jsx`, que hasta ahora no la usaba.
+
 ## [1.5.11] - 2026-05-25 — Checkbox de política de privacidad obligatorio en contacto
 
 ### [FEATURE] Aceptación de la política de privacidad como requisito para enviar
