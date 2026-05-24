@@ -135,6 +135,8 @@ export default function GallerySection() {
               cursor: 'pointer',
               border: '1px solid rgba(0, 230, 118, 0.20)',
               boxShadow: '0 8px 32px rgba(0, 0, 0, 0.40)',
+              transform: 'translateZ(0)',
+              isolation: 'isolate',
             }}
           >
             {photos.map((photo, idx) => (
@@ -214,17 +216,7 @@ export default function GallerySection() {
         )}
 
         {/* 2. Fila de Miniaturas (Thumbnails) */}
-        <div
-          className="gallery-thumbnails-container"
-          style={{
-            display: 'flex',
-            gap: 12,
-            justifyContent: 'center',
-            overflowX: 'auto',
-            padding: '4px 4px 16px',
-            WebkitOverflowScrolling: 'touch',
-          }}
-        >
+        <div className="gallery-thumbnails-container">
           {loading
             ? Array.from({ length: 6 }).map((_, idx) => (
                 <div

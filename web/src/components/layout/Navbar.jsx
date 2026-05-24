@@ -233,6 +233,7 @@ export default function Navbar() {
         padding: '24px 24px 32px',
         transform: open ? 'translateX(0)' : 'translateX(-100%)',
         transition: 'transform 0.30s ease',
+        visibility: open ? 'visible' : 'hidden',
       }}>
         {navLinks.map(({ key, hash, Icon }) => (
           <button

@@ -409,13 +409,24 @@ footer {
   }
 }
 
-/* ─── Gallery thumbnails scrollbar hiding ─── */
+/* ─── Gallery thumbnails container and scrollbar hiding ─── */
 .gallery-thumbnails-container::-webkit-scrollbar {
   display: none;
 }
 .gallery-thumbnails-container {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start; /* flex-start on mobile to prevent overflow/alignment bugs! */
+  overflow-x: auto;
+  padding: 4px 4px 16px;
+  -webkit-overflow-scrolling: touch;
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+@media (min-width: 640px) {
+  .gallery-thumbnails-container {
+    justify-content: center; /* Center on larger screens where it does not overflow */
+  }
 }
 
 /* Hero — estilos movidos a HeroSection.css
