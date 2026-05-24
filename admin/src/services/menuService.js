@@ -7,8 +7,16 @@ export const menuService = {
       .from(TABLES.CATEGORIES)
       .select(`*, products(*)`)
       .order('display_order')
+      .order('display_order', { foreignTable: 'products', ascending: true })
     if (error) throw error
-    return data
+    
+    // Ordenar en memoria para asegurar consistencia absoluta
+    return (data ?? []).map(cat => ({
+      ...cat,
+      products: (cat.products ?? []).sort(
+        (a, b) => (a.display_order ?? 999999) - (b.display_order ?? 999999)
+      ),
+    }))
   },
 
   async createCategory(payload) {
