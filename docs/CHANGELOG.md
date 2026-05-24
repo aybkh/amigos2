@@ -46,6 +46,12 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 - Precio movido a la **derecha** del nombre (fila flex `space-between`, `align-items: baseline`); nombre con `flex:1` + ellipsis si es largo
 - Se mantiene `useMenu()` y el componente `PriceDisplay` (no se llama a Supabase directo desde el componente)
 
+### [FIX] Productos sin precio: no se muestra nada (en vez de "0,00 €" o "—")
+- `components/ui/PriceDisplay.jsx` — oculta solo cuando `price == null`. Antes también ocultaba `price === 0`, lo cual era incorrecto (0 es precio válido)
+- `components/tv/TvProductCard.jsx` — el bloque `.tv-price` se renderiza condicionalmente cuando `product.price != null`. Antes mostraba `0.00 €` en TV para cervezas/vinos sin precio
+- `components/home/FeaturedSection.jsx` — eliminado el fallback `—`. Ahora simplemente no se ve nada si el plato destacado no tiene precio
+- Productos sin precio afectados: cañas/cervezas, copas de vino, mojito individual, sangría copa, destilados (Jack Daniel's, Ballantine's, etc.)
+
 ### [REFACTOR] GallerySection — UX modernizada (home)
 - `components/home/GallerySection.jsx` — Lightbox ahora bloquea el **scroll del body** mientras está abierto y soporta **navegación por teclado** (Esc cierra, ← anterior, → siguiente). Estilos inline movidos a clases CSS
 - `styles/index.css` — bloque gallery rehecho:

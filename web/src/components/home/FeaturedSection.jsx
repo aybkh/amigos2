@@ -149,13 +149,7 @@ function FeaturedCard({ cat, lang }) {
               overflow: 'hidden', textOverflow: 'ellipsis', whiteSpace: 'nowrap',
             }}>{product.name}</span>
             <span style={{ flexShrink: 0 }}>
-              {product.price != null
-                ? <PriceDisplay price={product.price} />
-                : <span style={{
-                    fontFamily: 'Montserrat, sans-serif',
-                    fontWeight: 800, fontSize: '0.95rem',
-                    color: 'var(--color-neon)',
-                  }}>—</span>}
+              <PriceDisplay price={product.price} />
             </span>
           </div>
         ) : (

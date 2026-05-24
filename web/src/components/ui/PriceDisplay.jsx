@@ -1,5 +1,6 @@
 export default function PriceDisplay({ price, className = '' }) {
-  if (price == null || price === 0) return null
+  // Solo se oculta si no hay precio. 0 es un precio válido (gratis).
+  if (price == null) return null
   const [euros, cents] = Number(price).toFixed(2).split('.')
   return (
     <span className={`price-display ${className}`.trim()}>
