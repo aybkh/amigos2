@@ -11,6 +11,10 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 - `web/src/styles/index.css` — Se modificó la regla `.navbar-logo` dentro del bloque responsivo móvil (`@media (max-width: 768px)`) para ocultar inicialmente el logo mediante `opacity: 0` y `pointer-events: none`.
 - `web/src/styles/index.css` — Se diseñó una micro-animación premium que hace que el logo se desvanezca y escale elásticamente (`transform: scale(0.92)` a `scale(1)`) de manera sumamente suave (`cubic-bezier(0.34, 1.56, 0.64, 1)`) al hacer scroll hacia abajo o al abrir el menú lateral móvil. En ordenadores, el logo se mantiene visible permanentemente sin cambios.
 
+### [FIX] Mayor espaciado y margen superior en el Hero para separar el logo del header fijo
+- `web/src/styles/HeroSection.css` — Se aumentó el `padding-top` por defecto de la sección del Hero de `60px` a `96px` en móvil para evitar que la barra de navegación fija tape o quede demasiado pegada al logo principal del Hero, dejando una separación visual impecable de `32px` de aire.
+- `web/src/styles/HeroSection.css` — Se incrementó proporcionalmente el `padding-top` en resoluciones de tableta y ordenador (de `80px` a `110px`) para mantener un espaciado amplio y equilibrado en pantallas grandes.
+
 ## [1.5.4] - 2026-05-24 — Rediseño y corrección de la sección de Galería
 
 ### [FIX] Fondo oscuro premium y relación de aspecto 3:2 en imágenes de galería
