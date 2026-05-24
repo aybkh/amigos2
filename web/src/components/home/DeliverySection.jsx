@@ -30,7 +30,7 @@ export default function DeliverySection() {
   }
 
   return (
-    <section id="domicilio" style={{ background: 'var(--color-bg-mid)', padding: '48px 24px' }}>
+    <section id="domicilio" style={{ background: 'linear-gradient(135deg, #0f3d2a 0%, #0a2a1a 100%)', padding: '48px 24px' }}>
       <div style={{ maxWidth: 1200, margin: '0 auto' }}>
         <div style={{ textAlign: 'center', marginBottom: 48 }}>
           <h2

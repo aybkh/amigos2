@@ -18,7 +18,7 @@ export default function LocationSection() {
     <section
       id="ubicacion"
       style={{
-        background: 'var(--color-bg-mid)',
+        background: 'linear-gradient(135deg, #0f3d2a 0%, #0a2a1a 100%)',
         padding: '48px 24px',
       }}
     >

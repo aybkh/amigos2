@@ -12,6 +12,7 @@ Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 ### [REFACTOR] Alternancia estricta de fondos entre secciones consecutivas y unificación de glows
 - `web/src/components/home/DeliverySection.jsx` — Se modificó el color de fondo de la sección de Pedidos a Domicilio de `rgba(7,26,16,0.40)` (que visualmente se asimilaba a un fondo oscuro) a verde selva intermedio (**`var(--color-bg-mid)`**), logrando una separación y alternancia cromática 100% perfecta entre la Galería (fondo oscuro) y los Horarios (gradiente diagonal).
 - `web/src/components/home/DeliverySection.jsx` + `web/src/components/home/HoursSection.jsx` + `web/src/components/home/LocationSection.jsx` — Se aplicó la clase `.section-title-glow` a sus títulos principales, logrando que el resplandor radial neón verde esmerilado esté presente de manera armoniosa y unificada en todas las secciones principales de la landing page.
+- `web/src/components/home/DeliverySection.jsx` + `web/src/components/home/LocationSection.jsx` — Para garantizar un contraste real, nítido y visible en todo tipo de pantallas (evitando que el tono oscuro y el medio se confundan), se rediseñó el fondo de ambas secciones utilizando un gradiente esmeralda premium tridimensional: `linear-gradient(135deg, #0f3d2a 0%, #0a2a1a 100%)`. Esto proporciona un contraste de alta gama que salta a la vista respetando la paleta de la marca.
 
 ## [1.5.5] - 2026-05-24 — Animación y ocultamiento del logo en cabecera móvil
 
