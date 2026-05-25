@@ -8,3 +8,12 @@ createRoot(document.getElementById('root')).render(
     <App />
   </StrictMode>,
 )
+
+// Registrar el Service Worker (PWA) sólo en producción para no interferir con HMR de Vite
+if ('serviceWorker' in navigator && import.meta.env.PROD) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch((err) => {
+      console.error('[PWA] Error al registrar el Service Worker:', err)
+    })
+  })
+}

@@ -75,27 +75,33 @@ export default function PostsPage() {
     <AdminLayout>
       <div className="space-y-4">
         <h1 className="text-2xl font-bold text-stone-900">Posts y Noticias</h1>
-        <div className="grid grid-cols-1 lg:grid-cols-[360px_1fr] gap-4 items-start">
-          <PostList
-            posts={posts}
-            selectedId={selectedId}
-            onSelect={handleSelect}
-            onCreate={handleCreate}
-            onDelete={handleDelete}
-            onPublish={handlePublish}
-            onUnpublish={handleUnpublish}
-          />
-          {showEditor ? (
-            <PostEditor
-              post={creating ? null : selectedPost}
-              onSaved={handleSaved}
-              onCancel={handleCancel}
+        {/* Móvil: master/detail (una vista a la vez)
+            Desktop (lg+): dos columnas 360px + resto */}
+        <div className="lg:grid lg:grid-cols-[360px_1fr] lg:gap-4 lg:items-start">
+          <div className={showEditor ? 'hidden lg:block' : 'block'}>
+            <PostList
+              posts={posts}
+              selectedId={selectedId}
+              onSelect={handleSelect}
+              onCreate={handleCreate}
+              onDelete={handleDelete}
+              onPublish={handlePublish}
+              onUnpublish={handleUnpublish}
             />
-          ) : (
-            <div className="bg-white rounded-xl border border-stone-200 flex items-center justify-center h-64 text-stone-400 text-sm">
-              Selecciona un post para editarlo o crea uno nuevo
-            </div>
-          )}
+          </div>
+          <div className={showEditor ? 'block' : 'hidden lg:block'}>
+            {showEditor ? (
+              <PostEditor
+                post={creating ? null : selectedPost}
+                onSaved={handleSaved}
+                onCancel={handleCancel}
+              />
+            ) : (
+              <div className="bg-white rounded-xl border border-stone-200 flex items-center justify-center h-64 text-stone-400 text-sm">
+                Selecciona un post para editarlo o crea uno nuevo
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </AdminLayout>

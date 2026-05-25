@@ -1,0 +1,26 @@
+{
+  "name": "Amigos2 Admin",
+  "short_name": "Amigos2",
+  "description": "Panel de administración del restaurante Amigos2",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#ffffff",
+  "theme_color": "#C84B31",
+  "lang": "es",
+  "icons": [
+    {
+      "src": "/amigos2-logo-1-1.png",
+      "sizes": "500x500",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/amigos2-logo-1-1.png",
+      "sizes": "500x500",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

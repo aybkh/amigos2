@@ -73,8 +73,8 @@ export default function ProductModal({ product, categoryId, onClose, onSaved }) 
   return (
     <Modal title={isEdit ? 'Editar producto' : 'Nuevo producto'} onClose={onClose}>
       <form onSubmit={handleSubmit} className="space-y-4">
-        <div className="grid grid-cols-2 gap-4">
-          <div className="col-span-2">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="sm:col-span-2">
             <Input label="Nombre" value={form.name} onChange={e => set('name', e.target.value)} required />
           </div>
           <Input

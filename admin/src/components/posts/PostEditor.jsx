@@ -3,7 +3,7 @@ import { Input, Textarea } from '../ui/Input'
 import Button from '../ui/Button'
 import ImagePicker from '../ui/ImagePicker'
 import { postsService } from '../../services/postsService'
-import { Eye, EyeOff } from 'lucide-react'
+import { Eye, EyeOff, ChevronLeft } from 'lucide-react'
 
 function toSlug(text) {
   return text
@@ -73,10 +73,21 @@ export default function PostEditor({ post, onSaved, onCancel }) {
 
   return (
     <div className="bg-white rounded-xl border border-stone-200 p-6 space-y-5">
-      <div className="flex items-center justify-between">
-        <h2 className="font-semibold text-stone-800">{isEdit ? 'Editar post' : 'Nuevo post'}</h2>
+      <div className="flex items-center justify-between gap-2">
+        <div className="flex items-center gap-2 min-w-0">
+          {onCancel && (
+            <button
+              onClick={onCancel}
+              className="lg:hidden p-2 -ml-2 text-stone-500 hover:text-stone-800"
+              aria-label="Volver a la lista de posts"
+            >
+              <ChevronLeft size={20} />
+            </button>
+          )}
+          <h2 className="font-semibold text-stone-800 truncate">{isEdit ? 'Editar post' : 'Nuevo post'}</h2>
+        </div>
         {onCancel && (
-          <button onClick={onCancel} className="text-sm text-stone-400 hover:text-stone-700">Cancelar</button>
+          <button onClick={onCancel} className="hidden lg:inline text-sm text-stone-400 hover:text-stone-700">Cancelar</button>
         )}
       </div>
       <form onSubmit={handleSubmit} className="space-y-4">

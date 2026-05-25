@@ -4,6 +4,27 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.6.0] - 2026-05-25 — Admin instalable como PWA + mejoras mobile-first
+
+### [FEATURE] Panel admin instalable como app nativa (PWA)
+- `admin/public/manifest.webmanifest` — Manifest con `name`, `short_name`, `start_url: "/"`, `scope: "/"`, `display: "standalone"`, `theme_color: "#C84B31"`, `background_color: "#ffffff"`, `orientation: "portrait"`, `lang: "es"` e iconos (500×500) en variantes `any` y `maskable` reutilizando `amigos2-logo-1-1.png`. Permite que Chrome/Edge/Safari ofrezcan "Añadir a pantalla de inicio" y que la app arranque sin barra del navegador en iOS y Android.
+- `admin/public/sw.js` — Service Worker básico con cache versionada `amigos2-admin-v1`. Estrategia mixta: network-first para navegación SPA con fallback al `/index.html` cacheado (uso offline básico), cache-first para `/assets/*` (chunks hasheados de Vite) y stale-while-revalidate para el resto. Las llamadas cross-origin a Supabase se excluyen explícitamente para no cachear datos sensibles. `skipWaiting` + `clients.claim` para activación inmediata.
+- `admin/index.html` — Se añadieron `<link rel="manifest">`, `<meta name="theme-color">`, `apple-mobile-web-app-capable`, `mobile-web-app-capable`, `apple-mobile-web-app-status-bar-style` y `apple-mobile-web-app-title`. Se actualizó el viewport con `viewport-fit=cover` para soporte de notch/safe-area en iOS.
+- `admin/src/main.jsx` — Registro del Service Worker en `window.load`, sólo en `import.meta.env.PROD` para no interferir con el HMR de Vite en desarrollo.
+
+### [FEATURE] Header móvil fijo en el panel admin
+- `admin/src/components/layout/AdminLayout.jsx` — El `<header>` móvil pasa de flujo normal a `fixed top-0 inset-x-0 z-30`, con `paddingTop` calculado sobre `env(safe-area-inset-top)` para respetar el notch de iOS cuando la app se ejecuta en modo standalone. Se añadió un spacer del mismo alto para compensar el header fijo y evitar que tape el contenido al hacer scroll.
+
+### [REFACTOR] Master/detail real en `PostsPage` para móvil
+- `admin/src/pages/PostsPage.jsx` — Antes en móvil se apilaban `PostList` + `PostEditor` (o el placeholder vacío). Ahora aplica el mismo patrón que `MenuPage`: con `showEditor=false` se ve sólo la lista; al seleccionar o crear, sólo el editor. En `lg:` (≥1024px) siguen visibles las dos columnas. El placeholder vacío ya no consume espacio en móvil.
+- `admin/src/components/posts/PostEditor.jsx` — Se añadió un botón "Volver" (icono `ChevronLeft`) visible sólo en móvil (`lg:hidden`) en la cabecera del editor, replicando el patrón de `ProductList`. El botón "Cancelar" textual queda reservado a desktop (`hidden lg:inline`).
+
+### [FIX] Grid del modal de productos no se apretaba en móviles estrechos
+- `admin/src/components/menu/ProductModal.jsx` — La fila de "Precio + Disponible" usaba `grid-cols-2` fijo, lo que apretaba ambos campos en pantallas ≤360 px. Se cambió a `grid-cols-1 sm:grid-cols-2` y el `col-span-2` del nombre a `sm:col-span-2`, para que en móvil cada campo ocupe una línea completa.
+
+### [FIX] Padding lateral del Modal demasiado grande en móvil
+- `admin/src/components/ui/Modal.jsx` — `px-6` en cabecera y cuerpo reducía demasiado el área útil en móviles estrechos. Se cambió a `px-4 sm:px-6` para tener más espacio de contenido en móvil sin perder la holgura visual en desktop.
+
 ## [1.5.12] - 2026-05-25 — Estilado custom del checkbox de privacidad
 
 ### [REFACTOR] Checkbox personalizado en línea con la identidad de marca
