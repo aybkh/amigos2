@@ -57,6 +57,14 @@
   z-index: 10;
 }
 
+.tv-logo {
+  height: 4.5rem;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 0 12px rgba(0, 230, 118, 0.25));
+}
+
 /* ────────────────────────────────────────────────
    MAIN — Área de contenido con transiciones
    ──────────────────────────────────────────────── */

@@ -4,6 +4,20 @@ Formato: [Versión semántica] - YYYY-MM-DD — Descripción breve
 
 Categorías: `[FEATURE]` `[FIX]` `[CONFIG]` `[REFACTOR]` `[DOCS]`
 
+## [1.6.2] - 2026-05-26 — TV: el hero de la categoría se muestra antes de los productos
+
+### [REFACTOR] Orden del ciclo de `/tv`: HERO_SCREEN → PRODUCT_LIST
+- `web/src/pages/TvPage.jsx` — Se invirtió la máquina de estados del ciclo. Antes, cada categoría se mostraba como `PRODUCT_LIST (1..n páginas) → HERO_SCREEN → siguiente categoría`. Ahora es `HERO_SCREEN (si tiene imagen) → PRODUCT_LIST (1..n páginas) → siguiente categoría`, de modo que el espectador ve primero la pantalla de impacto con el nombre y la imagen de la categoría y después los productos. La fase inicial es `HERO_SCREEN`; cuando llegamos a una categoría sin `image_url` se hace un salto automático a `PRODUCT_LIST` (efecto que detecta `cat && !cat.image_url`). En `advance()`, al terminar la última página, se inspecciona la siguiente categoría (`categories[(catIdx + 1) % categories.length].image_url`) para decidir si entra por `HERO_SCREEN` o directamente por `PRODUCT_LIST`. Se eliminó la variable derivada `hasHero` que ya no se usaba.
+
+## [1.6.1] - 2026-05-25 — TV: logo en el header y mínimo 2 productos por página
+
+### [REFACTOR] Header de `/tv` usa el logo en lugar de texto
+- `web/src/pages/TvPage.jsx` — Se reemplazó el `<span>` con el texto "Amigos2" del header por un `<img src="/amigos2-logo-2-1.png" className="tv-logo">`. Se usa el logo horizontal (948×263) ya presente en `web/public/`.
+- `web/src/styles/tv.css` — Nueva regla `.tv-logo` (height: 4.5rem, width auto, object-fit contain) con un `drop-shadow` neón verde tenue para integrar el PNG con el tema oscuro Amigos2.
+
+### [FIX] Ninguna página de productos en `/tv` muestra un solo artículo
+- `web/src/pages/TvPage.jsx` — La función `paginate()` ahora detecta cuando la última página queda con un único producto (por ejemplo, 7 productos = `[6, 1]`) y mueve un elemento de la página anterior a la última, garantizando que toda página visible tenga al menos 2 productos siempre que el total sea ≥2. Caso `[6, 1]` → `[5, 2]`. No afecta a categorías con 1 sólo producto en total (única página de 1) ni a las que dividen exactamente.
+
 ## [1.6.0] - 2026-05-25 — Admin instalable como PWA + mejoras mobile-first
 
 ### [FEATURE] Panel admin instalable como app nativa (PWA)

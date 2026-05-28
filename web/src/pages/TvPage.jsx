@@ -9,9 +9,17 @@ import '../styles/tv.css'
 
 const PHASE = { PRODUCT_LIST: 'PRODUCT_LIST', HERO_SCREEN: 'HERO_SCREEN' }
 
+// Pagina garantizando que ninguna página tenga menos de 2 productos
+// (siempre que el total sea >= 2). Si la última página quedaría con 1 sólo
+// elemento, se reparte tomando uno de la anterior.
 function paginate(arr, size) {
   const pages = []
   for (let i = 0; i < arr.length; i += size) pages.push(arr.slice(i, i + size))
+  if (pages.length > 1 && pages[pages.length - 1].length === 1) {
+    const last = pages[pages.length - 1]
+    const prev = pages[pages.length - 2]
+    pages[pages.length - 1] = [prev.pop(), ...last]
+  }
   return pages
 }
 
@@ -23,7 +31,7 @@ export default function TvPage() {
   const [loading,    setLoading]    = useState(true)
   const [catIdx,     setCatIdx]     = useState(0)
   const [pageIdx,    setPageIdx]    = useState(0)
-  const [phase,      setPhase]      = useState(PHASE.PRODUCT_LIST)
+  const [phase,      setPhase]      = useState(PHASE.HERO_SCREEN)
   const [fadeOut,    setFadeOut]    = useState(false)
   const [clock,      setClock]      = useState(new Date())
   const timer = useRef(null)
@@ -47,37 +55,46 @@ export default function TvPage() {
     return () => { clearInterval(refreshId); clearInterval(clockId) }
   }, [loadMenu])
 
+  // Si la categoría actual no tiene imagen de portada, saltar el hero
+  // y pasar directamente a la lista de productos
+  useEffect(() => {
+    if (phase === PHASE.HERO_SCREEN && cat && !cat.image_url) {
+      setPhase(PHASE.PRODUCT_LIST)
+    }
+  }, [phase, cat])
+
   // ── Datos derivados ──
   const cat         = categories[catIdx] ?? null
   const sortedProds = [...(cat?.products ?? [])].sort((a, b) => a.display_order - b.display_order)
   const pages       = paginate(sortedProds, TV_CONFIG.PRODUCTS_PER_PAGE)
   const totalPages  = pages.length
   const pageProd    = pages[pageIdx] ?? []
-  const hasHero     = Boolean(cat?.image_url)
 
   // ── Máquina de estados del ciclo automático ──
+  // Orden por categoría: HERO_SCREEN (si tiene imagen) → páginas de PRODUCT_LIST → siguiente categoría
   const advance = useCallback(() => {
     if (!categories.length) return
     setFadeOut(true)
     setTimeout(() => {
       setFadeOut(false)
-      if (phase === PHASE.PRODUCT_LIST) {
-        if (pageIdx < totalPages - 1) {
-          setPageIdx((p) => p + 1)
-        } else if (hasHero) {
-          setPhase(PHASE.HERO_SCREEN)
-          setPageIdx(0)
-        } else {
-          setPageIdx(0)
-          setCatIdx((i) => (i + 1) % categories.length)
-        }
-      } else {
+      if (phase === PHASE.HERO_SCREEN) {
+        // Tras el hero, mostrar la primera página de productos de la misma categoría
         setPhase(PHASE.PRODUCT_LIST)
         setPageIdx(0)
-        setCatIdx((i) => (i + 1) % categories.length)
+      } else {
+        // PRODUCT_LIST: avanzar página o pasar a la siguiente categoría
+        if (pageIdx < totalPages - 1) {
+          setPageIdx((p) => p + 1)
+        } else {
+          const nextIdx = (catIdx + 1) % categories.length
+          const nextHasHero = Boolean(categories[nextIdx]?.image_url)
+          setCatIdx(nextIdx)
+          setPageIdx(0)
+          setPhase(nextHasHero ? PHASE.HERO_SCREEN : PHASE.PRODUCT_LIST)
+        }
       }
     }, TV_CONFIG.TRANSITION_DURATION)
-  }, [phase, pageIdx, totalPages, hasHero, categories.length])
+  }, [phase, pageIdx, totalPages, catIdx, categories])
 
   useEffect(() => {
     if (!categories.length) return
@@ -104,9 +121,11 @@ export default function TvPage() {
 
       {/* ── HEADER ── */}
       <header className="tv-header">
-        <span className="tv-bebas" style={{ fontSize: '3.5rem', color: 'var(--tv-text)' }}>
-          Amigos<span style={{ color: 'var(--tv-accent)' }}>2</span>
-        </span>
+        <img
+          src="/amigos2-logo-2-1.png"
+          alt="Amigos2"
+          className="tv-logo"
+        />
         <div style={{ textAlign: 'right' }}>
           <div className="tv-bebas" style={{ fontSize: '4.2rem', lineHeight: 1, color: 'var(--tv-text)' }}>
             {fmtTime(clock)}
